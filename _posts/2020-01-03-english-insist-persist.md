@@ -55,5 +55,12 @@ comments: true
 > We said we’d give her the cash, and we must stick to our agreement.
 
 
+Note:
 
+Insistence vs persistence – Just like the verb forms, the nouns are different.
+
+●    Her insistence on following up the matter with persistence was the reason behind our victory.
+
+insistence - 坚持、强调
+persistence - 固执、持久性
 

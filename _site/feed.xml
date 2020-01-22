@@ -1,209 +1,386 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-10T12:53:49-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">apparatus, instrument, device, equipment, tool, implement, installation, appliance, facilities 区别</title><link href="http://localhost:4000/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/" rel="alternate" type="text/html" title="apparatus, instrument, device, equipment, tool, implement, installation, appliance, facilities 区别" /><published>2020-01-10T00:00:00-08:00</published><updated>2020-01-10T00:00:00-08:00</updated><id>http://localhost:4000/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities</id><content type="html" xml:base="http://localhost:4000/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/">&lt;p&gt;&lt;img src=&quot;https://cookmankitchenequipments.files.wordpress.com/2015/09/commercial-kitchen-equipment-supplies-l-40da9a0c49163d9c.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-22T15:10:45-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Android 友盟多渠道打包</title><link href="http://localhost:4000/android-apk/" rel="alternate" type="text/html" title="Android 友盟多渠道打包" /><published>2020-01-22T00:00:00-08:00</published><updated>2020-01-22T00:00:00-08:00</updated><id>http://localhost:4000/android-apk</id><content type="html" xml:base="http://localhost:4000/android-apk/">&lt;p&gt;&lt;img src=&quot;https://www.ritavpn.com/blog/wp-content/uploads/2019/12/Best-APK-Download-Sites-for-2020.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;修改AndroidManifest.xml文件，添加渠道名称变量&lt;/p&gt;
+
+    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         &lt;span class=&quot;c&quot;&gt;&amp;lt;!--value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量--&amp;gt;&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta-data&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${UMENG_CHANNEL_VALUE}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UMENG_CHANNEL&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;修改app的build.gradle文件，添加所需要的渠道&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;cm&quot;&gt;/*配置渠道*/&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;productFlavors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;yingyongbao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;yingyongbao&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;wandoujia&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;wandoujia&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;xiaomi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;xiaomi&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果遇到一下错误，可以参考google文档修改解决&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     Error:All flavors must now belong to a named flavor dimension.
+     The flavor &lt;span class=&quot;s1&quot;&gt;'flavor_name'&lt;/span&gt; is not assigned to a flavor dimension.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;在build.gradle文件的defaultConfig段落中添加&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;versionCode&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://developer.android.com/studio/build/build-variants?utm_source=android-studio#product-flavors&quot; title=&quot;Google's document&quot;&gt;参考链接1&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/WUXIAOCHANG/p/10683942.html&quot; title=&quot;cnblogs's document&quot;&gt;参考链接2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e4da2f477cd8&quot; title=&quot;jianshu's document&quot;&gt;参考链接3&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Android" /><summary type="html"></summary></entry><entry><title type="html">laugh, smile, siggle, grin, beam, sneer 区别</title><link href="http://localhost:4000/english-laugh-smile-siggle-grin-beam-sneer/" rel="alternate" type="text/html" title="laugh, smile, siggle, grin, beam, sneer 区别" /><published>2020-01-22T00:00:00-08:00</published><updated>2020-01-22T00:00:00-08:00</updated><id>http://localhost:4000/english-laugh-smile-siggle-grin-beam-sneer</id><content type="html" xml:base="http://localhost:4000/english-laugh-smile-siggle-grin-beam-sneer/">&lt;p&gt;&lt;img src=&quot;http://www.beautiful-women-pedia.com/images/woman-smiling-text-photo.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;laugh : 最常用词，指因喜悦、愉快或轻视而出声的笑或大笑。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;smile : 指面露微笑，侧重于无声。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;siggle : 指发出咯咯的笑声，较多地用于女人或孩子。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;grin : 指露齿而笑。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;beam : 书面用词，指人因心情舒畅而发出的笑，即喜形于色地笑。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;sneer : 指冷笑、嘲笑。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;chuckle : 轻声笑&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;snicker : 忍笑&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;roar : 哄笑&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;simper : 假笑&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cachinnate : 放声大笑&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Choose, select, pick, elect, prefer, opt 区别</title><link href="http://localhost:4000/english-choose-select-pick-elect-opt-prefer/" rel="alternate" type="text/html" title="Choose, select, pick, elect, prefer, opt 区别" /><published>2020-01-21T00:00:00-08:00</published><updated>2020-01-21T00:00:00-08:00</updated><id>http://localhost:4000/english-choose-select-pick-elect-opt-prefer</id><content type="html" xml:base="http://localhost:4000/english-choose-select-pick-elect-opt-prefer/">&lt;p&gt;&lt;img src=&quot;http://jacobspradlin.files.wordpress.com/2013/08/choosetech.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;choose
+ 这是很平常的普通用词，侧重于根据个人的意愿和判断在众多的对象中进行选择，较为看重别选者的优点，但是这个词会强调在选择的过程中所下的决心。&lt;/p&gt;
+
+    &lt;p&gt;普通用词，主要表达个人意愿和判断大多数人的选择&lt;/p&gt;
+
+    &lt;p&gt;例如：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;They will be able to choose their own leaders in democratic elections.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The local shops have been marked in on this map so that people can choose a house in a suitable area.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;pick
+ 这个就是很常见的口语用词，大多数情况指的是从个人角度进行仔细的挑选，也含有任意的进行挑选，也就是不需要进行仔细的挑选或进行辨别。&lt;/p&gt;
+
+    &lt;p&gt;口语用词，指从个人的一主观仔细挑选，比较随意的挑选&lt;/p&gt;
+
+    &lt;p&gt;例如：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Mr. Nowell had picked ten people to interview for six sales jobs in Dallas.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;If your proposed syntax picks one of them then you need to give me a syntax to pick the others.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;select
+ 在写作中用这个词应该是会比较多的，因为这是个书面用语，在使用的时候，有时是会具有庄严、正式的感情色彩，所强调的是在认真的考虑之后，从很多的人或者物里面精心选出最好的，最中意的。&lt;/p&gt;
+
+    &lt;p&gt;书面用词，用于庄严、正式的场合，强调精选&lt;/p&gt;
+
+    &lt;p&gt;例如：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Voters are selecting candidates for both U.S. Senate seats and for 52 congressional seats.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;But within one data set you can view it in a number of different formats and select from a range of different variables.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;elect
+ 别看它比select少了个‘S’，但是这也是一个选择，这个一般指的是按照一定的规章或法律，在一定的范围里面，在有限的数量中，用投票等等的方式所进行的认真、慎重的选择。&lt;/p&gt;
+
+    &lt;p&gt;指按一定的规章或法律，用投票等方式进行的认真、慎重的选择&lt;/p&gt;
+
+    &lt;p&gt;例如：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The people of the Philippines have voted to elect a new president.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;In many cases we need also to take account of the responsibility of patients for their own health, and voters for the governments they elect.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;prefer
+ 这个选择说是选择，其实也可以说不是选择，其所强调的是因为个人的偏爱所做的选择，但是不一定会有选择的行动。&lt;/p&gt;
+
+    &lt;p&gt;强调个人偏爱，但不一定有选择的行为。&lt;/p&gt;
+
+    &lt;p&gt;例如：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;I became a teacher because I preferred books and people to politics.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;She chose Spain, but personally I’d prefer to go to France.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;opt
+ 这个选择的范围是比较小的，一般都是指在几种可能性之间进行的选择。&lt;/p&gt;
+
+    &lt;p&gt;多指在几种可能性之间进行选择。&lt;/p&gt;
+
+    &lt;p&gt;例如：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;After graduating she opted for a career in music.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Employees may opt out of the company’s pension plan.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;single
+ 这个选择算得上是精挑细选，强调的是从若干的人或者物中，很慎重的挑选出符合要求的人或者物。&lt;/p&gt;
+
+    &lt;p&gt;例如：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;He was singled out to succeed his uncle.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">apparatus, instrument, device, equipment, tool, implement, installation, appliance, facilities 区别</title><link href="http://localhost:4000/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/" rel="alternate" type="text/html" title="apparatus, instrument, device, equipment, tool, implement, installation, appliance, facilities 区别" /><published>2020-01-10T00:00:00-08:00</published><updated>2020-01-10T00:00:00-08:00</updated><id>http://localhost:4000/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities</id><content type="html" xml:base="http://localhost:4000/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/">&lt;p&gt;&lt;img src=&quot;https://cookmankitchenequipments.files.wordpress.com/2015/09/commercial-kitchen-equipment-supplies-l-40da9a0c49163d9c.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
 &lt;p&gt;这些名词均有“仪器、设备、器械、器具”之意。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;apparatus ：既可指某种具体的由许多不同零件构成的复杂的仪器、装置或器械，又可指它们的总称。&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;apparatus:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Firefighters needed breathing apparatus to enter the burning house.
+    &lt;p&gt;既可指某种具体的由许多不同零件构成的复杂的仪器、装置或器械，又可指它们的总称。&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Firefighters needed breathing apparatus to enter the burning house.
 消防队员需要呼吸器以便进入燃烧的大楼。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;instrument:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;instrument ：通常指能使人们完成某一精确动作或测量的一种小型仪器，尤指电工仪表、测量装置，航海或航空用的控制装置。&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;通常指能使人们完成某一精确动作或测量的一种小型仪器，尤指电工仪表、测量装置，航海或航空用的控制装置。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;a thin tube-like optical instrument
+    &lt;blockquote&gt;
+      &lt;p&gt;a thin tube-like optical instrument
 试管状的细长光学仪器&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;device:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;device ：多指为某一特殊用途或解决某一特定机械问题而设计或改装的精巧的仪器或装置。&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;多指为某一特殊用途或解决某一特定机械问题而设计或改装的精巧的仪器或装置。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;a water-saving device
+    &lt;p&gt;“device” 通常指 “小巧的电子装置或设备”，比如 “移动设备 mobile device”、“听力装置 listening device”。“Device” 是可数名词。来听一个例句。&lt;/p&gt;
+
+    &lt;p&gt;Example:&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;All mobile devices should be switched off during this flight.
+请在本次飞行中关闭所有移动设备。&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;a water-saving device
 节水装置&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;electrical labour-saving devices around the home
+    &lt;blockquote&gt;
+      &lt;p&gt;electrical labour-saving devices around the home
 节省劳力的各种家用电器&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;equipment:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;equipment ：多指成套的或重型的设备或装备。通常用作不可数名词。&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;单词 “equipment” 表示 “特定活动所需的设备、器械”，是不可数名词。如果想说 “一件设备”，我们可以在 “equipment” 前搭配 “a piece of 一个，一件”，即 “a piece of equipment”。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;The plant was dismantled of all its equipment and furniture.
+    &lt;p&gt;“Equipment” 通常指 “成套的，不只一件的设备”。而且，与 “device” 和 “appliance” 不同的是，“equipment” 不光包括 “电子设备”，还包含相关的工具。比如，上文提到的 “cycling and diving equipment 自行车和潜水装备” 中可能包括服装、自行车灯、潜水眼镜、呼吸器等物品；再如，“医疗设备” 的说法是 “medical equipment”。比如，虽然 “听诊器 stethoscope” 是一种 “medical equipment”，但它并不是一个 “medical device”，因为听诊器不是电子的。&lt;/p&gt;
+
+    &lt;p&gt;Example:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The hospital has been donated medical equipment that’s worth a million pounds.
+这家医院收到了价值一百万英镑的医疗设备捐助。&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The plant was dismantled of all its equipment and furniture.
 这家工厂的设备和家具全被拆除了。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;tool:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;tool ：一般指进行特种工作的手工工具，也可指人造使用动力的工具，还可作引申用。&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;一般指进行特种工作的手工工具，也可指人造使用动力的工具，还可作引申用。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;I find the best tool for the purpose is a pair of shears.
+    &lt;blockquote&gt;
+      &lt;p&gt;I find the best tool for the purpose is a pair of shears.
 我发现做这件事最得力的工具是一把大剪刀。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;implement:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;implement ：原指史前人类所用的工具，现在多指农用工具，也可指为实现某个任务所需的工具或器具。&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;原指史前人类所用的工具，现在多指农用工具，也可指为实现某个任务所需的工具或器具。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;knives and other useful implements
+    &lt;blockquote&gt;
+      &lt;p&gt;knives and other useful implements
 刀子和其他有用工具&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;installation:&lt;/p&gt;
 
-&lt;p&gt;installation ：一般多指安装完成，可供使用或操作的整套装置或设施。&lt;/p&gt;
+    &lt;p&gt;一般多指安装完成，可供使用或操作的整套装置或设施。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;The building was turned into a secret military installation.
+    &lt;blockquote&gt;
+      &lt;p&gt;The building was turned into a secret military installation.
 该建筑被改造成了一处秘密军事设施。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;appliance:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;appliance ：侧重指家用机器或设备，尤指家用电器。&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;侧重指家用机器或设备，尤指家用电器。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;He could also learn to use the vacuum cleaner, the washing machine and other household appliances.
+    &lt;p&gt;可数名词 “appliance”。“Appliance” 尤指 “家用电器 home appliances”，比如冰箱、烤箱、洗衣机等等。通常，冰箱本身并不是 “装置 device”，但我们可以把控制家电的 “智能家居设备” 叫做 “home device”。&lt;/p&gt;
+
+    &lt;p&gt;Examples:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The shopping channel is known for selling home appliances.
+这个购物频道以卖家电出名。&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;I can switch on my oven remotely using the new home device.
+我可以用这台新型智能家居装置来远程打开家里的烤箱。&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;He could also learn to use the vacuum cleaner, the washing machine and other household appliances.
 他可以再学学使用吸尘器、洗衣机和其他家用电器。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;facilities:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;facilities ：常用复数形式，指可供使用的设备或设施。&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;常用复数形式，指可供使用的设备或设施。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Medical facilities are being reorganized and upgraded.
+    &lt;blockquote&gt;
+      &lt;p&gt;Medical facilities are being reorganized and upgraded.
 正在对医疗设施进行重组和升级。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Our city needs more facilities for recreation.
+    &lt;blockquote&gt;
+      &lt;p&gt;Our city needs more facilities for recreation.
 我们城市需要更多的娱乐设施。&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">success, succeed, successful, successor 区别</title><link href="http://localhost:4000/english-success-succeed-successful-successor/" rel="alternate" type="text/html" title="success, succeed, successful, successor 区别" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-success-succeed-successful-successor</id><content type="html" xml:base="http://localhost:4000/english-success-succeed-successful-successor/">&lt;p&gt;&lt;img src=&quot;http://gearingforsuccess.ca/wp-content/uploads/2018/09/success-800x449.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;再来一个例子：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jimmy just moved into his new flat and is ready to unpack. First, he put away his clothes, his mobile devices, his cycling and diving equipment, and then he put all his books on the shelf. The flat is equipped with household appliances such as a fridge, a freezer, an oven, a dishwasher, a washing machine, a TV, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jimmy 刚刚搬进他的新公寓，正准备整理行李。他先收好了衣物、移动设备，放好了他的自行车和潜水装备，并把所有的书都摆上书架。这间公寓备有冰箱、冰柜、烤箱、洗碗机、洗衣机、电视等生活家电。&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Mood, Emotion, Temper, Feeling 区别</title><link href="http://localhost:4000/english-mood-emotion-temper-feeling/" rel="alternate" type="text/html" title="Mood, Emotion, Temper, Feeling 区别" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-mood-emotion-temper-feeling</id><content type="html" xml:base="http://localhost:4000/english-mood-emotion-temper-feeling/">&lt;p&gt;&lt;img src=&quot;https://svgsilh.com/svg/1337383.svg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;success n &lt;em&gt;成功&lt;/em&gt;&lt;/p&gt;
+    &lt;p&gt;Mood - 心情、心境、情绪、精神状态 the way you feel at a particular time&lt;/p&gt;
+
+    &lt;p&gt;She’s in a good/bad mood.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;succeed (in) vi &lt;em&gt;获得成功&lt;/em&gt;&lt;/p&gt;
+    &lt;p&gt;Emotion - 感情、情感、情绪、激情 a strong feeling such as love or anger, or strong feelings in general&lt;/p&gt;
+
+    &lt;p&gt;Like a lot of men, he finds it hard to express his emotions.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;successful adj &lt;em&gt;成功的&lt;/em&gt;&lt;/p&gt;
+    &lt;p&gt;Temper - 脾气 the tendency to become angry very quickly&lt;/p&gt;
+
+    &lt;p&gt;She has a real temper. / He’s got a really bad temper.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;successor n &lt;em&gt;继任者 继承者&lt;/em&gt;&lt;/p&gt;
+    &lt;p&gt;Feeling - 1. 感觉 the fact of feeling something physical 2. 感情、感触、情绪 emotion 3. 观点、意见 opinion&lt;/p&gt;
+
+    &lt;p&gt;I had a tingling feeling in my fingers.
+The feeling of loneliness suddenly overwhelmed him.
+My feeling is that we had better act quickly or it will be too late.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">ubuntu下查看log</title><link href="http://localhost:4000/linux-ubuntu-log/" rel="alternate" type="text/html" title="ubuntu下查看log" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/linux-ubuntu-log</id><content type="html" xml:base="http://localhost:4000/linux-ubuntu-log/">&lt;p&gt;&lt;img src=&quot;https://www.howtogeek.com/wp-content/uploads/2012/07/ximage8.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.qSWlkYkoXy.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;dmesg&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;madoor@template:~$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;dmesg | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;dmesg | less
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;cat /var/log/syslog&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;madoor@template:~$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /var/log/syslog
-&lt;span class=&quot;gp&quot;&gt;madoor@template:~$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /var/log/mail.log
-&lt;span class=&quot;gp&quot;&gt;madoor@template:~$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /var/log/auth.log
-&lt;span class=&quot;gp&quot;&gt;madoor@template:~$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /var/log/faillog
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Linux" /><category term="ubuntu" /><summary type="html"></summary></entry><entry><title type="html">两种坚持 英文</title><link href="http://localhost:4000/english-insist-persist/" rel="alternate" type="text/html" title="两种坚持 英文" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-insist-persist</id><content type="html" xml:base="http://localhost:4000/english-insist-persist/">&lt;p&gt;&lt;img src=&quot;https://www.grammar.com/images/2984_insist_vs._persist.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;persistaction&quot;&gt;persist(action)&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;to continue to do or say something in a determined way&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;‘But why?’ he persisted.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;persist in:&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Moody 情绪化、喜怒无常&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Emotional 情感丰富、感性&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;She persisted in her refusal to pay.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;persist in doing something:&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;My neighbor is a good man but he can be &lt;strong&gt;moody&lt;/strong&gt; and has a bad &lt;strong&gt;temper&lt;/strong&gt;. To make things worse, I’m quite an &lt;strong&gt;emotional&lt;/strong&gt; person so I go through a range of &lt;strong&gt;emotions&lt;/strong&gt; throughout the day. The other day, I saw my neighbor in his garden.  “Good morning,” I said cheerfully. He stared at me, clearly in no &lt;strong&gt;mood&lt;/strong&gt; to chat. “What’s so good about it?” he yelled back angrily, losing his &lt;strong&gt;temper&lt;/strong&gt;. Overcome by &lt;strong&gt;emotion&lt;/strong&gt;, I burst into tears and ran back into our house. The whole thing really put me in a bad &lt;strong&gt;mood&lt;/strong&gt; for the rest of the day.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Why do you persist in denying that it was your fault?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;insist-idea-belief-viewpoint&quot;&gt;insist (idea, belief, viewpoint)&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;1. to say very firmly that something must happen or must be done&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You must see a doctor immediately – I insist.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;insist (that):&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;She insisted that we stay at her house instead of a hotel.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;insist on:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Some companies insist on staff undergoing regular medical checks.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;2. to keep saying very firmly that something is true, even when other people will not believe you&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;insist (that):&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The school insists that it is doing everything it can to cooperate.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;insist on:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;He has insisted on his innocence from the beginning.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;stick-to-plan-promise-belief&quot;&gt;stick to (plan, promise, belief)&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;stick to (something): to do something that you promised or decided you would do, or that you believe you should do&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We said we’d give her the cash, and we must stick to our agreement.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Activity, Motion, Motive, Motivation, Motivate 区别</title><link href="http://localhost:4000/english-activity-motion-motive-motivation-motivate/" rel="alternate" type="text/html" title="Activity, Motion, Motive, Motivation, Motivate 区别" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-activity-motion-motive-motivation-motivate</id><content type="html" xml:base="http://localhost:4000/english-activity-motion-motive-motivation-motivate/">&lt;p&gt;&lt;img src=&quot;https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;我的鄰居人不錯，但他&lt;strong&gt;喜怒無常&lt;/strong&gt;，而且&lt;strong&gt;脾氣&lt;/strong&gt;不好。更糟的是，我是個感情豐富的人，也就是說我在短短一天內可以表現出一系列不同的&lt;strong&gt;情感&lt;/strong&gt;。一天，我看鄰居在他家花園裡，便開心地對他說：“早上好。” 當時他直勾勾地盯著我，顯然沒&lt;strong&gt;心情&lt;/strong&gt;聊天，衝我嚷道：“哪裡好了？” 接著竟衝我&lt;strong&gt;發起火來&lt;/strong&gt;。被&lt;strong&gt;情緒&lt;/strong&gt;所左右的我一下子就哭了，然後跑回了家裡。那件事影響了我一整天的&lt;strong&gt;心情&lt;/strong&gt;。&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Activity, Motion, Motive, Motivation, Motivate 区别</title><link href="http://localhost:4000/english-activity-motion-motive-motivation-motivate/" rel="alternate" type="text/html" title="Activity, Motion, Motive, Motivation, Motivate 区别" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-activity-motion-motive-motivation-motivate</id><content type="html" xml:base="http://localhost:4000/english-activity-motion-motive-motivation-motivate/">&lt;p&gt;&lt;img src=&quot;https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -314,181 +491,106 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;He should do the experience according to the safety guideline.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Mood, Emotion, Temper, Feeling 区别</title><link href="http://localhost:4000/english-mood-emotion-temper-feeling/" rel="alternate" type="text/html" title="Mood, Emotion, Temper, Feeling 区别" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-mood-emotion-temper-feeling</id><content type="html" xml:base="http://localhost:4000/english-mood-emotion-temper-feeling/">&lt;p&gt;&lt;img src=&quot;https://svgsilh.com/svg/1337383.svg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">两种坚持 英文</title><link href="http://localhost:4000/english-insist-persist/" rel="alternate" type="text/html" title="两种坚持 英文" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-insist-persist</id><content type="html" xml:base="http://localhost:4000/english-insist-persist/">&lt;p&gt;&lt;img src=&quot;https://www.grammar.com/images/2984_insist_vs._persist.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
+&lt;h2 id=&quot;persistaction&quot;&gt;persist(action)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;to continue to do or say something in a determined way&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;‘But why?’ he persisted.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mood - 心情、心境、情绪、精神状态 the way you feel at a particular time&lt;/p&gt;
-
-    &lt;p&gt;She’s in a good/bad mood.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Emotion - 感情、情感、情绪、激情 a strong feeling such as love or anger, or strong feelings in general&lt;/p&gt;
-
-    &lt;p&gt;Like a lot of men, he finds it hard to express his emotions.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Temper - 脾气 the tendency to become angry very quickly&lt;/p&gt;
-
-    &lt;p&gt;She has a real temper. / He’s got a really bad temper.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Feeling - 1. 感觉 the fact of feeling something physical 2. 感情、感触、情绪 emotion 3. 观点、意见 opinion&lt;/p&gt;
-
-    &lt;p&gt;I had a tingling feeling in my fingers.
-The feeling of loneliness suddenly overwhelmed him.
-My feeling is that we had better act quickly or it will be too late.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Moody 情绪化、喜怒无常&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Emotional 情感丰富、感性&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;persist in:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;She persisted in her refusal to pay.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;My neighbor is a good man but he can be &lt;strong&gt;moody&lt;/strong&gt; and has a bad &lt;strong&gt;temper&lt;/strong&gt;. To make things worse, I’m quite an &lt;strong&gt;emotional&lt;/strong&gt; person so I go through a range of &lt;strong&gt;emotions&lt;/strong&gt; throughout the day. The other day, I saw my neighbor in his garden.  “Good morning,” I said cheerfully. He stared at me, clearly in no &lt;strong&gt;mood&lt;/strong&gt; to chat. “What’s so good about it?” he yelled back angrily, losing his &lt;strong&gt;temper&lt;/strong&gt;. Overcome by &lt;strong&gt;emotion&lt;/strong&gt;, I burst into tears and ran back into our house. The whole thing really put me in a bad &lt;strong&gt;mood&lt;/strong&gt; for the rest of the day.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;persist in doing something:&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;我的鄰居人不錯，但他&lt;strong&gt;喜怒無常&lt;/strong&gt;，而且&lt;strong&gt;脾氣&lt;/strong&gt;不好。更糟的是，我是個感情豐富的人，也就是說我在短短一天內可以表現出一系列不同的&lt;strong&gt;情感&lt;/strong&gt;。一天，我看鄰居在他家花園裡，便開心地對他說：“早上好。” 當時他直勾勾地盯著我，顯然沒&lt;strong&gt;心情&lt;/strong&gt;聊天，衝我嚷道：“哪裡好了？” 接著竟衝我&lt;strong&gt;發起火來&lt;/strong&gt;。被&lt;strong&gt;情緒&lt;/strong&gt;所左右的我一下子就哭了，然後跑回了家裡。那件事影響了我一整天的&lt;strong&gt;心情&lt;/strong&gt;。&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Words about outer space</title><link href="http://localhost:4000/english-outer-space/" rel="alternate" type="text/html" title="Words about outer space" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-outer-space</id><content type="html" xml:base="http://localhost:4000/english-outer-space/">&lt;p&gt;&lt;img src=&quot;https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1134635135%2F960x0.jpg%3Ffit%3Dscale&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Why do you persist in denying that it was your fault?&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;!-- more --&gt;
+&lt;h2 id=&quot;insist-idea-belief-viewpoint&quot;&gt;insist (idea, belief, viewpoint)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;1. to say very firmly that something must happen or must be done&lt;/em&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;cosmos/universe 宇宙。&lt;/li&gt;
-  &lt;li&gt;space /outer space 外太空。&lt;/li&gt;
-  &lt;li&gt;spacewalk 太空漫步。&lt;/li&gt;
-  &lt;li&gt;astronaut /cosmonaut 太空人。&lt;/li&gt;
-  &lt;li&gt;spacecraft/spaceship/space shuttle 太空船、太空艙。&lt;/li&gt;
-  &lt;li&gt;satellite 衛星。&lt;/li&gt;
-  &lt;li&gt;telescope 望遠鏡。&lt;/li&gt;
-  &lt;li&gt;orbit 軌道。&lt;/li&gt;
-  &lt;li&gt;galaxy 銀河 。&lt;/li&gt;
-  &lt;li&gt;solar system 太陽系。&lt;/li&gt;
-  &lt;li&gt;constellation/ zodiac signs 星座。&lt;/li&gt;
-  &lt;li&gt;Chinese Zodiac 十二生肖。&lt;/li&gt;
-  &lt;li&gt;meteor 隕石。&lt;/li&gt;
-  &lt;li&gt;solar panels 太陽能板。&lt;/li&gt;
-  &lt;li&gt;Southern/Northern hemisphere 南/北半球。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;You must see a doctor immediately – I insist.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3 id=&quot;九大行星的英文&quot;&gt;九大行星的英文&lt;/h3&gt;
-&lt;p&gt;水星——-Mercury
-金星——-Venus
-地球——-Earth
-火星——-Mars
-木星——-Jupiter
-土星——-Saturn
-天王星—-Uranus
-海王星—-Neptune
-冥王星—-Pluto&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;insist (that):&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;黄道12星座&quot;&gt;黄道12星座&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;She insisted that we stay at her house instead of a hotel.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;水瓶座1.21-2.19 &lt;strong&gt;Aquarius&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;insist on:&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;inventive, clever, humanitarian, friendly&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Some companies insist on staff undergoing regular medical checks.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt; 雙魚座 2.20-3.20 &lt;strong&gt;Pisces&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2. to keep saying very firmly that something is true, even when other people will not believe you&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;romantic, devoted, compassionate&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;insist (that):&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt; 牡羊(白羊)座3.21-4.19 &lt;strong&gt;Aries&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The school insists that it is doing everything it can to cooperate.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;generous, enthusiastic, efficient&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;insist on:&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt; 金牛座4.20-5.20 &lt;strong&gt;Taurus&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;He has insisted on his innocence from the beginning.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt; reliable, stable, determined&lt;/p&gt;
+&lt;h2 id=&quot;stick-to-plan-promise-belief&quot;&gt;stick to (plan, promise, belief)&lt;/h2&gt;
 
-&lt;p&gt; 雙子座5.21-6.21 &lt;strong&gt;Gemini&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;stick to (something): to do something that you promised or decided you would do, or that you believe you should do&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;witty, creative, eloquent, curious&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;We said we’d give her the cash, and we must stick to our agreement.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt; 巨蟹座6.22-7.22 &lt;strong&gt;Cancer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Note:&lt;/p&gt;
 
-&lt;p&gt;intuitive, nurturing, frugal, cautious&lt;/p&gt;
+&lt;p&gt;Insistence vs persistence – Just like the verb forms, the nouns are different.&lt;/p&gt;
 
-&lt;p&gt; 獅子座7.23-8.22 &lt;strong&gt;Leo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;●    Her insistence on following up the matter with persistence was the reason behind our victory.&lt;/p&gt;
 
-&lt;p&gt;confident, independent, ambitious&lt;/p&gt;
-
-&lt;p&gt; 處女座8.23-9.22 &lt;strong&gt;Virgo&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;tidy, industrious, calm, a keen intelligence&lt;/p&gt;
-
-&lt;p&gt; 天秤座9.23-10.23 &lt;strong&gt;Libra&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;創造力，聰明，人道主義，友好
-浪漫，敬業，富有同情心
-大方，熱情，高效
-可靠，穩定，確定
-機智，創意，口才，自信
-直觀，培育，節儉，謹慎
-自信，獨立，有事業心
-整潔，勤勞，冷靜，敏銳的智慧 
-外交，隨和，有點大男子主義，
-熱情，機智，專注
-樂觀，冒險，率直
-負責，執著，嚴謹，沉穩&lt;/p&gt;
-
-&lt;p&gt;diplomatic, easygoing, sociable,&lt;/p&gt;
-
-&lt;p&gt; 天蠍座10.24-11.21 &lt;strong&gt;Scorpio&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;passionate, resourceful, focused&lt;/p&gt;
-
-&lt;p&gt; 射手(人馬)座11.22-12.20 &lt;strong&gt;Sagittarius&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;optimistic, adventurous, straightforward&lt;/p&gt;
-
-&lt;p&gt; 摩羯座12.21-1.20 &lt;strong&gt;Capricorn&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;responsible, persistent, disciplined, calm&lt;/p&gt;
-
-&lt;h3 id=&quot;人格特質中文翻譯答案對照&quot;&gt;人格特質中文翻譯答案/對照&lt;/h3&gt;
-
-&lt;p&gt;inventive, clever, humanitarian, friendly
-romantic, devoted, compassionate
-generous, enthusiastic, efficient
-reliable, stable, determined
-witty, creative, eloquent, curious
-intuitive, nurturing, frugal, cautious
-confident, independent, ambitious
-tidy, industrious, calm, a keen intelligence
-diplomatic, easygoing, sociable,
-passionate, resourceful, focused
-optimistic, adventurous, straightforward
-responsible, persistent, disciplined, calm
-創造力，聰明，人道主義，友好
-浪漫，敬業，富有同情心
-大方，熱情，高效
-可靠，穩定，確定
-機智，創意，口才，自信
-直觀，培育，節儉，謹慎
-自信，獨立，有事業心
-整潔，勤勞，冷靜，敏銳的智慧 
-外交，隨和，有點大男子主義，
-熱情，機智，專注
-樂觀，冒險，率直
-負責，執著，嚴謹，沉穩&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Progress, Process, Proceed, Procedure区别</title><link href="http://localhost:4000/english-progress-process-proceed-procedure/" rel="alternate" type="text/html" title="Progress, Process, Proceed, Procedure区别" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-progress-process-proceed-procedure</id><content type="html" xml:base="http://localhost:4000/english-progress-process-proceed-procedure/">&lt;p&gt;&lt;img src=&quot;https://dotcom.nlcdn.com/wp-content/uploads/2017/08/BuildSalesProcess_Featured-1140x768@2x-80-min.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;insistence - 坚持、强调
+persistence - 固执、持久性&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">success, succeed, successful, successor 区别</title><link href="http://localhost:4000/english-success-succeed-successful-successor/" rel="alternate" type="text/html" title="success, succeed, successful, successor 区别" /><published>2020-01-03T00:00:00-08:00</published><updated>2020-01-03T00:00:00-08:00</updated><id>http://localhost:4000/english-success-succeed-successful-successor</id><content type="html" xml:base="http://localhost:4000/english-success-succeed-successful-successor/">&lt;p&gt;&lt;img src=&quot;http://gearingforsuccess.ca/wp-content/uploads/2018/09/success-800x449.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;progress 进步&lt;/p&gt;
+    &lt;p&gt;success n &lt;em&gt;成功&lt;/em&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;process 过程&lt;/p&gt;
+    &lt;p&gt;succeed (in) vi &lt;em&gt;获得成功&lt;/em&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;procedure 步骤&lt;/p&gt;
+    &lt;p&gt;successful adj &lt;em&gt;成功的&lt;/em&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;proceed 继续&lt;/p&gt;
+    &lt;p&gt;successor n &lt;em&gt;继任者 继承者&lt;/em&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
