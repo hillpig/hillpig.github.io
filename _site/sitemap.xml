@@ -93,6 +93,14 @@
 <lastmod>2020-02-02T00:00:00-08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/english-auto-parts/</loc>
+<lastmod>2020-02-03T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/english-speaking-1/</loc>
+<lastmod>2020-02-03T00:00:00-08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/java-spring-transaction/</loc>
 <lastmod>2020-02-03T00:00:00-08:00</lastmod>
 </url>
@@ -116,5 +124,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page3/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page4/</loc>
 </url>
 </urlset>

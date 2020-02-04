@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-03T16:43:42-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Spring boot 事务特性</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-04T09:57:19-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Spring boot 事务特性</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -44,7 +44,325 @@
 
     &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e4da2f477cd8&quot; title=&quot;jianshu's document&quot;&gt;参考链接3&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">status, state, condition, situation 区别</title><link href="http://localhost:4000/english-state-status-situation-condition-circumstance/" rel="alternate" type="text/html" title="status, state, condition, situation 区别" /><published>2020-02-02T00:00:00-08:00</published><updated>2020-02-02T00:00:00-08:00</updated><id>http://localhost:4000/english-state-status-situation-condition-circumstance</id><content type="html" xml:base="http://localhost:4000/english-state-status-situation-condition-circumstance/">&lt;p&gt;&lt;img src=&quot;http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Actual speaking English</title><link href="http://localhost:4000/english-speaking-1/" rel="alternate" type="text/html" title="Actual speaking English" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-speaking-1</id><content type="html" xml:base="http://localhost:4000/english-speaking-1/">&lt;p&gt;&lt;img src=&quot;https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;M: Hey Rachel, how are you?&lt;/p&gt;
+
+&lt;p&gt;W: I’m good but I’m a bit nervous.&lt;/p&gt;
+
+&lt;p&gt;M: Why?&lt;/p&gt;
+
+&lt;p&gt;W: Because I’m starting at a new company in a couple of days, but I don’t really know know to introduce myself to a new group of people.&lt;/p&gt;
+
+&lt;p&gt;M: The first day at a company is nerve-racking, right?&lt;/p&gt;
+
+&lt;p&gt;You meet so many new faces and they all know each other as well. That is evven worse. But there are some things you should do on your first day.&lt;/p&gt;
+
+&lt;p&gt;W: I’d love some advice.&lt;/p&gt;
+
+&lt;p&gt;Note: 
+    nerve-racking: stressful, exhausting&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new faces: new people
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;M: Ok. A firm handshake, that is key, to project confidence, but not too hard, you don’t want to hurt the other person, but not to flimsy as well. I hate a wet flimsy handshake. So if you are feeling nervous and sweaty, perhaps give your hand a wipe as well.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    project: to give or express a clear impression of one’s thoughts or personality; make an image&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;flimsy: weak, without strength, unstable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;W: Clammy hands.&lt;/p&gt;
+
+&lt;p&gt;M: They are going to call you clammy hands at the company.&lt;/p&gt;
+
+&lt;p&gt;W: Alright, so a firm handshake is really important.&lt;/p&gt;
+
+&lt;p&gt;M: And then eye contact as well.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    clammy: cold and damp, covered with moisture; wet, sweaty&lt;/p&gt;
+
+&lt;p&gt;M: And a big smile, I think that always helps, it makes people feel much more comfortable.&lt;/p&gt;
+
+&lt;p&gt;W: Yeah that’s true, that definitely will leave a great first impression.&lt;/p&gt;
+
+&lt;p&gt;M: As long as you don’t have something stuck in your teeth. Again, check.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    to leave an impression (on someone): to provide a lasting memory for someone&lt;/p&gt;
+
+&lt;p&gt;W: I’ll have to get a mirror and check my teeth. That’s for sure. Alright so you’re saying a firm handshake is important, good eye contact, those show that I’m confident and then a friendly smile will show that I’m at ease and that I’m confortable with my surroundings.&lt;/p&gt;
+
+&lt;p&gt;M: Sure, and then maybe the last thing remember people’s names.&lt;/p&gt;
+
+&lt;p&gt;W: Oh, right!&lt;/p&gt;
+
+&lt;p&gt;M: And when you say your name as well, project it loudly so they remember you.&lt;/p&gt;
+
+&lt;p&gt;W: But you know, there’s so many people that I have to meet. How do I remember all their names?&lt;/p&gt;
+
+&lt;p&gt;M: I think writing it down as soon as you can, at the earliest possible opportunity. But I think that’s about it. And I think you’ll be fine, Rachel.&lt;/p&gt;
+
+&lt;p&gt;W: You think so? Alright, well I can’t wait to use that advice on my first day at my new company.&lt;/p&gt;
+
+&lt;p&gt;M: Fingers crossed.&lt;/p&gt;
+
+&lt;p&gt;W: Thank you.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    keep one’s fingers crossed: to wish someone luck; to hope for a good outcome for someone&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Activity
+    &lt;ol&gt;
+      &lt;li&gt;活跃、繁忙( Uncountable) &lt;em&gt;the situation in which a lot of things are happening or people are moving around&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;行动、活动 &lt;em&gt;the work of a group or organization to achieve an aim&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;娱乐活动 &lt;em&gt;something that is done for enjoyment, especially an organized event&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There was a lot of activity in preparation for the Queen’s visit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;He was found guilty of terrorist activity. / criminal activities&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;His spare-time activities include cooking, tennis, and windsurfing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Motion&lt;/p&gt;
+
+    &lt;p&gt;动、运动、移动 &lt;em&gt;the act or process of moving, or a particular action or movement&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;They showed the goal again in slow motion.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motive
+动机 &lt;em&gt;a reason for doing something&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Why would she have killed him? She has no motive.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motivation
+    &lt;ol&gt;
+      &lt;li&gt;积极性、干劲儿 &lt;em&gt;enthusiasm for doing something&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;动机、诱因 &lt;em&gt;the need or reason for doing something&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;He’s a bright enough student - he just lacks motivation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What was the motivation for the attack?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motivate
+    &lt;ol&gt;
+      &lt;li&gt;使产生动机、激起 &lt;em&gt;to cause someone to behave in a particular way&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;激励 &lt;em&gt;to make someone want to do something well&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Like so many people, he’s motivated by greed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Teaching is all about motivating people to learn.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">auto parts</title><link href="http://localhost:4000/english-auto-parts/" rel="alternate" type="text/html" title="auto parts" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-auto-parts</id><content type="html" xml:base="http://localhost:4000/english-auto-parts/">&lt;p&gt;&lt;img src=&quot;https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;front bumper
+rear bumper&lt;/p&gt;
+
+&lt;p&gt;windshield
+windshield wiper&lt;/p&gt;
+
+&lt;p&gt;wiper blade&lt;/p&gt;
+
+&lt;p&gt;splash shield&lt;/p&gt;
+
+&lt;p&gt;filler lid&lt;/p&gt;
+
+&lt;p&gt;headlight
+taillight&lt;/p&gt;
+
+&lt;p&gt;roof&lt;/p&gt;
+
+&lt;p&gt;left blinker
+right blinker&lt;/p&gt;
+
+&lt;p&gt;brake light&lt;/p&gt;
+
+&lt;p&gt;side mirrors&lt;/p&gt;
+
+&lt;p&gt;hood&lt;/p&gt;
+
+&lt;p&gt;trunk&lt;/p&gt;
+
+&lt;p&gt;steering wheel&lt;/p&gt;
+
+&lt;p&gt;car seats&lt;/p&gt;
+
+&lt;p&gt;driver’s seat
+passenger’s seat
+back seat&lt;/p&gt;
+
+&lt;p&gt;back seat driver&lt;/p&gt;
+
+&lt;p&gt;instrument cluster/panel&lt;/p&gt;
+
+&lt;p&gt;galaxy clusters&lt;/p&gt;
+
+&lt;p&gt;odometer&lt;/p&gt;
+
+&lt;p&gt;speedometer&lt;/p&gt;
+
+&lt;p&gt;rear view mirror&lt;/p&gt;
+
+&lt;p&gt;gas pedal
+accelerator&lt;/p&gt;
+
+&lt;p&gt;brake pedal&lt;/p&gt;
+
+&lt;p&gt;automatic car
+stick shift car&lt;/p&gt;
+
+&lt;p&gt;clutch&lt;/p&gt;
+
+&lt;p&gt;center console/armrest&lt;/p&gt;
+
+&lt;p&gt;emergency brake/e-brake/parking brake&lt;/p&gt;
+
+&lt;p&gt;glove compartment/box&lt;/p&gt;
+
+&lt;p&gt;dashboard&lt;/p&gt;
+
+&lt;p&gt;entertainment system&lt;/p&gt;
+
+&lt;p&gt;navigation&lt;/p&gt;
+
+&lt;p&gt;air vent/ventilation&lt;/p&gt;
+
+&lt;p&gt;seatbelt&lt;/p&gt;
+
+&lt;p&gt;seatbelt buckle&lt;/p&gt;
+
+&lt;p&gt;cup holder&lt;/p&gt;
+
+&lt;p&gt;horn&lt;/p&gt;
+
+&lt;p&gt;honk at someone&lt;/p&gt;
+
+&lt;p&gt;shift/gear selector&lt;/p&gt;
+
+&lt;p&gt;starter/ignition&lt;/p&gt;
+
+&lt;p&gt;high beam
+fog light&lt;/p&gt;
+
+&lt;p&gt;air bags&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Activity
+    &lt;ol&gt;
+      &lt;li&gt;活跃、繁忙( Uncountable) &lt;em&gt;the situation in which a lot of things are happening or people are moving around&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;行动、活动 &lt;em&gt;the work of a group or organization to achieve an aim&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;娱乐活动 &lt;em&gt;something that is done for enjoyment, especially an organized event&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There was a lot of activity in preparation for the Queen’s visit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;He was found guilty of terrorist activity. / criminal activities&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;His spare-time activities include cooking, tennis, and windsurfing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Motion&lt;/p&gt;
+
+    &lt;p&gt;动、运动、移动 &lt;em&gt;the act or process of moving, or a particular action or movement&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;They showed the goal again in slow motion.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motive
+动机 &lt;em&gt;a reason for doing something&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Why would she have killed him? She has no motive.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motivation
+    &lt;ol&gt;
+      &lt;li&gt;积极性、干劲儿 &lt;em&gt;enthusiasm for doing something&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;动机、诱因 &lt;em&gt;the need or reason for doing something&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;He’s a bright enough student - he just lacks motivation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What was the motivation for the attack?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motivate
+    &lt;ol&gt;
+      &lt;li&gt;使产生动机、激起 &lt;em&gt;to cause someone to behave in a particular way&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;激励 &lt;em&gt;to make someone want to do something well&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Like so many people, he’s motivated by greed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Teaching is all about motivating people to learn.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">status, state, condition, situation 区别</title><link href="http://localhost:4000/english-state-status-situation-condition-circumstance/" rel="alternate" type="text/html" title="status, state, condition, situation 区别" /><published>2020-02-02T00:00:00-08:00</published><updated>2020-02-02T00:00:00-08:00</updated><id>http://localhost:4000/english-state-status-situation-condition-circumstance</id><content type="html" xml:base="http://localhost:4000/english-state-status-situation-condition-circumstance/">&lt;p&gt;&lt;img src=&quot;http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1415,153 +1733,4 @@ My dearest&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e4da2f477cd8&quot; title=&quot;jianshu's document&quot;&gt;参考链接3&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Android" /><summary type="html"></summary></entry><entry><title type="html">laugh, smile, siggle, grin, beam, sneer 区别</title><link href="http://localhost:4000/english-laugh-smile-siggle-grin-beam-sneer/" rel="alternate" type="text/html" title="laugh, smile, siggle, grin, beam, sneer 区别" /><published>2020-01-22T00:00:00-08:00</published><updated>2020-01-22T00:00:00-08:00</updated><id>http://localhost:4000/english-laugh-smile-siggle-grin-beam-sneer</id><content type="html" xml:base="http://localhost:4000/english-laugh-smile-siggle-grin-beam-sneer/">&lt;p&gt;&lt;img src=&quot;http://www.beautiful-women-pedia.com/images/woman-smiling-text-photo.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;laugh : 最常用词，指因喜悦、愉快或轻视而出声的笑或大笑。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;smile : 指面露微笑，侧重于无声。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;siggle : 指发出咯咯的笑声，较多地用于女人或孩子。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;grin : 指露齿而笑。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;beam : 书面用词，指人因心情舒畅而发出的笑，即喜形于色地笑。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;sneer : 指冷笑、嘲笑。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;chuckle : 轻声笑&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;snicker : 忍笑&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;roar : 哄笑&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;simper : 假笑&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;cachinnate : 放声大笑&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Choose, select, pick, elect, prefer, opt 区别</title><link href="http://localhost:4000/english-choose-select-pick-elect-opt-prefer/" rel="alternate" type="text/html" title="Choose, select, pick, elect, prefer, opt 区别" /><published>2020-01-21T00:00:00-08:00</published><updated>2020-01-21T00:00:00-08:00</updated><id>http://localhost:4000/english-choose-select-pick-elect-opt-prefer</id><content type="html" xml:base="http://localhost:4000/english-choose-select-pick-elect-opt-prefer/">&lt;p&gt;&lt;img src=&quot;http://jacobspradlin.files.wordpress.com/2013/08/choosetech.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;choose
- 这是很平常的普通用词，侧重于根据个人的意愿和判断在众多的对象中进行选择，较为看重别选者的优点，但是这个词会强调在选择的过程中所下的决心。&lt;/p&gt;
-
-    &lt;p&gt;普通用词，主要表达个人意愿和判断大多数人的选择&lt;/p&gt;
-
-    &lt;p&gt;例如：&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;They will be able to choose their own leaders in democratic elections.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;The local shops have been marked in on this map so that people can choose a house in a suitable area.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;pick
- 这个就是很常见的口语用词，大多数情况指的是从个人角度进行仔细的挑选，也含有任意的进行挑选，也就是不需要进行仔细的挑选或进行辨别。&lt;/p&gt;
-
-    &lt;p&gt;口语用词，指从个人的一主观仔细挑选，比较随意的挑选&lt;/p&gt;
-
-    &lt;p&gt;例如：&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Mr. Nowell had picked ten people to interview for six sales jobs in Dallas.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;If your proposed syntax picks one of them then you need to give me a syntax to pick the others.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;select
- 在写作中用这个词应该是会比较多的，因为这是个书面用语，在使用的时候，有时是会具有庄严、正式的感情色彩，所强调的是在认真的考虑之后，从很多的人或者物里面精心选出最好的，最中意的。&lt;/p&gt;
-
-    &lt;p&gt;书面用词，用于庄严、正式的场合，强调精选&lt;/p&gt;
-
-    &lt;p&gt;例如：&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Voters are selecting candidates for both U.S. Senate seats and for 52 congressional seats.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;But within one data set you can view it in a number of different formats and select from a range of different variables.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;elect
- 别看它比select少了个‘S’，但是这也是一个选择，这个一般指的是按照一定的规章或法律，在一定的范围里面，在有限的数量中，用投票等等的方式所进行的认真、慎重的选择。&lt;/p&gt;
-
-    &lt;p&gt;指按一定的规章或法律，用投票等方式进行的认真、慎重的选择&lt;/p&gt;
-
-    &lt;p&gt;例如：&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;The people of the Philippines have voted to elect a new president.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;In many cases we need also to take account of the responsibility of patients for their own health, and voters for the governments they elect.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;prefer
- 这个选择说是选择，其实也可以说不是选择，其所强调的是因为个人的偏爱所做的选择，但是不一定会有选择的行动。&lt;/p&gt;
-
-    &lt;p&gt;强调个人偏爱，但不一定有选择的行为。&lt;/p&gt;
-
-    &lt;p&gt;例如：&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I became a teacher because I preferred books and people to politics.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;She chose Spain, but personally I’d prefer to go to France.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;opt
- 这个选择的范围是比较小的，一般都是指在几种可能性之间进行的选择。&lt;/p&gt;
-
-    &lt;p&gt;多指在几种可能性之间进行选择。&lt;/p&gt;
-
-    &lt;p&gt;例如：&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;After graduating she opted for a career in music.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Employees may opt out of the company’s pension plan.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;single
- 这个选择算得上是精挑细选，强调的是从若干的人或者物中，很慎重的挑选出符合要求的人或者物。&lt;/p&gt;
-
-    &lt;p&gt;例如：&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;He was singled out to succeed his uncle.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><category term="Android" /><summary type="html"></summary></entry></feed>
