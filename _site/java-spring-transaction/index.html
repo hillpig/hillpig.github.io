@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Spring boot 事务特性 – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Spring boot 事务特性" />
+    <meta property="twitter:title" content="Spring boot 事务特性" />
     
   <!-- Async font loading -->
 <script>
@@ -151,312 +158,116 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Spring boot 事务特性</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-02-03
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/tags#Spring boot">
+          Spring boot
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg" alt="img" /></p>
+
+<!-- more -->
+
+<ol>
+  <li>
+    <p>修改AndroidManifest.xml文件，添加渠道名称变量</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         <span class="c">&lt;!--value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量--&gt;</span>
+         <span class="nt">&lt;meta-data</span> <span class="na">android:value=</span><span class="s">"${UMENG_CHANNEL_VALUE}"</span> <span class="na">android:name=</span><span class="s">"UMENG_CHANNEL"</span><span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>修改app的build.gradle文件，添加所需要的渠道</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="cm">/*配置渠道*/</span>
+     <span class="n">productFlavors</span> <span class="o">{</span>
+         <span class="n">yingyongbao</span> <span class="o">{</span>
+             <span class="n">manifestPlaceholders</span> <span class="o">=</span> <span class="o">[</span><span class="nl">UMENG_CHANNEL_VALUE:</span> <span class="s">"yingyongbao"</span><span class="o">]</span>
+         <span class="o">}</span>
+         <span class="n">wandoujia</span> <span class="o">{</span>
+             <span class="n">manifestPlaceholders</span> <span class="o">=</span> <span class="o">[</span><span class="nl">UMENG_CHANNEL_VALUE:</span> <span class="s">"wandoujia"</span><span class="o">]</span>
+         <span class="o">}</span>
+         <span class="n">xiaomi</span> <span class="o">{</span>
+             <span class="n">manifestPlaceholders</span> <span class="o">=</span> <span class="o">[</span><span class="nl">UMENG_CHANNEL_VALUE:</span> <span class="s">"xiaomi"</span><span class="o">]</span>
+         <span class="o">}</span>
+     <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>如果遇到一下错误，可以参考google文档修改解决</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     Error:All flavors must now belong to a named flavor dimension.
+     The flavor <span class="s1">'flavor_name'</span> is not assigned to a flavor dimension.
+</code></pre></div>    </div>
+    <p>在build.gradle文件的defaultConfig段落中添加</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="n">flavorDimensions</span> <span class="s">"versionCode"</span>
+</code></pre></div>    </div>
+
+    <p><a href="https://developer.android.com/studio/build/build-variants?utm_source=android-studio#product-flavors" title="Google's document">参考链接1</a></p>
+
+    <p><a href="https://www.cnblogs.com/WUXIAOCHANG/p/10683942.html" title="cnblogs's document">参考链接2</a></p>
+
+    <p><a href="https://www.jianshu.com/p/e4da2f477cd8" title="jianshu's document">参考链接3</a></p>
+  </li>
+</ol>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-transaction/">Spring boot 事务特性</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Spring boot 事务特性",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-transaction/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-state-status-situation-condition-circumstance/">status, state, condition, situation 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-02
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-state-status-situation-condition-circumstance/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-trading-email/">外贸邮件英文模版</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.magvision.com/uploads/allimg/190304/1-1Z30416331U05.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-trading-email/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-email/">英文邮件</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.learnenglishwithwill.com/wp-content/uploads/2019/04/emails-040419.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-email/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-bean/">什么是Spring boot中的 bean</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-27
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-bean/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-even-if-though/">even, even if, even though 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-27
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.liberaldictionary.com/wp-content/uploads/2019/01/even.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-even-if-though/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-I-think/">21 more advanced alternative phrases of "I think ..."</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-27
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://discoveryinaction.com.au/wp-content/uploads/2019/09/image-1.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-I-think/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-laugh-smile-siggle-grin-beam-sneer/">laugh, smile, siggle, grin, beam, sneer 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-22
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.beautiful-women-pedia.com/images/woman-smiling-text-photo.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-laugh-smile-siggle-grin-beam-sneer/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-  
-    <span class="next">
-      <a href="/page2/" class="next">
-        下一页 →
+    <span class="prev" >
+      <a href="http://localhost:4000/english-state-status-situation-condition-circumstance/">
+        ← 上一篇
       </a>
     </span>
   
+  
 </div>
-
       </div>
     </div>
 

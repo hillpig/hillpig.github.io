@@ -108,7 +108,7 @@ id sem consectetuer libero luctus adipiscing.
 有序列表只需要将上述标记符换成数字加句点。而且顺序由书写顺序决定，与数字无关，但数字需要从1开始。例如：
 
 ```
-1\.  Bird
+1.  Bird
 3.  McHale
 2.  Parish
 
