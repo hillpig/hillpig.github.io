@@ -4,44 +4,131 @@
 
 <ol>
   <li>
-    <p>修改AndroidManifest.xml文件，添加渠道名称变量</p>
+    <h2 id="overview">Overview</h2>
 
-    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         <span class="c">&lt;!--value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量--&gt;</span>
-         <span class="nt">&lt;meta-data</span> <span class="na">android:value=</span><span class="s">"${UMENG_CHANNEL_VALUE}"</span> <span class="na">android:name=</span><span class="s">"UMENG_CHANNEL"</span><span class="nt">/&gt;</span>
-</code></pre></div>    </div>
+    <p>Bean is a key concept of the Spring Framework. As such, understanding this notion is crucial to get the hang of the framework and to use it in an effective way.</p>
+
+    <p>Unfortunately, <strong>there aren’t clear answers to a simple question – what a Spring bean really is.</strong> Some explanations go to such a low level that a big picture is missed, whereas some are too vague.</p>
   </li>
   <li>
-    <p>修改app的build.gradle文件，添加所需要的渠道</p>
+    <h2 id="bean-definition">Bean Definition</h2>
+    <p>Here’s a definition of beans in <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-introduction" title="the Spring Framework documentation">the Spring Framework documentation</a>:</p>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="cm">/*配置渠道*/</span>
-     <span class="n">productFlavors</span> <span class="o">{</span>
-         <span class="n">yingyongbao</span> <span class="o">{</span>
-             <span class="n">manifestPlaceholders</span> <span class="o">=</span> <span class="o">[</span><span class="nl">UMENG_CHANNEL_VALUE:</span> <span class="s">"yingyongbao"</span><span class="o">]</span>
-         <span class="o">}</span>
-         <span class="n">wandoujia</span> <span class="o">{</span>
-             <span class="n">manifestPlaceholders</span> <span class="o">=</span> <span class="o">[</span><span class="nl">UMENG_CHANNEL_VALUE:</span> <span class="s">"wandoujia"</span><span class="o">]</span>
-         <span class="o">}</span>
-         <span class="n">xiaomi</span> <span class="o">{</span>
-             <span class="n">manifestPlaceholders</span> <span class="o">=</span> <span class="o">[</span><span class="nl">UMENG_CHANNEL_VALUE:</span> <span class="s">"xiaomi"</span><span class="o">]</span>
-         <span class="o">}</span>
+    <p><em>In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.</em></p>
+
+    <p>This definition is concise and gets to the point, <strong>but misses an important thing – Spring IoC container.</strong> Let’s go down the rabbit hole to see what it is and the benefits it brings in.</p>
+  </li>
+  <li>
+    <h2 id="inversion-of-control">Inversion of Control</h2>
+
+    <p>Simply put, <a href="https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring" title="Inversion of Control">Inversion of Control</a>, or IoC for short, is a process in which an object defines its dependencies without creating them. This object delegates the job of constructing such dependencies to an IoC container.</p>
+
+    <p>Let’s start with the declaration of a couple of domain classes before diving into IoC.</p>
+
+    <ul>
+      <li>
+        <h3 id="domain-classes">Domain Classes</h3>
+      </li>
+    </ul>
+
+    <p>Assume we have a class declaration:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Company</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">Address</span> <span class="n">address</span><span class="o">;</span>
+ 
+     <span class="kd">public</span> <span class="nf">Company</span><span class="o">(</span><span class="nc">Address</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+ <span class="o">}</span>
+ 
+     <span class="c1">// getter, setter and other properties</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>This class needs a collaborator of type Address:</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Address</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">street</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">number</span><span class="o">;</span>
+    
+     <span class="kd">public</span> <span class="nf">Address</span><span class="o">(</span><span class="nc">String</span> <span class="n">street</span><span class="o">,</span> <span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">street</span> <span class="o">=</span> <span class="n">street</span><span class="o">;</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">number</span> <span class="o">=</span> <span class="n">number</span><span class="o">;</span>
      <span class="o">}</span>
+    
+     <span class="c1">// getters and setters</span>
+ <span class="o">}</span>
 </code></pre></div>    </div>
+    <ul>
+      <li>
+        <h3 id="tranditional-approach">Tranditional Approach</h3>
+      </li>
+    </ul>
+
+    <p>Normally, we create objects with their classes’ constructors:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">Address</span> <span class="n">address</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Address</span><span class="o">(</span><span class="s">"High Street"</span><span class="o">,</span> <span class="mi">1000</span><span class="o">);</span>
+ <span class="nc">Company</span> <span class="n">company</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Company</span><span class="o">(</span><span class="n">address</span><span class="o">);</span>
+</code></pre></div>    </div>
+
+    <p>There’s nothing wrong with this approach, but wouldn’t it be nice to manage the dependencies in a better way?</p>
+
+    <p>Imagine an application with dozens or even hundreds of classes. Sometimes we want to share a single instance of a class across the whole application, other times we need a separate object for each use case, and so on.</p>
+
+    <p>Managing such a number of objects is nothing short of a nightmare. <strong>This is where Inversion of Control comes to the rescue.</strong></p>
+
+    <p>Instead of constructing dependencies by itself, an object can retrieve its dependencies from an IoC container. <strong>All we need to do is to provide the container with appropriate configuration metadata.</strong></p>
+
+    <ul>
+      <li>
+        <h3 id="bean-configuration">Bean configuration</h3>
+      </li>
+    </ul>
+
+    <p>First off, let’s decorate the Company class with the <em>@Component annotation:</em></p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Component</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Company</span> <span class="o">{</span>
+     <span class="c1">// this body is the same as before</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+    <p>Here’s a configuration class supplying bean metadata to an IoC container:</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Configuration</span>
+ <span class="nd">@ComponentScan</span><span class="o">(</span><span class="n">basePackageClasses</span> <span class="o">=</span> <span class="nc">Company</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Config</span> <span class="o">{</span>
+     <span class="nd">@Bean</span>
+     <span class="kd">public</span> <span class="nc">Address</span> <span class="nf">getAddress</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="k">new</span> <span class="nf">Address</span><span class="o">(</span><span class="s">"High Street"</span><span class="o">,</span> <span class="mi">1000</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>The configuration class produces a bean of type <em>Address</em>. It also carries the <em>@ComponentScan annotation</em>, which instructs the container to looks for beans in the package containing the <em>Company class</em>.</p>
+
+    <p><strong>When a Spring IoC container constructs objects of those types, all the objects are called Spring beans as they are managed by the IoC container.</strong></p>
+
+    <ul>
+      <li>
+        <h3 id="ioc-in-action">IoC in Action</h3>
+      </li>
+    </ul>
+
+    <p>Since we defined beans in a configuration class, <strong>we’ll need an instance of the AnnotationConfigApplicationContext class to build up a container:</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AnnotationConfigApplicationContext</span><span class="o">(</span><span class="nc">Config</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre></div>    </div>
+
+    <p>A quick test verifies the existence as well as property values of our beans:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">Company</span> <span class="n">company</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"company"</span><span class="o">,</span> <span class="nc">Company</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+ <span class="n">assertEquals</span><span class="o">(</span><span class="s">"High Street"</span><span class="o">,</span> <span class="n">company</span><span class="o">.</span><span class="na">getAddress</span><span class="o">().</span><span class="na">getStreet</span><span class="o">());</span>
+ <span class="n">assertEquals</span><span class="o">(</span><span class="mi">1000</span><span class="o">,</span> <span class="n">company</span><span class="o">.</span><span class="na">getAddress</span><span class="o">().</span><span class="na">getNumber</span><span class="o">());</span>
+</code></pre></div>    </div>
+
+    <p>The result proves that the IoC container has created and initialized beans correctly.</p>
   </li>
   <li>
-    <p>如果遇到一下错误，可以参考google文档修改解决</p>
+    <h2 id="conclusion">Conclusion</h2>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     Error:All flavors must now belong to a named flavor dimension.
-     The flavor <span class="s1">'flavor_name'</span> is not assigned to a flavor dimension.
-</code></pre></div>    </div>
-    <p>在build.gradle文件的defaultConfig段落中添加</p>
+    <p>This tutorial gave a brief description of Spring beans and their relationship with an IoC container.</p>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="n">flavorDimensions</span> <span class="s">"versionCode"</span>
-</code></pre></div>    </div>
-
-    <p><a href="https://developer.android.com/studio/build/build-variants?utm_source=android-studio#product-flavors" title="Google's document">参考链接1</a></p>
-
-    <p><a href="https://www.cnblogs.com/WUXIAOCHANG/p/10683942.html" title="cnblogs's document">参考链接2</a></p>
-
-    <p><a href="https://www.jianshu.com/p/e4da2f477cd8" title="jianshu's document">参考链接3</a></p>
+    <p>The complete source code for this tutorial can be found over on <a href="https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring" title="GitHub">GitHub</a>.</p>
   </li>
 </ol>

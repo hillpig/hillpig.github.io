@@ -1,0 +1,47 @@
+<p><img src="https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;ssl=1" alt="img" /></p>
+
+<!-- more -->
+
+<ul>
+  <li>@PostMapping – Handle HTTP POST Requests</li>
+  <li>@GetMapping – Handle HTTP Get Requests</li>
+  <li>@PutMapping – Handle HTTP Put Requests</li>
+  <li>@DeleteMapping – Handle HTTP Delete Requests</li>
+</ul>
+
+<p>Additionally to the above-mentioned shortcut annotations, you can use the @RequestMapping annotation which you will most probably find in most of the Spring MVC REST Web Service projects. You can use this single @RequestMapping annotation to map any request to a specific method.</p>
+
+<p><strong>A few HTTP GET request mapping examples:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">)</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">)</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="o">{</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">,</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_XML_VALUE</span><span class="o">})</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">"/{id}"</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="o">{</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">,</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_XML_VALUE</span><span class="o">})</span>
+</code></pre></div></div>
+
+<p><strong>To map HTTP Post request to a method, we just need to change the Request Method type:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">consumes</span><span class="o">=</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">)</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">"/{id}"</span><span class="o">,</span> <span class="n">consumes</span><span class="o">=</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>Please note that if you need your Web Service endpoint to be able to return information in either XML or JSON format. Depending on the value of the Accept Header. Then you need you use the curly brackets {} and list the supported media types like so:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">"/{id}"</span><span class="o">,</span> <span class="n">consumes</span> <span class="o">=</span> <span class="o">{</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">,</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_XML_VALUE</span><span class="o">},</span> <span class="n">produces</span> <span class="o">=</span> <span class="o">{</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON_VALUE</span><span class="o">,</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_XML_VALUE</span><span class="o">})</span>
+</code></pre></div></div>
+
+<p>Note: Note that if you want your Web Service endpoint to return MediaType.APPLICATION_XML_VALUE then your HTTP Request must contain the Accept header with a value application/xml like in the curl example below:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">    curl -X GET \
+    http://localhost:8080/users/Ow8EG5GAvkCa9kEHGqLTQpR32zSmhd /
+    -H 'accept: application/xml' /
+    -H 'authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTIzMDMwNTg4fQ.rnOqIEpmh6xQYBPkcRHp9DOnT8M5a7o9De6a7ZE7z2nBKfNpgXNrXgFQnlUi01CnltOP-iXyprsGhB4wvkafcg'
+</span></code></pre></div></div>

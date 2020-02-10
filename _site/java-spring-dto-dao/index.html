@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Spring boot - DTO vs DAO – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Spring boot - DTO vs DAO" />
+    <meta property="twitter:title" content="Spring boot - DTO vs DAO" />
     
   <!-- Async font loading -->
 <script>
@@ -151,312 +158,130 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Spring boot - DTO vs DAO</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-02-05
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/tags#Spring boot">
+          Spring boot
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://i.stack.imgur.com/3XnBN.png" alt="img" /></p>
+
+<!-- more -->
+
+<p>Data Access Object (DAO)
+Data Transfer Object (DTO)</p>
+
+<ol>
+  <li>
+    <p>Data Access Object (DAO)</p>
+
+    <p>DAO is a class that usually has operations like save, update, delete. Whereas the DTO is just an object that holds data.</p>
+
+    <p>The advantage of the DAO layer is that if you need to change the underlying persistence mechanism you only have to change the DAO layer, and not all the places in the domain logic where the DAO layer is used from.</p>
+
+    <p>The advantage of DTO layer is that it adds a good deal of flexibility to the service layer and subsequently to the design of the entire application</p>
+  </li>
+  <li>
+    <p>Data Transfer Object (DTO)</p>
+
+    <p>The DTO is used to expose several values in a bean like fashion. This provides a light-weight mechanism to transfer values over a network or between different application tiers.</p>
+
+    <p>DTO will be passed as value object to DAO layer and DAO layer will use this object to persist data using its CRUD operation methods.</p>
+  </li>
+</ol>
+
+<p>DTO is an abbreviation for Data Transfer Object, so it is used to transfer the data between classes and modules of your application.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DTO should only contain private fields for your data, getters, setters, and constructors.
+DTO is not recommended to add business logic methods to such classes, but it is OK to add some util methods.
+</code></pre></div></div>
+
+<p>DAO is an abbreviation for Data Access Object, so it should encapsulate the logic for retrieving, saving and updating data in your data storage (a database, a file-system, whatever).</p>
+
+<p>Here is an example of how the DAO and DTO interfaces would look like:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">PersonDTO</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="nf">getName</span><span class="o">();</span>
+    <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+    <span class="c1">//.....</span>
+<span class="o">}</span>
+
+<span class="kd">interface</span> <span class="nc">PersonDAO</span> <span class="o">{</span>
+    <span class="nc">PersonDTO</span> <span class="nf">findById</span><span class="o">(</span><span class="kt">long</span> <span class="n">id</span><span class="o">);</span>
+    <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">PersonDTO</span> <span class="n">person</span><span class="o">);</span>
+    <span class="c1">//.....</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The MVC is a wider pattern. The DTO/DAO would be your model in the MVC pattern.
+It tells you how to organize the whole application, not just the part responsible for data retrieval.</p>
+
+<p>As for the second question, if you have a small application it is completely OK, however, if you want to follow the MVC pattern it would be better to have a separate controller, which would contain the business logic for your frame in a separate class and dispatch messages to this controller from the event handlers.
+This would separate your business logic from the view.</p>
 
 
+  </div>
 
-<div class="posts">
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-trading-email/">外贸邮件英文模版</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Spring boot - DTO vs DAO",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.magvision.com/uploads/allimg/190304/1-1Z30416331U05.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-trading-email/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-email/">英文邮件</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.learnenglishwithwill.com/wp-content/uploads/2019/04/emails-040419.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-email/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-bean/">什么是Spring boot中的 bean</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-27
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-bean/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-even-if-though/">even, even if, even though 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-27
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.liberaldictionary.com/wp-content/uploads/2019/01/even.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-even-if-though/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-I-think/">21 more advanced alternative phrases of "I think ..."</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-27
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://discoveryinaction.com.au/wp-content/uploads/2019/09/image-1.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-I-think/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-laugh-smile-siggle-grin-beam-sneer/">laugh, smile, siggle, grin, beam, sneer 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-22
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.beautiful-women-pedia.com/images/woman-smiling-text-photo.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-laugh-smile-siggle-grin-beam-sneer/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/android-apk/">Android 友盟多渠道打包</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-22
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Android">
-              Android
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.ritavpn.com/blog/wp-content/uploads/2019/12/Best-APK-Download-Sites-for-2020.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/android-apk/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-choose-select-pick-elect-opt-prefer/">Choose, select, pick, elect, prefer, opt 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-21
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://jacobspradlin.files.wordpress.com/2013/08/choosetech.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-choose-select-pick-elect-opt-prefer/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/java-spring-annotation-transient/">
+        ← 上一篇
       </a>
     </span>
   
   
-    <span class="next">
-      <a href="/page3/" class="next">
-        下一页 →
+    <span class="next" >
+      <a href="http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping/">
+        下一篇 →
       </a>
     </span>
   
 </div>
-
       </div>
     </div>
 

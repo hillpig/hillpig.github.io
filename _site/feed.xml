@@ -1,4 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-05T12:30:35-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Spring boot - @transient</title><link href="http://localhost:4000/java-spring-annotation-transient/" rel="alternate" type="text/html" title="Spring boot - @transient" /><published>2020-02-05T00:00:00-08:00</published><updated>2020-02-05T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-annotation-transient</id><content type="html" xml:base="http://localhost:4000/java-spring-annotation-transient/">&lt;p&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-09T00:41:53-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">HTTP - Get, Post, Put, Delete</title><link href="http://localhost:4000/http-get-post-delete/" rel="alternate" type="text/html" title="HTTP - Get, Post, Put, Delete" /><published>2020-02-08T00:00:00-08:00</published><updated>2020-02-08T00:00:00-08:00</updated><id>http://localhost:4000/http-get-post-delete</id><content type="html" xml:base="http://localhost:4000/http-get-post-delete/">&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/assertible/blog/swagger-petstore-store-endpoints.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;em&gt;Using HTTP Methods for RESTful Services&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The HTTP verbs comprise a major portion of our “uniform interface” constraint and provide us the action counterpart to the noun-based resource. The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are POST, GET, PUT, PATCH, and DELETE. These correspond to create, read, update, and delete (or CRUD) operations, respectively. There are a number of other verbs, too, but are utilized less frequently. Of those less-frequent methods, OPTIONS and HEAD are used more often than others.&lt;/p&gt;
+
+&lt;p&gt;Below is a table summarizing recommended return values of the primary HTTP methods in combination with the resource URIs:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;HTTP Verb&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;CRUD&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Entire Collection (e.g. /customers)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Specific Item (e.g. /customers/{id})&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;POST&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Create&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;201 (Created), ‘Location’ header with link to /customers/{id} containing new ID.&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;404 (Not Found), 409 (Conflict) if resource already exists..&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;GET&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Read&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK), list of customers. Use pagination, sorting and filtering to navigate big lists.&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK), single customer. 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PUT&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Update/Replace&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;405 (Method Not Allowed), unless you want to update/replace every resource in the entire collection.&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PATCH&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Update/Modify&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;405 (Method Not Allowed), unless you want to modify the collection itself.&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DELETE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Delete&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;405 (Method Not Allowed), unless you want to delete the whole collection—not often desirable.&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK). 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Below is a more-detailed discussion of the main HTTP methods. Click on a tab for more information about the desired HTTP method.&lt;/p&gt;
+
+&lt;p&gt;The POST verb is most-often utilized to &lt;strong&gt;create&lt;/strong&gt; new resources. In particular, it’s used to create subordinate resources. That is, subordinate to some other (e.g. parent) resource. In other words, when creating a new resource, POST to the parent and the service takes care of associating the new resource with the parent, assigning an ID (new resource URI), etc.&lt;/p&gt;
+
+&lt;p&gt;On successful creation, return HTTP status 201, returning a Location header with a link to the newly-created resource with the 201 HTTP status.&lt;/p&gt;
+
+&lt;p&gt;POST is neither safe nor idempotent. It is therefore recommended for non-idempotent resource requests. Making two identical POST requests will most-likely result in two resources containing the same information.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;POST http://www.example.com/customers
+   POST http://www.example.com/customers/12345/orders&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The HTTP GET method is used to &lt;strong&gt;read&lt;/strong&gt; (or retrieve) a representation of a resource. In the “happy” (or non-error) path, GET returns a representation in XML or JSON and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).&lt;/p&gt;
+
+&lt;p&gt;According to the design of the HTTP specification, GET (along with HEAD) requests are used only to read data and not change it. Therefore, when used this way, they are considered safe. That is, they can be called without risk of data modification or corruption—calling it once has the same effect as calling it 10 times, or none at all. Additionally, GET (and HEAD) is idempotent, which means that making multiple identical requests ends up having the same result as a single request.&lt;/p&gt;
+
+&lt;p&gt;Do not expose unsafe operations via GET—it should never modify any resources on the server.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;GET http://www.example.com/customers/12345
+   GET http://www.example.com/customers/12345/orders
+   GET http://www.example.com/buckets/sample&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;PUT is most-often utilized for &lt;strong&gt;update&lt;/strong&gt; capabilities, PUT-ing to a known resource URI with the request body containing the newly-updated representation of the original resource.&lt;/p&gt;
+
+&lt;p&gt;However, PUT can also be used to create a resource in the case where the resource ID is chosen by the client instead of by the server. In other words, if the PUT is to a URI that contains the value of a non-existent resource ID. Again, the request body contains a resource representation. Many feel this is convoluted and confusing. Consequently, this method of creation should be used sparingly, if at all.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, use POST to create new resources and provide the client-defined ID in the body representation—presumably to a URI that doesn’t include the ID of the resource (see POST below).&lt;/p&gt;
+
+&lt;p&gt;On successful update, return 200 (or 204 if not returning any content in the body) from a PUT. If using PUT for create, return HTTP status 201 on successful creation. A body in the response is optional—providing one consumes more bandwidth. It is not necessary to return a link via a Location header in the creation case since the client already set the resource ID.&lt;/p&gt;
+
+&lt;p&gt;PUT is not a safe operation, in that it modifies (or creates) state on the server, but it is idempotent. In other words, if you create or update a resource using PUT and then make that same call again, the resource is still there and still has the same state as it did with the first call.&lt;/p&gt;
+
+&lt;p&gt;If, for instance, calling PUT on a resource increments a counter within the resource, the call is no longer idempotent. Sometimes that happens and it may be enough to document that the call is not idempotent. However, it’s recommended to keep PUT requests idempotent. It is strongly recommended to use POST for non-idempotent requests.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;PUT http://www.example.com/customers/12345
+   PUT http://www.example.com/customers/12345/orders/98765
+   PUT http://www.example.com/buckets/secret_stuff&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;PATCH is used for &lt;strong&gt;modify&lt;/strong&gt; capabilities. The PATCH request only needs to contain the changes to the resource, not the complete resource.&lt;/p&gt;
+
+&lt;p&gt;This resembles PUT, but the body contains a set of instructions describing how a resource currently residing on the server should be modified to produce a new version. This means that the PATCH body should not just be a modified part of the resource, but in some kind of patch language like JSON Patch or XML Patch.&lt;/p&gt;
+
+&lt;p&gt;PATCH is neither safe nor idempotent. However, a PATCH request can be issued in such a way as to be idempotent, which also helps prevent bad outcomes from collisions between two PATCH requests on the same resource in a similar time frame. Collisions from multiple PATCH requests may be more dangerous than PUT collisions because some patch formats need to operate from a known base-point or else they will corrupt the resource. Clients using this kind of patch application should use a conditional request such that the request will fail if the resource has been updated since the client last accessed the resource. For example, the client can use a strong ETag in an If-Match header on the PATCH request.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;PATCH http://www.example.com/customers/12345
+   PATCH http://www.example.com/customers/12345/orders/98765
+   PATCH http://www.example.com/buckets/secret_stuff&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;DELETE is pretty easy to understand. It is used to &lt;strong&gt;delete&lt;/strong&gt; a resource identified by a URI.&lt;/p&gt;
+
+&lt;p&gt;On successful deletion, return HTTP status 200 (OK) along with a response body, perhaps the representation of the deleted item (often demands too much bandwidth), or a wrapped response (see Return Values below). Either that or return HTTP status 204 (NO CONTENT) with no response body. In other words, a 204 status with no body, or the JSEND-style response and HTTP status 200 are the recommended responses.&lt;/p&gt;
+
+&lt;p&gt;HTTP-spec-wise, DELETE operations are idempotent. If you DELETE a resource, it’s removed. Repeatedly calling DELETE on that resource ends up the same: the resource is gone. If calling DELETE say, decrements a counter (within the resource), the DELETE call is no longer idempotent. As mentioned previously, usage statistics and measurements may be updated while still considering the service idempotent as long as no resource data is changed. Using POST for non-idempotent resource requests is recommended.&lt;/p&gt;
+
+&lt;p&gt;There is a caveat about DELETE idempotence, however. Calling DELETE on a resource a second time will often return a 404 (NOT FOUND) since it was already removed and therefore is no longer findable. This, by some opinions, makes DELETE operations no longer idempotent, however, the end-state of the resource is the same. Returning a 404 is acceptable and communicates accurately the status of the call.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DELETE http://www.example.com/customers/12345
+   DELETE http://www.example.com/customers/12345/orders
+   DELETE http://www.example.com/bucket/sample&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="http" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - DTO vs DAO</title><link href="http://localhost:4000/java-spring-dto-dao/" rel="alternate" type="text/html" title="Spring boot - DTO vs DAO" /><published>2020-02-05T00:00:00-08:00</published><updated>2020-02-05T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-dto-dao</id><content type="html" xml:base="http://localhost:4000/java-spring-dto-dao/">&lt;p&gt;&lt;img src=&quot;https://i.stack.imgur.com/3XnBN.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Data Access Object (DAO)
+Data Transfer Object (DTO)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Data Access Object (DAO)&lt;/p&gt;
+
+    &lt;p&gt;DAO is a class that usually has operations like save, update, delete. Whereas the DTO is just an object that holds data.&lt;/p&gt;
+
+    &lt;p&gt;The advantage of the DAO layer is that if you need to change the underlying persistence mechanism you only have to change the DAO layer, and not all the places in the domain logic where the DAO layer is used from.&lt;/p&gt;
+
+    &lt;p&gt;The advantage of DTO layer is that it adds a good deal of flexibility to the service layer and subsequently to the design of the entire application&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Data Transfer Object (DTO)&lt;/p&gt;
+
+    &lt;p&gt;The DTO is used to expose several values in a bean like fashion. This provides a light-weight mechanism to transfer values over a network or between different application tiers.&lt;/p&gt;
+
+    &lt;p&gt;DTO will be passed as value object to DAO layer and DAO layer will use this object to persist data using its CRUD operation methods.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;DTO is an abbreviation for Data Transfer Object, so it is used to transfer the data between classes and modules of your application.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DTO should only contain private fields for your data, getters, setters, and constructors.
+DTO is not recommended to add business logic methods to such classes, but it is OK to add some util methods.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;DAO is an abbreviation for Data Access Object, so it should encapsulate the logic for retrieving, saving and updating data in your data storage (a database, a file-system, whatever).&lt;/p&gt;
+
+&lt;p&gt;Here is an example of how the DAO and DTO interfaces would look like:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PersonDTO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//.....&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PersonDAO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;PersonDTO&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PersonDTO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//.....&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The MVC is a wider pattern. The DTO/DAO would be your model in the MVC pattern.
+It tells you how to organize the whole application, not just the part responsible for data retrieval.&lt;/p&gt;
+
+&lt;p&gt;As for the second question, if you have a small application it is completely OK, however, if you want to follow the MVC pattern it would be better to have a separate controller, which would contain the business logic for your frame in a separate class and dispatch messages to this controller from the event handlers.
+This would separate your business logic from the view.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - @transient</title><link href="http://localhost:4000/java-spring-annotation-transient/" rel="alternate" type="text/html" title="Spring boot - @transient" /><published>2020-02-05T00:00:00-08:00</published><updated>2020-02-05T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-annotation-transient</id><content type="html" xml:base="http://localhost:4000/java-spring-annotation-transient/">&lt;p&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -234,155 +417,99 @@
  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Actual speaking English</title><link href="http://localhost:4000/english-speaking-1/" rel="alternate" type="text/html" title="Actual speaking English" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-speaking-1</id><content type="html" xml:base="http://localhost:4000/english-speaking-1/">&lt;p&gt;&lt;img src=&quot;https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping</title><link href="http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping/" rel="alternate" type="text/html" title="Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping" /><published>2020-02-05T00:00:00-08:00</published><updated>2020-02-05T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping</id><content type="html" xml:base="http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping/">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;amp;ssl=1&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
-&lt;p&gt;M: Hey Rachel, how are you?&lt;/p&gt;
-
-&lt;p&gt;W: I’m good but I’m a bit nervous.&lt;/p&gt;
-
-&lt;p&gt;M: Why?&lt;/p&gt;
-
-&lt;p&gt;W: Because I’m starting at a new company in a couple of days, but I don’t really know know to introduce myself to a new group of people.&lt;/p&gt;
-
-&lt;p&gt;M: The first day at a company is nerve-racking, right?&lt;/p&gt;
-
-&lt;p&gt;You meet so many new faces and they all know each other as well. That is evven worse. But there are some things you should do on your first day.&lt;/p&gt;
-
-&lt;p&gt;W: I’d love some advice.&lt;/p&gt;
-
-&lt;p&gt;Note: 
-    nerve-racking: stressful, exhausting&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new faces: new people
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;M: Ok. A firm handshake, that is key, to project confidence, but not too hard, you don’t want to hurt the other person, but not to flimsy as well. I hate a wet flimsy handshake. So if you are feeling nervous and sweaty, perhaps give your hand a wipe as well.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    project: to give or express a clear impression of one’s thoughts or personality; make an image&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;flimsy: weak, without strength, unstable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;W: Clammy hands.&lt;/p&gt;
-
-&lt;p&gt;M: They are going to call you clammy hands at the company.&lt;/p&gt;
-
-&lt;p&gt;W: Alright, so a firm handshake is really important.&lt;/p&gt;
-
-&lt;p&gt;M: And then eye contact as well.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    clammy: cold and damp, covered with moisture; wet, sweaty&lt;/p&gt;
-
-&lt;p&gt;M: And a big smile, I think that always helps, it makes people feel much more comfortable.&lt;/p&gt;
-
-&lt;p&gt;W: Yeah that’s true, that definitely will leave a great first impression.&lt;/p&gt;
-
-&lt;p&gt;M: As long as you don’t have something stuck in your teeth. Again, check.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    to leave an impression (on someone): to provide a lasting memory for someone&lt;/p&gt;
-
-&lt;p&gt;W: I’ll have to get a mirror and check my teeth. That’s for sure. Alright so you’re saying a firm handshake is important, good eye contact, those show that I’m confident and then a friendly smile will show that I’m at ease and that I’m confortable with my surroundings.&lt;/p&gt;
-
-&lt;p&gt;M: Sure, and then maybe the last thing remember people’s names.&lt;/p&gt;
-
-&lt;p&gt;W: Oh, right!&lt;/p&gt;
-
-&lt;p&gt;M: And when you say your name as well, project it loudly so they remember you.&lt;/p&gt;
-
-&lt;p&gt;W: But you know, there’s so many people that I have to meet. How do I remember all their names?&lt;/p&gt;
-
-&lt;p&gt;M: I think writing it down as soon as you can, at the earliest possible opportunity. But I think that’s about it. And I think you’ll be fine, Rachel.&lt;/p&gt;
-
-&lt;p&gt;W: You think so? Alright, well I can’t wait to use that advice on my first day at my new company.&lt;/p&gt;
-
-&lt;p&gt;M: Fingers crossed.&lt;/p&gt;
-
-&lt;p&gt;W: Thank you.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    keep one’s fingers crossed: to wish someone luck; to hope for a good outcome for someone&lt;/p&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;Activity
-    &lt;ol&gt;
-      &lt;li&gt;活跃、繁忙( Uncountable) &lt;em&gt;the situation in which a lot of things are happening or people are moving around&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;行动、活动 &lt;em&gt;the work of a group or organization to achieve an aim&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;娱乐活动 &lt;em&gt;something that is done for enjoyment, especially an organized event&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
+  &lt;li&gt;@PostMapping – Handle HTTP POST Requests&lt;/li&gt;
+  &lt;li&gt;@GetMapping – Handle HTTP Get Requests&lt;/li&gt;
+  &lt;li&gt;@PutMapping – Handle HTTP Put Requests&lt;/li&gt;
+  &lt;li&gt;@DeleteMapping – Handle HTTP Delete Requests&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;There was a lot of activity in preparation for the Queen’s visit.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Additionally to the above-mentioned shortcut annotations, you can use the @RequestMapping annotation which you will most probably find in most of the Spring MVC REST Web Service projects. You can use this single @RequestMapping annotation to map any request to a specific method.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;He was found guilty of terrorist activity. / criminal activities&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A few HTTP GET request mapping examples:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;His spare-time activities include cooking, tennis, and windsurfing.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ul&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To map HTTP Post request to a method, we just need to change the Request Method type:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Please note that if you need your Web Service endpoint to be able to return information in either XML or JSON format. Depending on the value of the Accept Header. Then you need you use the curly brackets {} and list the supported media types like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note: Note that if you want your Web Service endpoint to return MediaType.APPLICATION_XML_VALUE then your HTTP Request must contain the Accept header with a value application/xml like in the curl example below:&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;    curl -X GET \
+    http://localhost:8080/users/Ow8EG5GAvkCa9kEHGqLTQpR32zSmhd /
+    -H 'accept: application/xml' /
+    -H 'authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTIzMDMwNTg4fQ.rnOqIEpmh6xQYBPkcRHp9DOnT8M5a7o9De6a7ZE7z2nBKfNpgXNrXgFQnlUi01CnltOP-iXyprsGhB4wvkafcg'
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot 事务特性</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Motion&lt;/p&gt;
+    &lt;p&gt;修改AndroidManifest.xml文件，添加渠道名称变量&lt;/p&gt;
 
-    &lt;p&gt;动、运动、移动 &lt;em&gt;the act or process of moving, or a particular action or movement&lt;/em&gt;&lt;/p&gt;
+    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         &lt;span class=&quot;c&quot;&gt;&amp;lt;!--value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量--&amp;gt;&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta-data&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${UMENG_CHANNEL_VALUE}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UMENG_CHANNEL&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;修改app的build.gradle文件，添加所需要的渠道&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;They showed the goal again in slow motion.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motive
-动机 &lt;em&gt;a reason for doing something&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Why would she have killed him? She has no motive.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motivation
-    &lt;ol&gt;
-      &lt;li&gt;积极性、干劲儿 &lt;em&gt;enthusiasm for doing something&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;动机、诱因 &lt;em&gt;the need or reason for doing something&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;cm&quot;&gt;/*配置渠道*/&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;productFlavors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;yingyongbao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;yingyongbao&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;wandoujia&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;wandoujia&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;xiaomi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;xiaomi&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果遇到一下错误，可以参考google文档修改解决&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;He’s a bright enough student - he just lacks motivation.&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     Error:All flavors must now belong to a named flavor dimension.
+     The flavor &lt;span class=&quot;s1&quot;&gt;'flavor_name'&lt;/span&gt; is not assigned to a flavor dimension.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;在build.gradle文件的defaultConfig段落中添加&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;What was the motivation for the attack?&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;versionCode&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Motivate
-    &lt;ol&gt;
-      &lt;li&gt;使产生动机、激起 &lt;em&gt;to cause someone to behave in a particular way&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;激励 &lt;em&gt;to make someone want to do something well&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.android.com/studio/build/build-variants?utm_source=android-studio#product-flavors&quot; title=&quot;Google's document&quot;&gt;参考链接1&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/WUXIAOCHANG/p/10683942.html&quot; title=&quot;cnblogs's document&quot;&gt;参考链接2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e4da2f477cd8&quot; title=&quot;jianshu's document&quot;&gt;参考链接3&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Like so many people, he’s motivated by greed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Teaching is all about motivating people to learn.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">auto parts</title><link href="http://localhost:4000/english-auto-parts/" rel="alternate" type="text/html" title="auto parts" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-auto-parts</id><content type="html" xml:base="http://localhost:4000/english-auto-parts/">&lt;p&gt;&lt;img src=&quot;https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">auto parts</title><link href="http://localhost:4000/english-auto-parts/" rel="alternate" type="text/html" title="auto parts" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-auto-parts</id><content type="html" xml:base="http://localhost:4000/english-auto-parts/">&lt;p&gt;&lt;img src=&quot;https://n6s6b6w9.stackpathcdn.com/client/w_719,q_lossy,ret_wait/https://appgrooves.com/cdn/mc/AUTO_AND_VEHICLES/1_w1200.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -552,53 +679,155 @@ fog light&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Teaching is all about motivating people to learn.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Spring boot 事务特性</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Actual speaking English</title><link href="http://localhost:4000/english-speaking-1/" rel="alternate" type="text/html" title="Actual speaking English" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-speaking-1</id><content type="html" xml:base="http://localhost:4000/english-speaking-1/">&lt;p&gt;&lt;img src=&quot;http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;修改AndroidManifest.xml文件，添加渠道名称变量&lt;/p&gt;
+&lt;p&gt;M: Hey Rachel, how are you?&lt;/p&gt;
 
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         &lt;span class=&quot;c&quot;&gt;&amp;lt;!--value的值填写渠道名称，例如yingyongbao。这里设置动态渠道名称变量--&amp;gt;&lt;/span&gt;
-         &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta-data&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${UMENG_CHANNEL_VALUE}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UMENG_CHANNEL&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;p&gt;W: I’m good but I’m a bit nervous.&lt;/p&gt;
+
+&lt;p&gt;M: Why?&lt;/p&gt;
+
+&lt;p&gt;W: Because I’m starting at a new company in a couple of days, but I don’t really know know to introduce myself to a new group of people.&lt;/p&gt;
+
+&lt;p&gt;M: The first day at a company is nerve-racking, right?&lt;/p&gt;
+
+&lt;p&gt;You meet so many new faces and they all know each other as well. That is evven worse. But there are some things you should do on your first day.&lt;/p&gt;
+
+&lt;p&gt;W: I’d love some advice.&lt;/p&gt;
+
+&lt;p&gt;Note: 
+    nerve-racking: stressful, exhausting&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new faces: new people
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;M: Ok. A firm handshake, that is key, to project confidence, but not too hard, you don’t want to hurt the other person, but not to flimsy as well. I hate a wet flimsy handshake. So if you are feeling nervous and sweaty, perhaps give your hand a wipe as well.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    project: to give or express a clear impression of one’s thoughts or personality; make an image&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;flimsy: weak, without strength, unstable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;W: Clammy hands.&lt;/p&gt;
+
+&lt;p&gt;M: They are going to call you clammy hands at the company.&lt;/p&gt;
+
+&lt;p&gt;W: Alright, so a firm handshake is really important.&lt;/p&gt;
+
+&lt;p&gt;M: And then eye contact as well.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    clammy: cold and damp, covered with moisture; wet, sweaty&lt;/p&gt;
+
+&lt;p&gt;M: And a big smile, I think that always helps, it makes people feel much more comfortable.&lt;/p&gt;
+
+&lt;p&gt;W: Yeah that’s true, that definitely will leave a great first impression.&lt;/p&gt;
+
+&lt;p&gt;M: As long as you don’t have something stuck in your teeth. Again, check.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    to leave an impression (on someone): to provide a lasting memory for someone&lt;/p&gt;
+
+&lt;p&gt;W: I’ll have to get a mirror and check my teeth. That’s for sure. Alright so you’re saying a firm handshake is important, good eye contact, those show that I’m confident and then a friendly smile will show that I’m at ease and that I’m confortable with my surroundings.&lt;/p&gt;
+
+&lt;p&gt;M: Sure, and then maybe the last thing remember people’s names.&lt;/p&gt;
+
+&lt;p&gt;W: Oh, right!&lt;/p&gt;
+
+&lt;p&gt;M: And when you say your name as well, project it loudly so they remember you.&lt;/p&gt;
+
+&lt;p&gt;W: But you know, there’s so many people that I have to meet. How do I remember all their names?&lt;/p&gt;
+
+&lt;p&gt;M: I think writing it down as soon as you can, at the earliest possible opportunity. But I think that’s about it. And I think you’ll be fine, Rachel.&lt;/p&gt;
+
+&lt;p&gt;W: You think so? Alright, well I can’t wait to use that advice on my first day at my new company.&lt;/p&gt;
+
+&lt;p&gt;M: Fingers crossed.&lt;/p&gt;
+
+&lt;p&gt;W: Thank you.&lt;/p&gt;
+
+&lt;p&gt;Note:
+    keep one’s fingers crossed: to wish someone luck; to hope for a good outcome for someone&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Activity
+    &lt;ol&gt;
+      &lt;li&gt;活跃、繁忙( Uncountable) &lt;em&gt;the situation in which a lot of things are happening or people are moving around&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;行动、活动 &lt;em&gt;the work of a group or organization to achieve an aim&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;娱乐活动 &lt;em&gt;something that is done for enjoyment, especially an organized event&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There was a lot of activity in preparation for the Queen’s visit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;He was found guilty of terrorist activity. / criminal activities&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;His spare-time activities include cooking, tennis, and windsurfing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;修改app的build.gradle文件，添加所需要的渠道&lt;/p&gt;
+    &lt;p&gt;Motion&lt;/p&gt;
 
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;cm&quot;&gt;/*配置渠道*/&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;productFlavors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;yingyongbao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;yingyongbao&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;wandoujia&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;wandoujia&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;xiaomi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-             &lt;span class=&quot;n&quot;&gt;manifestPlaceholders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;UMENG_CHANNEL_VALUE:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;xiaomi&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;动、运动、移动 &lt;em&gt;the act or process of moving, or a particular action or movement&lt;/em&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果遇到一下错误，可以参考google文档修改解决&lt;/p&gt;
+&lt;/ul&gt;
 
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     Error:All flavors must now belong to a named flavor dimension.
-     The flavor &lt;span class=&quot;s1&quot;&gt;'flavor_name'&lt;/span&gt; is not assigned to a flavor dimension.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;在build.gradle文件的defaultConfig段落中添加&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;They showed the goal again in slow motion.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;versionCode&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Motive
+动机 &lt;em&gt;a reason for doing something&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;p&gt;&lt;a href=&quot;https://developer.android.com/studio/build/build-variants?utm_source=android-studio#product-flavors&quot; title=&quot;Google's document&quot;&gt;参考链接1&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Why would she have killed him? She has no motive.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/WUXIAOCHANG/p/10683942.html&quot; title=&quot;cnblogs's document&quot;&gt;参考链接2&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e4da2f477cd8&quot; title=&quot;jianshu's document&quot;&gt;参考链接3&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Motivation
+    &lt;ol&gt;
+      &lt;li&gt;积极性、干劲儿 &lt;em&gt;enthusiasm for doing something&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;动机、诱因 &lt;em&gt;the need or reason for doing something&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">status, state, condition, situation 区别</title><link href="http://localhost:4000/english-state-status-situation-condition-circumstance/" rel="alternate" type="text/html" title="status, state, condition, situation 区别" /><published>2020-02-02T00:00:00-08:00</published><updated>2020-02-02T00:00:00-08:00</updated><id>http://localhost:4000/english-state-status-situation-condition-circumstance</id><content type="html" xml:base="http://localhost:4000/english-state-status-situation-condition-circumstance/">&lt;p&gt;&lt;img src=&quot;http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;He’s a bright enough student - he just lacks motivation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What was the motivation for the attack?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motivate
+    &lt;ol&gt;
+      &lt;li&gt;使产生动机、激起 &lt;em&gt;to cause someone to behave in a particular way&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;激励 &lt;em&gt;to make someone want to do something well&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Like so many people, he’s motivated by greed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Teaching is all about motivating people to learn.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">status, state, condition, situation 区别</title><link href="http://localhost:4000/english-state-status-situation-condition-circumstance/" rel="alternate" type="text/html" title="status, state, condition, situation 区别" /><published>2020-02-02T00:00:00-08:00</published><updated>2020-02-02T00:00:00-08:00</updated><id>http://localhost:4000/english-state-status-situation-condition-circumstance</id><content type="html" xml:base="http://localhost:4000/english-state-status-situation-condition-circumstance/">&lt;p&gt;&lt;img src=&quot;http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1624,303 +1853,4 @@ My dearest&lt;/p&gt;
   &lt;li&gt;发生重大事件跟客户交流想法，比如 冰岛火山，地震，海啸，也要及时问候当地的客户。&lt;/li&gt;
   &lt;li&gt;我们自己公司的放假通知一定要提前传达给客户。&lt;/li&gt;
   &lt;li&gt;用心写好每一封邮件         这点是最难做到的，很多人都是忽视了这点。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">even, even if, even though 区别</title><link href="http://localhost:4000/english-even-if-though/" rel="alternate" type="text/html" title="even, even if, even though 区别" /><published>2020-01-27T00:00:00-08:00</published><updated>2020-01-27T00:00:00-08:00</updated><id>http://localhost:4000/english-even-if-though</id><content type="html" xml:base="http://localhost:4000/english-even-if-though/">&lt;p&gt;&lt;img src=&quot;https://www.liberaldictionary.com/wp-content/uploads/2019/01/even.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Even - 甚至&lt;/li&gt;
-  &lt;li&gt;Even if - 即使、纵然 （假设，可以用于虚拟语气）&lt;/li&gt;
-  &lt;li&gt;Even though - 即使、纵然 （真实场景）&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">21 more advanced alternative phrases of “I think …”</title><link href="http://localhost:4000/english-I-think/" rel="alternate" type="text/html" title="21 more advanced alternative phrases of &quot;I think ...&quot;" /><published>2020-01-27T00:00:00-08:00</published><updated>2020-01-27T00:00:00-08:00</updated><id>http://localhost:4000/english-I-think</id><content type="html" xml:base="http://localhost:4000/english-I-think/">&lt;p&gt;&lt;img src=&quot;https://discoveryinaction.com.au/wp-content/uploads/2019/09/image-1.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;I’m not going to lie …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I’m not going to lie, I was pretty insulted to not be invited to my ex boyfriend’s wedding.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;in all honesty …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;In all honesty, I had every right to be there.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;in my view …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;In my view, I should’ve been invited so it was totally fair for me to turn up on the day.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;if you ask me …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;If you ask me, the church service was wonderful, but it was a shame I had to stand at the back.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;as far as I can tell …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;As far as I can tell, the bride wasn’t really expecting me.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;to my mind …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;To my mind, she should’ve been happier to see me and reveive my support.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;as far as I’m concerned …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;As far as I’m concerned, she totally overreacted and shouldn’t have cried.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;the way I see things/it …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;The way I see things, I made the family photographs a lot more interesting.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;as I see things/it …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;As I see it, they obviously didn’t take me into consideration when drawing up the seating plans.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;it seems to me that … the&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;It seems to me that everyone overreacted when I tried to sit at the top table.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I believe …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I believe that they should have just made space for me in the first place.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I would say …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I’d say that food was very good, but it was a shame I had to share with my neighbour.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I consider … to be …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I consider it to be very rude that I was forced to sit down when I stood up to make a speech.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;to me …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;To me, no one knows my ex better than me so I should’v been able to tell all of our funny stories.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;from my point of view …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;From my point of view, the first dance was cringe-worthy so I did everyone a favour by joining in.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;it is my view/belief that …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;It is my view that the open bar made everything worse.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I reckon …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I reckon the sixth gin and tonic tipped me over the edge.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I honestly believe that …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I honestly believe that if I hadn’t started cutting the cake, no one would have.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;honestly speaking …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Honestly speaking, I probably shouldn’t have thrown my slice at the bride.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I feel that …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;I feel that my ex could have found a more welcoming bride with a better sense of humour.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;personally speaking …&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Personally speaking, calling the police was a bit OTT.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;Notes:&lt;/p&gt;
-
-    &lt;p&gt;Over the top (OTT)&lt;/p&gt;
-
-    &lt;p&gt;to an excessive or exaggerated degree&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">什么是Spring boot中的 bean</title><link href="http://localhost:4000/java-bean/" rel="alternate" type="text/html" title="什么是Spring boot中的 bean" /><published>2020-01-27T00:00:00-08:00</published><updated>2020-01-27T00:00:00-08:00</updated><id>http://localhost:4000/java-bean</id><content type="html" xml:base="http://localhost:4000/java-bean/">&lt;p&gt;&lt;img src=&quot;https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-
-    &lt;p&gt;Bean is a key concept of the Spring Framework. As such, understanding this notion is crucial to get the hang of the framework and to use it in an effective way.&lt;/p&gt;
-
-    &lt;p&gt;Unfortunately, &lt;strong&gt;there aren’t clear answers to a simple question – what a Spring bean really is.&lt;/strong&gt; Some explanations go to such a low level that a big picture is missed, whereas some are too vague.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;bean-definition&quot;&gt;Bean Definition&lt;/h2&gt;
-    &lt;p&gt;Here’s a definition of beans in &lt;a href=&quot;https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-introduction&quot; title=&quot;the Spring Framework documentation&quot;&gt;the Spring Framework documentation&lt;/a&gt;:&lt;/p&gt;
-
-    &lt;p&gt;&lt;em&gt;In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.&lt;/em&gt;&lt;/p&gt;
-
-    &lt;p&gt;This definition is concise and gets to the point, &lt;strong&gt;but misses an important thing – Spring IoC container.&lt;/strong&gt; Let’s go down the rabbit hole to see what it is and the benefits it brings in.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;inversion-of-control&quot;&gt;Inversion of Control&lt;/h2&gt;
-
-    &lt;p&gt;Simply put, &lt;a href=&quot;https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring&quot; title=&quot;Inversion of Control&quot;&gt;Inversion of Control&lt;/a&gt;, or IoC for short, is a process in which an object defines its dependencies without creating them. This object delegates the job of constructing such dependencies to an IoC container.&lt;/p&gt;
-
-    &lt;p&gt;Let’s start with the declaration of a couple of domain classes before diving into IoC.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;h3 id=&quot;domain-classes&quot;&gt;Domain Classes&lt;/h3&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;Assume we have a class declaration:&lt;/p&gt;
-
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
- 
-     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
- 
-     &lt;span class=&quot;c1&quot;&gt;// getter, setter and other properties&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;This class needs a collaborator of type Address:&lt;/p&gt;
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;street&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    
-     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;street&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;street&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;street&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    
-     &lt;span class=&quot;c1&quot;&gt;// getters and setters&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;h3 id=&quot;tranditional-approach&quot;&gt;Tranditional Approach&lt;/h3&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;Normally, we create objects with their classes’ constructors:&lt;/p&gt;
-
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;High Street&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
- &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;There’s nothing wrong with this approach, but wouldn’t it be nice to manage the dependencies in a better way?&lt;/p&gt;
-
-    &lt;p&gt;Imagine an application with dozens or even hundreds of classes. Sometimes we want to share a single instance of a class across the whole application, other times we need a separate object for each use case, and so on.&lt;/p&gt;
-
-    &lt;p&gt;Managing such a number of objects is nothing short of a nightmare. &lt;strong&gt;This is where Inversion of Control comes to the rescue.&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Instead of constructing dependencies by itself, an object can retrieve its dependencies from an IoC container. &lt;strong&gt;All we need to do is to provide the container with appropriate configuration metadata.&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;h3 id=&quot;bean-configuration&quot;&gt;Bean configuration&lt;/h3&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;First off, let’s decorate the Company class with the &lt;em&gt;@Component annotation:&lt;/em&gt;&lt;/p&gt;
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;
- &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;c1&quot;&gt;// this body is the same as before&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Here’s a configuration class supplying bean metadata to an IoC container:&lt;/p&gt;
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt;
- &lt;span class=&quot;nd&quot;&gt;@ComponentScan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basePackageClasses&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;High Street&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;The configuration class produces a bean of type &lt;em&gt;Address&lt;/em&gt;. It also carries the &lt;em&gt;@ComponentScan annotation&lt;/em&gt;, which instructs the container to looks for beans in the package containing the &lt;em&gt;Company class&lt;/em&gt;.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;When a Spring IoC container constructs objects of those types, all the objects are called Spring beans as they are managed by the IoC container.&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;h3 id=&quot;ioc-in-action&quot;&gt;IoC in Action&lt;/h3&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;Since we defined beans in a configuration class, &lt;strong&gt;we’ll need an instance of the AnnotationConfigApplicationContext class to build up a container:&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nc&quot;&gt;ApplicationContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AnnotationConfigApplicationContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;A quick test verifies the existence as well as property values of our beans:&lt;/p&gt;
-
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;company&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
- &lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;High Street&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getStreet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
- &lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getNumber&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;The result proves that the IoC container has created and initialized beans correctly.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-    &lt;p&gt;This tutorial gave a brief description of Spring beans and their relationship with an IoC container.&lt;/p&gt;
-
-    &lt;p&gt;The complete source code for this tutorial can be found over on &lt;a href=&quot;https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring&quot; title=&quot;GitHub&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
