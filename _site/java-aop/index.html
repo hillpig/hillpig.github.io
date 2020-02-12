@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Spring boot 事务特性　@Transactional – 山猪 – 方寸之间 点滴墨彩</title>
+  <title>Spring AOP – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,8 +19,8 @@
     <meta name="author" content="山猪" />
 
     
-    <meta property="og:title" content="Spring boot 事务特性　@Transactional" />
-    <meta property="twitter:title" content="Spring boot 事务特性　@Transactional" />
+    <meta property="og:title" content="Spring AOP" />
+    <meta property="twitter:title" content="Spring AOP" />
     
   <!-- Async font loading -->
 <script>
@@ -159,7 +159,7 @@
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
         <article class="posts">
-  <h1>Spring boot 事务特性　@Transactional</h1>
+  <h1>Spring AOP</h1>
 
   <div clsss="meta">
     <span class="date">
@@ -188,63 +188,32 @@
 
 <!-- more -->
 
+<p>AOP is an abbreviation of Aspect-Oriented Programming.</p>
+
 <ul>
-  <li>
-    <p>常见坑点1：遇到检测异常时，事务默认不回滚。</p>
-
-    <p>例如下面这段代码，账户余额依旧增加成功，并没有因为后面遇到SQLException（检测异常）而进行事务回滚！！</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="nd">@Transactional</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-          <span class="c1">//先增加余额</span>
-          <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-          <span class="c1">//然后遇到故障</span>
-          <span class="k">throw</span> <span class="k">new</span> <span class="nf">SQLException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-      <span class="o">}</span>
-</code></pre></div>    </div>
-    <p>原因分析：因为Spring的默认的事务规则是遇到运行异常（RuntimeException及其子类）和程序错误（Error）才会进行事务回滚，显然SQLException并不属于这个范围。如果想针对检测异常进行事务回滚，可以在@Transactional 注解里使用rollbackFor 属性明确指定异常。例如下面这样，就可以正常回滚：</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="nd">@Transactional</span><span class="o">(</span><span class="n">rollbackFor</span> <span class="o">=</span> <span class="nc">Exception</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-          <span class="c1">//先增加余额</span>
-          <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-          <span class="c1">//然后遇到故障</span>
-          <span class="k">throw</span> <span class="k">new</span> <span class="nf">SQLException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-      <span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>常见坑点2： 在业务层捕捉异常后，发现事务不生效。</p>
-
-    <p>这是许多新手都会犯的一个错误，在业务层手工捕捉并处理了异常，你都把异常“吃”掉了，Spring自然不知道这里有错，更不会主动去回滚数据。例如：下面这段代码直接导致增加余额的事务回滚没有生效。</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nd">@Transactional</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-      <span class="c1">//先增加余额</span>
-      <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-      <span class="c1">//谨慎：尽量不要在业务层捕捉异常并处理</span>
-      <span class="k">try</span> <span class="o">{</span>
-          <span class="k">throw</span> <span class="k">new</span> <span class="nf">SQLException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-      <span class="o">}</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
-
-    <p>不要小瞧了这些细节，往前暴露异常很大程度上很能够帮我们快速定位问题，而不是经常在项目上线后出现问题，却无法刨根知道哪里报错。</p>
-
-    <p>推荐做法：若非实际业务要求，则在业务层统一抛出异常，然后在控制层统一处理。</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nd">@Transactional</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-      <span class="c1">//先增加余额</span>
-      <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-      <span class="c1">//推荐：在业务层将异常抛出</span>
-      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
+  <li>Cross-cutting concern</li>
 </ul>
+
+<p>在DynamicProxyDemo專案的例子中，記錄的 動作原先被橫切（Cross-cutting）入至HelloSpeaker本身所負責的商務流程之中，另外類似於日誌這類的動作，如安全 （Security）檢查、交易（Transaction）等系統層面的服務（Service），在一些應用程式之中常被見到安插至各個物件的處理流程之 中，這些動作在AOP的術語中被稱之為Cross-cutting concerns。</p>
+
+<p>以圖片說明可強調出Cross-cutting concerns的意涵，例如原來的商務流程是很單純的：</p>
+
+<p>AOP(Aspect Oriented Programming) 面向切面编程，是目前软件开发中的一个热点，是Spring框架内容，利用AOP可以对业务逻辑的各个部分隔离，从而使的业务逻辑各部分的耦合性降低，提高程序的可重用性，踢开开发效率，主要功能：日志记录，性能统计，安全控制，事务处理，异常处理等。</p>
+
+<p>AOP实现原理是java动态代理，但是jdk的动态代理必须实现接口，所以spring的aop是用cglib这个库实现的，cglis使用里asm这个直接操纵字节码的框架，所以可以做到不使用接口的情况下实现动态代理。</p>
+
+<p>AOP与OOP的却别：</p>
+
+<p>OOP面向对象编程，针对业务处理过程的实体及其属性和行为进行抽象封装，以获得更加清晰高效的逻辑单元划分。而AOP则是针对业务处理过程中的切面进行提取，它所面对的是处理过程的某个步骤或阶段，以获得逻辑过程的中各部分之间低耦合的隔离效果。这两种设计思想在目标上有着本质的差异。</p>
+
+<p>举例：</p>
+
+<p>对于“雇员”这样一个业务实体进行封装，自然是OOP的任务，我们可以建立一个“Employee”类，并将“雇员”相关的属性和行为封装其中。而用AOP 设计思想对“雇员”进行封装则无从谈起。</p>
+
+<p>同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。</p>
+
+<p>OOP面向名次领域，AOP面向动词领域。</p>
+
 
   </div>
 
@@ -261,7 +230,7 @@
           admin: ["hillpig"],
           id: window.location.pathname,      // Ensure uniqueness and length less than 50
           distractionFreeMode: false,  // Facebook-like distraction free mode
-          title: "Spring boot 事务特性　@Transactional",
+          title: "Spring AOP",
           language: "zh-CN",
 
         })
@@ -275,17 +244,11 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/english-pascalcase-camelcase/">
+      <a href="http://localhost:4000/java-spring-transaction/">
         ← 上一篇
       </a>
     </span>
   
-  
-    <span class="next" >
-      <a href="http://localhost:4000/java-aop/">
-        下一篇 →
-      </a>
-    </span>
   
 </div>
       </div>

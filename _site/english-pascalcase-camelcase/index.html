@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Spring boot 事务特性　@Transactional – 山猪 – 方寸之间 点滴墨彩</title>
+  <title>Pascal Case & Camel Case – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,8 +19,8 @@
     <meta name="author" content="山猪" />
 
     
-    <meta property="og:title" content="Spring boot 事务特性　@Transactional" />
-    <meta property="twitter:title" content="Spring boot 事务特性　@Transactional" />
+    <meta property="og:title" content="Pascal Case & Camel Case" />
+    <meta property="twitter:title" content="Pascal Case & Camel Case" />
     
   <!-- Async font loading -->
 <script>
@@ -159,7 +159,7 @@
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
         <article class="posts">
-  <h1>Spring boot 事务特性　@Transactional</h1>
+  <h1>Pascal Case & Camel Case</h1>
 
   <div clsss="meta">
     <span class="date">
@@ -169,14 +169,8 @@
     <ul class="tag">
       
       <li>
-        <a href="http://localhost:4000/tags#Java">
-          Java
-        </a>
-      </li>
-      
-      <li>
-        <a href="http://localhost:4000/tags#Spring boot">
-          Spring boot
+        <a href="http://localhost:4000/tags#English">
+          English
         </a>
       </li>
       
@@ -184,67 +178,86 @@
   </div>
 
   <div class="entry">
-    <p><img src="https://www.javainuse.com/boot-66-18.JPG" alt="img" /></p>
+    <p><img src="https://www.bkacontent.com/wp-content/uploads/2015/10/AP-Title-Case-Splash.jpg" alt="img" /></p>
 
 <!-- more -->
 
-<ul>
+<h1 id="case-styles">Case styles</h1>
+
+<p>In English, a variety of case styles are used in various circumstances:</p>
+
+<ol>
   <li>
-    <p>常见坑点1：遇到检测异常时，事务默认不回滚。</p>
+    <p>Sentence case</p>
 
-    <p>例如下面这段代码，账户余额依旧增加成功，并没有因为后面遇到SQLException（检测异常）而进行事务回滚！！</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="nd">@Transactional</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-          <span class="c1">//先增加余额</span>
-          <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-          <span class="c1">//然后遇到故障</span>
-          <span class="k">throw</span> <span class="k">new</span> <span class="nf">SQLException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-      <span class="o">}</span>
-</code></pre></div>    </div>
-    <p>原因分析：因为Spring的默认的事务规则是遇到运行异常（RuntimeException及其子类）和程序错误（Error）才会进行事务回滚，显然SQLException并不属于这个范围。如果想针对检测异常进行事务回滚，可以在@Transactional 注解里使用rollbackFor 属性明确指定异常。例如下面这样，就可以正常回滚：</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="nd">@Transactional</span><span class="o">(</span><span class="n">rollbackFor</span> <span class="o">=</span> <span class="nc">Exception</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-          <span class="c1">//先增加余额</span>
-          <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-          <span class="c1">//然后遇到故障</span>
-          <span class="k">throw</span> <span class="k">new</span> <span class="nf">SQLException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-      <span class="o">}</span>
-</code></pre></div>    </div>
+    <blockquote>
+      <p>The vitamins are in my fresh California raisins</p>
+    </blockquote>
   </li>
   <li>
-    <p>常见坑点2： 在业务层捕捉异常后，发现事务不生效。</p>
+    <p>Title case (capital case, headline style)</p>
 
-    <p>这是许多新手都会犯的一个错误，在业务层手工捕捉并处理了异常，你都把异常“吃”掉了，Spring自然不知道这里有错，更不会主动去回滚数据。例如：下面这段代码直接导致增加余额的事务回滚没有生效。</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nd">@Transactional</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-      <span class="c1">//先增加余额</span>
-      <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-      <span class="c1">//谨慎：尽量不要在业务层捕捉异常并处理</span>
-      <span class="k">try</span> <span class="o">{</span>
-          <span class="k">throw</span> <span class="k">new</span> <span class="nf">SQLException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-      <span class="o">}</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
-
-    <p>不要小瞧了这些细节，往前暴露异常很大程度上很能够帮我们快速定位问题，而不是经常在项目上线后出现问题，却无法刨根知道哪里报错。</p>
-
-    <p>推荐做法：若非实际业务要求，则在业务层统一抛出异常，然后在控制层统一处理。</p>
-
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nd">@Transactional</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMoney</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-      <span class="c1">//先增加余额</span>
-      <span class="n">accountMapper</span><span class="o">.</span><span class="na">addMoney</span><span class="o">();</span>
-      <span class="c1">//推荐：在业务层将异常抛出</span>
-      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"发生异常了.."</span><span class="o">);</span>
-  <span class="o">}</span>
-</code></pre></div>    </div>
+    <blockquote>
+      <p>The Vitamins Are in My Fresh California Raisins</p>
+    </blockquote>
   </li>
-</ul>
+  <li>
+    <p>All caps (all uppercase)</p>
+
+    <blockquote>
+      <p>THE VITAMINS ARE IN MY FRESH CALIFORNIA RAISINS</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>All lowercase</p>
+
+    <blockquote>
+      <p>the vitamins are in my fresh california raisins</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h1 id="special-case-styles">Special case styles</h1>
+
+<ol>
+  <li>
+    <p>Camel case</p>
+
+    <blockquote>
+      <p>theQuickBrownFoxJumpsOverTheLazyDog</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Pascal case</p>
+
+    <blockquote>
+      <p>TheQuickBrownFoxJumpsOverTheLazyDog</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Snake case</p>
+
+    <blockquote>
+      <p>the_quick_brown_fox_jumps_over_the_lazy_dog</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Kebab case</p>
+
+    <blockquote>
+      <p>the-quick-brown-fox-jumps-over-the-lazy-dog</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Studly caps</p>
+
+    <blockquote>
+      <p>tHeqUicKBrOWnFoXJUmpsoVeRThElAzydOG</p>
+    </blockquote>
+
+    <p>Mixed case with no semantic or syntactic significance to the use of the capitals. Sometimes only vowels are upper case, at other times upper and lower case are alternated, but often it is simply random. The name comes from the sarcastic or ironic implication that it was used in an attempt by the writer to convey their own coolness. It is also used to mock the violation of standard English case conventions by marketers in the naming of computer software packages, even when there is no technical requirement to do so – e.g., Sun Microsystems’ naming of a windowing system NeWS. Illustrative naming of the style is, naturally, random: stUdlY cAps, StUdLy CaPs, etc.</p>
+  </li>
+</ol>
 
   </div>
 
@@ -261,7 +274,7 @@
           admin: ["hillpig"],
           id: window.location.pathname,      // Ensure uniqueness and length less than 50
           distractionFreeMode: false,  // Facebook-like distraction free mode
-          title: "Spring boot 事务特性　@Transactional",
+          title: "Pascal Case & Camel Case",
           language: "zh-CN",
 
         })
@@ -275,14 +288,14 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/english-pascalcase-camelcase/">
+      <a href="http://localhost:4000/http-get-post-delete/">
         ← 上一篇
       </a>
     </span>
   
   
     <span class="next" >
-      <a href="http://localhost:4000/java-aop/">
+      <a href="http://localhost:4000/java-spring-transaction/">
         下一篇 →
       </a>
     </span>
