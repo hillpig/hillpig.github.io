@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-12T13:26:12-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Spring AOP</title><link href="http://localhost:4000/java-aop/" rel="alternate" type="text/html" title="Spring AOP" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-aop</id><content type="html" xml:base="http://localhost:4000/java-aop/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-12T17:17:32-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Static Proxy vs. Dynamic Proxy</title><link href="http://localhost:4000/java-static-proxy-dynamic-proxy/" rel="alternate" type="text/html" title="Static Proxy vs. Dynamic Proxy" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/java-static-proxy-dynamic-proxy</id><content type="html" xml:base="http://localhost:4000/java-static-proxy-dynamic-proxy/">&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/1280/1*bdXBG8hFHucrTPmJLfnH4w.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -26,7 +26,245 @@
 
 &lt;p&gt;同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。&lt;/p&gt;
 
-&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Pascal Case &amp;amp; Camel Case</title><link href="http://localhost:4000/english-pascalcase-camelcase/" rel="alternate" type="text/html" title="Pascal Case &amp; Camel Case" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/english-pascalcase-camelcase</id><content type="html" xml:base="http://localhost:4000/english-pascalcase-camelcase/">&lt;p&gt;&lt;img src=&quot;https://www.bkacontent.com/wp-content/uploads/2015/10/AP-Title-Case-Splash.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Generate SSH Keys - Git</title><link href="http://localhost:4000/git-ssh-key/" rel="alternate" type="text/html" title="Generate SSH Keys - Git" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/git-ssh-key</id><content type="html" xml:base="http://localhost:4000/git-ssh-key/">&lt;p&gt;&lt;img src=&quot;https://images.ctfassets.net/0lvk5dbamxpi/UTPF4vNZ56vh5Y9cndGfI/e6438d14fcdf045fe098702302456f07/SSH_Key_-_Authentication_Using_SSH_Keys&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generating an SSH key (Mac OS X / linux)&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Enter the following command in the Terminal window.&lt;/p&gt;
+
+        &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;     ssh-keygen -t rsa
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Press the ENTER key to accept the default location. The ssh-keygen utility prompts you for a passphrase.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Type in a passphrase. You can also hit the ENTER key to accept the default (no passphrase). However, this is not recommended.
+  Please note that you will need to enter the passphrase a second time to continue.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;After you confirm the passphrase, the system generates the key pair.&lt;/p&gt;
+
+    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;      Your identification has been saved in /Users/user/.ssh/id_rsa.
+      Your public key has been saved in /Users/user/.ssh/id_rsa.pub.
+      The key fingerprint is:
+      ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 user@mymac.local
+      The key's randomart image is:
+      +--[ RSA 2048]----+
+      |                 |
+      |         .       |
+      |        E .      |
+      |   .   . o       |
+      |  o . . S .      |
+      | + + o . +       |
+      |. + o = o +      |
+      | o...o * o       |
+      |.  oo.o .        |
+      +-----------------+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Your private key is saved to the id_rsa file in the .ssh directory and is used to verify the public key you use belongs to the same cloud server. It’s important to never share your private key with anyone, it is equivalent of your password!&lt;/p&gt;
+
+    &lt;p&gt;Your public key is saved to the id_rsa.pub file and it is the key you’ll upload to our cloud service. You can save this key to the clipboard by running this:&lt;/p&gt;
+
+    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;      pbcopy &amp;lt; ~/.ssh/id_rsa.pub
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Git" /><summary type="html"></summary></entry><entry><title type="html">Delegation VS Inheritance - Java</title><link href="http://localhost:4000/java-inheritance-delegation/" rel="alternate" type="text/html" title="Delegation VS Inheritance - Java" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/java-inheritance-delegation</id><content type="html" xml:base="http://localhost:4000/java-inheritance-delegation/">&lt;p&gt;&lt;img src=&quot;https://dzone.com/storage/temp/12808609-classdiagramm.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/inheritance-in-java/&quot; title=&quot;Inheritance&quot;&gt;&lt;strong&gt;Inheritance&lt;/strong&gt;&lt;/a&gt; in Java programming is the process by which one class takes the property of another other class. i.e. the new classes, known as derived or child class, take over the attributes and behavior of the pre-existing classes, which are referred to as base classes or super or parent class.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Delegation&lt;/strong&gt; is simply passing a duty off to someone/something else.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Delegation can be an alternative to inheritance.&lt;/li&gt;
+  &lt;li&gt;Delegation means that you use an object of another class as an instance variable, and forward messages to the instance.&lt;/li&gt;
+  &lt;li&gt;It is better than inheritance for many cases because it makes you to think about each message you forward, because the instance is of a known class, rather than a new class, and because it doesn’t force you to accept all the methods of the super class: you can provide only the methods that really make sense.&lt;/li&gt;
+  &lt;li&gt;Delegation can be viewed as a relationship between objects where one object forwards certain method calls to another object, called its delegate.&lt;/li&gt;
+  &lt;li&gt;The primary advantage of delegation is run-time flexibility – the delegate can easily be changed at run-time. But unlike inheritance, delegation is not directly supported by most popular object-oriented languages, and it doesn’t facilitate dynamic polymorphism &lt;a href=&quot;https://www.geeksforgeeks.org/dynamic-method-dispatch-runtime-polymorphism-java/&quot; title=&quot;dynamic polymorphism&quot;&gt;dynamic polymorphism&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Java program to illustrate &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// delegation &lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RealPrinter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;c1&quot;&gt;// the &quot;delegate&quot; &lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The Delegate&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+  
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Printer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;c1&quot;&gt;// the &quot;delegator&quot; &lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;RealPrinter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RealPrinter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+  
+    &lt;span class=&quot;c1&quot;&gt;// create the delegate &lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// delegation &lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+  
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Tester&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+  
+    &lt;span class=&quot;c1&quot;&gt;// To the outside world it looks like Printer actually prints. &lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;nc&quot;&gt;Printer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Printer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+        &lt;span class=&quot;n&quot;&gt;printer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Delegate&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When you delegate, you are simply calling up some class which knows what must be done. You do not really care how it does it, all you care about is that the class you are calling knows what needs doing.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Java program to illustrate &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Inheritance &lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RealPrinter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;c1&quot;&gt;// base class implements method &lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Printing Data&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Printer Inheriting functionality of real printer &lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Printer&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RealPrinter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+  
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// inside calling method of parent &lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+  
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Tester&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+  
+    &lt;span class=&quot;c1&quot;&gt;// To the outside world it looks like Printer actually prints. &lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;nc&quot;&gt;Printer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Printer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+        &lt;span class=&quot;n&quot;&gt;printer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Printing Data&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;When to use what?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some examples when inheritance or delegation are being used:&lt;/p&gt;
+
+&lt;p&gt;Assume your class is called B and the derived/delegated to class is called A then If&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You want to express relationship (is-a) then you want to use Inheritance.&lt;/li&gt;
+  &lt;li&gt;You want to be able to pass your class to an existing API expecting A’s then you need to use inheritance.&lt;/li&gt;
+  &lt;li&gt;You want to enhance A, but A is final and can no further be sub-classed then you need to use composition and delegation.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Spring AOP</title><link href="http://localhost:4000/java-inheritance-proxy-decorator/" rel="alternate" type="text/html" title="Spring AOP" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-inheritance-proxy-decorator</id><content type="html" xml:base="http://localhost:4000/java-inheritance-proxy-decorator/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;AOP is an abbreviation of Aspect-Oriented Programming.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cross-cutting concern&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在DynamicProxyDemo專案的例子中，記錄的 動作原先被橫切（Cross-cutting）入至HelloSpeaker本身所負責的商務流程之中，另外類似於日誌這類的動作，如安全 （Security）檢查、交易（Transaction）等系統層面的服務（Service），在一些應用程式之中常被見到安插至各個物件的處理流程之 中，這些動作在AOP的術語中被稱之為Cross-cutting concerns。&lt;/p&gt;
+
+&lt;p&gt;以圖片說明可強調出Cross-cutting concerns的意涵，例如原來的商務流程是很單純的：&lt;/p&gt;
+
+&lt;p&gt;AOP(Aspect Oriented Programming) 面向切面编程，是目前软件开发中的一个热点，是Spring框架内容，利用AOP可以对业务逻辑的各个部分隔离，从而使的业务逻辑各部分的耦合性降低，提高程序的可重用性，踢开开发效率，主要功能：日志记录，性能统计，安全控制，事务处理，异常处理等。&lt;/p&gt;
+
+&lt;p&gt;AOP实现原理是java动态代理，但是jdk的动态代理必须实现接口，所以spring的aop是用cglib这个库实现的，cglis使用里asm这个直接操纵字节码的框架，所以可以做到不使用接口的情况下实现动态代理。&lt;/p&gt;
+
+&lt;p&gt;AOP与OOP的却别：&lt;/p&gt;
+
+&lt;p&gt;OOP面向对象编程，针对业务处理过程的实体及其属性和行为进行抽象封装，以获得更加清晰高效的逻辑单元划分。而AOP则是针对业务处理过程中的切面进行提取，它所面对的是处理过程的某个步骤或阶段，以获得逻辑过程的中各部分之间低耦合的隔离效果。这两种设计思想在目标上有着本质的差异。&lt;/p&gt;
+
+&lt;p&gt;举例：&lt;/p&gt;
+
+&lt;p&gt;对于“雇员”这样一个业务实体进行封装，自然是OOP的任务，我们可以建立一个“Employee”类，并将“雇员”相关的属性和行为封装其中。而用AOP 设计思想对“雇员”进行封装则无从谈起。&lt;/p&gt;
+
+&lt;p&gt;同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。&lt;/p&gt;
+
+&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot 事务特性　@Transactional</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性　@Transactional" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;常见坑点1：遇到检测异常时，事务默认不回滚。&lt;/p&gt;
+
+    &lt;p&gt;例如下面这段代码，账户余额依旧增加成功，并没有因为后面遇到SQLException（检测异常）而进行事务回滚！！&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;//然后遇到故障&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SQLException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;原因分析：因为Spring的默认的事务规则是遇到运行异常（RuntimeException及其子类）和程序错误（Error）才会进行事务回滚，显然SQLException并不属于这个范围。如果想针对检测异常进行事务回滚，可以在@Transactional 注解里使用rollbackFor 属性明确指定异常。例如下面这样，就可以正常回滚：&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rollbackFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;//然后遇到故障&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SQLException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;常见坑点2： 在业务层捕捉异常后，发现事务不生效。&lt;/p&gt;
+
+    &lt;p&gt;这是许多新手都会犯的一个错误，在业务层手工捕捉并处理了异常，你都把异常“吃”掉了，Spring自然不知道这里有错，更不会主动去回滚数据。例如：下面这段代码直接导致增加余额的事务回滚没有生效。&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//谨慎：尽量不要在业务层捕捉异常并处理&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SQLException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;不要小瞧了这些细节，往前暴露异常很大程度上很能够帮我们快速定位问题，而不是经常在项目上线后出现问题，却无法刨根知道哪里报错。&lt;/p&gt;
+
+    &lt;p&gt;推荐做法：若非实际业务要求，则在业务层统一抛出异常，然后在控制层统一处理。&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//推荐：在业务层将异常抛出&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Pascal Case &amp;amp; Camel Case</title><link href="http://localhost:4000/english-pascalcase-camelcase/" rel="alternate" type="text/html" title="Pascal Case &amp; Camel Case" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/english-pascalcase-camelcase</id><content type="html" xml:base="http://localhost:4000/english-pascalcase-camelcase/">&lt;p&gt;&lt;img src=&quot;https://www.bkacontent.com/wp-content/uploads/2015/10/AP-Title-Case-Splash.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -105,67 +343,35 @@
 
     &lt;p&gt;Mixed case with no semantic or syntactic significance to the use of the capitals. Sometimes only vowels are upper case, at other times upper and lower case are alternated, but often it is simply random. The name comes from the sarcastic or ironic implication that it was used in an attempt by the writer to convey their own coolness. It is also used to mock the violation of standard English case conventions by marketers in the naming of computer software packages, even when there is no technical requirement to do so – e.g., Sun Microsystems’ naming of a windowing system NeWS. Illustrative naming of the style is, naturally, random: stUdlY cAps, StUdLy CaPs, etc.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Spring boot 事务特性　@Transactional</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性　@Transactional" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Spring AOP</title><link href="http://localhost:4000/java-aop/" rel="alternate" type="text/html" title="Spring AOP" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-aop</id><content type="html" xml:base="http://localhost:4000/java-aop/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
+&lt;p&gt;AOP is an abbreviation of Aspect-Oriented Programming.&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;常见坑点1：遇到检测异常时，事务默认不回滚。&lt;/p&gt;
+  &lt;li&gt;Cross-cutting concern&lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;p&gt;例如下面这段代码，账户余额依旧增加成功，并没有因为后面遇到SQLException（检测异常）而进行事务回滚！！&lt;/p&gt;
+&lt;p&gt;在DynamicProxyDemo專案的例子中，記錄的 動作原先被橫切（Cross-cutting）入至HelloSpeaker本身所負責的商務流程之中，另外類似於日誌這類的動作，如安全 （Security）檢查、交易（Transaction）等系統層面的服務（Service），在一些應用程式之中常被見到安插至各個物件的處理流程之 中，這些動作在AOP的術語中被稱之為Cross-cutting concerns。&lt;/p&gt;
 
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-          &lt;span class=&quot;c1&quot;&gt;//然后遇到故障&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SQLException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;原因分析：因为Spring的默认的事务规则是遇到运行异常（RuntimeException及其子类）和程序错误（Error）才会进行事务回滚，显然SQLException并不属于这个范围。如果想针对检测异常进行事务回滚，可以在@Transactional 注解里使用rollbackFor 属性明确指定异常。例如下面这样，就可以正常回滚：&lt;/p&gt;
+&lt;p&gt;以圖片說明可強調出Cross-cutting concerns的意涵，例如原來的商務流程是很單純的：&lt;/p&gt;
 
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rollbackFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-          &lt;span class=&quot;c1&quot;&gt;//然后遇到故障&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SQLException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;常见坑点2： 在业务层捕捉异常后，发现事务不生效。&lt;/p&gt;
+&lt;p&gt;AOP(Aspect Oriented Programming) 面向切面编程，是目前软件开发中的一个热点，是Spring框架内容，利用AOP可以对业务逻辑的各个部分隔离，从而使的业务逻辑各部分的耦合性降低，提高程序的可重用性，踢开开发效率，主要功能：日志记录，性能统计，安全控制，事务处理，异常处理等。&lt;/p&gt;
 
-    &lt;p&gt;这是许多新手都会犯的一个错误，在业务层手工捕捉并处理了异常，你都把异常“吃”掉了，Spring自然不知道这里有错，更不会主动去回滚数据。例如：下面这段代码直接导致增加余额的事务回滚没有生效。&lt;/p&gt;
+&lt;p&gt;AOP实现原理是java动态代理，但是jdk的动态代理必须实现接口，所以spring的aop是用cglib这个库实现的，cglis使用里asm这个直接操纵字节码的框架，所以可以做到不使用接口的情况下实现动态代理。&lt;/p&gt;
 
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;//谨慎：尽量不要在业务层捕捉异常并处理&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SQLException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;p&gt;AOP与OOP的却别：&lt;/p&gt;
 
-    &lt;p&gt;不要小瞧了这些细节，往前暴露异常很大程度上很能够帮我们快速定位问题，而不是经常在项目上线后出现问题，却无法刨根知道哪里报错。&lt;/p&gt;
+&lt;p&gt;OOP面向对象编程，针对业务处理过程的实体及其属性和行为进行抽象封装，以获得更加清晰高效的逻辑单元划分。而AOP则是针对业务处理过程中的切面进行提取，它所面对的是处理过程的某个步骤或阶段，以获得逻辑过程的中各部分之间低耦合的隔离效果。这两种设计思想在目标上有着本质的差异。&lt;/p&gt;
 
-    &lt;p&gt;推荐做法：若非实际业务要求，则在业务层统一抛出异常，然后在控制层统一处理。&lt;/p&gt;
+&lt;p&gt;举例：&lt;/p&gt;
 
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;//先增加余额&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;accountMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMoney&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;//推荐：在业务层将异常抛出&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;发生异常了..&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">HTTP - Get, Post, Put, Delete</title><link href="http://localhost:4000/http-get-post-delete/" rel="alternate" type="text/html" title="HTTP - Get, Post, Put, Delete" /><published>2020-02-08T00:00:00-08:00</published><updated>2020-02-08T00:00:00-08:00</updated><id>http://localhost:4000/http-get-post-delete</id><content type="html" xml:base="http://localhost:4000/http-get-post-delete/">&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/assertible/blog/swagger-petstore-store-endpoints.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;对于“雇员”这样一个业务实体进行封装，自然是OOP的任务，我们可以建立一个“Employee”类，并将“雇员”相关的属性和行为封装其中。而用AOP 设计思想对“雇员”进行封装则无从谈起。&lt;/p&gt;
+
+&lt;p&gt;同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。&lt;/p&gt;
+
+&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">HTTP - Get, Post, Put, Delete</title><link href="http://localhost:4000/http-get-post-delete/" rel="alternate" type="text/html" title="HTTP - Get, Post, Put, Delete" /><published>2020-02-08T00:00:00-08:00</published><updated>2020-02-08T00:00:00-08:00</updated><id>http://localhost:4000/http-get-post-delete</id><content type="html" xml:base="http://localhost:4000/http-get-post-delete/">&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/assertible/blog/swagger-petstore-store-endpoints.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -588,445 +794,4 @@ This would separate your business logic from the view.&lt;/p&gt;
  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping</title><link href="http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping/" rel="alternate" type="text/html" title="Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping" /><published>2020-02-05T00:00:00-08:00</published><updated>2020-02-05T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping</id><content type="html" xml:base="http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping/">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;amp;ssl=1&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;@PostMapping – Handle HTTP POST Requests&lt;/li&gt;
-  &lt;li&gt;@GetMapping – Handle HTTP Get Requests&lt;/li&gt;
-  &lt;li&gt;@PutMapping – Handle HTTP Put Requests&lt;/li&gt;
-  &lt;li&gt;@DeleteMapping – Handle HTTP Delete Requests&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Additionally to the above-mentioned shortcut annotations, you can use the @RequestMapping annotation which you will most probably find in most of the Spring MVC REST Web Service projects. You can use this single @RequestMapping annotation to map any request to a specific method.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A few HTTP GET request mapping examples:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To map HTTP Post request to a method, we just need to change the Request Method type:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Please note that if you need your Web Service endpoint to be able to return information in either XML or JSON format. Depending on the value of the Accept Header. Then you need you use the curly brackets {} and list the supported media types like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;produces&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_XML_VALUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Note: Note that if you want your Web Service endpoint to return MediaType.APPLICATION_XML_VALUE then your HTTP Request must contain the Accept header with a value application/xml like in the curl example below:&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;    curl -X GET \
-    http://localhost:8080/users/Ow8EG5GAvkCa9kEHGqLTQpR32zSmhd /
-    -H 'accept: application/xml' /
-    -H 'authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNTIzMDMwNTg4fQ.rnOqIEpmh6xQYBPkcRHp9DOnT8M5a7o9De6a7ZE7z2nBKfNpgXNrXgFQnlUi01CnltOP-iXyprsGhB4wvkafcg'
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Actual speaking English</title><link href="http://localhost:4000/english-speaking-1/" rel="alternate" type="text/html" title="Actual speaking English" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-speaking-1</id><content type="html" xml:base="http://localhost:4000/english-speaking-1/">&lt;p&gt;&lt;img src=&quot;http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;M: Hey Rachel, how are you?&lt;/p&gt;
-
-&lt;p&gt;W: I’m good but I’m a bit nervous.&lt;/p&gt;
-
-&lt;p&gt;M: Why?&lt;/p&gt;
-
-&lt;p&gt;W: Because I’m starting at a new company in a couple of days, but I don’t really know know to introduce myself to a new group of people.&lt;/p&gt;
-
-&lt;p&gt;M: The first day at a company is nerve-racking, right?&lt;/p&gt;
-
-&lt;p&gt;You meet so many new faces and they all know each other as well. That is evven worse. But there are some things you should do on your first day.&lt;/p&gt;
-
-&lt;p&gt;W: I’d love some advice.&lt;/p&gt;
-
-&lt;p&gt;Note: 
-    nerve-racking: stressful, exhausting&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;new faces: new people
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;M: Ok. A firm handshake, that is key, to project confidence, but not too hard, you don’t want to hurt the other person, but not to flimsy as well. I hate a wet flimsy handshake. So if you are feeling nervous and sweaty, perhaps give your hand a wipe as well.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    project: to give or express a clear impression of one’s thoughts or personality; make an image&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;flimsy: weak, without strength, unstable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;W: Clammy hands.&lt;/p&gt;
-
-&lt;p&gt;M: They are going to call you clammy hands at the company.&lt;/p&gt;
-
-&lt;p&gt;W: Alright, so a firm handshake is really important.&lt;/p&gt;
-
-&lt;p&gt;M: And then eye contact as well.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    clammy: cold and damp, covered with moisture; wet, sweaty&lt;/p&gt;
-
-&lt;p&gt;M: And a big smile, I think that always helps, it makes people feel much more comfortable.&lt;/p&gt;
-
-&lt;p&gt;W: Yeah that’s true, that definitely will leave a great first impression.&lt;/p&gt;
-
-&lt;p&gt;M: As long as you don’t have something stuck in your teeth. Again, check.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    to leave an impression (on someone): to provide a lasting memory for someone&lt;/p&gt;
-
-&lt;p&gt;W: I’ll have to get a mirror and check my teeth. That’s for sure. Alright so you’re saying a firm handshake is important, good eye contact, those show that I’m confident and then a friendly smile will show that I’m at ease and that I’m confortable with my surroundings.&lt;/p&gt;
-
-&lt;p&gt;M: Sure, and then maybe the last thing remember people’s names.&lt;/p&gt;
-
-&lt;p&gt;W: Oh, right!&lt;/p&gt;
-
-&lt;p&gt;M: And when you say your name as well, project it loudly so they remember you.&lt;/p&gt;
-
-&lt;p&gt;W: But you know, there’s so many people that I have to meet. How do I remember all their names?&lt;/p&gt;
-
-&lt;p&gt;M: I think writing it down as soon as you can, at the earliest possible opportunity. But I think that’s about it. And I think you’ll be fine, Rachel.&lt;/p&gt;
-
-&lt;p&gt;W: You think so? Alright, well I can’t wait to use that advice on my first day at my new company.&lt;/p&gt;
-
-&lt;p&gt;M: Fingers crossed.&lt;/p&gt;
-
-&lt;p&gt;W: Thank you.&lt;/p&gt;
-
-&lt;p&gt;Note:
-    keep one’s fingers crossed: to wish someone luck; to hope for a good outcome for someone&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Activity
-    &lt;ol&gt;
-      &lt;li&gt;活跃、繁忙( Uncountable) &lt;em&gt;the situation in which a lot of things are happening or people are moving around&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;行动、活动 &lt;em&gt;the work of a group or organization to achieve an aim&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;娱乐活动 &lt;em&gt;something that is done for enjoyment, especially an organized event&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;There was a lot of activity in preparation for the Queen’s visit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;He was found guilty of terrorist activity. / criminal activities&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;His spare-time activities include cooking, tennis, and windsurfing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Motion&lt;/p&gt;
-
-    &lt;p&gt;动、运动、移动 &lt;em&gt;the act or process of moving, or a particular action or movement&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;They showed the goal again in slow motion.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motive
-动机 &lt;em&gt;a reason for doing something&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Why would she have killed him? She has no motive.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motivation
-    &lt;ol&gt;
-      &lt;li&gt;积极性、干劲儿 &lt;em&gt;enthusiasm for doing something&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;动机、诱因 &lt;em&gt;the need or reason for doing something&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;He’s a bright enough student - he just lacks motivation.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;What was the motivation for the attack?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motivate
-    &lt;ol&gt;
-      &lt;li&gt;使产生动机、激起 &lt;em&gt;to cause someone to behave in a particular way&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;激励 &lt;em&gt;to make someone want to do something well&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Like so many people, he’s motivated by greed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Teaching is all about motivating people to learn.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">auto parts</title><link href="http://localhost:4000/english-auto-parts/" rel="alternate" type="text/html" title="auto parts" /><published>2020-02-03T00:00:00-08:00</published><updated>2020-02-03T00:00:00-08:00</updated><id>http://localhost:4000/english-auto-parts</id><content type="html" xml:base="http://localhost:4000/english-auto-parts/">&lt;p&gt;&lt;img src=&quot;https://n6s6b6w9.stackpathcdn.com/client/w_719,q_lossy,ret_wait/https://appgrooves.com/cdn/mc/AUTO_AND_VEHICLES/1_w1200.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;front bumper
-rear bumper&lt;/p&gt;
-
-&lt;p&gt;windshield
-windshield wiper&lt;/p&gt;
-
-&lt;p&gt;wiper blade&lt;/p&gt;
-
-&lt;p&gt;splash shield&lt;/p&gt;
-
-&lt;p&gt;filler lid&lt;/p&gt;
-
-&lt;p&gt;headlight
-taillight&lt;/p&gt;
-
-&lt;p&gt;roof&lt;/p&gt;
-
-&lt;p&gt;left blinker
-right blinker&lt;/p&gt;
-
-&lt;p&gt;brake light&lt;/p&gt;
-
-&lt;p&gt;side mirrors&lt;/p&gt;
-
-&lt;p&gt;hood&lt;/p&gt;
-
-&lt;p&gt;trunk&lt;/p&gt;
-
-&lt;p&gt;steering wheel&lt;/p&gt;
-
-&lt;p&gt;car seats&lt;/p&gt;
-
-&lt;p&gt;driver’s seat
-passenger’s seat
-back seat&lt;/p&gt;
-
-&lt;p&gt;back seat driver&lt;/p&gt;
-
-&lt;p&gt;instrument cluster/panel&lt;/p&gt;
-
-&lt;p&gt;galaxy clusters&lt;/p&gt;
-
-&lt;p&gt;odometer&lt;/p&gt;
-
-&lt;p&gt;speedometer&lt;/p&gt;
-
-&lt;p&gt;rear view mirror&lt;/p&gt;
-
-&lt;p&gt;gas pedal
-accelerator&lt;/p&gt;
-
-&lt;p&gt;brake pedal&lt;/p&gt;
-
-&lt;p&gt;automatic car
-stick shift car&lt;/p&gt;
-
-&lt;p&gt;clutch&lt;/p&gt;
-
-&lt;p&gt;center console/armrest&lt;/p&gt;
-
-&lt;p&gt;emergency brake/e-brake/parking brake&lt;/p&gt;
-
-&lt;p&gt;glove compartment/box&lt;/p&gt;
-
-&lt;p&gt;dashboard&lt;/p&gt;
-
-&lt;p&gt;entertainment system&lt;/p&gt;
-
-&lt;p&gt;navigation&lt;/p&gt;
-
-&lt;p&gt;air vent/ventilation&lt;/p&gt;
-
-&lt;p&gt;seatbelt&lt;/p&gt;
-
-&lt;p&gt;seatbelt buckle&lt;/p&gt;
-
-&lt;p&gt;cup holder&lt;/p&gt;
-
-&lt;p&gt;horn&lt;/p&gt;
-
-&lt;p&gt;honk at someone&lt;/p&gt;
-
-&lt;p&gt;shift/gear selector&lt;/p&gt;
-
-&lt;p&gt;starter/ignition&lt;/p&gt;
-
-&lt;p&gt;high beam
-fog light&lt;/p&gt;
-
-&lt;p&gt;air bags&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Activity
-    &lt;ol&gt;
-      &lt;li&gt;活跃、繁忙( Uncountable) &lt;em&gt;the situation in which a lot of things are happening or people are moving around&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;行动、活动 &lt;em&gt;the work of a group or organization to achieve an aim&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;娱乐活动 &lt;em&gt;something that is done for enjoyment, especially an organized event&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;There was a lot of activity in preparation for the Queen’s visit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;He was found guilty of terrorist activity. / criminal activities&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;His spare-time activities include cooking, tennis, and windsurfing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Motion&lt;/p&gt;
-
-    &lt;p&gt;动、运动、移动 &lt;em&gt;the act or process of moving, or a particular action or movement&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;They showed the goal again in slow motion.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motive
-动机 &lt;em&gt;a reason for doing something&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Why would she have killed him? She has no motive.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motivation
-    &lt;ol&gt;
-      &lt;li&gt;积极性、干劲儿 &lt;em&gt;enthusiasm for doing something&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;动机、诱因 &lt;em&gt;the need or reason for doing something&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;He’s a bright enough student - he just lacks motivation.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;What was the motivation for the attack?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motivate
-    &lt;ol&gt;
-      &lt;li&gt;使产生动机、激起 &lt;em&gt;to cause someone to behave in a particular way&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;激励 &lt;em&gt;to make someone want to do something well&lt;/em&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Like so many people, he’s motivated by greed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Teaching is all about motivating people to learn.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">status, state, condition, situation 区别</title><link href="http://localhost:4000/english-state-status-situation-condition-circumstance/" rel="alternate" type="text/html" title="status, state, condition, situation 区别" /><published>2020-02-02T00:00:00-08:00</published><updated>2020-02-02T00:00:00-08:00</updated><id>http://localhost:4000/english-state-status-situation-condition-circumstance</id><content type="html" xml:base="http://localhost:4000/english-state-status-situation-condition-circumstance/">&lt;p&gt;&lt;img src=&quot;http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;amp;resize=2048:*&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;status
-人在政治、社会、经济、法律上的地位或者身份。也可用于指政治等事态的状况。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;status&lt;/em&gt; 和其他三个词的差别最大。虽然名词 &lt;em&gt;status&lt;/em&gt;也可以描述个人在群体和环境中的位置，但它主要社会中的地位、身份。比如，&lt;em&gt;marital status&lt;/em&gt; 婚姻状况。&lt;/p&gt;
-
-&lt;p&gt;Examples:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In some societies, lawyers, doctors and professors have a high social status.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Luxury yachts are popular status symbols among the rich and powerful.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;condition
-一般强调产生影响的原因或者环境，复数形式指笼统的情况。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;第一个用法和 &lt;em&gt;state&lt;/em&gt; 相似，只不过在形容人的时候，&lt;em&gt;condition&lt;/em&gt; 强调身体状态，而 &lt;em&gt;state&lt;/em&gt; 则更重于表示心理上的、精神上的状态。需要注意的是，在这里，&lt;em&gt;condition&lt;/em&gt; 常作单数形式。&lt;/p&gt;
-
-&lt;p&gt;Examples:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This painting has been preserved with care. It’s in excellent condition.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;My grandpa is recovering from an operation. He is in no condition to travel.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;state
-人或者物在特定时间的状态，与环境、外表、心灵以及健康相关。或在某一阶段的状态或形式。比如，常用搭配有 &lt;em&gt;state of mind&lt;/em&gt; 心态、心情。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Examples:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The news left us all in a state of shock.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The prop manager’s job is to acquire or build props, and keep them in a good state of repair.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;He hasn’t been eating properly for a month – I’m worried about the state of his health.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;situation
-明确具体的环境情况或处境。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;situation&lt;/em&gt; 的意思是 特定时间、特定地点的具体情况。举个例子，情景喜剧的英文说法就是 &lt;em&gt;situation comedies&lt;/em&gt;，简称 &lt;em&gt;sitcoms&lt;/em&gt; 。&lt;/p&gt;
-
-&lt;p&gt;Examples:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Don’t put me in a difficult situation!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I don’t know if I would do the same. It all depends on the situation.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;circumstance
-周围的情况或某事发生时的情况。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry></feed>

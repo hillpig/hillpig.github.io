@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Static Proxy vs. Dynamic Proxy – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Static Proxy vs. Dynamic Proxy" />
+    <meta property="twitter:title" content="Static Proxy vs. Dynamic Proxy" />
     
   <!-- Async font loading -->
 <script>
@@ -151,324 +158,99 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Static Proxy vs. Dynamic Proxy</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-02-12
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/tags#Spring boot">
+          Spring boot
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://miro.medium.com/max/1280/1*bdXBG8hFHucrTPmJLfnH4w.png" alt="img" /></p>
+
+<!-- more -->
+
+<p>AOP is an abbreviation of Aspect-Oriented Programming.</p>
+
+<ul>
+  <li>Cross-cutting concern</li>
+</ul>
+
+<p>在DynamicProxyDemo專案的例子中，記錄的 動作原先被橫切（Cross-cutting）入至HelloSpeaker本身所負責的商務流程之中，另外類似於日誌這類的動作，如安全 （Security）檢查、交易（Transaction）等系統層面的服務（Service），在一些應用程式之中常被見到安插至各個物件的處理流程之 中，這些動作在AOP的術語中被稱之為Cross-cutting concerns。</p>
+
+<p>以圖片說明可強調出Cross-cutting concerns的意涵，例如原來的商務流程是很單純的：</p>
+
+<p>AOP(Aspect Oriented Programming) 面向切面编程，是目前软件开发中的一个热点，是Spring框架内容，利用AOP可以对业务逻辑的各个部分隔离，从而使的业务逻辑各部分的耦合性降低，提高程序的可重用性，踢开开发效率，主要功能：日志记录，性能统计，安全控制，事务处理，异常处理等。</p>
+
+<p>AOP实现原理是java动态代理，但是jdk的动态代理必须实现接口，所以spring的aop是用cglib这个库实现的，cglis使用里asm这个直接操纵字节码的框架，所以可以做到不使用接口的情况下实现动态代理。</p>
+
+<p>AOP与OOP的却别：</p>
+
+<p>OOP面向对象编程，针对业务处理过程的实体及其属性和行为进行抽象封装，以获得更加清晰高效的逻辑单元划分。而AOP则是针对业务处理过程中的切面进行提取，它所面对的是处理过程的某个步骤或阶段，以获得逻辑过程的中各部分之间低耦合的隔离效果。这两种设计思想在目标上有着本质的差异。</p>
+
+<p>举例：</p>
+
+<p>对于“雇员”这样一个业务实体进行封装，自然是OOP的任务，我们可以建立一个“Employee”类，并将“雇员”相关的属性和行为封装其中。而用AOP 设计思想对“雇员”进行封装则无从谈起。</p>
+
+<p>同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。</p>
+
+<p>OOP面向名次领域，AOP面向动词领域。</p>
 
 
+  </div>
 
-<div class="posts">
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/">Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Static Proxy vs. Dynamic Proxy",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;ssl=1" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-dto-dao/">Spring boot - DTO vs DAO</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i.stack.imgur.com/3XnBN.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-dto-dao/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-annotation-transient/">Spring boot - @transient</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-annotation-transient/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-speaking-1/">Actual speaking English</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-speaking-1/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-auto-parts/">auto parts</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://n6s6b6w9.stackpathcdn.com/client/w_719,q_lossy,ret_wait/https://appgrooves.com/cdn/mc/AUTO_AND_VEHICLES/1_w1200.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-auto-parts/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-state-status-situation-condition-circumstance/">status, state, condition, situation 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-02
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-state-status-situation-condition-circumstance/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-trading-email/">外贸邮件英文模版</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.magvision.com/uploads/allimg/190304/1-1Z30416331U05.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-trading-email/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-email/">英文邮件</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.learnenglishwithwill.com/wp-content/uploads/2019/04/emails-040419.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-email/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/java-inheritance-delegation/">
+        ← 上一篇
       </a>
     </span>
   
-  
-    <span class="next">
-      <a href="/page3/" class="next">
-        下一页 →
-      </a>
-    </span>
   
 </div>
-
       </div>
     </div>
 

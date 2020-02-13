@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Generate SSH Keys - Git – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Generate SSH Keys - Git" />
+    <meta property="twitter:title" content="Generate SSH Keys - Git" />
     
   <!-- Async font loading -->
 <script>
@@ -151,324 +158,120 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Generate SSH Keys - Git</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-02-12
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Git">
+          Git
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="https://images.ctfassets.net/0lvk5dbamxpi/UTPF4vNZ56vh5Y9cndGfI/e6438d14fcdf045fe098702302456f07/SSH_Key_-_Authentication_Using_SSH_Keys" alt="img" /></p>
+
+<!-- more -->
+
+<ul>
+  <li>
+    <p>Generating an SSH key (Mac OS X / linux)</p>
+
+    <ol>
+      <li>
+        <p>Enter the following command in the Terminal window.</p>
+
+        <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">     ssh-keygen -t rsa
+</span></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Press the ENTER key to accept the default location. The ssh-keygen utility prompts you for a passphrase.</p>
+      </li>
+      <li>
+        <p>Type in a passphrase. You can also hit the ENTER key to accept the default (no passphrase). However, this is not recommended.
+  Please note that you will need to enter the passphrase a second time to continue.</p>
+      </li>
+    </ol>
+
+    <p>After you confirm the passphrase, the system generates the key pair.</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">      Your identification has been saved in /Users/user/.ssh/id_rsa.
+      Your public key has been saved in /Users/user/.ssh/id_rsa.pub.
+      The key fingerprint is:
+      ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 user@mymac.local
+      The key's randomart image is:
+      +--[ RSA 2048]----+
+      |                 |
+      |         .       |
+      |        E .      |
+      |   .   . o       |
+      |  o . . S .      |
+      | + + o . +       |
+      |. + o = o +      |
+      | o...o * o       |
+      |.  oo.o .        |
+      +-----------------+
+</span></code></pre></div>    </div>
+    <p>Your private key is saved to the id_rsa file in the .ssh directory and is used to verify the public key you use belongs to the same cloud server. It’s important to never share your private key with anyone, it is equivalent of your password!</p>
+
+    <p>Your public key is saved to the id_rsa.pub file and it is the key you’ll upload to our cloud service. You can save this key to the clipboard by running this:</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">      pbcopy &lt; ~/.ssh/id_rsa.pub
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/">Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Generate SSH Keys - Git",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;ssl=1" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-dto-dao/">Spring boot - DTO vs DAO</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i.stack.imgur.com/3XnBN.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-dto-dao/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-annotation-transient/">Spring boot - @transient</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-annotation-transient/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-speaking-1/">Actual speaking English</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-speaking-1/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-auto-parts/">auto parts</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://n6s6b6w9.stackpathcdn.com/client/w_719,q_lossy,ret_wait/https://appgrooves.com/cdn/mc/AUTO_AND_VEHICLES/1_w1200.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-auto-parts/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-state-status-situation-condition-circumstance/">status, state, condition, situation 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-02
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-state-status-situation-condition-circumstance/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-trading-email/">外贸邮件英文模版</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.magvision.com/uploads/allimg/190304/1-1Z30416331U05.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-trading-email/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-email/">英文邮件</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.learnenglishwithwill.com/wp-content/uploads/2019/04/emails-040419.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-email/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/java-inheritance-proxy-decorator/">
+        ← 上一篇
       </a>
     </span>
   
   
-    <span class="next">
-      <a href="/page3/" class="next">
-        下一页 →
+    <span class="next" >
+      <a href="http://localhost:4000/java-inheritance-delegation/">
+        下一篇 →
       </a>
     </span>
   
 </div>
-
       </div>
     </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Delegation VS Inheritance - Java – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Delegation VS Inheritance - Java" />
+    <meta property="twitter:title" content="Delegation VS Inheritance - Java" />
     
   <!-- Async font loading -->
 <script>
@@ -151,324 +158,170 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Delegation VS Inheritance - Java</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-02-12
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="https://dzone.com/storage/temp/12808609-classdiagramm.png" alt="img" /></p>
+
+<!-- more -->
+
+<p><a href="https://www.geeksforgeeks.org/inheritance-in-java/" title="Inheritance"><strong>Inheritance</strong></a> in Java programming is the process by which one class takes the property of another other class. i.e. the new classes, known as derived or child class, take over the attributes and behavior of the pre-existing classes, which are referred to as base classes or super or parent class.</p>
+
+<p><strong>Delegation</strong> is simply passing a duty off to someone/something else.</p>
+
+<ul>
+  <li>Delegation can be an alternative to inheritance.</li>
+  <li>Delegation means that you use an object of another class as an instance variable, and forward messages to the instance.</li>
+  <li>It is better than inheritance for many cases because it makes you to think about each message you forward, because the instance is of a known class, rather than a new class, and because it doesn’t force you to accept all the methods of the super class: you can provide only the methods that really make sense.</li>
+  <li>Delegation can be viewed as a relationship between objects where one object forwards certain method calls to another object, called its delegate.</li>
+  <li>The primary advantage of delegation is run-time flexibility – the delegate can easily be changed at run-time. But unlike inheritance, delegation is not directly supported by most popular object-oriented languages, and it doesn’t facilitate dynamic polymorphism <a href="https://www.geeksforgeeks.org/dynamic-method-dispatch-runtime-polymorphism-java/" title="dynamic polymorphism">dynamic polymorphism</a>.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Java program to illustrate </span>
+<span class="c1">// delegation </span>
+<span class="kd">class</span> <span class="nc">RealPrinter</span> <span class="o">{</span> 
+    <span class="c1">// the "delegate" </span>
+    <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> 
+    <span class="o">{</span> 
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The Delegate"</span><span class="o">);</span> 
+    <span class="o">}</span> 
+<span class="o">}</span> 
+  
+<span class="kd">class</span> <span class="nc">Printer</span> <span class="o">{</span> 
+    <span class="c1">// the "delegator" </span>
+    <span class="nc">RealPrinter</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RealPrinter</span><span class="o">();</span> 
+  
+    <span class="c1">// create the delegate </span>
+    <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> 
+    <span class="o">{</span> 
+        <span class="n">p</span><span class="o">.</span><span class="na">print</span><span class="o">();</span> <span class="c1">// delegation </span>
+    <span class="o">}</span> 
+<span class="o">}</span> 
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span> 
+  
+    <span class="c1">// To the outside world it looks like Printer actually prints. </span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> 
+    <span class="o">{</span> 
+        <span class="nc">Printer</span> <span class="n">printer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="o">();</span> 
+        <span class="n">printer</span><span class="o">.</span><span class="na">print</span><span class="o">();</span> 
+    <span class="o">}</span> 
+<span class="o">}</span> 
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<blockquote>
+  <p>The Delegate</p>
+</blockquote>
+
+<p>When you delegate, you are simply calling up some class which knows what must be done. You do not really care how it does it, all you care about is that the class you are calling knows what needs doing.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Java program to illustrate </span>
+<span class="c1">// Inheritance </span>
+<span class="kd">class</span> <span class="nc">RealPrinter</span> <span class="o">{</span> 
+    <span class="c1">// base class implements method </span>
+    <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> 
+    <span class="o">{</span> 
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Printing Data"</span><span class="o">);</span> 
+    <span class="o">}</span> 
+<span class="o">}</span> <span class="mi">3</span> <span class="c1">// Printer Inheriting functionality of real printer </span>
+    <span class="kd">class</span> <span class="nc">Printer</span> <span class="kd">extends</span> <span class="nc">RealPrinter</span> <span class="o">{</span> 
+  
+    <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> 
+    <span class="o">{</span> 
+        <span class="kd">super</span><span class="o">.</span><span class="na">print</span><span class="o">();</span> <span class="c1">// inside calling method of parent </span>
+    <span class="o">}</span> 
+<span class="o">}</span> 
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="o">{</span> 
+  
+    <span class="c1">// To the outside world it looks like Printer actually prints. </span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> 
+    <span class="o">{</span> 
+        <span class="nc">Printer</span> <span class="n">printer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="o">();</span> 
+        <span class="n">printer</span><span class="o">.</span><span class="na">print</span><span class="o">();</span> 
+    <span class="o">}</span> 
+<span class="o">}</span> 
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<blockquote>
+  <p>Printing Data</p>
+</blockquote>
+
+<p><strong>When to use what?</strong></p>
+
+<p>Here are some examples when inheritance or delegation are being used:</p>
+
+<p>Assume your class is called B and the derived/delegated to class is called A then If</p>
+
+<ul>
+  <li>You want to express relationship (is-a) then you want to use Inheritance.</li>
+  <li>You want to be able to pass your class to an existing API expecting A’s then you need to use inheritance.</li>
+  <li>You want to enhance A, but A is final and can no further be sub-classed then you need to use composition and delegation.</li>
+</ul>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/">Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Delegation VS Inheritance - Java",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;ssl=1" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-dto-dao/">Spring boot - DTO vs DAO</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i.stack.imgur.com/3XnBN.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-dto-dao/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-annotation-transient/">Spring boot - @transient</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-annotation-transient/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-speaking-1/">Actual speaking English</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-speaking-1/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-auto-parts/">auto parts</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://n6s6b6w9.stackpathcdn.com/client/w_719,q_lossy,ret_wait/https://appgrooves.com/cdn/mc/AUTO_AND_VEHICLES/1_w1200.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-auto-parts/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-state-status-situation-condition-circumstance/">status, state, condition, situation 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-02
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://ichef.bbci.co.uk/images/ic/640x360/p0639shn.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-state-status-situation-condition-circumstance/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-trading-email/">外贸邮件英文模版</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.magvision.com/uploads/allimg/190304/1-1Z30416331U05.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-trading-email/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-email/">英文邮件</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-29
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.learnenglishwithwill.com/wp-content/uploads/2019/04/emails-040419.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-email/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/git-ssh-key/">
+        ← 上一篇
       </a>
     </span>
   
   
-    <span class="next">
-      <a href="/page3/" class="next">
-        下一页 →
+    <span class="next" >
+      <a href="http://localhost:4000/java-static-proxy-dynamic-proxy/">
+        下一篇 →
       </a>
     </span>
   
 </div>
-
       </div>
     </div>
 
