@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 什么是Spring boot中的 bean
+title: Spring boot中的 bean 和 IoC
 date: 2020-01-27
 Author: 山猪
 tags: [Java, Spring boot]

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Spring AOP – 山猪 – 方寸之间 点滴墨彩</title>
+  <title>Spring boot中的 bean 和 IoC – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,8 +19,8 @@
     <meta name="author" content="山猪" />
 
     
-    <meta property="og:title" content="Spring AOP" />
-    <meta property="twitter:title" content="Spring AOP" />
+    <meta property="og:title" content="Spring boot中的 bean 和 IoC" />
+    <meta property="twitter:title" content="Spring boot中的 bean 和 IoC" />
     
   <!-- Async font loading -->
 <script>
@@ -159,11 +159,11 @@
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
         <article class="posts">
-  <h1>Spring AOP</h1>
+  <h1>Spring boot中的 bean 和 IoC</h1>
 
   <div clsss="meta">
     <span class="date">
-      2020-02-10
+      2020-01-27
     </span>
 
     <ul class="tag">
@@ -184,36 +184,140 @@
   </div>
 
   <div class="entry">
-    <p><img src="https://www.javainuse.com/boot-66-18.JPG" alt="img" /></p>
+    <p><img src="https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
 
 <!-- more -->
 
-<p>AOP is an abbreviation of Aspect-Oriented Programming.</p>
+<ol>
+  <li>
+    <h2 id="overview">Overview</h2>
 
-<ul>
-  <li>Cross-cutting concern</li>
-</ul>
+    <p>Bean is a key concept of the Spring Framework. As such, understanding this notion is crucial to get the hang of the framework and to use it in an effective way.</p>
 
-<p>在DynamicProxyDemo專案的例子中，記錄的 動作原先被橫切（Cross-cutting）入至HelloSpeaker本身所負責的商務流程之中，另外類似於日誌這類的動作，如安全 （Security）檢查、交易（Transaction）等系統層面的服務（Service），在一些應用程式之中常被見到安插至各個物件的處理流程之 中，這些動作在AOP的術語中被稱之為Cross-cutting concerns。</p>
+    <p>Unfortunately, <strong>there aren’t clear answers to a simple question – what a Spring bean really is.</strong> Some explanations go to such a low level that a big picture is missed, whereas some are too vague.</p>
+  </li>
+  <li>
+    <h2 id="bean-definition">Bean Definition</h2>
+    <p>Here’s a definition of beans in <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-introduction" title="the Spring Framework documentation">the Spring Framework documentation</a>:</p>
 
-<p>以圖片說明可強調出Cross-cutting concerns的意涵，例如原來的商務流程是很單純的：</p>
+    <p><em>In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.</em></p>
 
-<p>AOP(Aspect Oriented Programming) 面向切面编程，是目前软件开发中的一个热点，是Spring框架内容，利用AOP可以对业务逻辑的各个部分隔离，从而使的业务逻辑各部分的耦合性降低，提高程序的可重用性，踢开开发效率，主要功能：日志记录，性能统计，安全控制，事务处理，异常处理等。</p>
+    <p>This definition is concise and gets to the point, <strong>but misses an important thing – Spring IoC container.</strong> Let’s go down the rabbit hole to see what it is and the benefits it brings in.</p>
+  </li>
+  <li>
+    <h2 id="inversion-of-control">Inversion of Control</h2>
 
-<p>AOP实现原理是java动态代理，但是jdk的动态代理必须实现接口，所以spring的aop是用cglib这个库实现的，cglis使用里asm这个直接操纵字节码的框架，所以可以做到不使用接口的情况下实现动态代理。</p>
+    <p>Simply put, <a href="https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring" title="Inversion of Control">Inversion of Control</a>, or IoC for short, is a process in which an object defines its dependencies without creating them. This object delegates the job of constructing such dependencies to an IoC container.</p>
 
-<p>AOP与OOP的却别：</p>
+    <p>Let’s start with the declaration of a couple of domain classes before diving into IoC.</p>
 
-<p>OOP面向对象编程，针对业务处理过程的实体及其属性和行为进行抽象封装，以获得更加清晰高效的逻辑单元划分。而AOP则是针对业务处理过程中的切面进行提取，它所面对的是处理过程的某个步骤或阶段，以获得逻辑过程的中各部分之间低耦合的隔离效果。这两种设计思想在目标上有着本质的差异。</p>
+    <ul>
+      <li>
+        <h3 id="domain-classes">Domain Classes</h3>
+      </li>
+    </ul>
 
-<p>举例：</p>
+    <p>Assume we have a class declaration:</p>
 
-<p>对于“雇员”这样一个业务实体进行封装，自然是OOP的任务，我们可以建立一个“Employee”类，并将“雇员”相关的属性和行为封装其中。而用AOP 设计思想对“雇员”进行封装则无从谈起。</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Company</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">Address</span> <span class="n">address</span><span class="o">;</span>
+ 
+     <span class="kd">public</span> <span class="nf">Company</span><span class="o">(</span><span class="nc">Address</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+ <span class="o">}</span>
+ 
+     <span class="c1">// getter, setter and other properties</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
 
-<p>同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。</p>
+    <p>This class needs a collaborator of type Address:</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Address</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">street</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">number</span><span class="o">;</span>
+    
+     <span class="kd">public</span> <span class="nf">Address</span><span class="o">(</span><span class="nc">String</span> <span class="n">street</span><span class="o">,</span> <span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">street</span> <span class="o">=</span> <span class="n">street</span><span class="o">;</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">number</span> <span class="o">=</span> <span class="n">number</span><span class="o">;</span>
+     <span class="o">}</span>
+    
+     <span class="c1">// getters and setters</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li>
+        <h3 id="tranditional-approach">Tranditional Approach</h3>
+      </li>
+    </ul>
 
-<p>OOP面向名次领域，AOP面向动词领域。</p>
+    <p>Normally, we create objects with their classes’ constructors:</p>
 
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">Address</span> <span class="n">address</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Address</span><span class="o">(</span><span class="s">"High Street"</span><span class="o">,</span> <span class="mi">1000</span><span class="o">);</span>
+ <span class="nc">Company</span> <span class="n">company</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Company</span><span class="o">(</span><span class="n">address</span><span class="o">);</span>
+</code></pre></div>    </div>
+
+    <p>There’s nothing wrong with this approach, but wouldn’t it be nice to manage the dependencies in a better way?</p>
+
+    <p>Imagine an application with dozens or even hundreds of classes. Sometimes we want to share a single instance of a class across the whole application, other times we need a separate object for each use case, and so on.</p>
+
+    <p>Managing such a number of objects is nothing short of a nightmare. <strong>This is where Inversion of Control comes to the rescue.</strong></p>
+
+    <p>Instead of constructing dependencies by itself, an object can retrieve its dependencies from an IoC container. <strong>All we need to do is to provide the container with appropriate configuration metadata.</strong></p>
+
+    <ul>
+      <li>
+        <h3 id="bean-configuration">Bean configuration</h3>
+      </li>
+    </ul>
+
+    <p>First off, let’s decorate the Company class with the <em>@Component annotation:</em></p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Component</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Company</span> <span class="o">{</span>
+     <span class="c1">// this body is the same as before</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+    <p>Here’s a configuration class supplying bean metadata to an IoC container:</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Configuration</span>
+ <span class="nd">@ComponentScan</span><span class="o">(</span><span class="n">basePackageClasses</span> <span class="o">=</span> <span class="nc">Company</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Config</span> <span class="o">{</span>
+     <span class="nd">@Bean</span>
+     <span class="kd">public</span> <span class="nc">Address</span> <span class="nf">getAddress</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="k">new</span> <span class="nf">Address</span><span class="o">(</span><span class="s">"High Street"</span><span class="o">,</span> <span class="mi">1000</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>The configuration class produces a bean of type <em>Address</em>. It also carries the <em>@ComponentScan annotation</em>, which instructs the container to looks for beans in the package containing the <em>Company class</em>.</p>
+
+    <p><strong>When a Spring IoC container constructs objects of those types, all the objects are called Spring beans as they are managed by the IoC container.</strong></p>
+
+    <ul>
+      <li>
+        <h3 id="ioc-in-action">IoC in Action</h3>
+      </li>
+    </ul>
+
+    <p>Since we defined beans in a configuration class, <strong>we’ll need an instance of the AnnotationConfigApplicationContext class to build up a container:</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AnnotationConfigApplicationContext</span><span class="o">(</span><span class="nc">Config</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre></div>    </div>
+
+    <p>A quick test verifies the existence as well as property values of our beans:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">Company</span> <span class="n">company</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"company"</span><span class="o">,</span> <span class="nc">Company</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+ <span class="n">assertEquals</span><span class="o">(</span><span class="s">"High Street"</span><span class="o">,</span> <span class="n">company</span><span class="o">.</span><span class="na">getAddress</span><span class="o">().</span><span class="na">getStreet</span><span class="o">());</span>
+ <span class="n">assertEquals</span><span class="o">(</span><span class="mi">1000</span><span class="o">,</span> <span class="n">company</span><span class="o">.</span><span class="na">getAddress</span><span class="o">().</span><span class="na">getNumber</span><span class="o">());</span>
+</code></pre></div>    </div>
+
+    <p>The result proves that the IoC container has created and initialized beans correctly.</p>
+  </li>
+  <li>
+    <h2 id="conclusion">Conclusion</h2>
+
+    <p>This tutorial gave a brief description of Spring beans and their relationship with an IoC container.</p>
+
+    <p>The complete source code for this tutorial can be found over on <a href="https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring" title="GitHub">GitHub</a>.</p>
+  </li>
+</ol>
 
   </div>
 
@@ -230,7 +334,7 @@
           admin: ["hillpig"],
           id: window.location.pathname,      // Ensure uniqueness and length less than 50
           distractionFreeMode: false,  // Facebook-like distraction free mode
-          title: "Spring AOP",
+          title: "Spring boot中的 bean 和 IoC",
           language: "zh-CN",
 
         })
@@ -244,14 +348,14 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/java-aop/">
+      <a href="http://localhost:4000/english-even-if-though/">
         ← 上一篇
       </a>
     </span>
   
   
     <span class="next" >
-      <a href="http://localhost:4000/git-ssh-key/">
+      <a href="http://localhost:4000/english-email/">
         下一篇 →
       </a>
     </span>

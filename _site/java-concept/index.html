@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>对一些java概念的理解 – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="对一些java概念的理解" />
+    <meta property="twitter:title" content="对一些java概念的理解" />
     
   <!-- Async font loading -->
 <script>
@@ -151,224 +158,222 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>对一些java概念的理解</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-02-13
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://images.idgesg.net/images/article/2019/05/java_binary_code_gears_programming_coding_development_by_bluebay2014_gettyimages-1040871468_2400x1600-100795798-large.jpg" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="composition">Composition</h2>
+
+<p><strong>Composition</strong> is the <strong>design technique</strong> to implement <em>has-a</em> relationship in classes. We can use java inheritance or Object composition for code reuse. Java composition is achieved by using instance variables that refers to other objects.</p>
+
+<p>Java composition is achieved by using instance variables that refers to other objects. Benefit of using composition is that we can control the visibility of other object to client classes and reuse only what we need.</p>
+
+<ol>
+  <li>
+    <p>We can get runtime binding in composition where inheritance binds the classes at compile time. So composition provides flexibility in invocation of methods.</p>
+  </li>
+  <li>
+    <p>Composition allows us to provide restricted access to the methods and hence more secure.</p>
+  </li>
+  <li>
+    <p>Inheritance exposes all the super class methods and variables to client and if we have no control in designing superclass,</p>
+  </li>
+  <li>
+    <p>Composition will never face this issue that any change in the superclass might affect subclass even though we might not be using the superclass methods</p>
+  </li>
+</ol>
+
+<p><strong>Inheritance</strong> is the concept of <strong>designing</strong> a class which defines properties and behavior which is common to set  of related classes.This class can be inherited by other classes the first is called super class and the second is called subclass.The subclass inherits all the instance variables and methods defined by the super class and can also add its own members.</p>
+
+<p><strong>Inheritance</strong> represents the <em>IS-A</em> relationship, also known as parent-child relationship.</p>
+
+<h2 id="how-inheritance-can-be-dangerous-">How inheritance can be dangerous ?</h2>
+
+<p>Lets take an example</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">X</span><span class="o">{</span>    
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">do</span><span class="o">(){</span>    
+   <span class="o">}</span>    
+<span class="o">}</span>    
+<span class="nc">Public</span> <span class="nc">Class</span> <span class="no">Y</span> <span class="kd">extends</span> <span class="no">X</span><span class="o">{</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">(){</span>    
+       <span class="k">do</span><span class="o">();</span>    
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>As clear in above code , Class Y has very strong coupling with class X. If anything changes in superclass X , Y may break dramatically. Suppose In future class X implements a method work with below signature</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">work</span><span class="o">(){</span>
+    <span class="c1">// some code</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Change is done in class X but it will make class Y uncompilable. SO this kind of dependency can go up to any level and it can be vary dangerous. Every time superclass might not have full visibility to code inside all its subclasses and subclass may be keep noticing what is happening in suerclass all the time. So we need to avoid this strong and unnecessary coupling.</p>
+
+<p>How does composition solves this issue?</p>
+
+<p>Lets see by revising the same example</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">X</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">do</span><span class="o">(){</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="nc">Public</span> <span class="nc">Class</span> <span class="no">Y</span><span class="o">{</span>
+    <span class="no">X</span> <span class="n">x</span><span class="o">=</span><span class="k">new</span> <span class="no">X</span><span class="o">();</span>    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">(){</span>    
+        <span class="n">x</span><span class="o">.</span><span class="na">do</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Here we are creating reference of X class in Y class and invoking method of X class by creating an instance of X class. Now all that strong coupling is gone. Superclass and subclass are highly independent of each other now. Classes can freely make changes which were dangerous in inheritance situation.</p>
+
+<h2 id="second-very-good-advantage-of-composition-in-that-it-provides-method-calling-flexibility-for-example">Second very good advantage of composition in that It provides method calling flexibility For example</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">X</span> <span class="kd">implements</span> <span class="no">R</span><span class="o">{}</span>
+<span class="kd">class</span> <span class="nc">Y</span> <span class="kd">implements</span> <span class="no">R</span><span class="o">{}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span><span class="o">{</span>    
+    <span class="no">R</span> <span class="n">r</span><span class="o">;</span>    
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>In Test class using r reference I can invoke methods of X class as well as Y class. This flexibility was never there in inheritance</p>
+
+<h2 id="another-great-advantage--unit-testing">Another great advantage : Unit testing</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">X</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">do</span><span class="o">(){</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="nc">Public</span> <span class="nc">Class</span> <span class="no">Y</span><span class="o">{</span>
+    <span class="no">X</span> <span class="n">x</span><span class="o">=</span><span class="k">new</span> <span class="no">X</span><span class="o">();</span>    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">(){</span>    
+        <span class="n">x</span><span class="o">.</span><span class="na">do</span><span class="o">();</span>    
+    <span class="o">}</span>    
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>In above example If state of x instance is not known ,it can easily be mocked up by using some test data and all methods can be easily tested. This was not possible at all in inheritance As you were heavily dependent on superclass to get the state of instance and execute any method.</p>
+
+<h2 id="another-good-reason-why-we-should-avoid-inheritance-is-that-java-does-not-support-multiple-inheritance">Another good reason why we should avoid inheritance is that Java does not support multiple inheritance.</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Public</span> <span class="kd">class</span> <span class="nc">Transaction</span> <span class="o">{</span>
+    <span class="nc">Banking</span> <span class="n">b</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">a</span><span class="o">[])</span>    
+    <span class="o">{</span>    
+        <span class="n">b</span><span class="o">=</span><span class="k">new</span> <span class="nc">Deposit</span><span class="o">();</span>    
+        <span class="k">if</span><span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="na">deposit</span><span class="o">()){</span>    
+            <span class="n">b</span><span class="o">=</span><span class="k">new</span> <span class="nc">Credit</span><span class="o">();</span>
+            <span class="n">b</span><span class="o">.</span><span class="na">credit</span><span class="o">();</span>    
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Good to know :</p>
+
+<ol>
+  <li>
+    <p>composition is easily achieved at runtime while inheritance provides its features at compile time</p>
+  </li>
+  <li>
+    <p>composition is also know as HAS-A relation and inheritance is also known as IS-A relation</p>
+  </li>
+</ol>
+
+<p>So make it a habit of always preferring composition over inheritance for various above reasons.</p>
+
+<h2 id="区别和联系">区别和联系</h2>
+
+<h3 id="区别">区别</h3>
+
+<ul>
+  <li>组合是一种 has-a 的 关系</li>
+  <li>继承是一种 is-a 的 关系</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>继承结构中，父类的内部细节对于子类是可见的。所以通过继承的代码复用是一种白盒式代码复用。</li>
+  <li>如果父类的实现跟随版本而发生改变，那么子类的实现也将随之改变。这样就导致了子类行为的不可预知性；</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>组合是通过对现有的类进行拼装（组合）产生新的、更复杂的功能。因为在类之间，各自的内部细节是不可见的，所以这种方式的代码复用是黑盒式代码复用。（因为组合中一般都定义一个类型，所以在编译期根本不知道具体会调用哪个实现类的方法）</li>
+  <li>继承，在写代码的时候就要指名具体继承哪个类，所以，在编译期就确定了关系。（从基类继承来的实现是无法在运行期动态改变的，因此降低了应用的灵活性。）
+组合，在写代码的时候可以采用面向接口编程。所以，类的组合关系一般在运行期确定。</li>
+</ul>
+
+<h3 id="联系">联系</h3>
+
+<ul>
+  <li>组合和继承都是代码复用的一种方式</li>
+</ul>
 
 
+  </div>
 
-<div class="posts">
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-eg-ie/">e.g. or i.e.</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "对一些java概念的理解",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://7esl.com/wp-content/uploads/2019/07/I.e.-vs-E.g.-1-1200x628.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-eg-ie/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-activity-motion-motive-motivation-motivate/">Activity, Motion, Motive, Motivation, Motivate 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-activity-motion-motive-motivation-motivate/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/math-test/">LaTex渲染的说明和测试</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2019-07-24
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#document">
-              document
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>LaTeX渲染已经在全站头部文件引入，可以直接使用，公式块上下使用<code class="highlighter-rouge">$$</code>标明，内联公式则用<code class="highlighter-rouge">$</code>.</p>
-
-<p>最好不要让公式出现在文章摘要里。</p>
-
-<p>Jekyll的默认文章摘要是第一段，但是我在使用中发现它选取摘要不是很稳...
-      </div>
-
-      <a href="/math-test/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/document/">LOFFER文档</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2019-06-02
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#document">
-              document
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。</p>
-
-<p>这是一个可以通过Fork直接发布在GitHub的Jekyll博客，你不需要编写代码或使用命令行即可获得一个部署在GitHub的博客。</p>
-
-<h2 id="更新内容">更新内容</h2>
-
-<h3 id="2019-07-25-v040">2019-07-25 V0.4...
-      </div>
-
-      <a href="/document/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/chinese-markdown-cheatsheet/">Markdown语法简介</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2013-07-16
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#markdown">
-              markdown
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>Markdown让文本编辑更加灵活，效果更加丰富。</p>
-
-<p>本中文版Markdown语法简介来自博客 <a href="https://blog.shengbin.me/posts/markdown-syntax">https://blog.shengbin.me/posts/markdown-syntax</a></p>
-
-<p>Markdown语法的完整介绍在这里：<a h...
-      </div>
-
-      <a href="/chinese-markdown-cheatsheet/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page4/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/java-bean/">
+        ← 上一篇
       </a>
     </span>
   
   
 </div>
-
       </div>
     </div>
 
