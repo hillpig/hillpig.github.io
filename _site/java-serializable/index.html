@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Serialization and Deserialization in Java – 山猪 – 方寸之间 点滴墨彩</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
+    
+    <meta name="author" content="山猪" />
+
+    
+    <meta property="og:title" content="Serialization and Deserialization in Java" />
+    <meta property="twitter:title" content="Serialization and Deserialization in Java" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="山猪 - 方寸之间 点滴墨彩" href="/feed.xml" />
+  <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/renaldo/128/pig-512.png">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://kit.fontawesome.com/56f7faf3f4.js"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/" class="site-avatar"><img src="https://github.com/hillpig/hillpig.github.io/blob/master/images/IMG_3789.jpg?raw=true" /></a>
+       
+      <h1 class="site-name"><a href="/">山猪</a></h1>
+      <p class="site-description">方寸之间 点滴墨彩</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/">首页</a>
+      
+      
+      
+      <a href="/about">关于</a>
+      
+      
+      
+      <a href="/archive">归档</a>
+      
+      
+      
+      <a href="/tags">标签</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  <li><a href="https://www.weibo.com/https://www.weibo.com/p/1005051403127811/home?from=page_100505&mod=TAB#place" class="icon-1 weibo" title="Weibo"><svg viewBox="0 0 512 512"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></svg></a></li>
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hillpig@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.facebook.com/hillpigcn" class="icon-10 facebook" title="Facebook"><svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg><!--[if lt IE 9]><em>Facebook</em><![endif]--></a></li>
+  
+
+  
+
+  
+  <li><a href="https://github.com/hillpig/hillpig.github.io" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://instagram.com/hillpigcn" class="icon-15 instagram" title="Instagram"><svg viewBox="0 0 512 512"><g><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/><circle cx="351.5" cy="160.5" r="21.5"/></g></svg><!--[if lt IE 9]><em>Instagram</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/samuel-chiang-0b42782a" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="http://stackoverflow.com/users/8577353/samuel-jiang" class="icon-23 stackoverflow" title="StackOverflow"><svg viewBox="0 0 512 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg><!--[if lt IE 9]><em>StackOverflow</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019 山猪</p>
+
+    </footer>
+  </div>
+</div>
+
+    
+
+    <div id="main" role="main" class="wrapper-content">
+      <div class="container">
+        <article class="posts">
+  <h1>Serialization and Deserialization in Java</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-02-14
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/media/index/serialization-process.gif" alt="img" /></p>
+
+<!-- more -->
+
+<h1 id="serialization-and-deserialization-in-java-with-example">Serialization and Deserialization in Java with Example</h1>
+
+<p>Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.</p>
+
+<p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2016/01/serialize-deserialize-java.png" alt="avatar" title="serialization" /></p>
+
+<p>The byte stream created is platform independent. So, the object serialized on one platform can be deserialized on a different platform.</p>
+
+<p>To make a Java object serializable we implement the java.io.Serializable interface.
+The ObjectOutputStream class contains writeObject() method for serializing an Object.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kt">void</span> <span class="nf">writeObject</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span>
+                       <span class="kd">throws</span> <span class="nc">IOException</span>
+</code></pre></div></div>
+
+<p>The ObjectInputStream class contains readObject() method for deserializing an object.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="nc">Object</span> <span class="nf">readObject</span><span class="o">()</span>
+                  <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">,</span>
+               <span class="nc">ClassNotFoundException</span>
+</code></pre></div></div>
+
+<p><strong>Advantages of Serialization</strong></p>
+
+<ol>
+  <li>To save/persist state of an object.</li>
+  <li>To travel an object across a network.</li>
+</ol>
+
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/serialization-5.jpg" alt="avatar" title="serialization" /></p>
+
+<p>Only the objects of those classes can be serialized which are implementing <strong>java.io.Serializable</strong> interface.
+Serializable is a <strong>marker interface</strong> (has no data member and method). It is used to “mark” java classes so that objects of these classes may get certain capability. Other examples of marker interfaces are:- Cloneable and Remote.</p>
+
+<p><strong>Points to remember</strong></p>
+
+<ol>
+  <li>If a parent class has implemented Serializable interface then child class doesn’t need to implement it but vice-versa is not true.</li>
+  <li>Only non-static data members are saved via Serialization process.</li>
+  <li>Static data members and transient data members are not saved via Serialization process.So, if you don’t want to save value of a non-static data member then make it transient.</li>
+  <li>Constructor of object is never called when an object is deserialized.</li>
+  <li>Associated objects must be implementing Serializable interface.</li>
+</ol>
+
+<p>Example :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">A</span> <span class="kd">implements</span> <span class="nc">Serializable</span><span class="o">{</span>
+    <span class="c1">// B also implements Serializable</span>
+    <span class="c1">// interface.</span>
+    <span class="no">B</span> <span class="n">ob</span><span class="o">=</span><span class="k">new</span> <span class="no">B</span><span class="o">();</span>  
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>SerialVersionUID</strong></p>
+
+<p>The Serialization runtime associates a version number with each Serializable class called a SerialVersionUID, which is used during Deserialization to verify that sender and reciever of a serialized object have loaded classes for that object which are compatible with respect to serialization. If the reciever has loaded a class for the object that has different UID than that of corresponding sender’s class, the Deserialization will result in an <strong>InvalidClassException</strong>. A Serializable class can declare its own UID explicitly by declaring a field name.
+It must be static, final and of type long.
+i.e- ANY-ACCESS-MODIFIER static final long serialVersionUID=42L;</p>
+
+<p>If a serializable class doesn’t explicitly declare a serialVersionUID, then the serialization runtime will calculate a default one for that class based on various aspects of class, as described in Java Object Serialization Specification. However it is strongly recommended that all serializable classes explicitly declare serialVersionUID value, since its computation is highly sensitive to class details that may vary depending on compiler implementations, any change in class or using different id may affect the serialized data.</p>
+
+<p>It is also recommended to use private modifier for UID since it is not useful as inherited member.</p>
+
+<p><strong>serialver</strong></p>
+
+<p>The serialver is a tool that comes with JDK. It is used to get serialVersionUID number for Java classes.
+You can run the following command to get serialVersionUID</p>
+
+<p>serialver [-classpath classpath] [-show] [classname…]</p>
+
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/serialver.jpg" alt="avatar" title="serialization" /></p>
+
+<p>Example 1:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Java code for serialization and deserialization </span>
+<span class="c1">// of a Java object </span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span> 
+
+<span class="kd">class</span> <span class="nc">Demo</span> <span class="kd">implements</span> <span class="n">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">Serializable</span> 
+<span class="o">{</span> 
+	<span class="kd">public</span> <span class="kt">int</span> <span class="n">a</span><span class="o">;</span> 
+	<span class="kd">public</span> <span class="nc">String</span> <span class="n">b</span><span class="o">;</span> 
+
+	<span class="c1">// Default constructor </span>
+	<span class="kd">public</span> <span class="nf">Demo</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="nc">String</span> <span class="n">b</span><span class="o">)</span> 
+	<span class="o">{</span> 
+		<span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span> 
+		<span class="k">this</span><span class="o">.</span><span class="na">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span> 
+	<span class="o">}</span> 
+
+<span class="o">}</span> 
+
+<span class="kd">class</span> <span class="nc">Test</span> 
+<span class="o">{</span> 
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> 
+	<span class="o">{</span> 
+		<span class="nc">Demo</span> <span class="n">object</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Demo</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"geeksforgeeks"</span><span class="o">);</span> 
+		<span class="nc">String</span> <span class="n">filename</span> <span class="o">=</span> <span class="s">"file.ser"</span><span class="o">;</span> 
+		
+		<span class="c1">// Serialization </span>
+		<span class="k">try</span>
+		<span class="o">{</span> 
+			<span class="c1">//Saving of object in a file </span>
+			<span class="nc">FileOutputStream</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileOutputStream</span><span class="o">(</span><span class="n">filename</span><span class="o">);</span> 
+			<span class="nc">ObjectOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectOutputStream</span><span class="o">(</span><span class="n">file</span><span class="o">);</span> 
+			
+			<span class="c1">// Method for serialization of object </span>
+			<span class="n">out</span><span class="o">.</span><span class="na">writeObject</span><span class="o">(</span><span class="n">object</span><span class="o">);</span> 
+			
+			<span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+			<span class="n">file</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Object has been serialized"</span><span class="o">);</span> 
+
+		<span class="o">}</span> 
+		
+		<span class="k">catch</span><span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> 
+		<span class="o">{</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"IOException is caught"</span><span class="o">);</span> 
+		<span class="o">}</span> 
+
+
+		<span class="nc">Demo</span> <span class="n">object1</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span> 
+
+		<span class="c1">// Deserialization </span>
+		<span class="k">try</span>
+		<span class="o">{</span> 
+			<span class="c1">// Reading the object from a file </span>
+			<span class="nc">FileInputStream</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="n">filename</span><span class="o">);</span> 
+			<span class="nc">ObjectInputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectInputStream</span><span class="o">(</span><span class="n">file</span><span class="o">);</span> 
+			
+			<span class="c1">// Method for deserialization of object </span>
+			<span class="n">object1</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Demo</span><span class="o">)</span><span class="n">in</span><span class="o">.</span><span class="na">readObject</span><span class="o">();</span> 
+			
+			<span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+			<span class="n">file</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+			
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Object has been deserialized "</span><span class="o">);</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a = "</span> <span class="o">+</span> <span class="n">object1</span><span class="o">.</span><span class="na">a</span><span class="o">);</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b = "</span> <span class="o">+</span> <span class="n">object1</span><span class="o">.</span><span class="na">b</span><span class="o">);</span> 
+		<span class="o">}</span> 
+		
+		<span class="k">catch</span><span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> 
+		<span class="o">{</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"IOException is caught"</span><span class="o">);</span> 
+		<span class="o">}</span> 
+		
+		<span class="k">catch</span><span class="o">(</span><span class="nc">ClassNotFoundException</span> <span class="n">ex</span><span class="o">)</span> 
+		<span class="o">{</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"ClassNotFoundException is caught"</span><span class="o">);</span> 
+		<span class="o">}</span> 
+
+	<span class="o">}</span> 
+<span class="o">}</span> 
+</code></pre></div></div>
+
+<p>Output :</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Object has been serialized
+Object has been deserialized 
+a = 1
+b = geeksforgeeks
+</span></code></pre></div></div>
+
+<p>Example 2:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Java code for serialization and deserialization </span>
+<span class="c1">// of a Java object </span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span> 
+
+<span class="kd">class</span> <span class="nc">Emp</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span> 
+<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialversionUID</span> <span class="o">=</span> 
+								<span class="mi">129348938L</span><span class="o">;</span> 
+	<span class="kd">transient</span> <span class="kt">int</span> <span class="n">a</span><span class="o">;</span> 
+	<span class="kd">static</span> <span class="kt">int</span> <span class="n">b</span><span class="o">;</span> 
+	<span class="nc">String</span> <span class="n">name</span><span class="o">;</span> 
+	<span class="kt">int</span> <span class="n">age</span><span class="o">;</span> 
+
+	<span class="c1">// Default constructor </span>
+<span class="kd">public</span> <span class="nf">Emp</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> 
+	<span class="o">{</span> 
+		<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span> 
+		<span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span> 
+		<span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span> 
+		<span class="k">this</span><span class="o">.</span><span class="na">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span> 
+	<span class="o">}</span> 
+
+<span class="o">}</span> 
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SerialExample</span> <span class="o">{</span> 
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printdata</span><span class="o">(</span><span class="nc">Emp</span> <span class="n">object1</span><span class="o">)</span> 
+	<span class="o">{</span> 
+
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"name = "</span> <span class="o">+</span> <span class="n">object1</span><span class="o">.</span><span class="na">name</span><span class="o">);</span> 
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"age = "</span> <span class="o">+</span> <span class="n">object1</span><span class="o">.</span><span class="na">age</span><span class="o">);</span> 
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a = "</span> <span class="o">+</span> <span class="n">object1</span><span class="o">.</span><span class="na">a</span><span class="o">);</span> 
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b = "</span> <span class="o">+</span> <span class="n">object1</span><span class="o">.</span><span class="na">b</span><span class="o">);</span> 
+	<span class="o">}</span> 
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> 
+	<span class="o">{</span> 
+		<span class="nc">Emp</span> <span class="n">object</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Emp</span><span class="o">(</span><span class="s">"ab"</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1000</span><span class="o">);</span> 
+		<span class="nc">String</span> <span class="n">filename</span> <span class="o">=</span> <span class="s">"shubham.txt"</span><span class="o">;</span> 
+
+		<span class="c1">// Serialization </span>
+		<span class="k">try</span> <span class="o">{</span> 
+
+			<span class="c1">// Saving of object in a file </span>
+			<span class="nc">FileOutputStream</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileOutputStream</span> 
+										<span class="o">(</span><span class="n">filename</span><span class="o">);</span> 
+			<span class="nc">ObjectOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectOutputStream</span> 
+										<span class="o">(</span><span class="n">file</span><span class="o">);</span> 
+
+			<span class="c1">// Method for serialization of object </span>
+			<span class="n">out</span><span class="o">.</span><span class="na">writeObject</span><span class="o">(</span><span class="n">object</span><span class="o">);</span> 
+
+			<span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+			<span class="n">file</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Object has been serialized\n"</span>
+							<span class="o">+</span> <span class="s">"Data before Deserialization."</span><span class="o">);</span> 
+			<span class="n">printdata</span><span class="o">(</span><span class="n">object</span><span class="o">);</span> 
+
+			<span class="c1">// value of static variable changed </span>
+			<span class="n">object</span><span class="o">.</span><span class="na">b</span> <span class="o">=</span> <span class="mi">2000</span><span class="o">;</span> 
+		<span class="o">}</span> 
+
+		<span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"IOException is caught"</span><span class="o">);</span> 
+		<span class="o">}</span> 
+
+		<span class="n">object</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span> 
+
+		<span class="c1">// Deserialization </span>
+		<span class="k">try</span> <span class="o">{</span> 
+
+			<span class="c1">// Reading the object from a file </span>
+			<span class="nc">FileInputStream</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileInputStream</span> 
+										<span class="o">(</span><span class="n">filename</span><span class="o">);</span> 
+			<span class="nc">ObjectInputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectInputStream</span> 
+										<span class="o">(</span><span class="n">file</span><span class="o">);</span> 
+
+			<span class="c1">// Method for deserialization of object </span>
+			<span class="n">object</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Emp</span><span class="o">)</span><span class="n">in</span><span class="o">.</span><span class="na">readObject</span><span class="o">();</span> 
+
+			<span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+			<span class="n">file</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Object has been deserialized\n"</span>
+								<span class="o">+</span> <span class="s">"Data after Deserialization."</span><span class="o">);</span> 
+			<span class="n">printdata</span><span class="o">(</span><span class="n">object</span><span class="o">);</span> 
+
+			<span class="c1">// System.out.println("z = " + object1.z); </span>
+		<span class="o">}</span> 
+
+		<span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"IOException is caught"</span><span class="o">);</span> 
+		<span class="o">}</span> 
+
+		<span class="k">catch</span> <span class="o">(</span><span class="nc">ClassNotFoundException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span> 
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"ClassNotFoundException"</span> <span class="o">+</span> 
+								<span class="s">" is caught"</span><span class="o">);</span> 
+		<span class="o">}</span> 
+	<span class="o">}</span> 
+<span class="o">}</span> 
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Object has been serialized
+Data before Deserialization.
+name = ab
+age = 20
+a = 2
+b = 1000
+Object has been deserialized
+Data after Deserialization.
+name = ab
+age = 20
+a = 0
+b = 2000
+</span></code></pre></div></div>
+
+<p><strong>Description for Output:</strong></p>
+
+<p>You have seen while deserializing the object the values of a and b has changed. The reason being a was marked as transient and b was static.
+In case of <strong>transient variables:-</strong> A variable defined with transient keyword is not serialized during serialization process.This variable will be initialized with default value during deserialization. (e.g: for objects it is null, for int it is 0).
+In case of <strong>static Variables:-</strong> A variable defined with static keyword is not serialized during serialization process.This variable will be loaded with current value defined in the class during deserialization.</p>
+
+  </div>
+
+  
+  
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Serialization and Deserialization in Java",
+          language: "zh-CN",
+
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/java-concept/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+</div>
+      </div>
+    </div>
+
+    
+
+  </body>
+
+  
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  <li><a href="https://www.weibo.com/https://www.weibo.com/p/1005051403127811/home?from=page_100505&mod=TAB#place" class="icon-1 weibo" title="Weibo"><svg viewBox="0 0 512 512"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></svg></a></li>
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hillpig@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.facebook.com/hillpigcn" class="icon-10 facebook" title="Facebook"><svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg><!--[if lt IE 9]><em>Facebook</em><![endif]--></a></li>
+  
+
+  
+
+  
+  <li><a href="https://github.com/hillpig/hillpig.github.io" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://instagram.com/hillpigcn" class="icon-15 instagram" title="Instagram"><svg viewBox="0 0 512 512"><g><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/><circle cx="351.5" cy="160.5" r="21.5"/></g></svg><!--[if lt IE 9]><em>Instagram</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/samuel-chiang-0b42782a" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="http://stackoverflow.com/users/8577353/samuel-jiang" class="icon-23 stackoverflow" title="StackOverflow"><svg viewBox="0 0 512 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg><!--[if lt IE 9]><em>StackOverflow</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019 山猪</p>
+
+    </footer>
+
+
+</html>
