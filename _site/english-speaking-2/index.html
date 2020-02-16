@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Mac OS X - iterm2 安装 美化 – 山猪 – 方寸之间 点滴墨彩</title>
+  <title>Actual speaking English - 02 – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,8 +19,8 @@
     <meta name="author" content="山猪" />
 
     
-    <meta property="og:title" content="Mac OS X - iterm2 安装 美化" />
-    <meta property="twitter:title" content="Mac OS X - iterm2 安装 美化" />
+    <meta property="og:title" content="Actual speaking English - 02" />
+    <meta property="twitter:title" content="Actual speaking English - 02" />
     
   <!-- Async font loading -->
 <script>
@@ -159,18 +159,18 @@
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
         <article class="posts">
-  <h1>Mac OS X - iterm2 安装 美化</h1>
+  <h1>Actual speaking English - 02</h1>
 
   <div clsss="meta">
     <span class="date">
-      2020-02-15
+      2020-02-16
     </span>
 
     <ul class="tag">
       
       <li>
-        <a href="http://localhost:4000/tags#Java">
-          Java
+        <a href="http://localhost:4000/tags#English">
+          English
         </a>
       </li>
       
@@ -178,144 +178,86 @@
   </div>
 
   <div class="entry">
-    <p><img src="https://iterm2.com/img/logo2x.jpg" alt="img" /></p>
+    <p><img src="https://i.pinimg.com/474x/bb/b5/0f/bbb50fc5dbf12dd27e65750159d7af55.jpg" alt="img" /></p>
 
 <!-- more -->
 
-<ol>
-  <li>
-    <p>下载安装iterm2</p>
+<p>M: Hey Rachel, how are you?</p>
 
-    <p>官方网站： https://www.iterm2.com</p>
-  </li>
-  <li>
-    <p>切换shell为zsh</p>
+<p>W: I’m good but I’m a bit nervous.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">
- ~ ❯❯❯ chsh -s /bin/zsh
- Changing shell for xxx.
- Password for xxx:
+<p>M: Why?</p>
 
-</span><span class="gp"> ~ ❯❯❯ echo $</span>SHELL
-<span class="go"> /bin/zsh
+<p>W: Because I’m starting at a new company in a couple of days, but I don’t really know know to introduce myself to a new group of people.</p>
 
-</span></code></pre></div>    </div>
-  </li>
-  <li>
-    <p>安装Oh my zsh</p>
+<p>M: The first day at a company is nerve-racking, right?</p>
 
-    <ul>
-      <li>使用 crul 安装：</li>
-    </ul>
+<p>You meet so many new faces and they all know each other as well. That is evven worse. But there are some things you should do on your first day.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp"> sh -c "$</span><span class="o">(</span>curl <span class="nt">-fsSL</span> https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="o">)</span><span class="s2">"
-</span></code></pre></div>    </div>
+<p>W: I’d love some advice.</p>
 
-    <ul>
-      <li>使用 wget 安装：</li>
-    </ul>
+<p>Note:</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp"> sh -c "$</span><span class="o">(</span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh <span class="nt">-O</span> -<span class="o">)</span><span class="s2">"
-</span></code></pre></div>    </div>
-  </li>
-  <li>
-    <p>安装PowerLine</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nerve-racking: stressful, exhausting
 
-    <ul>
-      <li>先安装pip</li>
-    </ul>
+new faces: new people
+</code></pre></div></div>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> sudo easy_install pip
-</span></code></pre></div>    </div>
+<p>M: Ok. A firm handshake, that is key, to project confidence, but not too hard, you don’t want to hurt the other person, but not to flimsy as well. I hate a wet flimsy handshake. So if you are feeling nervous and sweaty, perhaps give your hand a wipe as well.</p>
 
-    <ul>
-      <li>再安装Powerline</li>
-    </ul>
+<p>Note:</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> pip install powerline-status
-</span></code></pre></div>    </div>
-  </li>
-  <li>
-    <p>安装额外的自体库</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project: to give or express a clear impression of one's thoughts or personality; make an image
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp"> #</span><span class="w"> </span>clone
-<span class="go"> git clone https://github.com/powerline/fonts.git --depth=1
-</span><span class="gp"> #</span><span class="w"> </span><span class="nb">install</span>
-<span class="go"> cd fonts
- ./install.sh
-</span><span class="gp"> #</span><span class="w"> </span>clean-up a bit
-<span class="go"> cd ..
- rm -rf fonts
-</span></code></pre></div>    </div>
+flimsy: weak, without strength, unstable
+</code></pre></div></div>
 
-    <p>安装好之后，选择一款Powerline字体了：iterm2 -&gt; Preferences -&gt; Profiles -&gt; Text -&gt; Font -&gt; Change Font（我用的是Meslo LG)</p>
-  </li>
-  <li>
-    <p>修改配色</p>
+<p>W: Clammy hands.</p>
 
-    <p>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Colors -&gt; Color Presets中根据个人喜好选择这已安装配色中的一种即可（或者安装新配色）。</p>
-  </li>
-  <li>
-    <p>修改主题配置</p>
+<p>M: They are going to call you clammy hands at the company.</p>
 
-    <p>用vim编辑器打开隐藏文件.zshrc，将ZSH_THEME后面字段改为agnoster.</p>
+<p>W: Alright, so a firm handshake is really important.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> ZSH_THEME="agnoster"
-</span></code></pre></div>    </div>
-  </li>
-  <li>
-    <p>设置高亮</p>
+<p>M: And then eye contact as well.</p>
 
-    <p>直接使用homebrew安装zsh-syntax-highlighting插件</p>
+<p>Note:</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> brew install zsh-syntax-highlighting
-</span></code></pre></div>    </div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clammy: cold and damp, covered with moisture; wet, sweaty
+</code></pre></div></div>
 
-    <p>然后在根目录下.zshrc中插入下面内容：</p>
+<p>M: And a big smile, I think that always helps, it makes people feel much more comfortable.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-</span></code></pre></div>    </div>
+<p>W: Yeah that’s true, that definitely will leave a great first impression.</p>
 
-    <p>或者git安装：</p>
+<p>M: As long as you don’t have something stuck in your teeth. Again, check.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-</span><span class="gp"> echo "source $</span><span class="o">{(</span>q-<span class="o">)</span>PWD<span class="o">}</span>/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh<span class="s2">" &gt;&gt; </span><span class="k">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="k">}</span><span class="s2">/.zshrc
-</span></code></pre></div>    </div>
-  </li>
-  <li>
-    <p>自动补全（会严重影响响应速度，不推荐）</p>
+<p>Note:</p>
 
-    <p>自动补全插件incr：
- 可以使用下面代码手动写入文件</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to leave an impression (on someone): to provide a lasting memory for someone
+</code></pre></div></div>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> cd ~/.oh-my-zsh/plugins/
- mkdir -p incr
- cd incr
- touch incr-0.2.zsh（将上面链接中的代码复制粘贴到incr-0.2.zsh文件中）   chmod 777 incr-0.2.zsh
-</span></code></pre></div>    </div>
+<p>W: I’ll have to get a mirror and check my teeth. That’s for sure. Alright so you’re saying a firm handshake is important, good eye contact, those show that I’m confident and then a friendly smile will show that I’m at ease and that I’m confortable with my surroundings.</p>
 
-    <p>配置.zshrc文件</p>
+<p>M: Sure, and then maybe the last thing remember people’s names.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> vim ~/.zshrc
- source ~/.oh-my-zsh/plugins/incr/incr*.zsh
- source ~/.zshrc 
-</span></code></pre></div>    </div>
+<p>W: Oh, right!</p>
 
-    <p>另一个zsh的插件，叫做zsh-autosuggestion</p>
+<p>M: And when you say your name as well, project it loudly so they remember you.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> cd ~/.oh-my-zsh/custom/plugins/
- git clone https://github.com/zsh-users/zsh-autosuggestions
- vi ~/.zshrc
-</span></code></pre></div>    </div>
+<p>W: But you know, there’s so many people that I have to meet. How do I remember all their names?</p>
 
-    <p>找到plugins，加上这个插件即可：</p>
+<p>M: I think writing it down as soon as you can, at the earliest possible opportunity. But I think that’s about it. And I think you’ll be fine, Rachel.</p>
 
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> plugins=(
-     zsh-autosuggestion
- )
-</span></code></pre></div>    </div>
-  </li>
-</ol>
+<p>W: You think so? Alright, well I can’t wait to use that advice on my first day at my new company.</p>
+
+<p>M: Fingers crossed.</p>
+
+<p>W: Thank you.</p>
+
+<p>Note:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keep one's fingers crossed: to wish someone luck; to hope for a good outcome for someone
+</code></pre></div></div>
 
   </div>
 
@@ -332,7 +274,7 @@
           admin: ["hillpig"],
           id: window.location.pathname,      // Ensure uniqueness and length less than 50
           distractionFreeMode: false,  // Facebook-like distraction free mode
-          title: "Mac OS X - iterm2 安装 美化",
+          title: "Actual speaking English - 02",
           language: "zh-CN",
 
         })
@@ -346,7 +288,7 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/java-serializable/">
+      <a href="http://localhost:4000/mac-iterm2/">
         ← 上一篇
       </a>
     </span>

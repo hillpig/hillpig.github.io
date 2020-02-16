@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Mac OS X - iterm2 安装 美化 – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Mac OS X - iterm2 安装 美化" />
+    <meta property="twitter:title" content="Mac OS X - iterm2 安装 美化" />
     
   <!-- Async font loading -->
 <script>
@@ -151,312 +158,207 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Mac OS X - iterm2 安装 美化</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-02-15
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Mac">
+          Mac
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="https://iterm2.com/img/logo2x.jpg" alt="img" /></p>
+
+<!-- more -->
+
+<ol>
+  <li>
+    <p>下载安装iterm2</p>
+
+    <p>官方网站： https://www.iterm2.com</p>
+  </li>
+  <li>
+    <p>切换shell为zsh</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">
+ ~ ❯❯❯ chsh -s /bin/zsh
+ Changing shell for xxx.
+ Password for xxx:
+
+</span><span class="gp"> ~ ❯❯❯ echo $</span>SHELL
+<span class="go"> /bin/zsh
+
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>安装Oh my zsh</p>
+
+    <ul>
+      <li>使用 crul 安装：</li>
+    </ul>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp"> sh -c "$</span><span class="o">(</span>curl <span class="nt">-fsSL</span> https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="o">)</span><span class="s2">"
+</span></code></pre></div>    </div>
+
+    <ul>
+      <li>使用 wget 安装：</li>
+    </ul>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp"> sh -c "$</span><span class="o">(</span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh <span class="nt">-O</span> -<span class="o">)</span><span class="s2">"
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>安装PowerLine</p>
+
+    <ul>
+      <li>先安装pip</li>
+    </ul>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> sudo easy_install pip
+</span></code></pre></div>    </div>
+
+    <ul>
+      <li>再安装Powerline</li>
+    </ul>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> pip install powerline-status
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>安装额外的自体库</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp"> #</span><span class="w"> </span>clone
+<span class="go"> git clone https://github.com/powerline/fonts.git --depth=1
+</span><span class="gp"> #</span><span class="w"> </span><span class="nb">install</span>
+<span class="go"> cd fonts
+ ./install.sh
+</span><span class="gp"> #</span><span class="w"> </span>clean-up a bit
+<span class="go"> cd ..
+ rm -rf fonts
+</span></code></pre></div>    </div>
+
+    <p>安装好之后，选择一款Powerline字体了：iterm2 -&gt; Preferences -&gt; Profiles -&gt; Text -&gt; Font -&gt; Change Font（我用的是Meslo LG)</p>
+  </li>
+  <li>
+    <p>修改配色</p>
+
+    <p>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Colors -&gt; Color Presets中根据个人喜好选择这已安装配色中的一种即可（或者安装新配色）。</p>
+  </li>
+  <li>
+    <p>修改主题配置</p>
+
+    <p>用vim编辑器打开隐藏文件.zshrc，将ZSH_THEME后面字段改为agnoster.</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> ZSH_THEME="agnoster"
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>设置高亮</p>
+
+    <p>直接使用homebrew安装zsh-syntax-highlighting插件</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> brew install zsh-syntax-highlighting
+</span></code></pre></div>    </div>
+
+    <p>然后在根目录下.zshrc中插入下面内容：</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</span></code></pre></div>    </div>
+
+    <p>或者git安装：</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+</span><span class="gp"> echo "source $</span><span class="o">{(</span>q-<span class="o">)</span>PWD<span class="o">}</span>/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh<span class="s2">" &gt;&gt; </span><span class="k">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="k">}</span><span class="s2">/.zshrc
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>自动补全（会严重影响响应速度，不推荐）</p>
+
+    <p>自动补全插件incr：
+ 可以使用下面代码手动写入文件</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> cd ~/.oh-my-zsh/plugins/
+ mkdir -p incr
+ cd incr
+ touch incr-0.2.zsh（将上面链接中的代码复制粘贴到incr-0.2.zsh文件中）   chmod 777 incr-0.2.zsh
+</span></code></pre></div>    </div>
+
+    <p>配置.zshrc文件</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> vim ~/.zshrc
+ source ~/.oh-my-zsh/plugins/incr/incr*.zsh
+ source ~/.zshrc 
+</span></code></pre></div>    </div>
+
+    <p>另一个zsh的插件，叫做zsh-autosuggestion</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> cd ~/.oh-my-zsh/custom/plugins/
+ git clone https://github.com/zsh-users/zsh-autosuggestions
+ vi ~/.zshrc
+</span></code></pre></div>    </div>
+
+    <p>找到plugins，加上这个插件即可：</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> plugins=(
+     zsh-autosuggestion
+ )
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-laugh-smile-siggle-grin-beam-sneer/">laugh, smile, siggle, grin, beam, sneer 区别</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Mac OS X - iterm2 安装 美化",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-01-22
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.beautiful-women-pedia.com/images/woman-smiling-text-photo.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-laugh-smile-siggle-grin-beam-sneer/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/android-apk/">Android 友盟多渠道打包</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-22
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Android">
-              Android
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.ritavpn.com/blog/wp-content/uploads/2019/12/Best-APK-Download-Sites-for-2020.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/android-apk/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-choose-select-pick-elect-opt-prefer/">Choose, select, pick, elect, prefer, opt 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-21
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://jacobspradlin.files.wordpress.com/2013/08/choosetech.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-choose-select-pick-elect-opt-prefer/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/">apparatus, instrument, device, equipment, tool, implement, installation, appliance, facilities 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://cookmankitchenequipments.files.wordpress.com/2015/09/commercial-kitchen-equipment-supplies-l-40da9a0c49163d9c.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/linux-ubuntu-log/">ubuntu下查看log</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Linux">
-              Linux
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#ubuntu">
-              ubuntu
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.howtogeek.com/wp-content/uploads/2012/07/ximage8.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.qSWlkYkoXy.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/linux-ubuntu-log/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-success-succeed-successful-successor/">success, succeed, successful, successor 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://gearingforsuccess.ca/wp-content/uploads/2018/09/success-800x449.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-success-succeed-successful-successor/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-relative/">亲属相关的英文</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://search3.openobjects.com/mediamanager/redcar/fsd/images/relative_experience_graphic_1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-relative/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-progress-process-proceed-procedure/">Progress, Process, Proceed, Procedure区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://dotcom.nlcdn.com/wp-content/uploads/2017/08/BuildSalesProcess_Featured-1140x768@2x-80-min.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-progress-process-proceed-procedure/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page3/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/java-serializable/">
+        ← 上一篇
       </a>
     </span>
   
   
-    <span class="next">
-      <a href="/page5/" class="next">
-        下一页 →
+    <span class="next" >
+      <a href="http://localhost:4000/english-speaking-2/">
+        下一篇 →
       </a>
     </span>
   
 </div>
-
       </div>
     </div>
 

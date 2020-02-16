@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Actual speaking English - 01
-date: 2020-02-03
+title: Actual speaking English - 02
+date: 2020-02-16
 Author: 山猪
 tags: [English]
 comments: true
 ---
-![img](http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg)
+![img](https://i.pinimg.com/474x/bb/b5/0f/bbb50fc5dbf12dd27e65750159d7af55.jpg)
 
 <!-- more -->
 
@@ -16,7 +16,7 @@ W: I'm good but I'm a bit nervous.
 
 M: Why?
 
-W: Because I'm starting at a new company in a couple of days, but I don't really know how to introduce myself to a new group of people.
+W: Because I'm starting at a new company in a couple of days, but I don't really know know to introduce myself to a new group of people.
 
 M: The first day at a company is nerve-racking, right?
 
@@ -24,7 +24,7 @@ M: The first day at a company is nerve-racking, right?
 
 W: I'd love some advice.
 
-Note:
+Note: 
 
     nerve-racking: stressful, exhausting
 

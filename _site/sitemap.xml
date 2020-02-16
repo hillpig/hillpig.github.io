@@ -157,8 +157,12 @@
 <lastmod>2020-02-14T00:00:00-08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/iterm2/</loc>
+<loc>http://localhost:4000/mac-iterm2/</loc>
 <lastmod>2020-02-15T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/english-speaking-2/</loc>
+<lastmod>2020-02-16T00:00:00-08:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/404/</loc>
@@ -186,5 +190,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page5/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page6/</loc>
 </url>
 </urlset>
