@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>persistence and serialization in Java – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="persistence and serialization in Java" />
+    <meta property="twitter:title" content="persistence and serialization in Java" />
     
   <!-- Async font loading -->
 <script>
@@ -151,336 +158,83 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>persistence and serialization in Java</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-02-14
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://koenig-media.raywenderlich.com/uploads/2017/08/UnitySaveLoad-feature.png" alt="img" /></p>
+
+<!-- more -->
+
+<p>对象持久化就是将对象存储在可持久保存的存储介质上，例如主流的关系数据库中。在实际应用中，需要将业务数据以对象的方式保存在数据库中，就需要应用到相应的对象持久化框架，如现在广为认知的Hibernate。而如果查阅对象持久化的历史，会发现早在1970年就已经开始有称之为面向对象数据库OODBMS。通常这些面向对象的数据库和特定的一种语言绑定。<strong>对象持久化的重点在于如何将业务数据对象存储在持久化介质上，并同时提供查询修改的手段</strong>。</p>
+
+<p>数据序列化就是将对象或者数据结构转化成特定的格式，使其可以在网络中传输，或者可存储在内存或者文件中。反序列化则是相反的操作，将对象从序列化数据中还原出来。而对象序列化后的数据格式可以是二进制，可以是XML，也可以是JSON等任何格式。<strong>对象/数据序列化的重点在于数据的交换和传输</strong>，例如在远程调用技术（如EJB，XML-RPC，Web Service），或者在GUI控件开发（JavaBean）等等。</p>
+
+<p>总结，对象持久化和对象序列化是两个不同应用场景不同纬度的两个概念。</p>
+
+<p>对象持久化是一个<strong>广义</strong>的概念，简单说就是save/load，多用以描述和数据库相关的操作。</p>
+
+<p>序列化是Java中的一项技术，把结构化的对象转化成无结构的字节流，侧重于数据交换和传输，不仅仅能用于数据的持久化。</p>
 
 
+  </div>
 
-<div class="posts">
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-aop/">Spring AOP</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "persistence and serialization in Java",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-02-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i1.wp.com/blogs.innovationm.com/wp-content/uploads/2018/05/Spring-AOP-Banner.png?resize=624%2C267" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-aop/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-transaction/">Spring boot 事务特性　@Transactional</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.javainuse.com/boot-66-18.JPG" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-transaction/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-pascalcase-camelcase/">Pascal Case & Camel Case</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.bkacontent.com/wp-content/uploads/2015/10/AP-Title-Case-Splash.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-pascalcase-camelcase/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/http-get-post-delete/">HTTP - Get, Post, Put, Delete</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-08
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#http">
-              http
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://s3-us-west-2.amazonaws.com/assertible/blog/swagger-petstore-store-endpoints.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/http-get-post-delete/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/">Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;ssl=1" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-dto-dao/">Spring boot - DTO vs DAO</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i.stack.imgur.com/3XnBN.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-dto-dao/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-annotation-transient/">Spring boot - @transient</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring boot">
-              Spring boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-annotation-transient/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-speaking-1/">Actual speaking English</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-speaking-1/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/java-concept/">
+        ← 上一篇
       </a>
     </span>
   
   
-    <span class="next">
-      <a href="/page3/" class="next">
-        下一页 →
+    <span class="next" >
+      <a href="http://localhost:4000/java-serializable/">
+        下一篇 →
       </a>
     </span>
   
 </div>
-
       </div>
     </div>
 

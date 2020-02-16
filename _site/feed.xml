@@ -1,4 +1,324 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-14T16:11:01-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Serialization and Deserialization in Java</title><link href="http://localhost:4000/java-serializable/" rel="alternate" type="text/html" title="Serialization and Deserialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-serializable</id><content type="html" xml:base="http://localhost:4000/java-serializable/">&lt;p&gt;&lt;img src=&quot;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/media/index/serialization-process.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-15T21:05:57-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Mac OS X - iterm2 安装 美化</title><link href="http://localhost:4000/iterm2/" rel="alternate" type="text/html" title="Mac OS X - iterm2 安装 美化" /><published>2020-02-15T00:00:00-08:00</published><updated>2020-02-15T00:00:00-08:00</updated><id>http://localhost:4000/iterm2</id><content type="html" xml:base="http://localhost:4000/iterm2/">&lt;p&gt;&lt;img src=&quot;https://iterm2.com/img/logo2x.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;下载安装iterm2&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;官方网站： https://www.iterm2.com&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;切换shell为zsh&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;
+~ ❯❯❯ chsh -s /bin/zsh
+Changing shell for xxx.
+Password for xxx:
+
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;~ ❯❯❯ echo $&lt;/span&gt;SHELL
+&lt;span class=&quot;go&quot;&gt;/bin/zsh
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2016/01/serialize-deserialize-java.png&quot; alt=&quot;avatar&quot; title=&quot;serialization&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The byte stream created is platform independent. So, the object serialized on one platform can be deserialized on a different platform.&lt;/p&gt;
+
+&lt;p&gt;To make a Java object serializable we implement the java.io.Serializable interface.
+The ObjectOutputStream class contains writeObject() method for serializing an Object.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;writeObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                       &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The ObjectInputStream class contains readObject() method for deserializing an object.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                  &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+               &lt;span class=&quot;nc&quot;&gt;ClassNotFoundException&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantages of Serialization&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;To save/persist state of an object.&lt;/li&gt;
+  &lt;li&gt;To travel an object across a network.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.geeksforgeeks.org/wp-content/uploads/serialization-5.jpg&quot; alt=&quot;avatar&quot; title=&quot;serialization&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Only the objects of those classes can be serialized which are implementing &lt;strong&gt;java.io.Serializable&lt;/strong&gt; interface.
+Serializable is a &lt;strong&gt;marker interface&lt;/strong&gt; (has no data member and method). It is used to “mark” java classes so that objects of these classes may get certain capability. Other examples of marker interfaces are:- Cloneable and Remote.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Points to remember&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;If a parent class has implemented Serializable interface then child class doesn’t need to implement it but vice-versa is not true.&lt;/li&gt;
+  &lt;li&gt;Only non-static data members are saved via Serialization process.&lt;/li&gt;
+  &lt;li&gt;Static data members and transient data members are not saved via Serialization process.So, if you don’t want to save value of a non-static data member then make it transient.&lt;/li&gt;
+  &lt;li&gt;Constructor of object is never called when an object is deserialized.&lt;/li&gt;
+  &lt;li&gt;Associated objects must be implementing Serializable interface.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Example :&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Serializable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// B also implements Serializable&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// interface.&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;  
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;SerialVersionUID&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Serialization runtime associates a version number with each Serializable class called a SerialVersionUID, which is used during Deserialization to verify that sender and reciever of a serialized object have loaded classes for that object which are compatible with respect to serialization. If the reciever has loaded a class for the object that has different UID than that of corresponding sender’s class, the Deserialization will result in an &lt;strong&gt;InvalidClassException&lt;/strong&gt;. A Serializable class can declare its own UID explicitly by declaring a field name.
+It must be static, final and of type long.
+i.e- ANY-ACCESS-MODIFIER static final long serialVersionUID=42L;&lt;/p&gt;
+
+&lt;p&gt;If a serializable class doesn’t explicitly declare a serialVersionUID, then the serialization runtime will calculate a default one for that class based on various aspects of class, as described in Java Object Serialization Specification. However it is strongly recommended that all serializable classes explicitly declare serialVersionUID value, since its computation is highly sensitive to class details that may vary depending on compiler implementations, any change in class or using different id may affect the serialized data.&lt;/p&gt;
+
+&lt;p&gt;It is also recommended to use private modifier for UID since it is not useful as inherited member.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;serialver&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The serialver is a tool that comes with JDK. It is used to get serialVersionUID number for Java classes.
+You can run the following command to get serialVersionUID&lt;/p&gt;
+
+&lt;p&gt;serialver [-classpath classpath] [-show] [classname…]&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.geeksforgeeks.org/wp-content/uploads/serialver.jpg&quot; alt=&quot;avatar&quot; title=&quot;serialization&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Example 1:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Java code for serialization and deserialization &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// of a Java object &lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Serializable&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+
+	&lt;span class=&quot;c1&quot;&gt;// Default constructor &lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+		&lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;geeksforgeeks&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.ser&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+		
+		&lt;span class=&quot;c1&quot;&gt;// Serialization &lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;c1&quot;&gt;//Saving of object in a file &lt;/span&gt;
+			&lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			
+			&lt;span class=&quot;c1&quot;&gt;// Method for serialization of object &lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;writeObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			
+			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been serialized&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+		
+		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+
+		&lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+
+		&lt;span class=&quot;c1&quot;&gt;// Deserialization &lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;c1&quot;&gt;// Reading the object from a file &lt;/span&gt;
+			&lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			
+			&lt;span class=&quot;c1&quot;&gt;// Method for deserialization of object &lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			
+			&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been deserialized &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+		
+		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+		
+		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ClassNotFoundException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ClassNotFoundException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Output :&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Object has been serialized
+Object has been deserialized 
+a = 1
+b = geeksforgeeks
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Example 2:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Java code for serialization and deserialization &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// of a Java object &lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Serializable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serialversionUID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+								&lt;span class=&quot;mi&quot;&gt;129348938L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;kd&quot;&gt;transient&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+
+	&lt;span class=&quot;c1&quot;&gt;// Default constructor &lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SerialExample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;age = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+		&lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ab&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;shubham.txt&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+
+		&lt;span class=&quot;c1&quot;&gt;// Serialization &lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+
+			&lt;span class=&quot;c1&quot;&gt;// Saving of object in a file &lt;/span&gt;
+			&lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt; 
+										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt; 
+										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+
+			&lt;span class=&quot;c1&quot;&gt;// Method for serialization of object &lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;writeObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+
+			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been serialized\n&quot;&lt;/span&gt;
+							&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Data before Deserialization.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;n&quot;&gt;printdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+
+			&lt;span class=&quot;c1&quot;&gt;// value of static variable changed &lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+		&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+
+		&lt;span class=&quot;c1&quot;&gt;// Deserialization &lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+
+			&lt;span class=&quot;c1&quot;&gt;// Reading the object from a file &lt;/span&gt;
+			&lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt; 
+										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt; 
+										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+
+			&lt;span class=&quot;c1&quot;&gt;// Method for deserialization of object &lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+
+			&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been deserialized\n&quot;&lt;/span&gt;
+								&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Data after Deserialization.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+			&lt;span class=&quot;n&quot;&gt;printdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+
+			&lt;span class=&quot;c1&quot;&gt;// System.out.println(&quot;z = &quot; + object1.z); &lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+
+		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ClassNotFoundException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ClassNotFoundException&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+								&lt;span class=&quot;s&quot;&gt;&quot; is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Object has been serialized
+Data before Deserialization.
+name = ab
+age = 20
+a = 2
+b = 1000
+Object has been deserialized
+Data after Deserialization.
+name = ab
+age = 20
+a = 0
+b = 2000
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Description for Output:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You have seen while deserializing the object the values of a and b has changed. The reason being a was marked as transient and b was static.
+In case of &lt;strong&gt;transient variables:-&lt;/strong&gt; A variable defined with transient keyword is not serialized during serialization process.This variable will be initialized with default value during deserialization. (e.g: for objects it is null, for int it is 0).
+In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined with static keyword is not serialized during serialization process.This variable will be loaded with current value defined in the class during deserialization.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">persistence and serialization in Java</title><link href="http://localhost:4000/java-persistence-serialization/" rel="alternate" type="text/html" title="persistence and serialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-persistence-serialization</id><content type="html" xml:base="http://localhost:4000/java-persistence-serialization/">&lt;p&gt;&lt;img src=&quot;https://koenig-media.raywenderlich.com/uploads/2017/08/UnitySaveLoad-feature.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;对象持久化就是将对象存储在可持久保存的存储介质上，例如主流的关系数据库中。在实际应用中，需要将业务数据以对象的方式保存在数据库中，就需要应用到相应的对象持久化框架，如现在广为认知的Hibernate。而如果查阅对象持久化的历史，会发现早在1970年就已经开始有称之为面向对象数据库OODBMS。通常这些面向对象的数据库和特定的一种语言绑定。&lt;strong&gt;对象持久化的重点在于如何将业务数据对象存储在持久化介质上，并同时提供查询修改的手段&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;数据序列化就是将对象或者数据结构转化成特定的格式，使其可以在网络中传输，或者可存储在内存或者文件中。反序列化则是相反的操作，将对象从序列化数据中还原出来。而对象序列化后的数据格式可以是二进制，可以是XML，也可以是JSON等任何格式。&lt;strong&gt;对象/数据序列化的重点在于数据的交换和传输&lt;/strong&gt;，例如在远程调用技术（如EJB，XML-RPC，Web Service），或者在GUI控件开发（JavaBean）等等。&lt;/p&gt;
+
+&lt;p&gt;总结，对象持久化和对象序列化是两个不同应用场景不同纬度的两个概念。&lt;/p&gt;
+
+&lt;p&gt;对象持久化是一个&lt;strong&gt;广义&lt;/strong&gt;的概念，简单说就是save/load，多用以描述和数据库相关的操作。&lt;/p&gt;
+
+&lt;p&gt;序列化是Java中的一项技术，把结构化的对象转化成无结构的字节流，侧重于数据交换和传输，不仅仅能用于数据的持久化。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Serialization and Deserialization in Java</title><link href="http://localhost:4000/java-serializable/" rel="alternate" type="text/html" title="Serialization and Deserialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-serializable</id><content type="html" xml:base="http://localhost:4000/java-serializable/">&lt;p&gt;&lt;img src=&quot;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/media/index/serialization-process.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -382,6 +702,8 @@ In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined wi
 &lt;p&gt;Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
 序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;4. 多次序列化的问题&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：&lt;/p&gt;
@@ -585,57 +907,7 @@ In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined wi
 
 &lt;p&gt;同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。&lt;/p&gt;
 
-&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Generate SSH Keys - Git</title><link href="http://localhost:4000/git-ssh-key/" rel="alternate" type="text/html" title="Generate SSH Keys - Git" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/git-ssh-key</id><content type="html" xml:base="http://localhost:4000/git-ssh-key/">&lt;p&gt;&lt;img src=&quot;https://images.ctfassets.net/0lvk5dbamxpi/UTPF4vNZ56vh5Y9cndGfI/e6438d14fcdf045fe098702302456f07/SSH_Key_-_Authentication_Using_SSH_Keys&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Generating an SSH key (Mac OS X / linux)&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;Enter the following command in the Terminal window.&lt;/p&gt;
-
-        &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;     ssh-keygen -t rsa
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Press the ENTER key to accept the default location. The ssh-keygen utility prompts you for a passphrase.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Type in a passphrase. You can also hit the ENTER key to accept the default (no passphrase). However, this is not recommended.
-  Please note that you will need to enter the passphrase a second time to continue.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;After you confirm the passphrase, the system generates the key pair.&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;      Your identification has been saved in /Users/user/.ssh/id_rsa.
-      Your public key has been saved in /Users/user/.ssh/id_rsa.pub.
-      The key fingerprint is:
-      ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 user@mymac.local
-      The key's randomart image is:
-      +--[ RSA 2048]----+
-      |                 |
-      |         .       |
-      |        E .      |
-      |   .   . o       |
-      |  o . . S .      |
-      | + + o . +       |
-      |. + o = o +      |
-      | o...o * o       |
-      |.  oo.o .        |
-      +-----------------+
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Your private key is saved to the id_rsa file in the .ssh directory and is used to verify the public key you use belongs to the same cloud server. It’s important to never share your private key with anyone, it is equivalent of your password!&lt;/p&gt;
-
-    &lt;p&gt;Your public key is saved to the id_rsa.pub file and it is the key you’ll upload to our cloud service. You can save this key to the clipboard by running this:&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;      pbcopy &amp;lt; ~/.ssh/id_rsa.pub
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Git" /><summary type="html"></summary></entry><entry><title type="html">Delegation VS Inheritance - Java</title><link href="http://localhost:4000/java-inheritance-delegation/" rel="alternate" type="text/html" title="Delegation VS Inheritance - Java" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/java-inheritance-delegation</id><content type="html" xml:base="http://localhost:4000/java-inheritance-delegation/">&lt;p&gt;&lt;img src=&quot;https://dzone.com/storage/temp/12808609-classdiagramm.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Delegation VS Inheritance - Java</title><link href="http://localhost:4000/java-inheritance-delegation/" rel="alternate" type="text/html" title="Delegation VS Inheritance - Java" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/java-inheritance-delegation</id><content type="html" xml:base="http://localhost:4000/java-inheritance-delegation/">&lt;p&gt;&lt;img src=&quot;https://dzone.com/storage/temp/12808609-classdiagramm.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -735,7 +1007,57 @@ In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined wi
   &lt;li&gt;You want to express relationship (is-a) then you want to use Inheritance.&lt;/li&gt;
   &lt;li&gt;You want to be able to pass your class to an existing API expecting A’s then you need to use inheritance.&lt;/li&gt;
   &lt;li&gt;You want to enhance A, but A is final and can no further be sub-classed then you need to use composition and delegation.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Spring AOP</title><link href="http://localhost:4000/java-aop/" rel="alternate" type="text/html" title="Spring AOP" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-aop</id><content type="html" xml:base="http://localhost:4000/java-aop/">&lt;p&gt;&lt;img src=&quot;https://i1.wp.com/blogs.innovationm.com/wp-content/uploads/2018/05/Spring-AOP-Banner.png?resize=624%2C267&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Generate SSH Keys - Git</title><link href="http://localhost:4000/git-ssh-key/" rel="alternate" type="text/html" title="Generate SSH Keys - Git" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/git-ssh-key</id><content type="html" xml:base="http://localhost:4000/git-ssh-key/">&lt;p&gt;&lt;img src=&quot;https://images.ctfassets.net/0lvk5dbamxpi/UTPF4vNZ56vh5Y9cndGfI/e6438d14fcdf045fe098702302456f07/SSH_Key_-_Authentication_Using_SSH_Keys&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generating an SSH key (Mac OS X / linux)&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Enter the following command in the Terminal window.&lt;/p&gt;
+
+        &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;     ssh-keygen -t rsa
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Press the ENTER key to accept the default location. The ssh-keygen utility prompts you for a passphrase.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Type in a passphrase. You can also hit the ENTER key to accept the default (no passphrase). However, this is not recommended.
+  Please note that you will need to enter the passphrase a second time to continue.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;After you confirm the passphrase, the system generates the key pair.&lt;/p&gt;
+
+    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;      Your identification has been saved in /Users/user/.ssh/id_rsa.
+      Your public key has been saved in /Users/user/.ssh/id_rsa.pub.
+      The key fingerprint is:
+      ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 user@mymac.local
+      The key's randomart image is:
+      +--[ RSA 2048]----+
+      |                 |
+      |         .       |
+      |        E .      |
+      |   .   . o       |
+      |  o . . S .      |
+      | + + o . +       |
+      |. + o = o +      |
+      | o...o * o       |
+      |.  oo.o .        |
+      +-----------------+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Your private key is saved to the id_rsa file in the .ssh directory and is used to verify the public key you use belongs to the same cloud server. It’s important to never share your private key with anyone, it is equivalent of your password!&lt;/p&gt;
+
+    &lt;p&gt;Your public key is saved to the id_rsa.pub file and it is the key you’ll upload to our cloud service. You can save this key to the clipboard by running this:&lt;/p&gt;
+
+    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;      pbcopy &amp;lt; ~/.ssh/id_rsa.pub
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Git" /><summary type="html"></summary></entry><entry><title type="html">Spring AOP</title><link href="http://localhost:4000/java-aop/" rel="alternate" type="text/html" title="Spring AOP" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-aop</id><content type="html" xml:base="http://localhost:4000/java-aop/">&lt;p&gt;&lt;img src=&quot;https://i1.wp.com/blogs.innovationm.com/wp-content/uploads/2018/05/Spring-AOP-Banner.png?resize=624%2C267&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1063,86 +1385,7 @@ In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined wi
 
 &lt;p&gt;同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。&lt;/p&gt;
 
-&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Pascal Case &amp;amp; Camel Case</title><link href="http://localhost:4000/english-pascalcase-camelcase/" rel="alternate" type="text/html" title="Pascal Case &amp; Camel Case" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/english-pascalcase-camelcase</id><content type="html" xml:base="http://localhost:4000/english-pascalcase-camelcase/">&lt;p&gt;&lt;img src=&quot;https://www.bkacontent.com/wp-content/uploads/2015/10/AP-Title-Case-Splash.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h1 id=&quot;case-styles&quot;&gt;Case styles&lt;/h1&gt;
-
-&lt;p&gt;In English, a variety of case styles are used in various circumstances:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sentence case&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;The vitamins are in my fresh California raisins&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Title case (capital case, headline style)&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;The Vitamins Are in My Fresh California Raisins&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;All caps (all uppercase)&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;THE VITAMINS ARE IN MY FRESH CALIFORNIA RAISINS&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;All lowercase&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;the vitamins are in my fresh california raisins&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;special-case-styles&quot;&gt;Special case styles&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Camel case&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;theQuickBrownFoxJumpsOverTheLazyDog&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pascal case&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;TheQuickBrownFoxJumpsOverTheLazyDog&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Snake case&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;the_quick_brown_fox_jumps_over_the_lazy_dog&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Kebab case&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;the-quick-brown-fox-jumps-over-the-lazy-dog&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Studly caps&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;tHeqUicKBrOWnFoXJUmpsoVeRThElAzydOG&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;Mixed case with no semantic or syntactic significance to the use of the capitals. Sometimes only vowels are upper case, at other times upper and lower case are alternated, but often it is simply random. The name comes from the sarcastic or ironic implication that it was used in an attempt by the writer to convey their own coolness. It is also used to mock the violation of standard English case conventions by marketers in the naming of computer software packages, even when there is no technical requirement to do so – e.g., Sun Microsystems’ naming of a windowing system NeWS. Illustrative naming of the style is, naturally, random: stUdlY cAps, StUdLy CaPs, etc.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Spring boot 事务特性　@Transactional</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性　@Transactional" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot 事务特性　@Transactional</title><link href="http://localhost:4000/java-spring-transaction/" rel="alternate" type="text/html" title="Spring boot 事务特性　@Transactional" /><published>2020-02-10T00:00:00-08:00</published><updated>2020-02-10T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-transaction</id><content type="html" xml:base="http://localhost:4000/java-spring-transaction/">&lt;p&gt;&lt;img src=&quot;https://www.javainuse.com/boot-66-18.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1202,134 +1445,4 @@ In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined wi
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry><entry><title type="html">HTTP - Get, Post, Put, Delete</title><link href="http://localhost:4000/http-get-post-delete/" rel="alternate" type="text/html" title="HTTP - Get, Post, Put, Delete" /><published>2020-02-08T00:00:00-08:00</published><updated>2020-02-08T00:00:00-08:00</updated><id>http://localhost:4000/http-get-post-delete</id><content type="html" xml:base="http://localhost:4000/http-get-post-delete/">&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/assertible/blog/swagger-petstore-store-endpoints.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;&lt;em&gt;Using HTTP Methods for RESTful Services&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The HTTP verbs comprise a major portion of our “uniform interface” constraint and provide us the action counterpart to the noun-based resource. The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are POST, GET, PUT, PATCH, and DELETE. These correspond to create, read, update, and delete (or CRUD) operations, respectively. There are a number of other verbs, too, but are utilized less frequently. Of those less-frequent methods, OPTIONS and HEAD are used more often than others.&lt;/p&gt;
-
-&lt;p&gt;Below is a table summarizing recommended return values of the primary HTTP methods in combination with the resource URIs:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;HTTP Verb&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;CRUD&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Entire Collection (e.g. /customers)&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Specific Item (e.g. /customers/{id})&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;POST&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Create&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;201 (Created), ‘Location’ header with link to /customers/{id} containing new ID.&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;404 (Not Found), 409 (Conflict) if resource already exists..&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;GET&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Read&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK), list of customers. Use pagination, sorting and filtering to navigate big lists.&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK), single customer. 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;PUT&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Update/Replace&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;405 (Method Not Allowed), unless you want to update/replace every resource in the entire collection.&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;PATCH&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Update/Modify&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;405 (Method Not Allowed), unless you want to modify the collection itself.&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;DELETE&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Delete&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;405 (Method Not Allowed), unless you want to delete the whole collection—not often desirable.&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;200 (OK). 404 (Not Found), if ID not found or invalid.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Below is a more-detailed discussion of the main HTTP methods. Click on a tab for more information about the desired HTTP method.&lt;/p&gt;
-
-&lt;p&gt;The POST verb is most-often utilized to &lt;strong&gt;create&lt;/strong&gt; new resources. In particular, it’s used to create subordinate resources. That is, subordinate to some other (e.g. parent) resource. In other words, when creating a new resource, POST to the parent and the service takes care of associating the new resource with the parent, assigning an ID (new resource URI), etc.&lt;/p&gt;
-
-&lt;p&gt;On successful creation, return HTTP status 201, returning a Location header with a link to the newly-created resource with the 201 HTTP status.&lt;/p&gt;
-
-&lt;p&gt;POST is neither safe nor idempotent. It is therefore recommended for non-idempotent resource requests. Making two identical POST requests will most-likely result in two resources containing the same information.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;POST http://www.example.com/customers
-   POST http://www.example.com/customers/12345/orders&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The HTTP GET method is used to &lt;strong&gt;read&lt;/strong&gt; (or retrieve) a representation of a resource. In the “happy” (or non-error) path, GET returns a representation in XML or JSON and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).&lt;/p&gt;
-
-&lt;p&gt;According to the design of the HTTP specification, GET (along with HEAD) requests are used only to read data and not change it. Therefore, when used this way, they are considered safe. That is, they can be called without risk of data modification or corruption—calling it once has the same effect as calling it 10 times, or none at all. Additionally, GET (and HEAD) is idempotent, which means that making multiple identical requests ends up having the same result as a single request.&lt;/p&gt;
-
-&lt;p&gt;Do not expose unsafe operations via GET—it should never modify any resources on the server.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;GET http://www.example.com/customers/12345
-   GET http://www.example.com/customers/12345/orders
-   GET http://www.example.com/buckets/sample&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;PUT is most-often utilized for &lt;strong&gt;update&lt;/strong&gt; capabilities, PUT-ing to a known resource URI with the request body containing the newly-updated representation of the original resource.&lt;/p&gt;
-
-&lt;p&gt;However, PUT can also be used to create a resource in the case where the resource ID is chosen by the client instead of by the server. In other words, if the PUT is to a URI that contains the value of a non-existent resource ID. Again, the request body contains a resource representation. Many feel this is convoluted and confusing. Consequently, this method of creation should be used sparingly, if at all.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, use POST to create new resources and provide the client-defined ID in the body representation—presumably to a URI that doesn’t include the ID of the resource (see POST below).&lt;/p&gt;
-
-&lt;p&gt;On successful update, return 200 (or 204 if not returning any content in the body) from a PUT. If using PUT for create, return HTTP status 201 on successful creation. A body in the response is optional—providing one consumes more bandwidth. It is not necessary to return a link via a Location header in the creation case since the client already set the resource ID.&lt;/p&gt;
-
-&lt;p&gt;PUT is not a safe operation, in that it modifies (or creates) state on the server, but it is idempotent. In other words, if you create or update a resource using PUT and then make that same call again, the resource is still there and still has the same state as it did with the first call.&lt;/p&gt;
-
-&lt;p&gt;If, for instance, calling PUT on a resource increments a counter within the resource, the call is no longer idempotent. Sometimes that happens and it may be enough to document that the call is not idempotent. However, it’s recommended to keep PUT requests idempotent. It is strongly recommended to use POST for non-idempotent requests.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;PUT http://www.example.com/customers/12345
-   PUT http://www.example.com/customers/12345/orders/98765
-   PUT http://www.example.com/buckets/secret_stuff&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;PATCH is used for &lt;strong&gt;modify&lt;/strong&gt; capabilities. The PATCH request only needs to contain the changes to the resource, not the complete resource.&lt;/p&gt;
-
-&lt;p&gt;This resembles PUT, but the body contains a set of instructions describing how a resource currently residing on the server should be modified to produce a new version. This means that the PATCH body should not just be a modified part of the resource, but in some kind of patch language like JSON Patch or XML Patch.&lt;/p&gt;
-
-&lt;p&gt;PATCH is neither safe nor idempotent. However, a PATCH request can be issued in such a way as to be idempotent, which also helps prevent bad outcomes from collisions between two PATCH requests on the same resource in a similar time frame. Collisions from multiple PATCH requests may be more dangerous than PUT collisions because some patch formats need to operate from a known base-point or else they will corrupt the resource. Clients using this kind of patch application should use a conditional request such that the request will fail if the resource has been updated since the client last accessed the resource. For example, the client can use a strong ETag in an If-Match header on the PATCH request.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;PATCH http://www.example.com/customers/12345
-   PATCH http://www.example.com/customers/12345/orders/98765
-   PATCH http://www.example.com/buckets/secret_stuff&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;DELETE is pretty easy to understand. It is used to &lt;strong&gt;delete&lt;/strong&gt; a resource identified by a URI.&lt;/p&gt;
-
-&lt;p&gt;On successful deletion, return HTTP status 200 (OK) along with a response body, perhaps the representation of the deleted item (often demands too much bandwidth), or a wrapped response (see Return Values below). Either that or return HTTP status 204 (NO CONTENT) with no response body. In other words, a 204 status with no body, or the JSEND-style response and HTTP status 200 are the recommended responses.&lt;/p&gt;
-
-&lt;p&gt;HTTP-spec-wise, DELETE operations are idempotent. If you DELETE a resource, it’s removed. Repeatedly calling DELETE on that resource ends up the same: the resource is gone. If calling DELETE say, decrements a counter (within the resource), the DELETE call is no longer idempotent. As mentioned previously, usage statistics and measurements may be updated while still considering the service idempotent as long as no resource data is changed. Using POST for non-idempotent resource requests is recommended.&lt;/p&gt;
-
-&lt;p&gt;There is a caveat about DELETE idempotence, however. Calling DELETE on a resource a second time will often return a 404 (NOT FOUND) since it was already removed and therefore is no longer findable. This, by some opinions, makes DELETE operations no longer idempotent, however, the end-state of the resource is the same. Returning a 404 is acceptable and communicates accurately the status of the call.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DELETE http://www.example.com/customers/12345
-   DELETE http://www.example.com/customers/12345/orders
-   DELETE http://www.example.com/bucket/sample&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="http" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry></feed>
