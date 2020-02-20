@@ -514,6 +514,558 @@
 
 <p>OOP面向名次领域，AOP面向动词领域。</p>
 
+<hr />
+
+<ol>
+  <li>
+    <h2 id="理解">理解</h2>
+
+    <p>面向切面编程的基本思想是在极少影响原程序的代码的前提下，在程序中的某些地方，使用某些方式，不可见的（即不在原程序中添加其他代码）为原程序切入一些额外的功能。
+ 优点
+ 减少代码间的耦合性，使功能具有拔插性，保证自己代码的清洁型。
+ 能够让你只关注自己的代码，不需要关注切面是如何实现的。</p>
+  </li>
+  <li>
+    <h2 id="名词解释">名词解释</h2>
+
+    <p>这里使用电力公司下的去各家各户查电表的工人为例。</p>
+
+    <p>通知(advice):</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 查电表的工人，在工作前心里明白，或者说必须接到公司老板下达的任务，即包括什么时候去查电表，以及去住户人家怎样查电表。和此相似，通知定义了切面做什么和什么时候去做（确切的说是程序员在通知中定义的）。除了定义切面要完成的工作(what job)，还会定位什么时候(when)去履行这项工作。是在方法调用前，还是调用之后，还是前后都是，还是抛出异常时。
+</code></pre></div>    </div>
+
+    <p>切面一共有五种通知</p>
+
+    <ul>
+      <li>Before 某方法调用之前发出通知。</li>
+      <li>After 某方法完成之后发出通知，不考虑方法运行的结果。</li>
+      <li>After-returning 将通知放置在被通知的方法成功执行之后。</li>
+      <li>After-throwing 将通知放置在被通知的方法抛出异常之后。</li>
+      <li>Around 通知包裹在被通知的方法的周围，在方法调用之前和之后发出通知。</li>
+    </ul>
+
+    <p>连接/参加点(Join Point):</p>
+
+    <p>就像每一个电力公司下有很多使用他提供的电的房子，每一个房子都可以，都有机会被查电表。同样,在你的应用程序中会有好多的地方可以，或者有机会被通知申请完成通知自己的工作。这些机会（某个点）就被称为连接点。连接点是切面在应用程序执行过程中插入的地方，可能是方法调用的时候，异常抛出的时候。</p>
+
+    <p>切点(pointcuts):</p>
+
+    <p>很明显一位查电表的人不能把所有的用电客户都拜访个遍，而是每一个人都会有自己管辖的客户。同样，一个切面没必要通知（advise）应用程序中所有的连接点（join point）。切点(pointcuts)能够精确定位被切面通知的连接点。</p>
+
+    <p>如果通知(advice)定义了切面what和when,那切点就定义的切面的 where。切点决定去匹配通知们应该去编织的一个或者多个连接点。通常需要使用类或者方法的名字来指定切点，或者通过正则表达式去匹配类和方法的名字</p>
+
+    <p>切面(aspects):</p>
+
+    <p>当查电表的开始了他的一天(when)，他知道他需要去做些什么(what)，(通知)，以及那些房子需要他访问(where)(切点)。事实上他知道他工作上要做的每一件事。
+ 很明显，切面即是通知和切点的结合体。放在一块，通知和切点定义了切面需要知道的每一件事。要做什么，以及在哪里什么时候去做。</p>
+
+    <p>引入(introductions):</p>
+
+    <p>引入允许你添加一个新的方法给已经存在的类。</p>
+  </li>
+  <li>
+    <h2 id="spring-aop的支持">Spring AOP的支持</h2>
+
+    <p>Spring建议在Java中书写AOP
+ Spring是在运行阶段才将切面编织进bean中，是使用代理类。
+ Spring只支持方法级别的连接点。</p>
+  </li>
+  <li>
+    <p>Spring使用AspectJ的切点表达式去定义Spring切面</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>AspectJ标志符</th>
+          <th style="text-align: center">解释</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>args()</td>
+          <td style="text-align: center">定制join-point去匹配那些参数为指定类型的方法的执行动作。</td>
+        </tr>
+        <tr>
+          <td>@args()</td>
+          <td style="text-align: center">定制join-point去匹配那些参数被指定类型注解的方法的执行动作。</td>
+        </tr>
+        <tr>
+          <td>execution()</td>
+          <td style="text-align: center">开始匹配在其内部编写的定制。</td>
+        </tr>
+        <tr>
+          <td>this()</td>
+          <td style="text-align: center">定制join-pont去匹配由AOP代理的Bean引用的指定类型的类。</td>
+        </tr>
+        <tr>
+          <td>target()</td>
+          <td style="text-align: center">定制join-point去匹配特定的对象，这些对象一定是指定类型的类。</td>
+        </tr>
+        <tr>
+          <td>@target()</td>
+          <td style="text-align: center">定制join-point去匹配特定的对象，这些对象要具有的指定类型的注解。</td>
+        </tr>
+        <tr>
+          <td>within()</td>
+          <td style="text-align: center">定制join-point在必须哪一个包中。</td>
+        </tr>
+        <tr>
+          <td>@within()</td>
+          <td style="text-align: center">定制join-point在必须由指定注解标注的类中。</td>
+        </tr>
+        <tr>
+          <td>@annotation</td>
+          <td style="text-align: center">定制连接点具有指定的注解。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>只有execution用来执行匹配，其他标志符都只是为了限制/定制他们所要匹配的连接点的位置。</li>
+    </ul>
+
+    <p>4.1 编写切点，一个简答的示例</p>
+
+    <p>开始写代码之前需要做一些准备。
+ 如果你使用的是Maven工具构建的项目，除了基本的Spring依赖，还需要导入下面两个支持Spring切面的依赖。</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">&lt;!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver --&gt;</span>
+ <span class="nt">&lt;dependency&gt;</span>    
+     <span class="nt">&lt;groupId&gt;</span>org.aspectj<span class="nt">&lt;/groupId&gt;</span>            
+     <span class="nt">&lt;artifactId&gt;</span>aspectjweaver<span class="nt">&lt;/artifactId&gt;</span>    
+     <span class="nt">&lt;version&gt;</span>1.8.9<span class="nt">&lt;/version&gt;</span>
+ <span class="nt">&lt;/dependency&gt;</span>
+ <span class="c">&lt;!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt --&gt;</span>
+ <span class="nt">&lt;dependency&gt;</span>   
+     <span class="nt">&lt;groupId&gt;</span>org.aspectj<span class="nt">&lt;/groupId&gt;</span> 
+     <span class="nt">&lt;artifactId&gt;</span>aspectjrt<span class="nt">&lt;/artifactId&gt;</span>    
+     <span class="nt">&lt;version&gt;</span>1.8.9<span class="nt">&lt;/version&gt;</span>
+ <span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>    </div>
+
+    <p>Gradle 相似。注意这里的groupId要为org.aspectj，而不是aspectj，否则运行时会抛出异常。</p>
+
+    <p>首先定义一个接口</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Performance</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">perform</span><span class="o">();</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>Performance代表一个表演者，比如舞台上的表演者，电影里的演员等等。
+ 现在你想写一个当Performance的perform()方法执行时触发的切面。下面这个表达式就展示了一个切点表达式，只要perform()方法执行了，他就能得到切面的通知。</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">execution</span><span class="o">(*</span> <span class="n">concert</span><span class="o">.</span><span class="na">Performance</span><span class="o">.</span><span class="na">perform</span><span class="o">(..))</span>
+</code></pre></div>    </div>
+
+    <p>这里解释一下：</p>
+
+    <p>execution意思是当某方法执行时触发。</p>
+
+    <p>第一个 * 意思配备任何一个perform方法，是不在乎方法返回类型是什么。</p>
+
+    <p>concert.Performance是为了定位perform()方法再哪个类中。</p>
+
+    <p>.. 代表配备任何一个perform方法，不在意他的参数列表是啥。</p>
+
+    <p>如果你想限定切点的范围，只匹配在concert包被调用的perform()。你可以使用within()标识符：</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">execution</span><span class="o">(*</span> <span class="n">concert</span><span class="o">.</span><span class="na">Performance</span><span class="o">.</span><span class="na">perform</span><span class="o">(..))</span>
+     <span class="o">&amp;&amp;</span> <span class="n">within</span><span class="o">(</span><span class="n">concert</span><span class="o">.*))</span>
+
+</code></pre></div>    </div>
+    <p>注意这里的 &amp;&amp; 就是与的意思，当然还有 或 || ，非 ! ,如果你是在XML配置文件中编写切面，那就建议使用 and or not 来替代他们。</p>
+
+    <p>4.2 在切点中选取bean</p>
+
+    <p>在表达式中，可以使用bean()标识符，通过bean的ID来识别一个bean。例如：</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">execution</span><span class="o">(*</span> <span class="n">concert</span><span class="o">.</span><span class="na">Performance</span><span class="o">.</span><span class="na">perform</span><span class="o">())</span>
+ <span class="n">and</span> <span class="nf">bean</span><span class="o">(</span><span class="err">'</span><span class="n">woodstock</span><span class="err">'</span><span class="o">)</span>
+</code></pre></div>    </div>
+
+    <p>4.3 创建注解切面</p>
+
+    <p>AspectJ 5 之后你就能使用注解的方式来创建切面，他能够让你使用很少的注解就能实现切面。
+ 现在你已经定义了一个Performance作为你切面要切入的主体。现在我们就使用AspectJ 注解来创建切面。</p>
+
+    <p>定义一个切面。</p>
+
+    <p>没有观众的表演家就不能叫表演家，观众对于表演家非常重要，但又不属于表演家，他是一个分离出来的点，因此，我们就能将观众定义成一个切面，好让他能够轻松的观看一个表演家的表演。</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">mengxiang</span><span class="o">.</span><span class="na">concert</span><span class="o">;</span>
+
+ <span class="kn">import</span> <span class="nn">org.aspectj.lang.annotation.*</span><span class="o">;</span>
+
+ <span class="cm">/**
+ * 观众
+ * Created by Henvealf on 2016/8/26.
+ */</span>
+ <span class="nd">@Aspect</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Audience</span> <span class="o">{</span>
+     <span class="nd">@Before</span><span class="o">(</span><span class="s">"execution(* com.mengxiang.concert.Performance.perform(..))"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">slienceCellPhones</span><span class="o">(){</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"关掉手机"</span><span class="o">);</span>
+     <span class="o">}</span>
+
+     <span class="nd">@Before</span><span class="o">(</span><span class="s">"execution(* com.mengxiang.concert.Performance.perform(..))"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">takeSeats</span><span class="o">()</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"找到座位"</span><span class="o">);</span>
+     <span class="o">}</span>
+
+     <span class="nd">@AfterReturning</span><span class="o">(</span><span class="s">"execution(* com.mengxiang.concert.Performance.perform(..))"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">applause</span><span class="o">()</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"好好好！！鼓掌"</span><span class="o">);</span>
+     <span class="o">}</span>
+
+     <span class="nd">@AfterThrowing</span><span class="o">(</span><span class="s">"execution(* com.mengxiang.concert.Performance.perform())"</span><span class="o">)</span>
+     <span class="kd">public</span>  <span class="kt">void</span> <span class="nf">demandRefund</span><span class="o">()</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"退票！ 退票！ "</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>然后编写一个配置文件，注入观众Bean和演员Bean。</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Configuration</span>
+ <span class="nd">@EnableAspectJAutoProxy</span>
+ <span class="nd">@ComponentScan</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConcertConfig</span> <span class="o">{</span>
+     <span class="nd">@Bean</span>
+     <span class="kd">public</span> <span class="nc">Audience</span> <span class="nf">audience</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="k">new</span> <span class="nf">Audience</span><span class="o">();</span>
+     <span class="o">}</span>
+     <span class="nd">@Bean</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"dancer"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="nc">Performance</span> <span class="nf">dancer</span><span class="o">(){</span>
+         <span class="k">return</span> <span class="k">new</span> <span class="nf">Dancer</span><span class="o">();</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>最后测试</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="nn">org.springframework.context.ApplicationContext</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">org.springframework.context.annotation.AnnotationConfigApplicationContext</span><span class="o">;</span>
+
+ <span class="cm">/**
+ * Created by Henvealf on 2016/8/27.
+ */</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+         <span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AnnotationConfigApplicationContext</span><span class="o">(</span><span class="s">"com.mengxiang.concert"</span><span class="o">);</span>
+         <span class="nc">Performance</span> <span class="n">per</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Performance</span><span class="o">)</span> <span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"dancer"</span><span class="o">);</span>
+         <span class="n">per</span><span class="o">.</span><span class="na">perform</span><span class="o">();</span>
+
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>测试结果完全可以预料到：</p>
+  </li>
+</ol>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">    关掉手机
+    找到座位
+    表演开始，跳舞，跳舞。
+    好好好！！鼓掌
+</span></code></pre></div></div>
+
+<p><a href="https://www.jianshu.com/p/ff8d0cd69a7e" title="2">参考链接</a>
+<a href="https://www.jianshu.com/p/d1363a376ae8" title="3">参考链接</a></p>
+
+<hr />
+
+<h1 id="注解方式">注解方式</h1>
+
+<ol>
+  <li>
+    <p>定义目标对象</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">service</span><span class="o">;</span>
+
+ <span class="cm">/**
+ * ${DESCRIPTION}
+ *
+ * @author Ricky Fung
+ * @create 2017-04-03 11:11
+ */</span>
+ <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">BankService</span> <span class="o">{</span>
+
+     <span class="kt">boolean</span> <span class="nf">transfer</span><span class="o">(</span><span class="nc">String</span> <span class="n">from</span><span class="o">,</span> <span class="nc">String</span> <span class="n">to</span><span class="o">,</span> <span class="kt">int</span> <span class="n">amount</span><span class="o">);</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>BankServiceImpl</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">service</span><span class="o">;</span>
+
+ <span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="o">;</span>
+
+ <span class="cm">/**
+ * ${DESCRIPTION}
+ *
+ * @author Ricky Fung
+ * @create 2017-04-03 11:12
+ */</span>
+ <span class="nd">@Service</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">BankServiceImpl</span> <span class="kd">implements</span> <span class="nc">BankService</span> <span class="o">{</span>
+
+     <span class="nd">@Override</span>
+     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">transfer</span><span class="o">(</span><span class="nc">String</span> <span class="n">from</span><span class="o">,</span> <span class="nc">String</span> <span class="n">to</span><span class="o">,</span> <span class="kt">int</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">if</span><span class="o">(</span><span class="n">amount</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">){</span>
+             <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="s">"transfer amount must be a positive number"</span><span class="o">);</span>
+         <span class="o">}</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"["</span><span class="o">+</span><span class="n">from</span><span class="o">+</span><span class="s">"]向["</span><span class="o">+</span><span class="n">to</span><span class="o">+</span> <span class="s">"]转账金额"</span><span class="o">+</span><span class="n">amount</span><span class="o">);</span>
+         <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>定义切面</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">;</span>
+
+ <span class="kn">import</span> <span class="nn">org.aspectj.lang.JoinPoint</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">org.aspectj.lang.ProceedingJoinPoint</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">org.aspectj.lang.annotation.*</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">org.springframework.core.annotation.Order</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
+
+ <span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+ <span class="nd">@Order</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+ <span class="nd">@Aspect</span>
+ <span class="nd">@Component</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TransferLogAdvice</span> <span class="o">{</span>
+
+     <span class="nd">@Pointcut</span><span class="o">(</span><span class="s">"execution(* com.bytebeats.spring4.aop.annotation.service.BankServiceImpl.*(..))"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pointcut1</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="nd">@Pointcut</span><span class="o">(</span><span class="s">"execution(* com.bytebeats.spring4.aop.annotation.service.*ServiceImpl.*(..))"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">myPointcut</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="cm">/**
+     * 前置通知：在方法执行前执行的代码
+     * @param joinPoint
+     */</span>
+     <span class="nd">@Before</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"pointcut1() || myPointcut()"</span><span class="o">)</span>
+     <span class="c1">//@Before("execution(* com.bytebeats.spring4.aop.annotation.service.BankServiceImpl.*(..))")</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforeExecute</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="n">args</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">joinPoint</span><span class="o">.</span><span class="na">getArgs</span><span class="o">());</span>
+            
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" before execute:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span> <span class="s">" begin with "</span><span class="o">+</span><span class="n">args</span><span class="o">);</span>
+     <span class="o">}</span>
+        
+     <span class="cm">/**
+     * 后置通知：在方法执行后执行的代码(无论该方法是否发生异常),注意后置通知拿不到执行的结果
+     * @param joinPoint
+     */</span>
+     <span class="nd">@After</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"pointcut1()"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterExecute</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" after execute:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span><span class="s">" end!"</span><span class="o">);</span>
+     <span class="o">}</span>
+        
+     <span class="cm">/**
+     * 后置返回通知：在方法正常执行后执行的代码,可以获取到方法的返回值
+     * @param joinPoint
+     */</span>
+     <span class="nd">@AfterReturning</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"pointcut1()"</span><span class="o">,</span>
+             <span class="n">returning</span><span class="o">=</span><span class="s">"result"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterReturning</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">,</span> <span class="nc">Object</span> <span class="n">result</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" afterReturning execute:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span><span class="s">" end with result:"</span><span class="o">+</span><span class="n">result</span><span class="o">);</span>
+     <span class="o">}</span>
+        
+     <span class="cm">/**
+     * 后置异常通知：在方法抛出异常之后执行,可以访问到异常信息,且可以指定出现特定异常信息时执行代码
+     * @param joinPoint
+     */</span>
+     <span class="nd">@AfterThrowing</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"pointcut1()"</span><span class="o">,</span>
+             <span class="n">throwing</span><span class="o">=</span><span class="s">"exception"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterThrowing</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">,</span> <span class="nc">Exception</span> <span class="cm">/**NullPointerException*/</span> <span class="n">exception</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" afterThrowing execute:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span><span class="s">" occurs exception:"</span><span class="o">+</span><span class="n">exception</span><span class="o">);</span>
+     <span class="o">}</span>
+        
+     <span class="cm">/**
+     * 环绕通知, 围绕着方法执行
+     */</span>
+     <span class="nd">@Around</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"pointcut1()"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="nc">Object</span> <span class="nf">around</span><span class="o">(</span><span class="nc">ProceedingJoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" around:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span><span class="s">" execute start"</span><span class="o">);</span>
+            
+         <span class="nc">Object</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+         <span class="k">try</span> <span class="o">{</span>
+             <span class="n">result</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">proceed</span><span class="o">();</span>
+         <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+             <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+         <span class="o">}</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" around:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span><span class="s">" execute end"</span><span class="o">);</span>
+         <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>Spring AOP提供了 @Before，@After、@AfterReturning、@AfterThrowing、@Around注解来指定 通知类型。</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cm">/**
+     * 前置通知：在方法执行前执行的代码
+     * @param joinPoint
+     */</span>
+     <span class="nd">@Before</span><span class="o">(</span><span class="s">"execution(* com.bytebeats.spring4.aop.annotation.service.BankServiceImpl.*(..))"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforeExecute</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="n">args</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">joinPoint</span><span class="o">.</span><span class="na">getArgs</span><span class="o">());</span>
+            
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" before execute:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span> <span class="s">" begin with "</span><span class="o">+</span><span class="n">args</span><span class="o">);</span>
+     <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>但是，为了复用切点，推荐使用@Pointcut来定义切点，然后在 @Before、@After等注解中引用定义好的切点，代码如下：</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Pointcut</span><span class="o">(</span><span class="s">"execution(* com.bytebeats.spring4.aop.annotation.service.BankServiceImpl.*(..))"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pointcut1</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="cm">/**
+     * 前置通知：在方法执行前执行的代码
+     * @param joinPoint
+     */</span>
+     <span class="nd">@Before</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"pointcut1()"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforeExecute</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="n">args</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">joinPoint</span><span class="o">.</span><span class="na">getArgs</span><span class="o">());</span>
+            
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" before execute:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span> <span class="s">" begin with "</span><span class="o">+</span><span class="n">args</span><span class="o">);</span>
+     <span class="o">}</span>
+
+     <span class="cm">/**
+     * 后置通知：在方法执行后执行的代码(无论该方法是否发生异常),注意后置通知拿不到执行的结果
+     * @param joinPoint
+     */</span>
+     <span class="nd">@After</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"pointcut1()"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterExecute</span><span class="o">(</span><span class="nc">JoinPoint</span> <span class="n">joinPoint</span><span class="o">){</span>
+            
+         <span class="nc">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">()+</span> <span class="s">" after execute:"</span><span class="o">+</span><span class="n">methodName</span><span class="o">+</span><span class="s">" end!"</span><span class="o">);</span>
+     <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>启用注解扫描</p>
+
+    <p>spring-aop-annotation.xml</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+ <span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
+     <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+     <span class="na">xmlns:context=</span><span class="s">"http://www.springframework.org/schema/context"</span>
+     <span class="na">xmlns:aop=</span><span class="s">"http://www.springframework.org/schema/aop"</span>
+     <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd"</span><span class="nt">&gt;</span>
+
+     <span class="c">&lt;!-- 自动扫描的包 --&gt;</span>
+     <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.bytebeats.spring4.aop.annotation"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;/context:component-scan&gt;</span>
+
+     <span class="c">&lt;!-- 启用AspectJ自动代理 --&gt;</span>
+     <span class="nt">&lt;aop:aspectj-autoproxy</span> <span class="nt">/&gt;</span>
+
+ <span class="nt">&lt;/beans&gt;</span>
+</code></pre></div>    </div>
+
+    <p>到此，基于注解方式配置AOP已经结束了，接下来可以验证一下。</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">;</span>
+
+ <span class="kn">import</span> <span class="nn">com.bytebeats.spring4.aop.annotation.service.BankService</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">com.bytebeats.spring4.aop.xml.service.UserService</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">org.springframework.context.support.ClassPathXmlApplicationContext</span><span class="o">;</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpringAopAnnotationApp</span> <span class="o">{</span>
+
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+            
+         <span class="nc">ClassPathXmlApplicationContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"classpath:spring-aop-annotation.xml"</span><span class="o">);</span>
+
+         <span class="nc">BankService</span> <span class="n">bankService</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="nc">BankService</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+         <span class="n">bankService</span><span class="o">.</span><span class="na">transfer</span><span class="o">(</span><span class="s">"jordan"</span><span class="o">,</span> <span class="s">"kobe"</span><span class="o">,</span> <span class="mi">2000</span><span class="o">);</span>
+
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"*********************"</span><span class="o">);</span>
+         <span class="n">bankService</span><span class="o">.</span><span class="na">transfer</span><span class="o">(</span><span class="s">"jordan"</span><span class="o">,</span> <span class="s">"kobe"</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+
+         <span class="n">ctx</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>Spring AOP切入点表达式
+ 切入点指示符用来指示切入点表达式目的，在Spring AOP中目前只有执行方法这一个连接点，表达式如下：</p>
+
+    <p>execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern)throws-pattern?)<br />
+ 括号中各个pattern分别表示 修饰符匹配（modifier-pattern?）、返回值匹配（ret-type-pattern）、类路径匹配（declaring-type-pattern?）、方法名匹配（name-pattern）、参数匹配（(param-pattern)）、异常类型匹配（throws-pattern?），其中后面跟着“?”的是可选项。</p>
+
+    <p>我们来看几个例子：</p>
+
+    <ol>
+      <li>匹配所有方法</li>
+    </ol>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">execution</span><span class="o">(*</span> <span class="o">*(..))</span>  
+</code></pre></div>    </div>
+
+    <p>2、匹配 com.bytebeats.spring4.aop.xml.service.UserService中所有的公有方法</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">execution</span><span class="o">(</span><span class="kd">public</span> <span class="o">*</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">xml</span><span class="o">.</span><span class="na">service</span><span class="o">.</span><span class="na">UserService</span><span class="o">.*(..))</span>
+</code></pre></div>    </div>
+
+    <p>3、匹配com.bytebeats.spring4.aop.xml.service 包及其子包下的所有方法</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">execution</span><span class="o">(*</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">xml</span><span class="o">.</span><span class="na">service</span><span class="o">..*.*(..))</span>  
+</code></pre></div>    </div>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>另外，@Pointcut 定义切点时，还可以使用 &amp;&amp;、</td>
+          <td> </td>
+          <td>和 !，如下：</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Pointcut</span><span class="o">(</span><span class="s">"execution(* com.bytebeats.mq.MqProducer.*(..))"</span><span class="o">)</span>  
+ <span class="kd">private</span> <span class="kt">void</span> <span class="nf">mqSender</span><span class="o">(){</span>
+ <span class="o">}</span>  
+ <span class="nd">@Pointcut</span><span class="o">(</span><span class="s">"execution(* com.bytebeats.mq.MqConsumer.*(..))"</span><span class="o">)</span>  
+ <span class="kd">private</span> <span class="kt">void</span> <span class="nf">mqReceiver</span><span class="o">(){</span>
+ <span class="o">}</span>
+
+ <span class="nd">@Pointcut</span><span class="o">(</span><span class="s">"mqSender() || mqReceiver()"</span><span class="o">)</span>  
+ <span class="kd">private</span> <span class="kt">void</span> <span class="nf">mqTrace</span><span class="o">(){</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>源码下载
+ https://github.com/TiFG/spring4-in-action/tree/master/spring-ch2-aop</p>
+  </li>
+</ol>
+
 
   </div>
 
