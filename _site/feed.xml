@@ -1,4 +1,345 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-19T12:15:34-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">English Vocabulary - Vegetable</title><link href="http://localhost:4000/english-vocabulary-vegetable/" rel="alternate" type="text/html" title="English Vocabulary - Vegetable" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/english-vocabulary-vegetable</id><content type="html" xml:base="http://localhost:4000/english-vocabulary-vegetable/">&lt;p&gt;&lt;img src=&quot;https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-20T14:35:53-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">curl 的用法指南</title><link href="http://localhost:4000/linux-curl/" rel="alternate" type="text/html" title="curl 的用法指南" /><published>2020-02-20T00:00:00-08:00</published><updated>2020-02-20T00:00:00-08:00</updated><id>http://localhost:4000/linux-curl</id><content type="html" xml:base="http://localhost:4000/linux-curl/">&lt;p&gt;&lt;img src=&quot;https://www.maketecheasier.com/assets/uploads/2019/03/how-to-use-curl-commands-featured-800x400.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;curl 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端（client）的 URL 工具的意思。&lt;/p&gt;
+
+&lt;p&gt;它的功能非常强大，命令行参数多达几十种。如果熟练的话，完全可以取代 Postman 这一类的图形界面工具。&lt;/p&gt;
+
+&lt;p&gt;不带有任何参数时，curl 就是发出 GET 请求。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令向&lt;strong&gt;www.example.com&lt;/strong&gt;发出 GET 请求，服务器返回的内容会在命令行输出。&lt;/p&gt;
+
+&lt;h1 id=&quot;-a&quot;&gt;-A&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-A&lt;/strong&gt;参数指定客户端的用户代理标头，即&lt;strong&gt;User-Agent&lt;/strong&gt;。curl 的默认用户代理字符串是&lt;strong&gt;curl/[version]&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将&lt;strong&gt;User-Agent&lt;/strong&gt;改成 Chrome 浏览器。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会移除&lt;strong&gt;User-Agent&lt;/strong&gt;标头。&lt;/p&gt;
+
+&lt;p&gt;也可以通过 &lt;strong&gt;-H&lt;/strong&gt; 参数直接指定标头，更改&lt;strong&gt;User-Agent&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'User-Agent: php/1.0'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-b&quot;&gt;-b&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-b&lt;/strong&gt;参数用来向服务器发送 Cookie。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo=bar'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会生成一个标头&lt;strong&gt;Cookie: foo=bar&lt;/strong&gt;，向服务器发送一个名为&lt;strong&gt;foo&lt;/strong&gt;、值为&lt;strong&gt;bar&lt;/strong&gt;的 Cookie。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo1=bar;foo2=bar2'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令发送两个 Cookie。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; cookies.txt https://www.google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令读取本地文件&lt;strong&gt;cookies.txt&lt;/strong&gt;，里面是服务器设置的 Cookie（参见 &lt;strong&gt;-c&lt;/strong&gt; 参数），将其发送到服务器。&lt;/p&gt;
+
+&lt;h1 id=&quot;-c&quot;&gt;-c&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-c&lt;/strong&gt;参数将服务器设置的 Cookie 写入一个文件。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; cookies.txt https://www.google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将服务器的 HTTP 回应所设置 Cookie 写入文本文件&lt;strong&gt;cookies.txt&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-d&quot;&gt;-d&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt;参数用于发送 POST 请求的数据体。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'login=emma＆password=123'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;或者&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'login=emma'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'password=123'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST  https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用 &lt;strong&gt;-d&lt;/strong&gt; 参数以后，HTTP 请求会自动加上标头&lt;strong&gt;Content-Type : application/x-www-form-urlencoded&lt;/strong&gt;。并且会自动将请求转为 POST 方法，因此可以省略 &lt;strong&gt;-X POST&lt;/strong&gt; 。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt;参数可以读取本地文本文件的数据，向服务器发送。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'@data.txt'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令读取&lt;strong&gt;data.txt&lt;/strong&gt;文件的内容，作为数据体向服务器发送。&lt;/p&gt;
+
+&lt;h1 id=&quot;data-urlencode&quot;&gt;–data-urlencode&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;–data-urlencode&lt;/strong&gt;参数等同于 &lt;strong&gt;-d&lt;/strong&gt;，发送 POST 请求的数据体，区别在于会自动将发送的数据进行 URL 编码。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--data-urlencode&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'comment=hello world'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码中，发送的数据&lt;strong&gt;hello world&lt;/strong&gt;之间有一个空格，需要进行 URL 编码。&lt;/p&gt;
+
+&lt;h1 id=&quot;-e&quot;&gt;-e&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;参数用来设置 HTTP 的标头&lt;strong&gt;Referer&lt;/strong&gt;，表示请求的来源。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;curl -e 'https://google.com?q=example' https://www.example.com
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将&lt;strong&gt;Referer&lt;/strong&gt;标头设为&lt;strong&gt;https://google.com?q=example&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-H&lt;/strong&gt;参数可以通过直接添加标头&lt;strong&gt;Referer&lt;/strong&gt;，达到同样效果。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;curl -H 'Referer: https://google.com?q=example' https://www.example.com
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-f&quot;&gt;-F&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数用来向服务器上传二进制文件。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png'&lt;/span&gt; https://google.com/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会给 HTTP 请求加上标头&lt;strong&gt;Content-Type: multipart/form-data&lt;/strong&gt;，然后将文件&lt;strong&gt;photo.png&lt;/strong&gt;作为&lt;strong&gt;file&lt;/strong&gt;字段上传。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数可以指定 MIME 类型。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png;type=image/png'&lt;/span&gt; https://google.com/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令指定 MIME 类型为&lt;strong&gt;image/png&lt;/strong&gt;，否则 curl 会把 MIME 类型设为&lt;strong&gt;application/octet-stream&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数也可以指定文件名。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png;filename=me.png'&lt;/span&gt; https://google.com/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令中，原始文件名为&lt;strong&gt;photo.png&lt;/strong&gt;，但是服务器接收到的文件名为&lt;strong&gt;me.png&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-g&quot;&gt;-G&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-G&lt;/strong&gt;参数用来构造 URL 的查询字符串。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'q=kitties'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'count=20'&lt;/span&gt; https://google.com/search
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会发出一个 GET 请求，实际请求的 URL 为&lt;strong&gt;https://google.com/search?q=kitties&amp;amp;count=20&lt;/strong&gt;。如果省略 &lt;strong&gt;–G&lt;/strong&gt;，会发出一个 POST 请求。&lt;/p&gt;
+
+&lt;p&gt;如果数据需要 URL 编码，可以结合 &lt;strong&gt;–data–urlencode&lt;/strong&gt;参数。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--data-urlencode&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'comment=hello world'&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-h&quot;&gt;-H&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-H&lt;/strong&gt;参数添加 HTTP 请求的标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Accept-Language: en-US'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令添加 HTTP 标头&lt;strong&gt;Accept-Language: en-US&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Accept-Language: en-US'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Secret-Message: xyzzy'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令添加两个 HTTP 标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;login&quot;: &quot;emma&quot;, &quot;pass&quot;: &quot;123&quot;}'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令添加 HTTP 请求的标头是&lt;strong&gt;Content-Type: application/json&lt;/strong&gt;，然后用 &lt;strong&gt;-d&lt;/strong&gt;参数发送 JSON 数据。&lt;/p&gt;
+
+&lt;h1 id=&quot;-i&quot;&gt;-i&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-i&lt;/strong&gt;参数打印出服务器回应的 HTTP 标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令收到服务器回应后，先输出服务器回应的标头，然后空一行，再输出网页的源码。&lt;/p&gt;
+
+&lt;h1 id=&quot;-i-1&quot;&gt;-I&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-I&lt;/strong&gt;参数向服务器发出 HEAD 请求，然会将服务器返回的 HTTP 标头打印出来。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-I&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令输出服务器对 HEAD 请求的回应。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–head&lt;/strong&gt;参数等同于 &lt;strong&gt;-I&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--head&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-k&quot;&gt;-k&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-k&lt;/strong&gt;参数指定跳过 SSL 检测。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-k&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令不会检查服务器的 SSL 证书是否正确。&lt;/p&gt;
+
+&lt;h1 id=&quot;-l&quot;&gt;-L&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-L&lt;/strong&gt;参数会让 HTTP 请求跟随服务器的重定向。curl 默认不跟随重定向。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tweet=hi'&lt;/span&gt; https://api.twitter.com/tweet
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;limit-rate&quot;&gt;–limit-rate&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;–limit-rate&lt;/strong&gt;用来限制 HTTP 请求和回应的带宽，模拟慢网速的环境。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--limit-rate&lt;/span&gt; 200k https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将带宽限制在每秒 200K 字节。&lt;/p&gt;
+
+&lt;h1 id=&quot;-o&quot;&gt;-o&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;参数将服务器的回应保存成文件，等同于wget命令。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; example.html https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将&lt;strong&gt;www.example.com&lt;/strong&gt;保存成&lt;strong&gt;example.html&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-o-1&quot;&gt;-O&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-O&lt;/strong&gt;参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://www.example.com/foo/bar.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将服务器回应保存成文件，文件名为&lt;strong&gt;bar.html&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-s&quot;&gt;-s&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-s&lt;/strong&gt;参数将不输出错误和进度信息。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令一旦发生错误，不会显示错误信息。不发生错误的话，会正常显示运行结果。&lt;/p&gt;
+
+&lt;p&gt;如果想让 curl 不产生任何输出，可以使用下面的命令。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /dev/null https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-s-1&quot;&gt;-S&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-S&lt;/strong&gt;参数指定只输出错误信息，通常与 &lt;strong&gt;-s&lt;/strong&gt;一起使用。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /dev/null https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令没有任何输出，除非发生错误。&lt;/p&gt;
+
+&lt;h1 id=&quot;-u&quot;&gt;-u&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-u&lt;/strong&gt;参数用来设置服务器认证的用户名和密码。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bob:12345'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令设置用户名为&lt;strong&gt;bob&lt;/strong&gt;，密码为&lt;strong&gt;12345&lt;/strong&gt;，然后将其转为 HTTP 标头&lt;strong&gt;Authorization: Basic Ym9iOjEyMzQ1&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;curl 能够识别 URL 里面的用户名和密码。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl https://bob:12345@google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令能够识别 URL 里面的用户名和密码，将其转为上个例子里面的 HTTP 标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bob'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令只设置了用户名，执行后，curl 会提示用户输入密码。&lt;/p&gt;
+
+&lt;h1 id=&quot;-v&quot;&gt;-v&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-v&lt;/strong&gt;参数输出通信的整个过程，用于调试。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;–trace&lt;/strong&gt;参数也可以用于调试，还会输出原始的二进制数据。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--trace&lt;/span&gt; - https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-x&quot;&gt;-x&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-x&lt;/strong&gt;参数指定 HTTP 请求的代理。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; socks5://james:cats@myproxy.com:8080 https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令指定 HTTP 请求通过&lt;strong&gt;myproxy.com:8080&lt;/strong&gt;的 socks5 代理发出。&lt;/p&gt;
+
+&lt;p&gt;如果没有指定代理协议，默认为 HTTP。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; james:cats@myproxy.com:8080 https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令中，请求的代理使用 HTTP 协议。&lt;/p&gt;
+
+&lt;h1 id=&quot;-x-1&quot;&gt;-X&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-X&lt;/strong&gt;参数指定 HTTP 请求的方法。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令对&lt;strong&gt;https://www.example.com&lt;/strong&gt;发出 POST 请求。&lt;/p&gt;
+
+&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://catonmat.net/cookbooks/curl&quot; title=&quot;curl cookbook&quot;&gt;curl cookbook&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/09/curl.html&quot; title=&quot;curl 初学者教程&quot;&gt;curl 初学者教程&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Vegetable</title><link href="http://localhost:4000/english-vocabulary-vegetable/" rel="alternate" type="text/html" title="English Vocabulary - Vegetable" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/english-vocabulary-vegetable</id><content type="html" xml:base="http://localhost:4000/english-vocabulary-vegetable/">&lt;p&gt;&lt;img src=&quot;https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -220,7 +561,97 @@
   &lt;li&gt;&lt;strong&gt;Y&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Yellow pepper 黄椒&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">SSH原理与运用</title><link href="http://localhost:4000/linux-ssh/" rel="alternate" type="text/html" title="SSH原理与运用" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/linux-ssh</id><content type="html" xml:base="http://localhost:4000/linux-ssh/">&lt;p&gt;&lt;img src=&quot;https://www.howtogeek.com/wp-content/uploads/2019/07/ximg_5d28e05a4901f.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.IPkGuFKMja.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Yellow pepper 黄椒&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Cook</title><link href="http://localhost:4000/english-cook/" rel="alternate" type="text/html" title="English Vocabulary - Cook" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/english-cook</id><content type="html" xml:base="http://localhost:4000/english-cook/">&lt;p&gt;&lt;img src=&quot;https://gourmandelle.com/wp-content/uploads/2013/03/Cooking-Methods-from-a-Yin-Yang-Perspective-Gourmandelle.com_.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;stir-fry 炒&lt;/p&gt;
+
+    &lt;p&gt;saute / sautee&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Today, I don’t know what to cook. I’m just going to stir fry some veggies and meat, Whatever I have on hand. Therefore&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;I’m just going to make some veggie stir-fry.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;pan fry 煎&lt;/p&gt;
+
+    &lt;p&gt;Gyoza 日式煎饺&lt;/p&gt;
+
+    &lt;p&gt;Pan fried dumplings 煎饺&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;sear 煎（焦）&lt;/p&gt;
+
+    &lt;p&gt;Pan seared scallons 香煎扇贝&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;brown 煎（焦）&lt;/p&gt;
+
+    &lt;p&gt;Brown all sides of the steak&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;braise 炖（红烧） VS. stew 炖 VS. gradual simmering（小火炖）&lt;/p&gt;
+
+    &lt;p&gt;With braises, where you’re adding the least amount of liquid required to cook the meat or vegetables, stews require full submersion, and usually call for the meat or vegetables to be cut into unifiorm pieces for even cooking.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;red braised pork belly 红烧肉&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Bring the water to a boil, turn down to medium low heat, and let it simmer for 40 minutes.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Because it preserves all the nutrients in your food.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;blanch 焯水&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Blanch the vegetables before stir frying. It&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;marinate 腌 VS. pickle 卤制&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Marinate the chicken in the fridge overnight, and then cook it next day.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;pickled beef&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;smoke 熏&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;smoked duck&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;roast 烤（烤箱） VS. grill 烤（置于火上） VS. broil （炙烤，高温）&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;roasted chicken 烤鸭&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;grilled chicken 烤鸡&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">SSH原理与运用</title><link href="http://localhost:4000/linux-ssh/" rel="alternate" type="text/html" title="SSH原理与运用" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/linux-ssh</id><content type="html" xml:base="http://localhost:4000/linux-ssh/">&lt;p&gt;&lt;img src=&quot;https://www.howtogeek.com/wp-content/uploads/2019/07/ximg_5d28e05a4901f.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.IPkGuFKMja.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -525,7 +956,7 @@
 
 &lt;p&gt;　　* WikiBooks: &lt;a href=&quot;http://en.wikibooks.org/wiki/Internet_Technologies/SSH&quot; title=&quot;Internet Technologies/SSH&quot;&gt;Internet Technologies/SSH&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;　　* Buddhika Chamith: SSH Tunneling Explained &lt;a href=&quot;http://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/&quot; title=&quot;SSH Tunneling Explained&quot;&gt;SSH Tunneling Explained&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Fruit</title><link href="http://localhost:4000/english-vocabulary-fruit/" rel="alternate" type="text/html" title="English Vocabulary - Fruit" /><published>2020-02-17T00:00:00-08:00</published><updated>2020-02-17T00:00:00-08:00</updated><id>http://localhost:4000/english-vocabulary-fruit</id><content type="html" xml:base="http://localhost:4000/english-vocabulary-fruit/">&lt;p&gt;&lt;img src=&quot;https://www.snopes.com/tachyon/2018/04/fruits_feature.jpg?resize=865,452&amp;amp;quality=65&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;　　* Buddhika Chamith: SSH Tunneling Explained &lt;a href=&quot;http://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/&quot; title=&quot;SSH Tunneling Explained&quot;&gt;SSH Tunneling Explained&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Fruit</title><link href="http://localhost:4000/english-vocabulary-fruit/" rel="alternate" type="text/html" title="English Vocabulary - Fruit" /><published>2020-02-17T00:00:00-08:00</published><updated>2020-02-17T00:00:00-08:00</updated><id>http://localhost:4000/english-vocabulary-fruit</id><content type="html" xml:base="http://localhost:4000/english-vocabulary-fruit/">&lt;p&gt;&lt;img src=&quot;https://www.snopes.com/tachyon/2018/04/fruits_feature.jpg?resize=865,452&amp;amp;quality=65&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -775,81 +1206,23 @@
 
 &lt;!-- more --&gt;
 
-&lt;p&gt;M: Hey Rachel, how are you?&lt;/p&gt;
+&lt;p&gt;Hello, everyone. My name is Peter Liptak and I’m looking forward to working with all of you here at EBS. As a new employee, I’m hoping to meet each and every one of you individually and get to know you, as well as get your feedback on what we could do to improve things here.&lt;/p&gt;
 
-&lt;p&gt;W: I’m good but I’m a bit nervous.&lt;/p&gt;
+&lt;p&gt;As to (for) my background, I have a lot of experience in education and writing. I’ve worked in education for about twenty years: been a professor, a private instructor, and also, even a pre-school teacher, so I’m fairly well-rounded in that experience. As a professional writer, I’ve been working for many years with large conglomerates and some governmental organizations, as well as publishing books. I publish ESL books, children’s books and even books on Korea. Anyway, thank you all and please come and talk to me when you have a chance.&lt;/p&gt;
 
-&lt;p&gt;M: Why?&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I'm looking forward to + verb / verb-ing
 
-&lt;p&gt;W: Because I’m starting at a new company in a couple of days, but I don’t really know know to introduce myself to a new group of people.&lt;/p&gt;
+I'm looking forward to showing you my capabilities.
 
-&lt;p&gt;M: The first day at a company is nerve-racking, right?&lt;/p&gt;
+As a new employee, I hope to / I'm hoping to + verb
 
-&lt;p&gt;You meet so many new faces and they all know each other as well. That is evven worse. But there are some things you should do on your first day.&lt;/p&gt;
+As a new employee, I hope to be successful in my role.
 
-&lt;p&gt;W: I’d love some advice.&lt;/p&gt;
+As for my background, I have experience in + noun / of + verb-ing.
 
-&lt;p&gt;Note:&lt;/p&gt;
+As for my background, I have experience of working abroad.
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nerve-racking: stressful, exhausting
-
-new faces: new people
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;M: Ok. A firm handshake, that is key, to project confidence, but not too hard, you don’t want to hurt the other person, but not to flimsy as well. I hate a wet flimsy handshake. So if you are feeling nervous and sweaty, perhaps give your hand a wipe as well.&lt;/p&gt;
-
-&lt;p&gt;Note:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;project: to give or express a clear impression of one's thoughts or personality; make an image
-
-flimsy: weak, without strength, unstable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;W: Clammy hands.&lt;/p&gt;
-
-&lt;p&gt;M: They are going to call you clammy hands at the company.&lt;/p&gt;
-
-&lt;p&gt;W: Alright, so a firm handshake is really important.&lt;/p&gt;
-
-&lt;p&gt;M: And then eye contact as well.&lt;/p&gt;
-
-&lt;p&gt;Note:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;clammy: cold and damp, covered with moisture; wet, sweaty
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;M: And a big smile, I think that always helps, it makes people feel much more comfortable.&lt;/p&gt;
-
-&lt;p&gt;W: Yeah that’s true, that definitely will leave a great first impression.&lt;/p&gt;
-
-&lt;p&gt;M: As long as you don’t have something stuck in your teeth. Again, check.&lt;/p&gt;
-
-&lt;p&gt;Note:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;to leave an impression (on someone): to provide a lasting memory for someone
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;W: I’ll have to get a mirror and check my teeth. That’s for sure. Alright so you’re saying a firm handshake is important, good eye contact, those show that I’m confident and then a friendly smile will show that I’m at ease and that I’m confortable with my surroundings.&lt;/p&gt;
-
-&lt;p&gt;M: Sure, and then maybe the last thing remember people’s names.&lt;/p&gt;
-
-&lt;p&gt;W: Oh, right!&lt;/p&gt;
-
-&lt;p&gt;M: And when you say your name as well, project it loudly so they remember you.&lt;/p&gt;
-
-&lt;p&gt;W: But you know, there’s so many people that I have to meet. How do I remember all their names?&lt;/p&gt;
-
-&lt;p&gt;M: I think writing it down as soon as you can, at the earliest possible opportunity. But I think that’s about it. And I think you’ll be fine, Rachel.&lt;/p&gt;
-
-&lt;p&gt;W: You think so? Alright, well I can’t wait to use that advice on my first day at my new company.&lt;/p&gt;
-
-&lt;p&gt;M: Fingers crossed.&lt;/p&gt;
-
-&lt;p&gt;W: Thank you.&lt;/p&gt;
-
-&lt;p&gt;Note:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;keep one's fingers crossed: to wish someone luck; to hope for a good outcome for someone
+As for my background, I have work experience in teaching / planning.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Mac OS X - iterm2 安装 美化</title><link href="http://localhost:4000/mac-iterm2/" rel="alternate" type="text/html" title="Mac OS X - iterm2 安装 美化" /><published>2020-02-15T00:00:00-08:00</published><updated>2020-02-15T00:00:00-08:00</updated><id>http://localhost:4000/mac-iterm2</id><content type="html" xml:base="http://localhost:4000/mac-iterm2/">&lt;p&gt;&lt;img src=&quot;https://iterm2.com/img/logo2x.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
@@ -987,7 +1360,19 @@ flimsy: weak, without strength, unstable
  )
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Mac" /><summary type="html"></summary></entry><entry><title type="html">Serialization and Deserialization in Java</title><link href="http://localhost:4000/java-serializable/" rel="alternate" type="text/html" title="Serialization and Deserialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-serializable</id><content type="html" xml:base="http://localhost:4000/java-serializable/">&lt;p&gt;&lt;img src=&quot;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/media/index/serialization-process.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Mac" /><summary type="html"></summary></entry><entry><title type="html">persistence and serialization in Java</title><link href="http://localhost:4000/java-persistence-serialization/" rel="alternate" type="text/html" title="persistence and serialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-persistence-serialization</id><content type="html" xml:base="http://localhost:4000/java-persistence-serialization/">&lt;p&gt;&lt;img src=&quot;https://koenig-media.raywenderlich.com/uploads/2017/08/UnitySaveLoad-feature.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;对象持久化就是将对象存储在可持久保存的存储介质上，例如主流的关系数据库中。在实际应用中，需要将业务数据以对象的方式保存在数据库中，就需要应用到相应的对象持久化框架，如现在广为认知的Hibernate。而如果查阅对象持久化的历史，会发现早在1970年就已经开始有称之为面向对象数据库OODBMS。通常这些面向对象的数据库和特定的一种语言绑定。&lt;strong&gt;对象持久化的重点在于如何将业务数据对象存储在持久化介质上，并同时提供查询修改的手段&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;数据序列化就是将对象或者数据结构转化成特定的格式，使其可以在网络中传输，或者可存储在内存或者文件中。反序列化则是相反的操作，将对象从序列化数据中还原出来。而对象序列化后的数据格式可以是二进制，可以是XML，也可以是JSON等任何格式。&lt;strong&gt;对象/数据序列化的重点在于数据的交换和传输&lt;/strong&gt;，例如在远程调用技术（如EJB，XML-RPC，Web Service），或者在GUI控件开发（JavaBean）等等。&lt;/p&gt;
+
+&lt;p&gt;总结，对象持久化和对象序列化是两个不同应用场景不同纬度的两个概念。&lt;/p&gt;
+
+&lt;p&gt;对象持久化是一个&lt;strong&gt;广义&lt;/strong&gt;的概念，简单说就是save/load，多用以描述和数据库相关的操作。&lt;/p&gt;
+
+&lt;p&gt;序列化是Java中的一项技术，把结构化的对象转化成无结构的字节流，侧重于数据交换和传输，不仅仅能用于数据的持久化。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Serialization and Deserialization in Java</title><link href="http://localhost:4000/java-serializable/" rel="alternate" type="text/html" title="Serialization and Deserialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-serializable</id><content type="html" xml:base="http://localhost:4000/java-serializable/">&lt;p&gt;&lt;img src=&quot;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/media/index/serialization-process.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1277,176 +1662,7 @@ b = 2000
 
 &lt;p&gt;You have seen while deserializing the object the values of a and b has changed. The reason being a was marked as transient and b was static.
 In case of &lt;strong&gt;transient variables:-&lt;/strong&gt; A variable defined with transient keyword is not serialized during serialization process.This variable will be initialized with default value during deserialization. (e.g: for objects it is null, for int it is 0).
-In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined with static keyword is not serialized during serialization process.This variable will be loaded with current value defined in the class during deserialization.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">persistence and serialization in Java</title><link href="http://localhost:4000/java-persistence-serialization/" rel="alternate" type="text/html" title="persistence and serialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-persistence-serialization</id><content type="html" xml:base="http://localhost:4000/java-persistence-serialization/">&lt;p&gt;&lt;img src=&quot;https://koenig-media.raywenderlich.com/uploads/2017/08/UnitySaveLoad-feature.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;对象持久化就是将对象存储在可持久保存的存储介质上，例如主流的关系数据库中。在实际应用中，需要将业务数据以对象的方式保存在数据库中，就需要应用到相应的对象持久化框架，如现在广为认知的Hibernate。而如果查阅对象持久化的历史，会发现早在1970年就已经开始有称之为面向对象数据库OODBMS。通常这些面向对象的数据库和特定的一种语言绑定。&lt;strong&gt;对象持久化的重点在于如何将业务数据对象存储在持久化介质上，并同时提供查询修改的手段&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;数据序列化就是将对象或者数据结构转化成特定的格式，使其可以在网络中传输，或者可存储在内存或者文件中。反序列化则是相反的操作，将对象从序列化数据中还原出来。而对象序列化后的数据格式可以是二进制，可以是XML，也可以是JSON等任何格式。&lt;strong&gt;对象/数据序列化的重点在于数据的交换和传输&lt;/strong&gt;，例如在远程调用技术（如EJB，XML-RPC，Web Service），或者在GUI控件开发（JavaBean）等等。&lt;/p&gt;
-
-&lt;p&gt;总结，对象持久化和对象序列化是两个不同应用场景不同纬度的两个概念。&lt;/p&gt;
-
-&lt;p&gt;对象持久化是一个&lt;strong&gt;广义&lt;/strong&gt;的概念，简单说就是save/load，多用以描述和数据库相关的操作。&lt;/p&gt;
-
-&lt;p&gt;序列化是Java中的一项技术，把结构化的对象转化成无结构的字节流，侧重于数据交换和传输，不仅仅能用于数据的持久化。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">对一些java概念的理解</title><link href="http://localhost:4000/java-concept/" rel="alternate" type="text/html" title="对一些java概念的理解" /><published>2020-02-13T00:00:00-08:00</published><updated>2020-02-13T00:00:00-08:00</updated><id>http://localhost:4000/java-concept</id><content type="html" xml:base="http://localhost:4000/java-concept/">&lt;p&gt;&lt;img src=&quot;https://images.idgesg.net/images/article/2019/05/java_binary_code_gears_programming_coding_development_by_bluebay2014_gettyimages-1040871468_2400x1600-100795798-large.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;composition&quot;&gt;Composition&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Composition&lt;/strong&gt; is the &lt;strong&gt;design technique&lt;/strong&gt; to implement &lt;em&gt;has-a&lt;/em&gt; relationship in classes. We can use java inheritance or Object composition for code reuse. Java composition is achieved by using instance variables that refers to other objects.&lt;/p&gt;
-
-&lt;p&gt;Java composition is achieved by using instance variables that refers to other objects. Benefit of using composition is that we can control the visibility of other object to client classes and reuse only what we need.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;We can get runtime binding in composition where inheritance binds the classes at compile time. So composition provides flexibility in invocation of methods.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Composition allows us to provide restricted access to the methods and hence more secure.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Inheritance exposes all the super class methods and variables to client and if we have no control in designing superclass,&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Composition will never face this issue that any change in the superclass might affect subclass even though we might not be using the superclass methods&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Inheritance&lt;/strong&gt; is the concept of &lt;strong&gt;designing&lt;/strong&gt; a class which defines properties and behavior which is common to set  of related classes.This class can be inherited by other classes the first is called super class and the second is called subclass.The subclass inherits all the instance variables and methods defined by the super class and can also add its own members.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Inheritance&lt;/strong&gt; represents the &lt;em&gt;IS-A&lt;/em&gt; relationship, also known as parent-child relationship.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-inheritance-can-be-dangerous-&quot;&gt;How inheritance can be dangerous ?&lt;/h2&gt;
-
-&lt;p&gt;Lets take an example&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;    
-   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;    
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;    
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;    
-&lt;span class=&quot;nc&quot;&gt;Public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Class&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Y&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;    
-       &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As clear in above code , Class Y has very strong coupling with class X. If anything changes in superclass X , Y may break dramatically. Suppose In future class X implements a method work with below signature&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// some code&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Change is done in class X but it will make class Y uncompilable. SO this kind of dependency can go up to any level and it can be vary dangerous. Every time superclass might not have full visibility to code inside all its subclasses and subclass may be keep noticing what is happening in suerclass all the time. So we need to avoid this strong and unnecessary coupling.&lt;/p&gt;
-
-&lt;p&gt;How does composition solves this issue?&lt;/p&gt;
-
-&lt;p&gt;Lets see by revising the same example&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;Public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Class&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;    
-        &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here we are creating reference of X class in Y class and invoking method of X class by creating an instance of X class. Now all that strong coupling is gone. Superclass and subclass are highly independent of each other now. Classes can freely make changes which were dangerous in inheritance situation.&lt;/p&gt;
-
-&lt;h2 id=&quot;second-very-good-advantage-of-composition-in-that-it-provides-method-calling-flexibility-for-example&quot;&gt;Second very good advantage of composition in that It provides method calling flexibility For example&lt;/h2&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Y&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;    
-    &lt;span class=&quot;no&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;    
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In Test class using r reference I can invoke methods of X class as well as Y class. This flexibility was never there in inheritance&lt;/p&gt;
-
-&lt;h2 id=&quot;another-great-advantage--unit-testing&quot;&gt;Another great advantage : Unit testing&lt;/h2&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;Public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Class&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;    
-        &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;    
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In above example If state of x instance is not known ,it can easily be mocked up by using some test data and all methods can be easily tested. This was not possible at all in inheritance As you were heavily dependent on superclass to get the state of instance and execute any method.&lt;/p&gt;
-
-&lt;h2 id=&quot;another-good-reason-why-we-should-avoid-inheritance-is-that-java-does-not-support-multiple-inheritance&quot;&gt;Another good reason why we should avoid inheritance is that Java does not support multiple inheritance.&lt;/h2&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Transaction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Banking&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt;    
-    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;    
-        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Deposit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;deposit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;    
-            &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Credit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;credit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Good to know :&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;composition is easily achieved at runtime while inheritance provides its features at compile time&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;composition is also know as HAS-A relation and inheritance is also known as IS-A relation&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;So make it a habit of always preferring composition over inheritance for various above reasons.&lt;/p&gt;
-
-&lt;h2 id=&quot;区别和联系&quot;&gt;区别和联系&lt;/h2&gt;
-
-&lt;h3 id=&quot;区别&quot;&gt;区别&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;组合是一种 has-a 的 关系&lt;/li&gt;
-  &lt;li&gt;继承是一种 is-a 的 关系&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;继承结构中，父类的内部细节对于子类是可见的。所以通过继承的代码复用是一种白盒式代码复用。&lt;/li&gt;
-  &lt;li&gt;如果父类的实现跟随版本而发生改变，那么子类的实现也将随之改变。这样就导致了子类行为的不可预知性；&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;组合是通过对现有的类进行拼装（组合）产生新的、更复杂的功能。因为在类之间，各自的内部细节是不可见的，所以这种方式的代码复用是黑盒式代码复用。（因为组合中一般都定义一个类型，所以在编译期根本不知道具体会调用哪个实现类的方法）&lt;/li&gt;
-  &lt;li&gt;继承，在写代码的时候就要指名具体继承哪个类，所以，在编译期就确定了关系。（从基类继承来的实现是无法在运行期动态改变的，因此降低了应用的灵活性。）
-组合，在写代码的时候可以采用面向接口编程。所以，类的组合关系一般在运行期确定。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;联系&quot;&gt;联系&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;组合和继承都是代码复用的一种方式&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">什么是 JavaBean</title><link href="http://localhost:4000/java-bean/" rel="alternate" type="text/html" title="什么是 JavaBean" /><published>2020-02-13T00:00:00-08:00</published><updated>2020-02-13T00:00:00-08:00</updated><id>http://localhost:4000/java-bean</id><content type="html" xml:base="http://localhost:4000/java-bean/">&lt;p&gt;&lt;img src=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/beans/spec/images/beancontext.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined with static keyword is not serialized during serialization process.This variable will be loaded with current value defined in the class during deserialization.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">什么是 JavaBean</title><link href="http://localhost:4000/java-bean/" rel="alternate" type="text/html" title="什么是 JavaBean" /><published>2020-02-13T00:00:00-08:00</published><updated>2020-02-13T00:00:00-08:00</updated><id>http://localhost:4000/java-bean</id><content type="html" xml:base="http://localhost:4000/java-bean/">&lt;p&gt;&lt;img src=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/beans/spec/images/beancontext.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1562,32 +1778,4 @@ In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined wi
 
 &lt;p&gt;&lt;a href=&quot;http://developer.51cto.com/art/201202/317181.htm&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/javabean-class-java/&quot; title=&quot;geeks&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Static Proxy vs. Dynamic Proxy</title><link href="http://localhost:4000/java-static-proxy-dynamic-proxy/" rel="alternate" type="text/html" title="Static Proxy vs. Dynamic Proxy" /><published>2020-02-12T00:00:00-08:00</published><updated>2020-02-12T00:00:00-08:00</updated><id>http://localhost:4000/java-static-proxy-dynamic-proxy</id><content type="html" xml:base="http://localhost:4000/java-static-proxy-dynamic-proxy/">&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/1280/1*bdXBG8hFHucrTPmJLfnH4w.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;AOP is an abbreviation of Aspect-Oriented Programming.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Cross-cutting concern&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;在DynamicProxyDemo專案的例子中，記錄的 動作原先被橫切（Cross-cutting）入至HelloSpeaker本身所負責的商務流程之中，另外類似於日誌這類的動作，如安全 （Security）檢查、交易（Transaction）等系統層面的服務（Service），在一些應用程式之中常被見到安插至各個物件的處理流程之 中，這些動作在AOP的術語中被稱之為Cross-cutting concerns。&lt;/p&gt;
-
-&lt;p&gt;以圖片說明可強調出Cross-cutting concerns的意涵，例如原來的商務流程是很單純的：&lt;/p&gt;
-
-&lt;p&gt;AOP(Aspect Oriented Programming) 面向切面编程，是目前软件开发中的一个热点，是Spring框架内容，利用AOP可以对业务逻辑的各个部分隔离，从而使的业务逻辑各部分的耦合性降低，提高程序的可重用性，踢开开发效率，主要功能：日志记录，性能统计，安全控制，事务处理，异常处理等。&lt;/p&gt;
-
-&lt;p&gt;AOP实现原理是java动态代理，但是jdk的动态代理必须实现接口，所以spring的aop是用cglib这个库实现的，cglis使用里asm这个直接操纵字节码的框架，所以可以做到不使用接口的情况下实现动态代理。&lt;/p&gt;
-
-&lt;p&gt;AOP与OOP的却别：&lt;/p&gt;
-
-&lt;p&gt;OOP面向对象编程，针对业务处理过程的实体及其属性和行为进行抽象封装，以获得更加清晰高效的逻辑单元划分。而AOP则是针对业务处理过程中的切面进行提取，它所面对的是处理过程的某个步骤或阶段，以获得逻辑过程的中各部分之间低耦合的隔离效果。这两种设计思想在目标上有着本质的差异。&lt;/p&gt;
-
-&lt;p&gt;举例：&lt;/p&gt;
-
-&lt;p&gt;对于“雇员”这样一个业务实体进行封装，自然是OOP的任务，我们可以建立一个“Employee”类，并将“雇员”相关的属性和行为封装其中。而用AOP 设计思想对“雇员”进行封装则无从谈起。&lt;/p&gt;
-
-&lt;p&gt;同样，对于“权限检查”这一动作片段进行划分，则是AOP的目标领域。&lt;/p&gt;
-
-&lt;p&gt;OOP面向名次领域，AOP面向动词领域。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring boot" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/javabean-class-java/&quot; title=&quot;geeks&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry></feed>
