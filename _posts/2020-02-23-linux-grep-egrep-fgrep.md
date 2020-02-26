@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Linux/macOS - ps 命令
-date: 2020-02-22
+title: Linux - grep, egrep, fgrep
+date: 2020-02-23
 Author: 山猪
-tags: [Linux, Mac]
+tags: [Linux]
 comments: true
 ---
-![img](https://dtb24j9dud7b2.cloudfront.net/wp-content/uploads/pexels-photo-207580-1080x675.jpeg)
+![img](http://qpeng.org/computer/grep.jpg)
 
 <!-- more -->
 
@@ -32,25 +32,27 @@ linux上进程有5种状态:
 
 ps工具标识进程的5种状态码: 
 
-D 不可中断 uninterruptible sleep (usually IO) 
+1. **D** 不可中断 uninterruptible sleep (usually IO) 
 
-R 运行 runnable (on run queue) 
+2. **R** 运行 runnable (on run queue) 
 
-S 中断 sleeping 
+3. **S** 中断 sleeping 
 
-T 停止 traced or stopped 
+4. **T** 停止 traced or stopped 
 
-Z 僵死 a defunct (”zombie”) process 
+5. **Z** 僵死 a defunct (”zombie”) process 
 
-1．命令格式：
+---
+
+## 命令格式：
 
 ps[参数]
 
-2．命令功能：
+## 命令功能：
 
 用来显示当前进程的状态
 
-3．命令参数：
+## 命令参数：
 
 a  显示所有进程
 
@@ -90,47 +92,52 @@ u  指定用户的所有进程
 
 --version 显示版本显示
 
-4．使用实例：
+---
+
+## 使用实例：
 
 实例1：显示所有进程信息
 
 命令：
 
-ps -A
-
+```console
+  ps -A
+```
 输出：
 
-[root@localhost test6]# ps -A
+```console
+  [root@localhost test6]# ps -A
 
-  PID TTY          TIME CMD
+    PID TTY          TIME CMD
 
-    1 ?        00:00:00 init
+      1 ?        00:00:00 init
 
-    2 ?        00:00:01 migration/0
+      2 ?        00:00:01 migration/0
 
-    3 ?        00:00:00 ksoftirqd/0
+      3 ?        00:00:00 ksoftirqd/0
 
-    4 ?        00:00:01 migration/1
+      4 ?        00:00:01 migration/1
 
-    5 ?        00:00:00 ksoftirqd/1
+      5 ?        00:00:00 ksoftirqd/1
 
-    6 ?        00:29:57 events/0
+      6 ?        00:29:57 events/0
 
-    7 ?        00:00:00 events/1
+      7 ?        00:00:00 events/1
 
-    8 ?        00:00:00 khelper
+      8 ?        00:00:00 khelper
 
-   49 ?        00:00:00 kthread
+    49 ?        00:00:00 kthread
 
-   54 ?        00:00:00 kblockd/0
+    54 ?        00:00:00 kblockd/0
 
-   55 ?        00:00:00 kblockd/1
+    55 ?        00:00:00 kblockd/1
 
-   56 ?        00:00:00 kacpid
+    56 ?        00:00:00 kacpid
 
-  217 ?        00:00:00 cqueue/0
+    217 ?        00:00:00 cqueue/0
 
-  ……省略部分结果
+    ……省略部分结果
+```
 
 说明：
 
@@ -171,8 +178,7 @@ ps -u root
    56 ?        00:00:00 kacpid
 
     ……省略部分结果
-
-说明：
+```
 
 实例3：显示所有进程信息，连同命令行
 
@@ -398,8 +404,12 @@ Warning: bad syntax, perhaps a bogus '-'? See /usr/share/doc/procps-3.2.7/FAQ
 
 命令：
 
+```console
+  ps aux | grep
+```
 输出：
 
+```console
 [root@localhost test6]# ps aux | egrep '(cron|syslog)'
 
 root      2682  0.0  0.0  83384  2000 ?        Sl   Nov02   0:00 /sbin/rsyslogd -i /var/run/syslogd.pid -c 5
@@ -407,62 +417,46 @@ root      2682  0.0  0.0  83384  2000 ?        Sl   Nov02   0:00 /sbin/rsyslogd 
 root      2735  0.0  0.0  74812  1140 ?        Ss   Nov02   0:00 crond
 
 root     17475  0.0  0.0  61180   832 pts/0    S+   16:27   0:00 egrep (cron|syslog)
+```
 
-[root@localhost test6]#
-
-说明：
+---
 
 其他实例：
 
-1. 可以用 | 管道和 more 连接起来分页查看
+- 可以用 | 管道和 more 连接起来分页查看
 
 命令：
 
-ps -aux |more
+```console
+  ps -aux |more
+```
 
-2. 把所有进程显示出来，并输出到ps001.txt文件
-
-命令：
-
-ps -aux > ps001.txt
-
-3. 输出指定的字段
+- 把所有进程显示出来，并输出到ps001.txt文件
 
 命令：
 
- ps -o pid,ppid,pgrp,session,tpgid,comm
+```console
+  ps -aux > ps001.txt
+```
+
+- 输出指定的字段
+
+命令：
+
+```console
+  ps -o pid,ppid,pgrp,session,tpgid,comm
+```
 
 输出：
 
-[root@localhost test6]# ps -o pid,ppid,pgrp,session,tpgid,comm
-
-  PID  PPID  PGRP  SESS TPGID COMMAND
-
-17398 17394 17398 17398 17478 bash
-
-17478 17398 17478 17398 17478 ps
-
-[root@localhost test6]#
-
 ```console
-$ curl https://www.example.com
-```
+  [root@localhost test6]# ps -o pid,ppid,pgrp,session,tpgid,comm
 
-上面命令向**www.example.com**发出 GET 请求，服务器返回的内容会在命令行输出。
+    PID  PPID  PGRP  SESS TPGID COMMAND
 
-# -A
----
+  17398 17394 17398 17398 17478 bash
 
-**-A**参数指定客户端的用户代理标头，即**User-Agent**。curl 的默认用户代理字符串是**curl/[version]**。
-
-```console
-$ curl -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' https://google.com
-```
-
-上面命令将**User-Agent**改成 Chrome 浏览器。
-
-```console
-$ curl -A '' https://google.com
+  17478 17398 17478 17398 17478 ps
 ```
 
 

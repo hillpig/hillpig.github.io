@@ -1,4 +1,915 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-20T14:35:53-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">curl 的用法指南</title><link href="http://localhost:4000/linux-curl/" rel="alternate" type="text/html" title="curl 的用法指南" /><published>2020-02-20T00:00:00-08:00</published><updated>2020-02-20T00:00:00-08:00</updated><id>http://localhost:4000/linux-curl</id><content type="html" xml:base="http://localhost:4000/linux-curl/">&lt;p&gt;&lt;img src=&quot;https://www.maketecheasier.com/assets/uploads/2019/03/how-to-use-curl-commands-featured-800x400.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-25T17:40:39-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">English Vocabulary - Disease</title><link href="http://localhost:4000/english-disease/" rel="alternate" type="text/html" title="English Vocabulary - Disease" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/english-disease</id><content type="html" xml:base="http://localhost:4000/english-disease/">&lt;p&gt;&lt;img src=&quot;https://www.spondylitis.ca/wp-content/uploads/2020/02/600x400_heart_illustration_xray-1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;cold 感冒&lt;/p&gt;
+
+    &lt;p&gt;a common infection, especially in the nose and throat, that often causes a cough, a slight fever, and sometimes some pain in the muscles:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;I’ve got a cold.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;She caught a cold at school.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;（UK informal）&lt;/em&gt; Don’t come near me - I’ve got a stinking/streaming cold (= extremely bad cold).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;fever 发烧&lt;/p&gt;
+
+    &lt;p&gt;a medical condition in which the body temperature is higher than usual and the heart beats very fast:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;He’s got a headache and a slight fever.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;flu 流感&lt;/p&gt;
+
+    &lt;p&gt;Pan seared scallons 香煎扇贝&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;headache 头痛&lt;/p&gt;
+
+    &lt;p&gt;Brown all sides of the steak&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;stomachache 胃痛、肚子痛&lt;/p&gt;
+
+    &lt;p&gt;With braises, where you’re adding the least amount of liquid required to cook the meat or vegetables, stews require full submersion, and usually call for the meat or vegetables to be cut into unifiorm pieces for even cooking.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;red braised pork belly 红烧肉&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Bring the water to a boil, turn down to medium low heat, and let it simmer for 40 minutes.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Because it preserves all the nutrients in your food.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Toothache 牙痛&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Blanch the vegetables before stir frying. It&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;indigestion 消化不良&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Do you suffer from indigestion after you have eaten?&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;You’ll give yourself indigestion if you swallow your dinner so quickly.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;anaemia 贫血&lt;/p&gt;
+
+    &lt;p&gt;a medical condition in which there are not enough red blood cells in the blood:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;The main symptoms of anaemia are tiredness and pallor.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;stroke 中风&lt;/p&gt;
+
+    &lt;p&gt;a sudden change in the blood supply to a part of the brain, sometimes causing a loss of the ability to move particular parts of the body:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;She suffered/had a stroke that left her unable to speak.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;He’s been fairly poorly since having a stroke in January.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;He suffered a stroke in 1988 that left him unable to speak, but his mental capacity wasn’t affected.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;appendicitis 阑尾炎&lt;/p&gt;
+
+    &lt;p&gt;an illness in which the appendix is infected and painful and usually needs to be removed in an operation：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;She had her appendix out (= medically removed) last summer.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;arthritis 关节炎&lt;/p&gt;
+
+    &lt;p&gt;a serious condition in which a person’s joints (= the places where two bones are connected) become painful, swollen, and stiff:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;In later life she was crippled with arthritis.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;enteritis / gastroenteritis 肠炎&lt;/p&gt;
+
+    &lt;p&gt;an illness that causes the stomach and bowels to become swollen and painful&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;fracture / break 骨折&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;She fractured her skull in the accident.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Two of her ribs fractured when she was thrown from her horse.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Your arm’s got a fracture.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Old bones break easily.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;chicken pox 水痘&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;measles 麻疹&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;heart disease 心胀病&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;diabetes 糖尿病&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cancer 癌症&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;fungus 脚气&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;more-examples&quot;&gt;More Examples:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;He is under the weather. 他生病了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He has been shut-in for a few days. 他生病在家几天了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He feels exhausted most of the time. 他经常觉得非常疲惫。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;His head is pounding. 他头痛。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He feels light-headed. 他觉得头晕。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He feels as though everything around him is spinning. 他感到天旋地转。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He has been lacking in energy for some time. 他感觉虚弱有一段时间了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He has bouts of uncontrollable coughing. 他无法控制的一阵阵咳嗽。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He has bouts of abdominal pain. 他一阵阵的肚子痛。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He has a soure throat and a stuffy nose. 他嗓子痛，而且鼻子不通气，。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is usually hard for him to fall asleep when he goes to bed at night.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;He has a feeling of tightness in the chest. 他觉得胸部闷闷的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The tooth hurts when he bites down on it. 他咬东西时，牙齿就痛。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;read-more&quot;&gt;Read More:&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;disease 表示“疾病”，通常指具体的“疾病”(可数)。如：&lt;/p&gt;
+
+    &lt;p&gt;Most diseases could be wiped out. 多数疾病是可以消灭的。&lt;/p&gt;
+
+    &lt;p&gt;I caught the disease from you. 这病我是从你那传染来的。&lt;/p&gt;
+
+    &lt;p&gt;注：有时指疾病的总称(不可数)，即通称的“疾病”。如：&lt;/p&gt;
+
+    &lt;p&gt;Rats spread disease. 老鼠传染疾病。&lt;/p&gt;
+
+    &lt;p&gt;Cleanliness helps prevent disease. 清洁有助于预防疾病。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;illness 和 sickness 常可通用，它们主要用于表示生病的时间或因病(disease)导致的不健康状态等。如：&lt;/p&gt;
+
+    &lt;p&gt;He can’t come because of illness. 他因病不能来。&lt;/p&gt;
+
+    &lt;p&gt;He died after a long illness. 他死之前病了很久。&lt;/p&gt;
+
+    &lt;p&gt;She is cheerful in spite of her illness. 她尽管有病，但还是快乐。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用于医学上表示各种病称时，通常用 disease。如：&lt;/p&gt;
+
+    &lt;p&gt;contagious diseases 传染病&lt;/p&gt;
+
+    &lt;p&gt;English disease 气管炎&lt;/p&gt;
+
+    &lt;p&gt;heart disease 心脏病&lt;/p&gt;
+
+    &lt;p&gt;lung disease 肺病&lt;/p&gt;
+
+    &lt;p&gt;a nervous disease 神经病&lt;/p&gt;
+
+    &lt;p&gt;a sex disease 性病&lt;/p&gt;
+
+    &lt;p&gt;skin disease 皮肤病     等等&lt;/p&gt;
+
+    &lt;p&gt;注：有个别搭配也用 illness。如：&lt;/p&gt;
+
+    &lt;p&gt;mental illness / sickness 精神病&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;胃不调 upset stomach&lt;/p&gt;
+
+&lt;p&gt;觉食物积滞胃中 feel heavy on the stomach&lt;/p&gt;
+
+&lt;p&gt;有点恶心 have （experience） some nausea&lt;/p&gt;
+
+&lt;p&gt;偶而恶心和呕吐 develop occasional nausea and vomiting&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Common Expressions</title><link href="http://localhost:4000/english-common-words/" rel="alternate" type="text/html" title="English Vocabulary - Common Expressions" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/english-common-words</id><content type="html" xml:base="http://localhost:4000/english-common-words/">&lt;p&gt;&lt;img src=&quot;https://scx1.b-cdn.net/csz/news/800/2017/studyreadsbe.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hiccup 打嗝&lt;/p&gt;
+
+    &lt;p&gt;a loud noise that you make in the throat without wanting to, caused by a sudden tightening of a muscle just below the chest and usually happening repeatedly&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;I’ve got the hiccups.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;belch 打嗝&lt;/p&gt;
+
+    &lt;p&gt;to allow air from the stomach to come out noisily through the mouth:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;He belched noisily.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Snore 打鼾&lt;/p&gt;
+
+    &lt;p&gt;to breathe in a very noisy way while you are sleeping:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Sometimes my husband snores so loudly, it keeps me awake at night.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Do you know any cures for snoring?&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;pick one’s nose 挖鼻孔&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Don’t pick your nose on public transportation.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;’’’
+     booger 鼻屎&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ear wax 耳屎
+
+ sleep / dry stuff / dry crap / crusty stuff 眼屎  '''
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;floss one’s teeth / pick one’s teeth 剔牙&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;I often floss my teeth after dinner.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;It is considered rude to pick your teeth in front of other people.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;He picked his teeth with a toothpick.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;braise 挠痒痒&lt;/p&gt;
+
+    &lt;p&gt;With braises, where you’re adding the least amount of liquid required to cook the meat or vegetables, stews require full submersion, and usually call for the meat or vegetables to be cut into unifiorm pieces for even cooking.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;red braised pork belly 红烧肉&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Bring the water to a boil, turn down to medium low heat, and let it simmer for 40 minutes.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Because it preserves all the nutrients in your food.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;tickle 胳肢&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;The bigger girls used to chase me and tickle me.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;comb 梳头&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Marinate the chicken in the fridge overnight, and then cook it next day.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;pickled beef&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;bend / stoop (down) / bow 弯腰&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;smoked duck&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;roast 踮脚&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;roasted chicken 烤鸭&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;grilled chicken 烤鸡&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;fart / break wind 放屁&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Don’t fart in my room!&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The fox broke wind in order to escape those hunting dogs.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cross one’s legs / sit cross-legged 盘腿&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;We sat cross-legged on the blanket.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;squat 蹲下&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Linux - grep, egrep, fgrep</title><link href="http://localhost:4000/linux-grep-egrep-fgrep/" rel="alternate" type="text/html" title="Linux - grep, egrep, fgrep" /><published>2020-02-23T00:00:00-08:00</published><updated>2020-02-23T00:00:00-08:00</updated><id>http://localhost:4000/linux-grep-egrep-fgrep</id><content type="html" xml:base="http://localhost:4000/linux-grep-egrep-fgrep/">&lt;p&gt;&lt;img src=&quot;http://qpeng.org/computer/grep.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Linux中的ps命令是Process Status的缩写。ps命令用来列出系统中当前运行的那些进程。ps命令列出的是当前那些进程的快照，就是执行ps命令的那个时刻的那些进程，如果想要动态的显示进程信息，就可以使用top命令。&lt;/p&gt;
+
+&lt;p&gt;要对进程进行监测和控制，首先必须要了解当前进程的情况，也就是需要查看当前进程，而 ps 命令就是最基本同时也是非常强大的进程查看命令。使用该命令可以确定有哪些进程正在运行和运行的状态、进程是否结束、进程有没有僵死、哪些进程占用了过多的资源等等。总之大部分信息都是可以通过执行该命令得到的。&lt;/p&gt;
+
+&lt;p&gt;ps 为我们提供了进程的一次性的查看，它所提供的查看结果并不动态连续的；如果想对进程时间监控，应该用 top 工具。&lt;/p&gt;
+
+&lt;p&gt;kill 命令用于杀死进程。&lt;/p&gt;
+
+&lt;p&gt;linux上进程有5种状态:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;运行(正在运行或在运行队列中等待)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;中断(休眠中, 受阻, 在等待某个条件的形成或接受到信号)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;不可中断(收到信号不唤醒和不可运行, 进程必须等待直到有中断发生)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;僵死(进程已终止, 但进程描述符存在, 直到父进程调用wait4()系统调用后释放)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;停止(进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ps工具标识进程的5种状态码:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;D&lt;/strong&gt; 不可中断 uninterruptible sleep (usually IO)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;R&lt;/strong&gt; 运行 runnable (on run queue)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;S&lt;/strong&gt; 中断 sleeping&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;T&lt;/strong&gt; 停止 traced or stopped&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Z&lt;/strong&gt; 僵死 a defunct (”zombie”) process&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;命令格式&quot;&gt;命令格式：&lt;/h2&gt;
+
+&lt;p&gt;ps[参数]&lt;/p&gt;
+
+&lt;h2 id=&quot;命令功能&quot;&gt;命令功能：&lt;/h2&gt;
+
+&lt;p&gt;用来显示当前进程的状态&lt;/p&gt;
+
+&lt;h2 id=&quot;命令参数&quot;&gt;命令参数：&lt;/h2&gt;
+
+&lt;p&gt;a  显示所有进程&lt;/p&gt;
+
+&lt;p&gt;-a 显示同一终端下的所有程序&lt;/p&gt;
+
+&lt;p&gt;-A 显示所有进程&lt;/p&gt;
+
+&lt;p&gt;c  显示进程的真实名称&lt;/p&gt;
+
+&lt;p&gt;-N 反向选择&lt;/p&gt;
+
+&lt;p&gt;-e 等于“-A”&lt;/p&gt;
+
+&lt;p&gt;e  显示环境变量&lt;/p&gt;
+
+&lt;p&gt;f  显示程序间的关系&lt;/p&gt;
+
+&lt;p&gt;-H 显示树状结构&lt;/p&gt;
+
+&lt;p&gt;r  显示当前终端的进程&lt;/p&gt;
+
+&lt;p&gt;T  显示当前终端的所有程序&lt;/p&gt;
+
+&lt;p&gt;u  指定用户的所有进程&lt;/p&gt;
+
+&lt;p&gt;-au 显示较详细的资讯&lt;/p&gt;
+
+&lt;p&gt;-aux 显示所有包含其他使用者的行程&lt;/p&gt;
+
+&lt;p&gt;-C&lt;命令&gt; 列出指定命令的状况&lt;/命令&gt;&lt;/p&gt;
+
+&lt;p&gt;–lines&lt;行数&gt; 每页显示的行数&lt;/行数&gt;&lt;/p&gt;
+
+&lt;p&gt;–width&lt;字符数&gt; 每页显示的字符数&lt;/字符数&gt;&lt;/p&gt;
+
+&lt;p&gt;–help 显示帮助信息&lt;/p&gt;
+
+&lt;p&gt;–version 显示版本显示&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;使用实例&quot;&gt;使用实例：&lt;/h2&gt;
+
+&lt;p&gt;实例1：显示所有进程信息&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;  ps -A
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;  [root@localhost test6]#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ps &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;
+    PID TTY          TIME CMD
+
+      1 ?        00:00:00 init
+
+      2 ?        00:00:01 migration/0
+
+      3 ?        00:00:00 ksoftirqd/0
+
+      4 ?        00:00:01 migration/1
+
+      5 ?        00:00:00 ksoftirqd/1
+
+      6 ?        00:29:57 events/0
+
+      7 ?        00:00:00 events/1
+
+      8 ?        00:00:00 khelper
+
+    49 ?        00:00:00 kthread
+
+    54 ?        00:00:00 kblockd/0
+
+    55 ?        00:00:00 kblockd/1
+
+    56 ?        00:00:00 kacpid
+
+    217 ?        00:00:00 cqueue/0
+
+    ……省略部分结果
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;说明：&lt;/p&gt;
+
+&lt;p&gt;实例2：显示指定用户信息&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;p&gt;ps -u root&lt;/p&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;p&gt;[root@localhost test6]# ps -u root&lt;/p&gt;
+
+&lt;p&gt;PID TTY          TIME CMD&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 ?        00:00:00 init
+
+2 ?        00:00:01 migration/0
+
+3 ?        00:00:00 ksoftirqd/0
+
+4 ?        00:00:01 migration/1
+
+5 ?        00:00:00 ksoftirqd/1
+
+6 ?        00:29:57 events/0
+
+7 ?        00:00:00 events/1
+
+8 ?        00:00:00 khelper
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;49 ?        00:00:00 kthread&lt;/p&gt;
+
+&lt;p&gt;54 ?        00:00:00 kblockd/0&lt;/p&gt;
+
+&lt;p&gt;55 ?        00:00:00 kblockd/1&lt;/p&gt;
+
+&lt;p&gt;56 ?        00:00:00 kacpid&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;……省略部分结果 ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;实例3：显示所有进程信息，连同命令行&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;p&gt;ps -ef&lt;/p&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;p&gt;[root@localhost test6]# ps -ef&lt;/p&gt;
+
+&lt;p&gt;UID        PID  PPID  C STIME TTY          TIME CMD&lt;/p&gt;
+
+&lt;p&gt;root         1     0  0 Nov02 ?        00:00:00 init [3]&lt;/p&gt;
+
+&lt;p&gt;root         2     1  0 Nov02 ?        00:00:01 [migration/0]&lt;/p&gt;
+
+&lt;p&gt;root         3     1  0 Nov02 ?        00:00:00 [ksoftirqd/0]&lt;/p&gt;
+
+&lt;p&gt;root         4     1  0 Nov02 ?        00:00:01 [migration/1]&lt;/p&gt;
+
+&lt;p&gt;root         5     1  0 Nov02 ?        00:00:00 [ksoftirqd/1]&lt;/p&gt;
+
+&lt;p&gt;root         6     1  0 Nov02 ?        00:29:57 [events/0]&lt;/p&gt;
+
+&lt;p&gt;root         7     1  0 Nov02 ?        00:00:00 [events/1]&lt;/p&gt;
+
+&lt;p&gt;root         8     1  0 Nov02 ?        00:00:00 [khelper]&lt;/p&gt;
+
+&lt;p&gt;root        49     1  0 Nov02 ?        00:00:00 [kthread]&lt;/p&gt;
+
+&lt;p&gt;root        54    49  0 Nov02 ?        00:00:00 [kblockd/0]&lt;/p&gt;
+
+&lt;p&gt;root        55    49  0 Nov02 ?        00:00:00 [kblockd/1]&lt;/p&gt;
+
+&lt;p&gt;root        56    49  0 Nov02 ?        00:00:00 [kacpid]&lt;/p&gt;
+
+&lt;p&gt;……省略部分结果&lt;/p&gt;
+
+&lt;p&gt;说明：&lt;/p&gt;
+
+&lt;p&gt;实例4： ps 与grep 常用组合用法，查找特定进程&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ps -ef&lt;/td&gt;
+      &lt;td&gt;grep ssh&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[root@localhost test6]# ps -ef&lt;/td&gt;
+      &lt;td&gt;grep ssh&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;root      2720     1  0 Nov02 ?        00:00:00 /usr/sbin/sshd&lt;/p&gt;
+
+&lt;p&gt;root     17394  2720  0 14:58 ?        00:00:00 sshd: root@pts/0&lt;/p&gt;
+
+&lt;p&gt;root     17465 17398  0 15:57 pts/0    00:00:00 grep ssh&lt;/p&gt;
+
+&lt;p&gt;说明：&lt;/p&gt;
+
+&lt;p&gt;实例5：将目前属于您自己这次登入的 PID 与相关信息列示出来&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;p&gt;ps -l&lt;/p&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;p&gt;[root@localhost test6]# ps -l&lt;/p&gt;
+
+&lt;p&gt;F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD&lt;/p&gt;
+
+&lt;p&gt;4 S     0 17398 17394  0  75   0 - 16543 wait   pts/0    00:00:00 bash&lt;/p&gt;
+
+&lt;p&gt;4 R     0 17469 17398  0  77   0 - 15877 -      pts/0    00:00:00 ps&lt;/p&gt;
+
+&lt;p&gt;说明：&lt;/p&gt;
+
+&lt;p&gt;各相关信息的意义：&lt;/p&gt;
+
+&lt;p&gt;F 代表这个程序的旗标 (flag)， 4 代表使用者为 super user&lt;/p&gt;
+
+&lt;p&gt;S 代表这个程序的状态 (STAT)，关于各 STAT 的意义将在内文介绍&lt;/p&gt;
+
+&lt;p&gt;UID 程序被该 UID 所拥有&lt;/p&gt;
+
+&lt;p&gt;PID 就是这个程序的 ID ！&lt;/p&gt;
+
+&lt;p&gt;PPID 则是其上级父程序的ID&lt;/p&gt;
+
+&lt;p&gt;C CPU 使用的资源百分比&lt;/p&gt;
+
+&lt;p&gt;PRI 这个是 Priority (优先执行序) 的缩写，详细后面介绍&lt;/p&gt;
+
+&lt;p&gt;NI 这个是 Nice 值，在下一小节我们会持续介绍&lt;/p&gt;
+
+&lt;p&gt;ADDR 这个是 kernel function，指出该程序在内存的那个部分。如果是个 running的程序，一般就是 “-“&lt;/p&gt;
+
+&lt;p&gt;SZ 使用掉的内存大小&lt;/p&gt;
+
+&lt;p&gt;WCHAN 目前这个程序是否正在运作当中，若为 - 表示正在运作&lt;/p&gt;
+
+&lt;p&gt;TTY 登入者的终端机位置&lt;/p&gt;
+
+&lt;p&gt;TIME 使用掉的 CPU 时间。&lt;/p&gt;
+
+&lt;p&gt;CMD 所下达的指令为何&lt;/p&gt;
+
+&lt;p&gt;在预设的情况下， ps 仅会列出与目前所在的 bash shell 有关的 PID 而已，所以， 当我使用 ps -l 的时候，只有三个 PID。&lt;/p&gt;
+
+&lt;p&gt;实例6：列出目前所有的正在内存当中的程序&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```console
+ps aux
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;p&gt;[root@localhost test6]# ps aux&lt;/p&gt;
+
+&lt;p&gt;USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND&lt;/p&gt;
+
+&lt;p&gt;root         1  0.0  0.0  10368   676 ?        Ss   Nov02   0:00 init [3]&lt;/p&gt;
+
+&lt;p&gt;root         2  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:01 [migration/0]&lt;/p&gt;
+
+&lt;p&gt;root         3  0.0  0.0      0     0 ?        SN   Nov02   0:00 [ksoftirqd/0]&lt;/p&gt;
+
+&lt;p&gt;root         4  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:01 [migration/1]&lt;/p&gt;
+
+&lt;p&gt;root         5  0.0  0.0      0     0 ?        SN   Nov02   0:00 [ksoftirqd/1]&lt;/p&gt;
+
+&lt;p&gt;root         6  0.0  0.0      0     0 ?        S&amp;lt;   Nov02  29:57 [events/0]&lt;/p&gt;
+
+&lt;p&gt;root         7  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:00 [events/1]&lt;/p&gt;
+
+&lt;p&gt;root         8  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:00 [khelper]&lt;/p&gt;
+
+&lt;p&gt;root        49  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:00 [kthread]&lt;/p&gt;
+
+&lt;p&gt;root        54  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:00 [kblockd/0]&lt;/p&gt;
+
+&lt;p&gt;root        55  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:00 [kblockd/1]&lt;/p&gt;
+
+&lt;p&gt;root        56  0.0  0.0      0     0 ?        S&amp;lt;   Nov02   0:00 [kacpid]&lt;/p&gt;
+
+&lt;p&gt;……省略部分结果&lt;/p&gt;
+
+&lt;p&gt;说明：&lt;/p&gt;
+
+&lt;p&gt;USER：该 process 属于那个使用者账号的&lt;/p&gt;
+
+&lt;p&gt;PID ：该 process 的号码&lt;/p&gt;
+
+&lt;p&gt;%CPU：该 process 使用掉的 CPU 资源百分比&lt;/p&gt;
+
+&lt;p&gt;%MEM：该 process 所占用的物理内存百分比&lt;/p&gt;
+
+&lt;p&gt;VSZ ：该 process 使用掉的虚拟内存量 (Kbytes)&lt;/p&gt;
+
+&lt;p&gt;RSS ：该 process 占用的固定的内存量 (Kbytes)&lt;/p&gt;
+
+&lt;p&gt;TTY ：该 process 是在那个终端机上面运作，若与终端机无关，则显示 ?，另外， tty1-tty6 是本机上面的登入者程序，若为 pts/0 等等的，则表示为由网络连接进主机的程序。&lt;/p&gt;
+
+&lt;p&gt;STAT：该程序目前的状态，主要的状态有&lt;/p&gt;
+
+&lt;p&gt;R ：该程序目前正在运作，或者是可被运作&lt;/p&gt;
+
+&lt;p&gt;S ：该程序目前正在睡眠当中 (可说是 idle 状态)，但可被某些讯号 (signal) 唤醒。&lt;/p&gt;
+
+&lt;p&gt;T ：该程序目前正在侦测或者是停止了&lt;/p&gt;
+
+&lt;p&gt;Z ：该程序应该已经终止，但是其父程序却无法正常的终止他，造成 zombie (疆尸) 程序的状态&lt;/p&gt;
+
+&lt;p&gt;START：该 process 被触发启动的时间&lt;/p&gt;
+
+&lt;p&gt;TIME ：该 process 实际使用 CPU 运作的时间&lt;/p&gt;
+
+&lt;p&gt;COMMAND：该程序的实际指令&lt;/p&gt;
+
+&lt;p&gt;实例7：列出类似程序树的程序显示&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;p&gt;ps -axjf&lt;/p&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;p&gt;[root@localhost test6]# ps -axjf&lt;/p&gt;
+
+&lt;p&gt;Warning: bad syntax, perhaps a bogus ‘-‘? See /usr/share/doc/procps-3.2.7/FAQ&lt;/p&gt;
+
+&lt;p&gt;PPID   PID  PGID   SID TTY      TPGID STAT   UID   TIME COMMAND&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0     1     1     1 ?           -1 Ss       0   0:00 init [3]                  
+
+1     2     1     1 ?           -1 S&amp;lt;       0   0:01 [migration/0]
+
+1     3     1     1 ?           -1 SN       0   0:00 [ksoftirqd/0]
+
+1     4     1     1 ?           -1 S&amp;lt;       0   0:01 [migration/1]
+
+1     5     1     1 ?           -1 SN       0   0:00 [ksoftirqd/1]
+
+1     6     1     1 ?           -1 S&amp;lt;       0  29:58 [events/0]
+
+1     7     1     1 ?           -1 S&amp;lt;       0   0:00 [events/1]
+
+1     8     1     1 ?           -1 S&amp;lt;       0   0:00 [khelper]
+
+1    49     1     1 ?           -1 S&amp;lt;       0   0:00 [kthread]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;49    54     1     1 ?           -1 S&amp;lt;       0   0:00  _ [kblockd/0]&lt;/p&gt;
+
+&lt;p&gt;49    55     1     1 ?           -1 S&amp;lt;       0   0:00  _ [kblockd/1]&lt;/p&gt;
+
+&lt;p&gt;49    56     1     1 ?           -1 S&amp;lt;       0   0:00  _ [kacpid]&lt;/p&gt;
+
+&lt;p&gt;说明：&lt;/p&gt;
+
+&lt;p&gt;实例8：找出与 cron 与 syslog 这两个服务有关的 PID 号码&lt;/p&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;  ps aux | grep
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;[root@localhost test6]#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ps aux | egrep &lt;span class=&quot;s1&quot;&gt;'(cron|syslog)'&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;
+root      2682  0.0  0.0  83384  2000 ?        Sl   Nov02   0:00 /sbin/rsyslogd -i /var/run/syslogd.pid -c 5
+
+root      2735  0.0  0.0  74812  1140 ?        Ss   Nov02   0:00 crond
+
+root     17475  0.0  0.0  61180   832 pts/0    S+   16:27   0:00 egrep (cron|syslog)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;其他实例：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;可以用&lt;/td&gt;
+          &lt;td&gt;管道和 more 连接起来分页查看&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;  ps -aux |more
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;把所有进程显示出来，并输出到ps001.txt文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;  ps -aux &amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ps001.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;输出指定的字段&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;  ps -o pid,ppid,pgrp,session,tpgid,comm
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;  [root@localhost test6]#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ps &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; pid,ppid,pgrp,session,tpgid,comm
+&lt;span class=&quot;go&quot;&gt;
+    PID  PPID  PGRP  SESS TPGID COMMAND
+
+  17398 17394 17398 17398 17478 bash
+
+  17478 17398 17478 17398 17478 ps
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/peida/archive/2012/12/19/2824418.html&quot; title=&quot;每天一个linux命令（41）：ps命令&quot;&gt;原文&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">Linux/macOS - ps 命令</title><link href="http://localhost:4000/mac-ps/" rel="alternate" type="text/html" title="Linux/macOS - ps 命令" /><published>2020-02-22T00:00:00-08:00</published><updated>2020-02-22T00:00:00-08:00</updated><id>http://localhost:4000/mac-ps</id><content type="html" xml:base="http://localhost:4000/mac-ps/">&lt;p&gt;&lt;img src=&quot;https://dtb24j9dud7b2.cloudfront.net/wp-content/uploads/pexels-photo-207580-1080x675.jpeg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/peida/archive/2012/12/19/2824418.html&quot; title=&quot;每天一个linux命令（41）：ps命令&quot;&gt;原文&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="Mac" /><summary type="html"></summary></entry><entry><title type="html">curl 的用法指南</title><link href="http://localhost:4000/linux-curl/" rel="alternate" type="text/html" title="curl 的用法指南" /><published>2020-02-20T00:00:00-08:00</published><updated>2020-02-20T00:00:00-08:00</updated><id>http://localhost:4000/linux-curl</id><content type="html" xml:base="http://localhost:4000/linux-curl/">&lt;p&gt;&lt;img src=&quot;https://www.maketecheasier.com/assets/uploads/2019/03/how-to-use-curl-commands-featured-800x400.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1223,559 +2134,4 @@ As for my background, I have experience in + noun / of + verb-ing.
 As for my background, I have experience of working abroad.
 
 As for my background, I have work experience in teaching / planning.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Mac OS X - iterm2 安装 美化</title><link href="http://localhost:4000/mac-iterm2/" rel="alternate" type="text/html" title="Mac OS X - iterm2 安装 美化" /><published>2020-02-15T00:00:00-08:00</published><updated>2020-02-15T00:00:00-08:00</updated><id>http://localhost:4000/mac-iterm2</id><content type="html" xml:base="http://localhost:4000/mac-iterm2/">&lt;p&gt;&lt;img src=&quot;https://iterm2.com/img/logo2x.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;下载安装iterm2&lt;/p&gt;
-
-    &lt;p&gt;官方网站： https://www.iterm2.com&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;切换shell为zsh&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;
- ~ ❯❯❯ chsh -s /bin/zsh
- Changing shell for xxx.
- Password for xxx:
-
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt; ~ ❯❯❯ echo $&lt;/span&gt;SHELL
-&lt;span class=&quot;go&quot;&gt; /bin/zsh
-
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装Oh my zsh&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;使用 crul 安装：&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; sh -c &quot;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;使用 wget 安装：&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; sh -c &quot;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; -&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装PowerLine&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;先安装pip&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; sudo easy_install pip
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;再安装Powerline&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; pip install powerline-status
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装额外的自体库&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;clone
-&lt;span class=&quot;go&quot;&gt; git clone https://github.com/powerline/fonts.git --depth=1
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt; cd fonts
- ./install.sh
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;clean-up a bit
-&lt;span class=&quot;go&quot;&gt; cd ..
- rm -rf fonts
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;安装好之后，选择一款Powerline字体了：iterm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Text -&amp;gt; Font -&amp;gt; Change Font（我用的是Meslo LG)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;修改配色&lt;/p&gt;
-
-    &lt;p&gt;iTerm2 -&amp;gt; Preferences -&amp;gt; Profiles -&amp;gt; Colors -&amp;gt; Color Presets中根据个人喜好选择这已安装配色中的一种即可（或者安装新配色）。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;修改主题配置&lt;/p&gt;
-
-    &lt;p&gt;用vim编辑器打开隐藏文件.zshrc，将ZSH_THEME后面字段改为agnoster.&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; ZSH_THEME=&quot;agnoster&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;设置高亮&lt;/p&gt;
-
-    &lt;p&gt;直接使用homebrew安装zsh-syntax-highlighting插件&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; brew install zsh-syntax-highlighting
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;然后在根目录下.zshrc中插入下面内容：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;或者git安装：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt; echo &quot;source $&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{(&lt;/span&gt;q-&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;PWD&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&lt;span class=&quot;s2&quot;&gt;&quot; &amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ZDOTDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.zshrc
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;自动补全（会严重影响响应速度，不推荐）&lt;/p&gt;
-
-    &lt;p&gt;自动补全插件incr：
- 可以使用下面代码手动写入文件&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; cd ~/.oh-my-zsh/plugins/
- mkdir -p incr
- cd incr
- touch incr-0.2.zsh（将上面链接中的代码复制粘贴到incr-0.2.zsh文件中）   chmod 777 incr-0.2.zsh
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;配置.zshrc文件&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; vim ~/.zshrc
- source ~/.oh-my-zsh/plugins/incr/incr*.zsh
- source ~/.zshrc 
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;另一个zsh的插件，叫做zsh-autosuggestion&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; cd ~/.oh-my-zsh/custom/plugins/
- git clone https://github.com/zsh-users/zsh-autosuggestions
- vi ~/.zshrc
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;找到plugins，加上这个插件即可：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; plugins=(
-     zsh-autosuggestion
- )
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Mac" /><summary type="html"></summary></entry><entry><title type="html">persistence and serialization in Java</title><link href="http://localhost:4000/java-persistence-serialization/" rel="alternate" type="text/html" title="persistence and serialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-persistence-serialization</id><content type="html" xml:base="http://localhost:4000/java-persistence-serialization/">&lt;p&gt;&lt;img src=&quot;https://koenig-media.raywenderlich.com/uploads/2017/08/UnitySaveLoad-feature.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;对象持久化就是将对象存储在可持久保存的存储介质上，例如主流的关系数据库中。在实际应用中，需要将业务数据以对象的方式保存在数据库中，就需要应用到相应的对象持久化框架，如现在广为认知的Hibernate。而如果查阅对象持久化的历史，会发现早在1970年就已经开始有称之为面向对象数据库OODBMS。通常这些面向对象的数据库和特定的一种语言绑定。&lt;strong&gt;对象持久化的重点在于如何将业务数据对象存储在持久化介质上，并同时提供查询修改的手段&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;数据序列化就是将对象或者数据结构转化成特定的格式，使其可以在网络中传输，或者可存储在内存或者文件中。反序列化则是相反的操作，将对象从序列化数据中还原出来。而对象序列化后的数据格式可以是二进制，可以是XML，也可以是JSON等任何格式。&lt;strong&gt;对象/数据序列化的重点在于数据的交换和传输&lt;/strong&gt;，例如在远程调用技术（如EJB，XML-RPC，Web Service），或者在GUI控件开发（JavaBean）等等。&lt;/p&gt;
-
-&lt;p&gt;总结，对象持久化和对象序列化是两个不同应用场景不同纬度的两个概念。&lt;/p&gt;
-
-&lt;p&gt;对象持久化是一个&lt;strong&gt;广义&lt;/strong&gt;的概念，简单说就是save/load，多用以描述和数据库相关的操作。&lt;/p&gt;
-
-&lt;p&gt;序列化是Java中的一项技术，把结构化的对象转化成无结构的字节流，侧重于数据交换和传输，不仅仅能用于数据的持久化。&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Serialization and Deserialization in Java</title><link href="http://localhost:4000/java-serializable/" rel="alternate" type="text/html" title="Serialization and Deserialization in Java" /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/java-serializable</id><content type="html" xml:base="http://localhost:4000/java-serializable/">&lt;p&gt;&lt;img src=&quot;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/media/index/serialization-process.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h1 id=&quot;serialization-and-deserialization-in-java-with-example&quot;&gt;Serialization and Deserialization in Java with Example&lt;/h1&gt;
-
-&lt;p&gt;Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2016/01/serialize-deserialize-java.png&quot; alt=&quot;avatar&quot; title=&quot;serialization&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The byte stream created is platform independent. So, the object serialized on one platform can be deserialized on a different platform.&lt;/p&gt;
-
-&lt;p&gt;To make a Java object serializable we implement the java.io.Serializable interface.
-The ObjectOutputStream class contains writeObject() method for serializing an Object.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;writeObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-                       &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The ObjectInputStream class contains readObject() method for deserializing an object.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-                  &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-               &lt;span class=&quot;nc&quot;&gt;ClassNotFoundException&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Advantages of Serialization&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;To save/persist state of an object.&lt;/li&gt;
-  &lt;li&gt;To travel an object across a network.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://media.geeksforgeeks.org/wp-content/uploads/serialization-5.jpg&quot; alt=&quot;avatar&quot; title=&quot;serialization&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Only the objects of those classes can be serialized which are implementing &lt;strong&gt;java.io.Serializable&lt;/strong&gt; interface.
-Serializable is a &lt;strong&gt;marker interface&lt;/strong&gt; (has no data member and method). It is used to “mark” java classes so that objects of these classes may get certain capability. Other examples of marker interfaces are:- Cloneable and Remote.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Points to remember&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;If a parent class has implemented Serializable interface then child class doesn’t need to implement it but vice-versa is not true.&lt;/li&gt;
-  &lt;li&gt;Only non-static data members are saved via Serialization process.&lt;/li&gt;
-  &lt;li&gt;Static data members and transient data members are not saved via Serialization process.So, if you don’t want to save value of a non-static data member then make it transient.&lt;/li&gt;
-  &lt;li&gt;Constructor of object is never called when an object is deserialized.&lt;/li&gt;
-  &lt;li&gt;Associated objects must be implementing Serializable interface.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Example :&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Serializable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// B also implements Serializable&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// interface.&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;  
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;SerialVersionUID&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The Serialization runtime associates a version number with each Serializable class called a SerialVersionUID, which is used during Deserialization to verify that sender and reciever of a serialized object have loaded classes for that object which are compatible with respect to serialization. If the reciever has loaded a class for the object that has different UID than that of corresponding sender’s class, the Deserialization will result in an &lt;strong&gt;InvalidClassException&lt;/strong&gt;. A Serializable class can declare its own UID explicitly by declaring a field name.
-It must be static, final and of type long.
-i.e- ANY-ACCESS-MODIFIER static final long serialVersionUID=42L;&lt;/p&gt;
-
-&lt;p&gt;If a serializable class doesn’t explicitly declare a serialVersionUID, then the serialization runtime will calculate a default one for that class based on various aspects of class, as described in Java Object Serialization Specification. However it is strongly recommended that all serializable classes explicitly declare serialVersionUID value, since its computation is highly sensitive to class details that may vary depending on compiler implementations, any change in class or using different id may affect the serialized data.&lt;/p&gt;
-
-&lt;p&gt;It is also recommended to use private modifier for UID since it is not useful as inherited member.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;serialver&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The serialver is a tool that comes with JDK. It is used to get serialVersionUID number for Java classes.
-You can run the following command to get serialVersionUID&lt;/p&gt;
-
-&lt;p&gt;serialver [-classpath classpath] [-show] [classname…]&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://media.geeksforgeeks.org/wp-content/uploads/serialver.jpg&quot; alt=&quot;avatar&quot; title=&quot;serialization&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Example 1:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Java code for serialization and deserialization &lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// of a Java object &lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Serializable&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-
-	&lt;span class=&quot;c1&quot;&gt;// Default constructor &lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-		&lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;geeksforgeeks&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.ser&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-		
-		&lt;span class=&quot;c1&quot;&gt;// Serialization &lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;c1&quot;&gt;//Saving of object in a file &lt;/span&gt;
-			&lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			
-			&lt;span class=&quot;c1&quot;&gt;// Method for serialization of object &lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;writeObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			
-			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been serialized&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-		
-		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-
-		&lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-
-		&lt;span class=&quot;c1&quot;&gt;// Deserialization &lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;c1&quot;&gt;// Reading the object from a file &lt;/span&gt;
-			&lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			
-			&lt;span class=&quot;c1&quot;&gt;// Method for deserialization of object &lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			
-			&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been deserialized &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-		
-		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-		
-		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ClassNotFoundException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ClassNotFoundException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Output :&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Object has been serialized
-Object has been deserialized 
-a = 1
-b = geeksforgeeks
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Example 2:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Java code for serialization and deserialization &lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// of a Java object &lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Serializable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serialversionUID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
-								&lt;span class=&quot;mi&quot;&gt;129348938L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-	&lt;span class=&quot;kd&quot;&gt;transient&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-	&lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-
-	&lt;span class=&quot;c1&quot;&gt;// Default constructor &lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SerialExample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-
-		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;age = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-		&lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ab&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;shubham.txt&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-
-		&lt;span class=&quot;c1&quot;&gt;// Serialization &lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-
-			&lt;span class=&quot;c1&quot;&gt;// Saving of object in a file &lt;/span&gt;
-			&lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileOutputStream&lt;/span&gt; 
-										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectOutputStream&lt;/span&gt; 
-										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-
-			&lt;span class=&quot;c1&quot;&gt;// Method for serialization of object &lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;writeObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-
-			&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been serialized\n&quot;&lt;/span&gt;
-							&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Data before Deserialization.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;printdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-
-			&lt;span class=&quot;c1&quot;&gt;// value of static variable changed &lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-		&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-
-		&lt;span class=&quot;c1&quot;&gt;// Deserialization &lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-
-			&lt;span class=&quot;c1&quot;&gt;// Reading the object from a file &lt;/span&gt;
-			&lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt; 
-										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt; 
-										&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-
-			&lt;span class=&quot;c1&quot;&gt;// Method for deserialization of object &lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-
-			&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Object has been deserialized\n&quot;&lt;/span&gt;
-								&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Data after Deserialization.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;printdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-
-			&lt;span class=&quot;c1&quot;&gt;// System.out.println(&quot;z = &quot; + object1.z); &lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IOException is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-
-		&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ClassNotFoundException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ClassNotFoundException&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-								&lt;span class=&quot;s&quot;&gt;&quot; is caught&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Output:&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Object has been serialized
-Data before Deserialization.
-name = ab
-age = 20
-a = 2
-b = 1000
-Object has been deserialized
-Data after Deserialization.
-name = ab
-age = 20
-a = 0
-b = 2000
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Description for Output:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;You have seen while deserializing the object the values of a and b has changed. The reason being a was marked as transient and b was static.
-In case of &lt;strong&gt;transient variables:-&lt;/strong&gt; A variable defined with transient keyword is not serialized during serialization process.This variable will be initialized with default value during deserialization. (e.g: for objects it is null, for int it is 0).
-In case of &lt;strong&gt;static Variables:-&lt;/strong&gt; A variable defined with static keyword is not serialized during serialization process.This variable will be loaded with current value defined in the class during deserialization.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">什么是 JavaBean</title><link href="http://localhost:4000/java-bean/" rel="alternate" type="text/html" title="什么是 JavaBean" /><published>2020-02-13T00:00:00-08:00</published><updated>2020-02-13T00:00:00-08:00</updated><id>http://localhost:4000/java-bean</id><content type="html" xml:base="http://localhost:4000/java-bean/">&lt;p&gt;&lt;img src=&quot;https://docs.oracle.com/javase/8/docs/technotes/guides/beans/spec/images/beancontext.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;h1 id=&quot;什么是javabean&quot;&gt;什么是JavaBean&lt;/h1&gt;
-
-    &lt;p&gt;JavaBean是一个遵循特定写法的Java类，它通常具有如下特点：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;这个Java类必须具有一个无参的构造函数&lt;/li&gt;
-      &lt;li&gt;属性必须私有化&lt;/li&gt;
-      &lt;li&gt;私有化的属性必须通过public类型的方法暴露给其它程序，并且方法的命名也必须遵守一定的命名规范。&lt;/li&gt;
-      &lt;li&gt;必须实现序列化&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h1 id=&quot;javabean作用&quot;&gt;JavaBean作用&lt;/h1&gt;
-
-    &lt;p&gt;JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h1 id=&quot;javabean的属性&quot;&gt;JavaBean的属性&lt;/h1&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;JavaBean的属性可以是任意类型，并且一个JavaBean可以有多个属性。每个属性通常都需要具有相应的setter、 getter方法，setter方法称为属性修改器，getter方法称为属性访问器。&lt;/li&gt;
-      &lt;li&gt;属性修改器必须以小写的set前缀开始，后跟属性名，且属性名的第一个字母要改为大写，例如，name属性的修改器名称为setName，password属性的修改器名称为setPassword。&lt;/li&gt;
-      &lt;li&gt;属性访问器通常以小写的get前缀开始，后跟属性名，且属性名的第一个字母也要改为大写，例如，name属性的访问器名称为getName，password属性的访问器名称为getPassword。&lt;/li&gt;
-      &lt;li&gt;一个JavaBean的某个属性也可以只有set方法或get方法，这样的属性通常也称之为只写、只读属性。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;java-bean类实现serializable接口的原因&quot;&gt;Java Bean类实现Serializable接口的原因&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Serializable接口能帮我们做些什么？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如上所述，读写对象会有什么问题呢？比如：我要将对象写入一个磁盘文件而后再将其读出来会有什么问题吗？别急，其中一个最大的问题就是对象引用！举个例子来说：假如我有两个类，分别是A和B，B类中含有一个指向A类对象的引用，现在我们对两个类进行实例化{ A a = new A(); B b = new B(); }，这时在内存中实际上分配了两个空间，一个存储对象a，一个存储对象b，接下来我们想将它们写入到磁盘的一个文件中去，就在写入文件时出现了问题！因为对象b包含对对象a的引用，所以系统会自动的将a的数据复制一份到b中，这样的话当我们从文件中恢复对象时(也就是重新加载到内存中)时，内存分配了三个空间，而对象a同时在内存中存在两份，想一想后果吧，如果我想修改对象a的数据的话，那不是还要搜索它的每一份拷贝来达到对象数据的一致性，这不是我们所希望的！&lt;/p&gt;
-
-&lt;p&gt;以下序列化机制的解决方案：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 保存到磁盘的所有对象都获得一个序列号(1, 2, 3等等)
-2. 当要保存一个对象时，先检查该对象是否被保存了
-3. 如果以前保存过，只需写入&quot;与已经保存的具有序列号x的对象相同&quot;的标记，否则，保存该对象通过以上的步骤序列化机制解决了对象引用的问题！
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在对对象进行实例化的过程中相关注意事项&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 读取对象的顺序必须与写入的顺序相同
-2. 如果有不能被序列化的对象，执行期间就会抛出NotSerializableException异常
-3. 序列化时，只对对象的状态进行保存，而不管对象的方法
-2. 当一个父类实现序列化，子类自动实现序列化，不需要显式实现Serializable接口
-4. 当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化，而且会是递归的方式。 （序列化程序会将对象版图上的所有东西储存下来，这样才能让该对象恢复到原来的状态）
-5. 如果子类实现Serializable接口而父类未实现时，父类不会被序列化，但此时父类必须有个无参构造方法，否则会抛InvalidClassException异常，因为反序列化时会恢复原有子对象的状态，而父类的成员变量也是原有子对象的一部分。由于父类没有实现序列化接口，即使没有显示调用，也会默认执行父类的无参构造函数使变量初始化
-6. 并非所有的对象都可以序列化
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;至于为什么不可以，有很多原因了，比如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 安全方面的原因，比如一个对象拥有private，public等field，对于一个要传输的对象，比如写到文件，或者进行RMI传输  等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的。
-2. 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;深入理解&quot;&gt;深入理解&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;1. 序列化算法透析&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。&lt;/p&gt;
-
-&lt;p&gt;序列化算法一般会按步骤做如下事情：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;将对象实例相关类的描述。&lt;/li&gt;
-  &lt;li&gt;递归地输出类的超类描述直到不再有超类。&lt;/li&gt;
-  &lt;li&gt;从最顶层的超类开始输出对象实例的实际数据值。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;2. 序列化ID的问题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;serialVersionUID适用于JAVA的序列化机制。简单来说，Java的序列化机制是通过判断类的serialVersionUID来验证版本一致性的。
-在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常，即是InvalidCastException。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. 序列化存储规则&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
-序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. 多次序列化的问题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StreamCorruptedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;code:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AC&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6145ed810100z143.html&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5. 影响序列化&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;transient关键字&lt;/li&gt;
-  &lt;li&gt;writeObject()方法与readObject()方法&lt;/li&gt;
-  &lt;li&gt;Externalizable接口&lt;/li&gt;
-  &lt;li&gt;readResolve()方法&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://developer.51cto.com/art/201202/317181.htm&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/javabean-class-java/&quot; title=&quot;geeks&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: auto parts
+title: Auto Parts
 date: 2020-02-03
 Author: 山猪
 tags: [English]
