@@ -64,15 +64,21 @@ comments: true
 
     - The bigger girls used to chase me and tickle me.
 
-8. comb 梳头
+8. comb 梳头 / 梳子 / 鸡冠
 
-    - Marinate the chicken in the fridge overnight, and then cook it next day.
+    - Your hair needs a good comb.
 
-    - pickled beef
+    - She bent to retrieve her comb from the floor.
+
+    - Your hair is so tangled that I cannot comb it.
 
 9. bend / stoop (down) / bow 弯腰
 
-    - smoked duck
+    - He bent to a squat and gathered the puppies on his lap.
+
+    - She reached down, touching her toes with opposite hands.
+
+    - I wanted to duck down and slip past but they saw me.
 
 10. roast 踮脚
 
