@@ -3,7 +3,7 @@ layout: post
 title: Spring boot中的 bean 和 IoC
 date: 2020-01-27
 Author: 山猪
-tags: [Java, Spring boot]
+tags: [Java, Spring Boot]
 comments: true
 ---
 ![img](https://dzone.com/storage/temp/12766233-coffee-beans-photo.jpg?crop=1.00xw:0.676xh;0,0.199xh&resize=2048:*)

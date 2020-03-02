@@ -3,7 +3,7 @@ layout: post
 title: Static Proxy vs. Dynamic Proxy
 date: 2020-02-12
 Author: 山猪
-tags: [Java, Spring boot]
+tags: [Java, Spring Boot]
 comments: true
 ---
 ![img](https://miro.medium.com/max/1280/1*bdXBG8hFHucrTPmJLfnH4w.png)

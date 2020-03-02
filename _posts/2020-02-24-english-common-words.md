@@ -98,6 +98,19 @@ comments: true
 
 13. squat 蹲下
 
+14. breathe	呼吸
+
+15. cry	哭
+
+16. to hiccup	打嗝
+
+17. sneeze	打喷嚏
+
+18. sweat / perspire    出汗
+
+19. urinate 排尿
+
+20. yawn    打哈欠
 
 
 

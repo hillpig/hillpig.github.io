@@ -3,7 +3,7 @@ layout: post
 title: Spring boot - @transient
 date: 2020-02-05
 Author: 山猪
-tags: [Java, Spring boot]
+tags: [Java, Spring Boot]
 comments: true
 ---
 ![img](https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG)

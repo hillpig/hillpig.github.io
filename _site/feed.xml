@@ -1,4 +1,778 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-25T17:40:39-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">English Vocabulary - Disease</title><link href="http://localhost:4000/english-disease/" rel="alternate" type="text/html" title="English Vocabulary - Disease" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/english-disease</id><content type="html" xml:base="http://localhost:4000/english-disease/">&lt;p&gt;&lt;img src=&quot;https://www.spondylitis.ca/wp-content/uploads/2020/02/600x400_heart_illustration_xray-1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T00:12:53-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">English Vocabulary - Body</title><link href="http://localhost:4000/english-body/" rel="alternate" type="text/html" title="English Vocabulary - Body" /><published>2020-03-01T00:00:00-08:00</published><updated>2020-03-01T00:00:00-08:00</updated><id>http://localhost:4000/english-body</id><content type="html" xml:base="http://localhost:4000/english-body/">&lt;p&gt;&lt;img src=&quot;https://cdn.britannica.com/07/192107-050-CE043374/anatomy-charts-human-body-muscle-systems-skeletal.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;头面部&quot;&gt;头面部&lt;/h1&gt;
+
+&lt;p&gt;beard   胡须
+cheek	脸颊
+chin	下巴
+head	头
+hair    头发
+ear 耳朵
+eye	眼睛
+eyebrow	眉毛
+eardrum	耳膜
+earlobe	耳垂
+eyelash	睫毛
+eyelid	眼睑
+forehead	额头
+freckles	雀斑
+jaw	下颌
+lip	嘴唇
+mouth	嘴巴
+nose	鼻子
+nostril	鼻孔
+moustache	胡子
+tongue	舌头
+tooth (复数形式：teeth)	牙齿
+wrinkles	皱纹&lt;/p&gt;
+
+&lt;h1 id=&quot;上半身&quot;&gt;上半身&lt;/h1&gt;
+
+&lt;p&gt;Adam’s apple	喉结
+arm	胳膊
+armpit	腋窝
+back	背
+breast	胸
+chest	胸口
+elbow	肘
+hand	手
+finger	手指
+fingernail	指甲
+forearm	前臂
+knuckle	指关节
+navel / belly button	肚脐
+neck	脖子
+nipple	乳头
+palm	手掌
+shoulder	肩膀
+throat	喉咙
+thumb	拇指
+waist	腰
+wrist	手腕关节&lt;/p&gt;
+
+&lt;h1 id=&quot;下半身&quot;&gt;下半身&lt;/h1&gt;
+
+&lt;p&gt;ankle	脚踝
+anus	肛门
+belly	肚子
+big toe	拇指
+bottom (俚语：bum)	屁股
+buttocks	臀部
+calf	小腿
+foot (复数形式：feet)	脚
+genitals	生殖器
+groin	腹股沟
+heel	脚后跟
+hip	臀部
+knee	膝盖
+leg	脚
+penis	阴茎
+pubic hair	阴毛
+shin	胫骨
+sole	脚掌
+testicles	睾丸
+thigh	大腿
+toe	脚趾
+toenail	脚趾甲
+vagina	阴道&lt;/p&gt;
+
+&lt;h1 id=&quot;眼部&quot;&gt;眼部&lt;/h1&gt;
+&lt;p&gt;cornea	角膜
+eye socket	眼窝
+eyeball	眼球
+iris	虹膜
+retina	视网膜
+pupil	瞳孔&lt;/p&gt;
+
+&lt;h1 id=&quot;体内&quot;&gt;体内&lt;/h1&gt;
+
+&lt;p&gt;Achilles tendon	跟腱
+artery	动脉
+appendix	阑尾
+bladder	膀胱
+blood vessel	血管
+brain	大脑
+cartilage	软骨
+colon	结肠
+gall bladder / gallbladder	胆囊
+heart	心脏
+intestines	肠道
+large intestine	大肠
+small intestine	小肠
+kidneys	肾脏
+ligament	韧带
+liver	肝
+lungs	肺
+oesophagus	食道
+pancreas	胰腺
+organ	器官
+prostate gland / prostate	前列腺
+rectum	直肠
+spleen	脾
+stomach	胃
+tendon	腱
+tonsils	扁桃体
+vein	血管
+windpipe	气管
+womb / uterus	子宫&lt;/p&gt;
+
+&lt;h1 id=&quot;骨骼&quot;&gt;骨骼&lt;/h1&gt;
+
+&lt;p&gt;collarbone / clavicle	锁骨
+thigh bone / femur	股骨
+humerus	肱骨
+kneecap	膝盖骨
+pelvis	骨盆
+rib	肋骨
+rib cage	胸腔
+skeleton	骨架
+skull	头盖骨
+spine / backbone	脊柱
+vertebra (复数形式：vertebrae)	椎骨&lt;/p&gt;
+
+&lt;h1 id=&quot;体液&quot;&gt;体液&lt;/h1&gt;
+&lt;p&gt;bile	胆汁
+blood	血
+mucus	黏液
+phlegm	痰
+saliva / spit	唾液
+semen	精液
+sweat / perspiration	汗
+tears	眼泪
+urine	尿液
+vomit	呕吐物&lt;/p&gt;
+
+&lt;h1 id=&quot;其他单词&quot;&gt;其他单词&lt;/h1&gt;
+
+&lt;p&gt;bone	骨头
+fat	肥胖
+flesh	肉体
+gland	腺
+joint	关节
+limb	肢
+muscle	肌肉
+nerve	神经
+skin	皮肤&lt;/p&gt;
+
+&lt;p&gt;digestive system	消化系统
+nervous system	神经系统
+to breathe	呼吸
+to cry	哭
+to hiccup	打嗝
+to have the hiccups	打嗝
+to sneeze	打喷嚏
+to sweat / to perspire	出汗
+to urinate	排尿
+to vomit	呕吐
+to yawn	打哈欠&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Spring Boot - Hibernate - OneToMany &amp;amp; ManyToOne Mapping</title><link href="http://localhost:4000/java-onetomany-manytoone/" rel="alternate" type="text/html" title="Spring Boot - Hibernate - OneToMany &amp; ManyToOne Mapping" /><published>2020-02-27T00:00:00-08:00</published><updated>2020-02-27T00:00:00-08:00</updated><id>http://localhost:4000/java-onetomany-manytoone</id><content type="html" xml:base="http://localhost:4000/java-onetomany-manytoone/">&lt;p&gt;&lt;img src=&quot;https://i0.wp.com/blogs.innovationm.com/wp-content/uploads/2018/08/Hibernate-Mapping.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;什么是javabean&quot;&gt;什么是JavaBean&lt;/h1&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;lombok既是一个IDE插件,也是一个项目要依赖的jar包.lombok是依赖jar包的原因是因为编译时要用它的注解.是插件的原因是他要在编译器编译时通过操作AST(抽象语法树)改变字节码生成.也就是说他可以改变java语法. 他不像spring的依赖注入或者hibernate的orm一样是运行时的特性,而是编译时的特性.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean作用&quot;&gt;JavaBean作用&lt;/h1&gt;
+
+    &lt;p&gt;JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean的属性&quot;&gt;JavaBean的属性&lt;/h1&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;JavaBean的属性可以是任意类型，并且一个JavaBean可以有多个属性。每个属性通常都需要具有相应的setter、 getter方法，setter方法称为属性修改器，getter方法称为属性访问器。&lt;/li&gt;
+      &lt;li&gt;属性修改器必须以小写的set前缀开始，后跟属性名，且属性名的第一个字母要改为大写，例如，name属性的修改器名称为setName，password属性的修改器名称为setPassword。&lt;/li&gt;
+      &lt;li&gt;属性访问器通常以小写的get前缀开始，后跟属性名，且属性名的第一个字母也要改为大写，例如，name属性的访问器名称为getName，password属性的访问器名称为getPassword。&lt;/li&gt;
+      &lt;li&gt;一个JavaBean的某个属性也可以只有set方法或get方法，这样的属性通常也称之为只写、只读属性。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;java-bean类实现serializable接口的原因&quot;&gt;Java Bean类实现Serializable接口的原因&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Serializable接口能帮我们做些什么？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如上所述，读写对象会有什么问题呢？比如：我要将对象写入一个磁盘文件而后再将其读出来会有什么问题吗？别急，其中一个最大的问题就是对象引用！举个例子来说：假如我有两个类，分别是A和B，B类中含有一个指向A类对象的引用，现在我们对两个类进行实例化{ A a = new A(); B b = new B(); }，这时在内存中实际上分配了两个空间，一个存储对象a，一个存储对象b，接下来我们想将它们写入到磁盘的一个文件中去，就在写入文件时出现了问题！因为对象b包含对对象a的引用，所以系统会自动的将a的数据复制一份到b中，这样的话当我们从文件中恢复对象时(也就是重新加载到内存中)时，内存分配了三个空间，而对象a同时在内存中存在两份，想一想后果吧，如果我想修改对象a的数据的话，那不是还要搜索它的每一份拷贝来达到对象数据的一致性，这不是我们所希望的！&lt;/p&gt;
+
+&lt;p&gt;以下序列化机制的解决方案：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 保存到磁盘的所有对象都获得一个序列号(1, 2, 3等等)
+2. 当要保存一个对象时，先检查该对象是否被保存了
+3. 如果以前保存过，只需写入&quot;与已经保存的具有序列号x的对象相同&quot;的标记，否则，保存该对象通过以上的步骤序列化机制解决了对象引用的问题！
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在对对象进行实例化的过程中相关注意事项&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 读取对象的顺序必须与写入的顺序相同
+2. 如果有不能被序列化的对象，执行期间就会抛出NotSerializableException异常
+3. 序列化时，只对对象的状态进行保存，而不管对象的方法
+2. 当一个父类实现序列化，子类自动实现序列化，不需要显式实现Serializable接口
+4. 当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化，而且会是递归的方式。 （序列化程序会将对象版图上的所有东西储存下来，这样才能让该对象恢复到原来的状态）
+5. 如果子类实现Serializable接口而父类未实现时，父类不会被序列化，但此时父类必须有个无参构造方法，否则会抛InvalidClassException异常，因为反序列化时会恢复原有子对象的状态，而父类的成员变量也是原有子对象的一部分。由于父类没有实现序列化接口，即使没有显示调用，也会默认执行父类的无参构造函数使变量初始化
+6. 并非所有的对象都可以序列化
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;至于为什么不可以，有很多原因了，比如：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 安全方面的原因，比如一个对象拥有private，public等field，对于一个要传输的对象，比如写到文件，或者进行RMI传输  等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的。
+2. 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;深入理解&quot;&gt;深入理解&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 序列化算法透析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。&lt;/p&gt;
+
+&lt;p&gt;序列化算法一般会按步骤做如下事情：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将对象实例相关类的描述。&lt;/li&gt;
+  &lt;li&gt;递归地输出类的超类描述直到不再有超类。&lt;/li&gt;
+  &lt;li&gt;从最顶层的超类开始输出对象实例的实际数据值。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 序列化ID的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;serialVersionUID适用于JAVA的序列化机制。简单来说，Java的序列化机制是通过判断类的serialVersionUID来验证版本一致性的。
+在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常，即是InvalidCastException。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 序列化存储规则&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
+序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. 多次序列化的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StreamCorruptedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;code:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AC&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6145ed810100z143.html&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. 影响序列化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;transient关键字&lt;/li&gt;
+  &lt;li&gt;writeObject()方法与readObject()方法&lt;/li&gt;
+  &lt;li&gt;Externalizable接口&lt;/li&gt;
+  &lt;li&gt;readResolve()方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://projectlombok.org/&quot; title=&quot;lombok的官方地址&quot;&gt;lombok的官方地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rzwitserloot/lombok&quot; title=&quot;lombok的Github地址&quot;&gt;lombok的Github地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/42348457&quot; title=&quot;参考文章 1&quot;&gt;参考文章 1 《Java开发中用到的，lombok是什么？》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">安装配置 Intellij Idea</title><link href="http://localhost:4000/intellij/" rel="alternate" type="text/html" title="安装配置 Intellij Idea" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/intellij</id><content type="html" xml:base="http://localhost:4000/intellij/">&lt;p&gt;&lt;img src=&quot;https://d3nmt5vlzunoa1.cloudfront.net/idea/files/2019/11/blog@2x-3.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/jetbrains-agent.jar&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;什么是javabean&quot;&gt;什么是JavaBean&lt;/h1&gt;
+
+    &lt;p&gt;JavaBean是一个遵循特定写法的Java类，它通常具有如下特点：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;这个Java类必须具有一个无参的构造函数&lt;/li&gt;
+      &lt;li&gt;属性必须私有化&lt;/li&gt;
+      &lt;li&gt;私有化的属性必须通过public类型的方法暴露给其它程序，并且方法的命名也必须遵守一定的命名规范。&lt;/li&gt;
+      &lt;li&gt;必须实现序列化&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean作用&quot;&gt;JavaBean作用&lt;/h1&gt;
+
+    &lt;p&gt;JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean的属性&quot;&gt;JavaBean的属性&lt;/h1&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;JavaBean的属性可以是任意类型，并且一个JavaBean可以有多个属性。每个属性通常都需要具有相应的setter、 getter方法，setter方法称为属性修改器，getter方法称为属性访问器。&lt;/li&gt;
+      &lt;li&gt;属性修改器必须以小写的set前缀开始，后跟属性名，且属性名的第一个字母要改为大写，例如，name属性的修改器名称为setName，password属性的修改器名称为setPassword。&lt;/li&gt;
+      &lt;li&gt;属性访问器通常以小写的get前缀开始，后跟属性名，且属性名的第一个字母也要改为大写，例如，name属性的访问器名称为getName，password属性的访问器名称为getPassword。&lt;/li&gt;
+      &lt;li&gt;一个JavaBean的某个属性也可以只有set方法或get方法，这样的属性通常也称之为只写、只读属性。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;java-bean类实现serializable接口的原因&quot;&gt;Java Bean类实现Serializable接口的原因&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Serializable接口能帮我们做些什么？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如上所述，读写对象会有什么问题呢？比如：我要将对象写入一个磁盘文件而后再将其读出来会有什么问题吗？别急，其中一个最大的问题就是对象引用！举个例子来说：假如我有两个类，分别是A和B，B类中含有一个指向A类对象的引用，现在我们对两个类进行实例化{ A a = new A(); B b = new B(); }，这时在内存中实际上分配了两个空间，一个存储对象a，一个存储对象b，接下来我们想将它们写入到磁盘的一个文件中去，就在写入文件时出现了问题！因为对象b包含对对象a的引用，所以系统会自动的将a的数据复制一份到b中，这样的话当我们从文件中恢复对象时(也就是重新加载到内存中)时，内存分配了三个空间，而对象a同时在内存中存在两份，想一想后果吧，如果我想修改对象a的数据的话，那不是还要搜索它的每一份拷贝来达到对象数据的一致性，这不是我们所希望的！&lt;/p&gt;
+
+&lt;p&gt;以下序列化机制的解决方案：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 保存到磁盘的所有对象都获得一个序列号(1, 2, 3等等)
+2. 当要保存一个对象时，先检查该对象是否被保存了
+3. 如果以前保存过，只需写入&quot;与已经保存的具有序列号x的对象相同&quot;的标记，否则，保存该对象通过以上的步骤序列化机制解决了对象引用的问题！
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在对对象进行实例化的过程中相关注意事项&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 读取对象的顺序必须与写入的顺序相同
+2. 如果有不能被序列化的对象，执行期间就会抛出NotSerializableException异常
+3. 序列化时，只对对象的状态进行保存，而不管对象的方法
+2. 当一个父类实现序列化，子类自动实现序列化，不需要显式实现Serializable接口
+4. 当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化，而且会是递归的方式。 （序列化程序会将对象版图上的所有东西储存下来，这样才能让该对象恢复到原来的状态）
+5. 如果子类实现Serializable接口而父类未实现时，父类不会被序列化，但此时父类必须有个无参构造方法，否则会抛InvalidClassException异常，因为反序列化时会恢复原有子对象的状态，而父类的成员变量也是原有子对象的一部分。由于父类没有实现序列化接口，即使没有显示调用，也会默认执行父类的无参构造函数使变量初始化
+6. 并非所有的对象都可以序列化
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;至于为什么不可以，有很多原因了，比如：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 安全方面的原因，比如一个对象拥有private，public等field，对于一个要传输的对象，比如写到文件，或者进行RMI传输  等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的。
+2. 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;深入理解&quot;&gt;深入理解&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 序列化算法透析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。&lt;/p&gt;
+
+&lt;p&gt;序列化算法一般会按步骤做如下事情：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将对象实例相关类的描述。&lt;/li&gt;
+  &lt;li&gt;递归地输出类的超类描述直到不再有超类。&lt;/li&gt;
+  &lt;li&gt;从最顶层的超类开始输出对象实例的实际数据值。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 序列化ID的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;serialVersionUID适用于JAVA的序列化机制。简单来说，Java的序列化机制是通过判断类的serialVersionUID来验证版本一致性的。
+在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常，即是InvalidCastException。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 序列化存储规则&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
+序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. 多次序列化的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StreamCorruptedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;code:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AC&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6145ed810100z143.html&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. 影响序列化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;transient关键字&lt;/li&gt;
+  &lt;li&gt;writeObject()方法与readObject()方法&lt;/li&gt;
+  &lt;li&gt;Externalizable接口&lt;/li&gt;
+  &lt;li&gt;readResolve()方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://developer.51cto.com/art/201202/317181.htm&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/javabean-class-java/&quot; title=&quot;geeks&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="IDE" /><summary type="html"></summary></entry><entry><title type="html">Java - lombok</title><link href="http://localhost:4000/java-lombok/" rel="alternate" type="text/html" title="Java - lombok" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/java-lombok</id><content type="html" xml:base="http://localhost:4000/java-lombok/">&lt;p&gt;&lt;img src=&quot;https://huongdanjava.com/wp-content/uploads/2017/08/lombok.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;什么是javabean&quot;&gt;什么是JavaBean&lt;/h1&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;lombok既是一个IDE插件,也是一个项目要依赖的jar包.lombok是依赖jar包的原因是因为编译时要用它的注解.是插件的原因是他要在编译器编译时通过操作AST(抽象语法树)改变字节码生成.也就是说他可以改变java语法. 他不像spring的依赖注入或者hibernate的orm一样是运行时的特性,而是编译时的特性.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean作用&quot;&gt;JavaBean作用&lt;/h1&gt;
+
+    &lt;p&gt;JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean的属性&quot;&gt;JavaBean的属性&lt;/h1&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;JavaBean的属性可以是任意类型，并且一个JavaBean可以有多个属性。每个属性通常都需要具有相应的setter、 getter方法，setter方法称为属性修改器，getter方法称为属性访问器。&lt;/li&gt;
+      &lt;li&gt;属性修改器必须以小写的set前缀开始，后跟属性名，且属性名的第一个字母要改为大写，例如，name属性的修改器名称为setName，password属性的修改器名称为setPassword。&lt;/li&gt;
+      &lt;li&gt;属性访问器通常以小写的get前缀开始，后跟属性名，且属性名的第一个字母也要改为大写，例如，name属性的访问器名称为getName，password属性的访问器名称为getPassword。&lt;/li&gt;
+      &lt;li&gt;一个JavaBean的某个属性也可以只有set方法或get方法，这样的属性通常也称之为只写、只读属性。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;java-bean类实现serializable接口的原因&quot;&gt;Java Bean类实现Serializable接口的原因&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Serializable接口能帮我们做些什么？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如上所述，读写对象会有什么问题呢？比如：我要将对象写入一个磁盘文件而后再将其读出来会有什么问题吗？别急，其中一个最大的问题就是对象引用！举个例子来说：假如我有两个类，分别是A和B，B类中含有一个指向A类对象的引用，现在我们对两个类进行实例化{ A a = new A(); B b = new B(); }，这时在内存中实际上分配了两个空间，一个存储对象a，一个存储对象b，接下来我们想将它们写入到磁盘的一个文件中去，就在写入文件时出现了问题！因为对象b包含对对象a的引用，所以系统会自动的将a的数据复制一份到b中，这样的话当我们从文件中恢复对象时(也就是重新加载到内存中)时，内存分配了三个空间，而对象a同时在内存中存在两份，想一想后果吧，如果我想修改对象a的数据的话，那不是还要搜索它的每一份拷贝来达到对象数据的一致性，这不是我们所希望的！&lt;/p&gt;
+
+&lt;p&gt;以下序列化机制的解决方案：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 保存到磁盘的所有对象都获得一个序列号(1, 2, 3等等)
+2. 当要保存一个对象时，先检查该对象是否被保存了
+3. 如果以前保存过，只需写入&quot;与已经保存的具有序列号x的对象相同&quot;的标记，否则，保存该对象通过以上的步骤序列化机制解决了对象引用的问题！
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在对对象进行实例化的过程中相关注意事项&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 读取对象的顺序必须与写入的顺序相同
+2. 如果有不能被序列化的对象，执行期间就会抛出NotSerializableException异常
+3. 序列化时，只对对象的状态进行保存，而不管对象的方法
+2. 当一个父类实现序列化，子类自动实现序列化，不需要显式实现Serializable接口
+4. 当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化，而且会是递归的方式。 （序列化程序会将对象版图上的所有东西储存下来，这样才能让该对象恢复到原来的状态）
+5. 如果子类实现Serializable接口而父类未实现时，父类不会被序列化，但此时父类必须有个无参构造方法，否则会抛InvalidClassException异常，因为反序列化时会恢复原有子对象的状态，而父类的成员变量也是原有子对象的一部分。由于父类没有实现序列化接口，即使没有显示调用，也会默认执行父类的无参构造函数使变量初始化
+6. 并非所有的对象都可以序列化
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;至于为什么不可以，有很多原因了，比如：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 安全方面的原因，比如一个对象拥有private，public等field，对于一个要传输的对象，比如写到文件，或者进行RMI传输  等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的。
+2. 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;深入理解&quot;&gt;深入理解&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 序列化算法透析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。&lt;/p&gt;
+
+&lt;p&gt;序列化算法一般会按步骤做如下事情：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将对象实例相关类的描述。&lt;/li&gt;
+  &lt;li&gt;递归地输出类的超类描述直到不再有超类。&lt;/li&gt;
+  &lt;li&gt;从最顶层的超类开始输出对象实例的实际数据值。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 序列化ID的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;serialVersionUID适用于JAVA的序列化机制。简单来说，Java的序列化机制是通过判断类的serialVersionUID来验证版本一致性的。
+在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常，即是InvalidCastException。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 序列化存储规则&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
+序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. 多次序列化的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StreamCorruptedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;code:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AC&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6145ed810100z143.html&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. 影响序列化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;transient关键字&lt;/li&gt;
+  &lt;li&gt;writeObject()方法与readObject()方法&lt;/li&gt;
+  &lt;li&gt;Externalizable接口&lt;/li&gt;
+  &lt;li&gt;readResolve()方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://projectlombok.org/&quot; title=&quot;lombok的官方地址&quot;&gt;lombok的官方地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rzwitserloot/lombok&quot; title=&quot;lombok的Github地址&quot;&gt;lombok的Github地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/42348457&quot; title=&quot;参考文章 1&quot;&gt;参考文章 1 《Java开发中用到的，lombok是什么？》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Programming - Idempotent</title><link href="http://localhost:4000/idempotent/" rel="alternate" type="text/html" title="Programming - Idempotent" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/idempotent</id><content type="html" xml:base="http://localhost:4000/idempotent/">&lt;p&gt;&lt;img src=&quot;https://image.slidesharecdn.com/cloudstock-2010-12-building-a-great-api-101212184238-phpapp01/95/building-a-great-api-evan-cooke-cloudstock-december-2010-21-728.jpg?cb=1292199082&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;现如今我们的系统大多拆分为分布式SOA，或者微服务，一套系统中包含了多个子系统服务，而一个子系统服务往往会去调用另一个服务，而服务调用服务无非就是使用RPC通信或者restful，既然是通信，那么就有可能再服务器处理完毕后返回结果的时候挂掉，这个时候用户端发现很久没有反应，那么就会多次点击按钮，这样请求有多次，那么处理数据的结果是否要统一呢？那是肯定的！尤其再支付场景。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;幂等性&lt;/strong&gt;：就是用户对于同一操作发起的一次请求或者多次请求的结果是一致的，不会因为多次点击而产生了副作用。举个最简单的例子，那就是支付，用户购买商品使用约支付，支付扣款成功，但是返回结果的时候网络异常，此时钱已经扣了，用户再次点击按钮，此时会进行第二次扣款，返回结果成功，用户查询余额返发现多扣钱了，流水记录也变成了两条．．．&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;在以前的单应用系统中，我们只需要把数据操作放入事务中即可，发生错误立即回滚，但是再响应客户端的时候也有可能出现网络中断或者异常等等。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;在&lt;strong&gt;增删改查&lt;/strong&gt;4个操作中，尤为注意就是&lt;strong&gt;增加&lt;/strong&gt;或者&lt;strong&gt;修改&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;查询&lt;/em&gt;对于结果是不会有改变的;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;删除&lt;/em&gt;只会进行一次，用户多次点击产生的结果一样;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;修改&lt;/em&gt;在大多场景下结果一样;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;增加&lt;/em&gt;在重复提交的场景下会出现;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;那么如何设计接口才能做到幂等呢？&lt;/p&gt;
+
+&lt;h2 id=&quot;方法一单次支付请求也就是直接支付了不需要额外的数据库操作了这个时候发起异步请求创建一个唯一的ticketid就是门票这张门票只能使用一次就作废具体步骤如下&quot;&gt;方法一、单次支付请求，也就是直接支付了，不需要额外的数据库操作了，这个时候发起异步请求创建一个唯一的ticketId，就是门票，这张门票只能使用一次就作废，具体步骤如下：&lt;/h2&gt;
+
+&lt;p&gt;异步请求获取门票
+调用支付，传入门票
+根据门票ID查询此次操作是否存在，如果存在则表示该操作已经执行过，直接返回结果；如果不存在，支付扣款，保存结果
+返回结果到客户端
+如果步骤4通信失败，用户再次发起请求，那么最终结果还是一样的&lt;/p&gt;
+
+&lt;h2 id=&quot;方法二分布式环境下各个服务相互调用&quot;&gt;方法二、分布式环境下各个服务相互调用&lt;/h2&gt;
+
+&lt;p&gt;这边就要举例我们的系统了，我们支付的时候先要扣款，然后更新订单，这个地方就涉及到了订单服务以及支付服务了。&lt;/p&gt;
+
+&lt;p&gt;用户调用支付，扣款成功后，更新对应订单状态，然后再保存流水。&lt;/p&gt;
+
+&lt;p&gt;而在这个地方就没必要使用门票ticketId了，因为会比较闲的麻烦&lt;/p&gt;
+
+&lt;p&gt;（支付状态：未支付，已支付）&lt;/p&gt;
+
+&lt;p&gt;步骤：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;查询订单支付状态&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果已经支付，直接返回结果&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果未支付，则支付扣款并且保存流水&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;返回支付结果&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;如果步骤4通信失败，用户再次发起请求，那么最终结果还是一样的&lt;/p&gt;
+
+&lt;p&gt;对于做过支付的朋友，幂等，也可以称之为冲正，保证客户端与服务端的交易一致性，避免多次扣款。&lt;/p&gt;
+
+&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/30493445&quot; title=&quot;什么是分布式系统中的幂等性&quot;&gt;原文 《什么是分布式系统中的幂等性》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Programming" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Common Expressions</title><link href="http://localhost:4000/english-common-words/" rel="alternate" type="text/html" title="English Vocabulary - Common Expressions" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/english-common-words</id><content type="html" xml:base="http://localhost:4000/english-common-words/">&lt;p&gt;&lt;img src=&quot;https://scx1.b-cdn.net/csz/news/800/2017/studyreadsbe.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hiccup 打嗝&lt;/p&gt;
+
+    &lt;p&gt;a loud noise that you make in the throat without wanting to, caused by a sudden tightening of a muscle just below the chest and usually happening repeatedly&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;I’ve got the hiccups.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;belch 打嗝&lt;/p&gt;
+
+    &lt;p&gt;to allow air from the stomach to come out noisily through the mouth:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;He belched noisily.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Snore 打鼾&lt;/p&gt;
+
+    &lt;p&gt;to breathe in a very noisy way while you are sleeping:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Sometimes my husband snores so loudly, it keeps me awake at night.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Do you know any cures for snoring?&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;pick one’s nose 挖鼻孔&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Don’t pick your nose on public transportation.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;’’’
+     booger 鼻屎&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ear wax 耳屎
+
+ sleep / dry stuff / dry crap / crusty stuff 眼屎  '''
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;floss one’s teeth / pick one’s teeth 剔牙&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;I often floss my teeth after dinner.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;It is considered rude to pick your teeth in front of other people.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;He picked his teeth with a toothpick.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;braise 挠痒痒&lt;/p&gt;
+
+    &lt;p&gt;With braises, where you’re adding the least amount of liquid required to cook the meat or vegetables, stews require full submersion, and usually call for the meat or vegetables to be cut into unifiorm pieces for even cooking.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;red braised pork belly 红烧肉&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Bring the water to a boil, turn down to medium low heat, and let it simmer for 40 minutes.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Because it preserves all the nutrients in your food.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;tickle 胳肢&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;The bigger girls used to chase me and tickle me.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;comb 梳头 / 梳子 / 鸡冠&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Your hair needs a good comb.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;She bent to retrieve her comb from the floor.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Your hair is so tangled that I cannot comb it.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;bend / stoop (down) / bow 弯腰&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;He bent to a squat and gathered the puppies on his lap.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;She reached down, touching her toes with opposite hands.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;I wanted to duck down and slip past but they saw me.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;roast 踮脚&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;roasted chicken 烤鸭&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;grilled chicken 烤鸡&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;fart / break wind 放屁&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Don’t fart in my room!&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The fox broke wind in order to escape those hunting dogs.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cross one’s legs / sit cross-legged 盘腿&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;We sat cross-legged on the blanket.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;squat 蹲下&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;breathe	呼吸&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cry	哭&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;to hiccup	打嗝&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;sneeze	打喷嚏&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;sweat / perspire    出汗&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;urinate 排尿&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;yawn    打哈欠&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Disease</title><link href="http://localhost:4000/english-disease/" rel="alternate" type="text/html" title="English Vocabulary - Disease" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/english-disease</id><content type="html" xml:base="http://localhost:4000/english-disease/">&lt;p&gt;&lt;img src=&quot;https://www.spondylitis.ca/wp-content/uploads/2020/02/600x400_heart_illustration_xray-1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -142,18 +916,85 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;measles 麻疹&lt;/p&gt;
+
+    &lt;p&gt;a disease, especially of children, that causes a high temperature and small red spots that cover the whole body&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;All our children have had the measles.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;heart disease 心胀病&lt;/p&gt;
+    &lt;p&gt;heart disease 心脏病&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;diabetes 糖尿病&lt;/p&gt;
+
+    &lt;p&gt;a medical condition in which the body cannot produce enough insulin to control the amount of sugar in the blood&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;cancer 癌症&lt;/p&gt;
+
+    &lt;p&gt;a serious disease in which growths of cells, also called cancers, form in the body and kill normal body cells. The disease often causes death.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;fungus 脚气&lt;/p&gt;
+
+    &lt;p&gt;an organism (= a living thing) that is similar to a plant without leaves, flowers or green colouring, and that usually grows on plants or on decaying matter. mushrooms and mildew are both fungi.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;pneumonia 肺炎 bronchia 支气管&lt;/p&gt;
+
+    &lt;p&gt;a serious illness affecting one or both lungs that makes breathing difficult&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;She died from bronchial pneumonia.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;inflammation 炎症&lt;/p&gt;
+
+    &lt;p&gt;​a condition in which a part of the body becomes red, painful and swollen (= larger than normal) because of infection or injury&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;The doctor’s notes recorded inflammation of the ear.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;I used a cream to reduce the inflammation.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;insomnia 失眠&lt;/p&gt;
+
+    &lt;p&gt;the condition of being unable to sleep&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;to suffer from insomnia&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;nausea 恶心&lt;/p&gt;
+
+    &lt;p&gt;the feeling that you have when you want to vomit, for example because you are sick or are shocked or frightened by something&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;A wave of nausea swept over her.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Nausea and vomiting are common symptoms.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;leukemia 白血病&lt;/p&gt;
+
+    &lt;p&gt;a serious disease in which too many white blood cells are produced, causing weakness and sometimes death&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;The newspapers are full of stories of leukaemia clusters near nuclear establishments.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -259,150 +1100,7 @@
 
 &lt;p&gt;有点恶心 have （experience） some nausea&lt;/p&gt;
 
-&lt;p&gt;偶而恶心和呕吐 develop occasional nausea and vomiting&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Common Expressions</title><link href="http://localhost:4000/english-common-words/" rel="alternate" type="text/html" title="English Vocabulary - Common Expressions" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/english-common-words</id><content type="html" xml:base="http://localhost:4000/english-common-words/">&lt;p&gt;&lt;img src=&quot;https://scx1.b-cdn.net/csz/news/800/2017/studyreadsbe.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Hiccup 打嗝&lt;/p&gt;
-
-    &lt;p&gt;a loud noise that you make in the throat without wanting to, caused by a sudden tightening of a muscle just below the chest and usually happening repeatedly&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;I’ve got the hiccups.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;belch 打嗝&lt;/p&gt;
-
-    &lt;p&gt;to allow air from the stomach to come out noisily through the mouth:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;He belched noisily.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Snore 打鼾&lt;/p&gt;
-
-    &lt;p&gt;to breathe in a very noisy way while you are sleeping:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Sometimes my husband snores so loudly, it keeps me awake at night.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Do you know any cures for snoring?&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;pick one’s nose 挖鼻孔&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Don’t pick your nose on public transportation.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;’’’
-     booger 鼻屎&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ear wax 耳屎
-
- sleep / dry stuff / dry crap / crusty stuff 眼屎  '''
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;floss one’s teeth / pick one’s teeth 剔牙&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;I often floss my teeth after dinner.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;It is considered rude to pick your teeth in front of other people.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;He picked his teeth with a toothpick.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;braise 挠痒痒&lt;/p&gt;
-
-    &lt;p&gt;With braises, where you’re adding the least amount of liquid required to cook the meat or vegetables, stews require full submersion, and usually call for the meat or vegetables to be cut into unifiorm pieces for even cooking.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;red braised pork belly 红烧肉&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Bring the water to a boil, turn down to medium low heat, and let it simmer for 40 minutes.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;Because it preserves all the nutrients in your food.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;tickle 胳肢&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;The bigger girls used to chase me and tickle me.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;comb 梳头&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Marinate the chicken in the fridge overnight, and then cook it next day.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;pickled beef&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;bend / stoop (down) / bow 弯腰&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;smoked duck&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;roast 踮脚&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;roasted chicken 烤鸭&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;grilled chicken 烤鸡&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;fart / break wind 放屁&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Don’t fart in my room!&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;The fox broke wind in order to escape those hunting dogs.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;cross one’s legs / sit cross-legged 盘腿&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;We sat cross-legged on the blanket.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;squat 蹲下&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Linux - grep, egrep, fgrep</title><link href="http://localhost:4000/linux-grep-egrep-fgrep/" rel="alternate" type="text/html" title="Linux - grep, egrep, fgrep" /><published>2020-02-23T00:00:00-08:00</published><updated>2020-02-23T00:00:00-08:00</updated><id>http://localhost:4000/linux-grep-egrep-fgrep</id><content type="html" xml:base="http://localhost:4000/linux-grep-egrep-fgrep/">&lt;p&gt;&lt;img src=&quot;http://qpeng.org/computer/grep.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;偶而恶心和呕吐 develop occasional nausea and vomiting&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Linux - grep, egrep, fgrep</title><link href="http://localhost:4000/linux-grep-egrep-fgrep/" rel="alternate" type="text/html" title="Linux - grep, egrep, fgrep" /><published>2020-02-23T00:00:00-08:00</published><updated>2020-02-23T00:00:00-08:00</updated><id>http://localhost:4000/linux-grep-egrep-fgrep</id><content type="html" xml:base="http://localhost:4000/linux-grep-egrep-fgrep/">&lt;p&gt;&lt;img src=&quot;http://qpeng.org/computer/grep.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1250,888 +1948,4 @@ root     17475  0.0  0.0  61180   832 pts/0    S+   16:27   0:00 egrep (cron|sys
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/09/curl.html&quot; title=&quot;curl 初学者教程&quot;&gt;curl 初学者教程&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Vegetable</title><link href="http://localhost:4000/english-vocabulary-vegetable/" rel="alternate" type="text/html" title="English Vocabulary - Vegetable" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/english-vocabulary-vegetable</id><content type="html" xml:base="http://localhost:4000/english-vocabulary-vegetable/">&lt;p&gt;&lt;img src=&quot;https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h1 id=&quot;vegetable&quot;&gt;Vegetable&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Adzuki[ə‘ʒuki] bean 红豆&lt;/p&gt;
-
-&lt;p&gt;Aloe[‘ælo] 芦荟&lt;/p&gt;
-
-&lt;p&gt;Aniseed[‘ænəsid]八角&lt;/p&gt;
-
-&lt;p&gt;Aubergine[‘obɚʒin] 茄子（英国）&lt;/p&gt;
-
-&lt;p&gt;Asparagus[ə‘spærəgəs] 芦笋&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Bamboo[，bæm‘bu] Shoot笋&lt;/p&gt;
-
-&lt;p&gt;Broccoli[‘brɔkəli]西兰花&lt;/p&gt;
-
-&lt;p&gt;Bean Sprout[spraʊt] 绿豆芽&lt;/p&gt;
-
-&lt;p&gt;Beetroot [‘bitrut] 甜菜&lt;/p&gt;
-
-&lt;p&gt;Brussels sprout球芽甘蓝&lt;/p&gt;
-
-&lt;p&gt;Bitter gourd[ɡʊrd] 苦瓜&lt;/p&gt;
-
-&lt;p&gt;Bok-choy[‘bɔk’tʃɔɪ]小白菜&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Carrot [‘kærət] 胡萝卜&lt;/p&gt;
-
-&lt;p&gt;Cabbage [ˈkæbɪdʒ]卷心菜&lt;/p&gt;
-
-&lt;p&gt;Celery[‘sɛləri]芹菜&lt;/p&gt;
-
-&lt;p&gt;Cucumber[‘kjʊ，kʌmbɚ]黄瓜&lt;/p&gt;
-
-&lt;p&gt;Cauliflower[‘kɔlɪ’flaʊɚ]花菜&lt;/p&gt;
-
-&lt;p&gt;Cloud ear/wood ear木耳&lt;/p&gt;
-
-&lt;p&gt;Chive [tʃaɪv] 细香葱&lt;/p&gt;
-
-&lt;p&gt;Corn[kɔrn] 玉米&lt;/p&gt;
-
-&lt;p&gt;Chili [‘tʃɪli]辣椒&lt;/p&gt;
-
-&lt;p&gt;Coriander[，kɔrɪ‘ændɚ]香菜&lt;/p&gt;
-
-&lt;p&gt;Cinnamon[‘sɪnəmən]肉桂&lt;/p&gt;
-
-&lt;p&gt;Chinese Kale[kel]芥蓝&lt;/p&gt;
-
-&lt;p&gt;Chinese Radish/Daikon白萝卜&lt;/p&gt;
-
-&lt;p&gt;Chinese Yam[jæm] 山药&lt;/p&gt;
-
-&lt;p&gt;Chrysanthemum[krɪ‘sænθəməm] greens茼蒿&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;E&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Eggplant[‘ɛɡplænt]茄子&lt;/p&gt;
-
-&lt;p&gt;Eddoes [‘edəʊ]小芋头&lt;/p&gt;
-
-&lt;p&gt;Enoki[e‘nɔki：] mushroom 金针菇&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;F&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;French Bean四季豆/刀豆&lt;/p&gt;
-
-&lt;p&gt;Fennel [‘fɛnl]茴香&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;G&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ginger[‘dʒɪndʒɚ] 姜&lt;/p&gt;
-
-&lt;p&gt;Garlic[‘ɡɑrlɪk]大蒜&lt;/p&gt;
-
-&lt;p&gt;Garlic sprout 蒜苗/苔&lt;/p&gt;
-
-&lt;p&gt;Green Pepper 青椒&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;K&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kohlrabi [‘kol’rɑbi]  甘蓝&lt;/p&gt;
-
-&lt;p&gt;Kelp[kɛlp] 海带&lt;/p&gt;
-
-&lt;p&gt;King oyster mushroom 杏鲍菇&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;L&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Lettuce[‘lɛtɪs] 莴苣/生菜&lt;/p&gt;
-
-&lt;p&gt;Lotus seed 莲子&lt;/p&gt;
-
-&lt;p&gt;Loofah [‘lufə] 丝瓜&lt;/p&gt;
-
-&lt;p&gt;Laurel[‘lɔrəl] 月桂&lt;/p&gt;
-
-&lt;p&gt;Leek [lik]韭葱&lt;/p&gt;
-
-&lt;p&gt;Laver[‘levɚ]紫菜&lt;/p&gt;
-
-&lt;p&gt;Licorice[‘lɪkərɪs； ’lɪkərɪʃ] 甘草&lt;/p&gt;
-
-&lt;p&gt;Lotus root 莲藕&lt;/p&gt;
-
-&lt;p&gt;想学习更多英语知识，请关注口袋英语aikoudaiyy&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;M&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mushroom[‘mʌʃrʊm]蘑菇&lt;/p&gt;
-
-&lt;p&gt;Mung bean 绿豆&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;O&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Onion [‘ʌnjən]洋葱&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pumpkin [‘pʌmpkɪn] 南瓜&lt;/p&gt;
-
-&lt;p&gt;Pepper [‘pɛpɚ]胡椒&lt;/p&gt;
-
-&lt;p&gt;Pickled cucumber酸黄瓜&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Radish [‘rædɪʃ] 萝卜&lt;/p&gt;
-
-&lt;p&gt;Romaine [rə（ʊ）‘meɪn]生菜&lt;/p&gt;
-
-&lt;p&gt;Red pepper 红椒&lt;/p&gt;
-
-&lt;p&gt;Red bean泛指红色的豆&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;S&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Scallion[‘skælɪən]/Spring onion 青葱&lt;/p&gt;
-
-&lt;p&gt;Silver ear fungus 白木耳&lt;/p&gt;
-
-&lt;p&gt;Soybean [‘sɔɪ，bin]大豆&lt;/p&gt;
-
-&lt;p&gt;Soybean sprout 黄豆芽&lt;/p&gt;
-
-&lt;p&gt;Spinach[‘spɪnɪtʃ]菠菜&lt;/p&gt;
-
-&lt;p&gt;Straw mushroom草菇&lt;/p&gt;
-
-&lt;p&gt;Green bean刀豆&lt;/p&gt;
-
-&lt;p&gt;Sweet Potato红薯&lt;/p&gt;
-
-&lt;p&gt;Seaweed[‘si’wid]海藻&lt;/p&gt;
-
-&lt;p&gt;Snow Pea荷兰豆&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Taro [‘tærəʊ] 大芋头&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;W&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Watercress[‘wɔtɚ’krɛs] 豆瓣菜&lt;/p&gt;
-
-&lt;p&gt;Water spinach空心菜&lt;/p&gt;
-
-&lt;p&gt;Water caltrop‘kæltrəp] 菱角&lt;/p&gt;
-
-&lt;p&gt;White gourd [ɡʊrd]冬瓜&lt;/p&gt;
-
-&lt;p&gt;Water chestnut荸荠&lt;/p&gt;
-
-&lt;p&gt;Wakame/sea mustard裙带藻（味增汤海带）&lt;/p&gt;
-
-&lt;p&gt;Wild rice stem茭白&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Y&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Yellow pepper 黄椒&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Cook</title><link href="http://localhost:4000/english-cook/" rel="alternate" type="text/html" title="English Vocabulary - Cook" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/english-cook</id><content type="html" xml:base="http://localhost:4000/english-cook/">&lt;p&gt;&lt;img src=&quot;https://gourmandelle.com/wp-content/uploads/2013/03/Cooking-Methods-from-a-Yin-Yang-Perspective-Gourmandelle.com_.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;stir-fry 炒&lt;/p&gt;
-
-    &lt;p&gt;saute / sautee&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Today, I don’t know what to cook. I’m just going to stir fry some veggies and meat, Whatever I have on hand. Therefore&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;I’m just going to make some veggie stir-fry.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;pan fry 煎&lt;/p&gt;
-
-    &lt;p&gt;Gyoza 日式煎饺&lt;/p&gt;
-
-    &lt;p&gt;Pan fried dumplings 煎饺&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;sear 煎（焦）&lt;/p&gt;
-
-    &lt;p&gt;Pan seared scallons 香煎扇贝&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;brown 煎（焦）&lt;/p&gt;
-
-    &lt;p&gt;Brown all sides of the steak&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;braise 炖（红烧） VS. stew 炖 VS. gradual simmering（小火炖）&lt;/p&gt;
-
-    &lt;p&gt;With braises, where you’re adding the least amount of liquid required to cook the meat or vegetables, stews require full submersion, and usually call for the meat or vegetables to be cut into unifiorm pieces for even cooking.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;red braised pork belly 红烧肉&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Bring the water to a boil, turn down to medium low heat, and let it simmer for 40 minutes.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;Because it preserves all the nutrients in your food.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;blanch 焯水&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Blanch the vegetables before stir frying. It&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;marinate 腌 VS. pickle 卤制&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Marinate the chicken in the fridge overnight, and then cook it next day.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;pickled beef&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;smoke 熏&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;smoked duck&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;roast 烤（烤箱） VS. grill 烤（置于火上） VS. broil （炙烤，高温）&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;roasted chicken 烤鸭&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;grilled chicken 烤鸡&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">SSH原理与运用</title><link href="http://localhost:4000/linux-ssh/" rel="alternate" type="text/html" title="SSH原理与运用" /><published>2020-02-19T00:00:00-08:00</published><updated>2020-02-19T00:00:00-08:00</updated><id>http://localhost:4000/linux-ssh</id><content type="html" xml:base="http://localhost:4000/linux-ssh/">&lt;p&gt;&lt;img src=&quot;https://www.howtogeek.com/wp-content/uploads/2019/07/ximg_5d28e05a4901f.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.IPkGuFKMja.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;什么是SSH？&lt;/p&gt;
-
-    &lt;p&gt;简单说，SSH是一种网络协议，用于计算机之间的加密登录。&lt;/p&gt;
-
-    &lt;p&gt;如果一个用户从本地计算机，使用SSH协议登录另一台远程计算机，我们就可以认为，这种登录是安全的，即使被中途截获，密码也不会泄露。&lt;/p&gt;
-
-    &lt;p&gt;最早的时候，互联网通信都是明文通信，一旦被截获，内容就暴露无疑。1995年，芬兰学者Tatu Ylonen设计了SSH协议，将登录信息全部加密，成为互联网安全的一个基本解决方案，迅速在全世界获得推广，目前已经成为Linux系统的标准配置。&lt;/p&gt;
-
-    &lt;p&gt;需要指出的是，SSH只是一种协议，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;最基本的用法&lt;/p&gt;
-
-    &lt;p&gt;SSH主要用于远程登录。假定你要以用户名user，登录远程主机host，只要一条简单命令就可以了。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh user@host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;如果本地用户名与远程用户名一致，登录时可以省略用户名。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;SSH的默认端口是22，也就是说，你的登录请求会送进远程主机的22端口。使用p参数，可以修改这个端口。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 2222 user@host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;上面这条命令表示，ssh直接连接远程主机的2222端口。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;中间人攻击&lt;/p&gt;
-
-    &lt;p&gt;SSH之所以能够保证安全，原因在于它采用了公钥加密。&lt;/p&gt;
-
-    &lt;p&gt;整个过程是这样的：&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 3.1. 远程主机收到用户的登录请求，把自己的公钥发给用户。
-
- 3.2. 用户使用这个公钥，将登录密码加密后，发送回来。
-
- 3.3. 远程主机用自己的私钥，解密登录密码，如果密码正确，就同意用户登录。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;这个过程本身是安全的，但是实施的时候存在一个风险：如果有人截获了登录请求，然后冒充远程主机，将伪造的公钥发给用户，那么用户很难辨别真伪。因为不像https协议，SSH协议的公钥是没有证书中心（CA）公证的，也就是说，都是自己签发的。&lt;/p&gt;
-
-    &lt;p&gt;可以设想，如果攻击者插在用户与远程主机之间（比如在公共的wifi区域），用伪造的公钥，获取用户的登录密码。再用这个密码登录远程主机，那么SSH的安全机制就荡然无存了。这种风险就是著名的”&lt;a href=&quot;http://en.wikipedia.org/wiki/Man-in-the-middle_attack&quot; title=&quot;中间人攻击&quot;&gt;中间人攻击&lt;/a&gt;“（Man-in-the-middle attack）。&lt;/p&gt;
-
-    &lt;p&gt;SSH协议是如何应对的呢？&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;口令登录&lt;/p&gt;
-
-    &lt;p&gt;如果你是第一次登录对方主机，系统会出现下面的提示：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh user@host
-&lt;span class=&quot;go&quot;&gt;
- 　　The authenticity of host 'host (12.18.429.21)' can't be established.
-
- 　　RSA key fingerprint is 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d.
-
- 　　Are you sure you want to continue connecting (yes/no)?
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;这段话的意思是，无法确认host主机的真实性，只知道它的公钥指纹，问你还想继续连接吗？&lt;/p&gt;
-
-    &lt;p&gt;所谓”公钥指纹”，是指公钥长度较长（这里采用RSA算法，长达1024位），很难比对，所以对其进行MD5计算，将它变成一个128位的指纹。上例中是98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d，再进行比较，就容易多了。&lt;/p&gt;
-
-    &lt;p&gt;很自然的一个问题就是，用户怎么知道远程主机的公钥指纹应该是多少？回答是没有好办法，远程主机必须在自己的网站上贴出公钥指纹，以便用户自行核对。&lt;/p&gt;
-
-    &lt;p&gt;假定经过风险衡量以后，用户决定接受这个远程主机的公钥。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; 　　Are you sure you want to continue connecting (yes/no)? yes
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;系统会出现一句提示，表示host主机已经得到认可。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; 　　Warning: Permanently added 'host,12.18.429.21' (RSA) to the list of known hosts.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;然后，会要求输入密码。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; 　　Password: (enter password)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;如果密码正确，就可以登录了。&lt;/p&gt;
-
-    &lt;p&gt;当远程主机的公钥被接受以后，它就会被保存在文件$HOME/.ssh/known_hosts之中。下次再连接这台主机，系统就会认出它的公钥已经保存在本地了，从而跳过警告部分，直接提示输入密码。&lt;/p&gt;
-
-    &lt;p&gt;每个SSH用户都有自己的known_hosts文件，此外系统也有一个这样的文件，通常是/etc/ssh/ssh_known_hosts，保存一些对所有用户都可信赖的远程主机的公钥。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;公钥登录&lt;/p&gt;
-
-    &lt;p&gt;使用密码登录，每次都必须输入密码，非常麻烦。好在SSH还提供了公钥登录，可以省去输入密码的步骤。&lt;/p&gt;
-
-    &lt;p&gt;所谓”公钥登录”，原理很简单，就是用户将自己的公钥储存在远程主机上。登录的时候，远程主机会向用户发送一段随机字符串，用户用自己的私钥加密后，再发回来。远程主机用事先储存的公钥进行解密，如果成功，就证明用户是可信的，直接允许登录shell，不再要求密码。&lt;/p&gt;
-
-    &lt;p&gt;这种方法要求用户必须提供自己的公钥。如果没有现成的，可以直接用ssh-keygen生成一个：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh-keygen
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;运行上面的命令以后，系统会出现一系列提示，可以一路回车。其中有一个问题是，要不要对私钥设置口令（passphrase），如果担心私钥的安全，这里可以设置一个。&lt;/p&gt;
-
-    &lt;p&gt;运行结束以后，在$HOME/.ssh/目录下，会新生成两个文件：id_rsa.pub和id_rsa。前者是你的公钥，后者是你的私钥。&lt;/p&gt;
-
-    &lt;p&gt;这时再输入下面的命令，将公钥传送到远程主机host上面：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh-copy-id user@host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;好了，从此你再登录，就不需要输入密码了。&lt;/p&gt;
-
-    &lt;p&gt;如果还是不行，就打开远程主机的/etc/ssh/sshd_config这个文件，检查下面几行前面”#”注释是否取掉。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; 　　RSAAuthentication yes
- 　　PubkeyAuthentication yes
- 　　AuthorizedKeysFile .ssh/authorized_keys
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;然后，重启远程主机的ssh服务。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; 　　// ubuntu系统
- 　　service ssh restart
-
- 　　// debian系统
- 　　/etc/init.d/ssh restart
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;authorized_keys文件&lt;/p&gt;
-
-    &lt;p&gt;远程主机将用户的公钥，保存在登录后的用户主目录的$HOME/.ssh/authorized_keys文件中。公钥就是一段字符串，只要把它追加在authorized_keys文件的末尾就行了。&lt;/p&gt;
-
-    &lt;p&gt;这里不使用上面的ssh-copy-id命令，改用下面的命令，解释公钥的保存过程：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh user@host &lt;span class=&quot;s1&quot;&gt;'mkdir -p .ssh &amp;amp;&amp;amp; cat &amp;gt;&amp;gt; .ssh/authorized_keys'&lt;/span&gt; &amp;lt; ~/.ssh/id_rsa.pub
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;这条命令由多个语句组成，依次分解开来看：&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; （1）&quot;$ ssh user@host&quot;，表示登录远程主机；
- （2）单引号中的mkdir .ssh &amp;amp;&amp;amp; cat &amp;gt;&amp;gt; .ssh/authorized_keys，表示登录后在远程shell上执行的命令；
- （3）&quot;$ mkdir -p .ssh&quot;的作用是，如果用户主目录中的.ssh目录不存在，就创建一个；
- （4）'cat &amp;gt;&amp;gt; .ssh/authorized_keys' &amp;lt; ~/.ssh/id_rsa.pub的作用是，将本地的公钥文件~/.ssh/id_rsa.pub，重定向追加到远程文件authorized_keys的末尾。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;写入authorized_keys文件后，公钥登录的设置就完成了。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;远程操作&lt;/p&gt;
-
-    &lt;p&gt;SSH不仅可以用于远程主机登录，还可以直接在远程主机上执行操作。&lt;/p&gt;
-
-    &lt;p&gt;上一节的操作，就是一个例子：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh user@host &lt;span class=&quot;s1&quot;&gt;'mkdir -p .ssh &amp;amp;&amp;amp; cat &amp;gt;&amp;gt; .ssh/authorized_keys'&lt;/span&gt; &amp;lt; ~/.ssh/id_rsa.pub
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;单引号中间的部分，表示在远程主机上执行的操作；后面的输入重定向，表示数据通过SSH传向远程主机。&lt;/p&gt;
-
-    &lt;p&gt;这就是说，SSH可以在用户和远程主机之间，建立命令和数据的传输通道，因此很多事情都可以通过SSH来完成。&lt;/p&gt;
-
-    &lt;p&gt;下面看几个例子。&lt;/p&gt;
-
-    &lt;p&gt;【例1】&lt;/p&gt;
-
-    &lt;p&gt;将$HOME/src/目录下面的所有文件，复制到远程主机的$HOME/src/目录。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;czv src | ssh user@host &lt;span class=&quot;s1&quot;&gt;'tar xz'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;【例2】&lt;/p&gt;
-
-    &lt;p&gt;将远程主机$HOME/src/目录下面的所有文件，复制到用户的当前目录。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh user@host &lt;span class=&quot;s1&quot;&gt;'tar cz src'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;xzv
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;【例3】&lt;/p&gt;
-
-    &lt;p&gt;查看远程主机是否运行进程httpd。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh user@host &lt;span class=&quot;s1&quot;&gt;'ps ax | grep [h]ttpd'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;绑定本地端口&lt;/p&gt;
-
-    &lt;p&gt;既然SSH可以传送数据，那么我们可以让那些不加密的网络连接，全部改走SSH连接，从而提高安全性。&lt;/p&gt;
-
-    &lt;p&gt;假定我们要让8080端口的数据，都通过SSH传向远程主机，命令就这样写：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;     $&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; 8080 user@host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;SSH会建立一个socket，去监听本地的8080端口。一旦有数据传向那个端口，就自动把它转移到SSH连接上面，发往远程主机。可以想象，如果8080端口原来是一个不加密端口，现在将变成一个加密端口。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;本地端口转发&lt;/p&gt;
-
-    &lt;p&gt;有时，绑定本地端口还不够，还必须指定数据传送的目标主机，从而形成点对点的”端口转发”。为了区别后文的”远程端口转发”，我们把这种情况称为”本地端口转发”（Local forwarding）。&lt;/p&gt;
-
-    &lt;p&gt;假定host1是本地主机，host2是远程主机。由于种种原因，这两台主机之间无法连通。但是，另外还有一台host3，可以同时连通前面两台主机。因此，很自然的想法就是，通过host3，将host1连上host2。&lt;/p&gt;
-
-    &lt;p&gt;我们在host1执行下面的命令：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 2121:host2:21 host3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;命令中的L参数一共接受三个值，分别是”本地端口:目标主机:目标主机端口”，它们之间用冒号分隔。这条命令的意思，就是指定SSH绑定本地端口2121，然后指定host3将所有的数据，转发到目标主机host2的21端口（假定host2运行FTP，默认端口为21）。&lt;/p&gt;
-
-    &lt;p&gt;这样一来，我们只要连接host1的2121端口，就等于连上了host2的21端口。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ftp localhost:2121
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;“本地端口转发”使得host1和host3之间仿佛形成一个数据传输的秘密隧道，因此又被称为”SSH隧道”。&lt;/p&gt;
-
-    &lt;p&gt;下面是一个比较有趣的例子。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 5900:localhost:5900 host3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;它表示将本机的5900端口绑定host3的5900端口（这里的localhost指的是host3，因为目标主机是相对host3而言的）。&lt;/p&gt;
-
-    &lt;p&gt;另一个例子是通过host3的端口转发，ssh登录host2。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 9001:host2:22 host3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;这时，只要ssh登录本机的9001端口，就相当于登录host2了。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; 　　$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 9001 localhost
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;上面的-p参数表示指定登录端口。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;远程端口转发&lt;/p&gt;
-
-    &lt;p&gt;既然”本地端口转发”是指绑定本地端口的转发，那么”远程端口转发”（remote forwarding）当然是指绑定远程端口的转发。&lt;/p&gt;
-
-    &lt;p&gt;还是接着看上面那个例子，host1与host2之间无法连通，必须借助host3转发。但是，特殊情况出现了，host3是一台内网机器，它可以连接外网的host1，但是反过来就不行，外网的host1连不上内网的host3。这时，”本地端口转发”就不能用了，怎么办？&lt;/p&gt;
-
-    &lt;p&gt;解决办法是，既然host3可以连host1，那么就从host3上建立与host1的SSH连接，然后在host1上使用这条连接就可以了。&lt;/p&gt;
-
-    &lt;p&gt;我们在host3执行下面的命令：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;    $&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; 2121:host2:21 host1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;R参数也是接受三个值，分别是”远程主机端口:目标主机:目标主机端口”。这条命令的意思，就是让host1监听它自己的2121端口，然后将所有数据经由host3，转发到host2的21端口。由于对于host3来说，host1是远程主机，所以这种情况就被称为”远程端口绑定”。&lt;/p&gt;
-
-    &lt;p&gt;绑定之后，我们在host1就可以连接host2了：&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;    $&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ftp localhost:2121
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;这里必须指出，”远程端口转发”的前提条件是，host1和host3两台主机都有sshD和ssh客户端。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SSH的其他参数&lt;/p&gt;
-
-    &lt;p&gt;SSH还有一些别的参数，也值得介绍。&lt;/p&gt;
-
-    &lt;p&gt;N参数，表示只连接远程主机，不打开远程shell；T参数，表示不为这个连接分配TTY。这个两个参数可以放在一起用，代表这个SSH连接只用来传数据，不执行远程操作。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;    $&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-NT&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; 8080 host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;f参数，表示SSH连接成功后，转入后台运行。这样一来，你就可以在不中断SSH连接的情况下，在本地shell中执行其他操作。&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;    $&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; 8080 host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;要关闭这个后台连接，就只有用kill命令去杀掉进程。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;参考文献&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;　　* SSH, The Secure Shell: The Definitive Guide:  &lt;a href=&quot;http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch02_04.htm&quot; title=&quot;2.4. Authentication by Cryptographic Key&quot;&gt;2.4. Authentication by Cryptographic Key&lt;/a&gt;, O’reilly&lt;/p&gt;
-
-&lt;p&gt;　　* SSH, The Secure Shell: The Definitive Guide: &lt;a href=&quot;http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch09_02.htm&quot; title=&quot;9.2. Port Forwarding&quot;&gt;9.2. Port Forwarding&lt;/a&gt;, O’reilly&lt;/p&gt;
-
-&lt;p&gt;　　* Shebang: &lt;a href=&quot;http://shebang.brandonmintern.com/tips-for-remote-unix-work-ssh-screen-and-vnc&quot; title=&quot;Tips for Remote Unix Work (SSH, screen, and VNC)&quot;&gt;Tips for Remote Unix Work (SSH, screen, and VNC)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;　　* brihatch: &lt;a href=&quot;http://www.symantec.com/connect/articles/ssh-host-key-protection&quot; title=&quot;SSH Host Key Protection&quot;&gt;SSH Host Key Protection&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;　　* brihatch: &lt;a href=&quot;http://www.symantec.com/connect/articles/ssh-user-identities&quot; title=&quot;SSH User Identities&quot;&gt;SSH User Identities&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;　　* IBM developerWorks: &lt;a href=&quot;http://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/&quot; title=&quot;实战 SSH 端口转发&quot;&gt;实战 SSH 端口转发&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;　　* Jianing YANG：&lt;a href=&quot;http://blog.jianingy.com/2009/09/ssh%E9%9A%A7%E9%81%93%E6%8A%80%E6%9C%AF%E7%AE%80%E4%BB%8B/&quot; title=&quot;ssh隧道技术简介&quot;&gt;ssh隧道技术简介&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;　　* WikiBooks: &lt;a href=&quot;http://en.wikibooks.org/wiki/Internet_Technologies/SSH&quot; title=&quot;Internet Technologies/SSH&quot;&gt;Internet Technologies/SSH&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;　　* Buddhika Chamith: SSH Tunneling Explained &lt;a href=&quot;http://chamibuddhika.wordpress.com/2012/03/21/ssh-tunnelling-explained/&quot; title=&quot;SSH Tunneling Explained&quot;&gt;SSH Tunneling Explained&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Fruit</title><link href="http://localhost:4000/english-vocabulary-fruit/" rel="alternate" type="text/html" title="English Vocabulary - Fruit" /><published>2020-02-17T00:00:00-08:00</published><updated>2020-02-17T00:00:00-08:00</updated><id>http://localhost:4000/english-vocabulary-fruit</id><content type="html" xml:base="http://localhost:4000/english-vocabulary-fruit/">&lt;p&gt;&lt;img src=&quot;https://www.snopes.com/tachyon/2018/04/fruits_feature.jpg?resize=865,452&amp;amp;quality=65&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h1 id=&quot;fruit&quot;&gt;Fruit&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Apple [ˈæpl] 苹果&lt;/p&gt;
-
-&lt;p&gt;　　Apricot [ˈeprɪˌkɑt] 杏桃&lt;/p&gt;
-
-&lt;p&gt;　　Almond [‘ɑmənd]杏仁&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Banana [bəˈnɑ：nə] 香蕉&lt;/p&gt;
-
-&lt;p&gt;　　Betelnut [‘bitl，nʌt]槟榔&lt;/p&gt;
-
-&lt;p&gt;　　Bitter orange 苦柑橘&lt;/p&gt;
-
-&lt;p&gt;　　Blackberry [‘blæk’bɛri] 黑莓&lt;/p&gt;
-
-&lt;p&gt;　　Blueberry [‘blubɛri] 蓝莓&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Cherry [ˈtʃeri] 樱桃&lt;/p&gt;
-
-&lt;p&gt;　　Crabapple [‘kræb’æpl] 海棠果&lt;/p&gt;
-
-&lt;p&gt;　　Carambola [，kærəm‘bolə]杨桃&lt;/p&gt;
-
-&lt;p&gt;　　Cherry tomato圣女果&lt;/p&gt;
-
-&lt;p&gt;　　Chestnut  [‘tʃɛsnʌt] 栗子&lt;/p&gt;
-
-&lt;p&gt;　　Coconut [‘kokənʌt] 椰子&lt;/p&gt;
-
-&lt;p&gt;　　Cranberry [‘kræn’bɛri]曼越莓&lt;/p&gt;
-
-&lt;p&gt;　　Cumquat[‘kʌmkwɔt]金桔&lt;/p&gt;
-
-&lt;p&gt;　　Custard[‘kʌstɚd] apple 番荔枝&lt;/p&gt;
-
-&lt;p&gt;　　Common fig [fɪɡ]无花果&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Damson [‘dæmzn] 洋李子（黑紫色）&lt;/p&gt;
-
-&lt;p&gt;　　Dates 枣子&lt;/p&gt;
-
-&lt;p&gt;　　Durian [‘dʊərɪən]榴莲&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;G&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Grape [greɪp] 葡萄&lt;/p&gt;
-
-&lt;p&gt;　　Grapefruit [‘ɡrepfrut]葡萄柚&lt;/p&gt;
-
-&lt;p&gt;　　Guava [‘ɡwɑvə]番石榴&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;H&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Haw [hɔ]山楂&lt;/p&gt;
-
-&lt;p&gt;　　Hami melon 哈蜜瓜&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;K&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Kiwifruit[‘kiwi，frʊt]奇异果，猕猴桃&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;L&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Lemon [ˈlemən] 柠檬&lt;/p&gt;
-
-&lt;p&gt;　　Lichee[，lɪ‘tʃi] 荔枝&lt;/p&gt;
-
-&lt;p&gt;　　Longan [‘lɔŋɡən]龙眼、桂圆&lt;/p&gt;
-
-&lt;p&gt;　　Loquat [‘lokwɑt]枇杷&lt;/p&gt;
-
-&lt;p&gt;　　Lotus nut （seed） 莲子&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;M&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Mango [ˈmæŋgəʊ] 芒果&lt;/p&gt;
-
-&lt;p&gt;　　Mandarin[‘mændərɪn] 中国柑桔&lt;/p&gt;
-
-&lt;p&gt;　　Mangosteen[‘mæŋgə，stin]山竹&lt;/p&gt;
-
-&lt;p&gt;　　Muskmelon[‘mʌsk，mɛlən]甜瓜总称&lt;/p&gt;
-
-&lt;p&gt;　　Mulberry [‘mʌl’bɛri]桑果&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;N&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Nectarine[ˌnɛktəˈrin] 油桃&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;O&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Olive 橄榄&lt;/p&gt;
-
-&lt;p&gt;　　Orange 橙子&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Papaya [pə‘paɪə] （Pawpaw） 木瓜&lt;/p&gt;
-
-&lt;p&gt;　　Peach 桃子&lt;/p&gt;
-
-&lt;p&gt;　　Peanut 花生&lt;/p&gt;
-
-&lt;p&gt;　　Pear 梨&lt;/p&gt;
-
-&lt;p&gt;　　Persimmon[pɚ‘sɪmən] 柿子&lt;/p&gt;
-
-&lt;p&gt;　　Pineapple [‘paɪn’æpl] 菠萝&lt;/p&gt;
-
-&lt;p&gt;　　Pistachio[pɪˈstæʃiˌoʊ]开心果&lt;/p&gt;
-
-&lt;p&gt;　　Pitaya [‘pɪtəjɚ]火龙果&lt;/p&gt;
-
-&lt;p&gt;　　Plum 李子&lt;/p&gt;
-
-&lt;p&gt;　　Pomegranate [‘pɑmɪɡrænɪt]石榴&lt;/p&gt;
-
-&lt;p&gt;　　Pomelo [‘pɑməlo]柚子&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Rambutan [ræm‘butn]红毛丹&lt;/p&gt;
-
-&lt;p&gt;　　Raspberry [‘ræzbəri] 树莓&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;S&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Shaddock [‘ʃædək] 文旦&lt;/p&gt;
-
-&lt;p&gt;　　Strawberry 草莓&lt;/p&gt;
-
-&lt;p&gt;　　Sugar cane 甘蔗&lt;/p&gt;
-
-&lt;p&gt;　　Sunflower seeds 瓜子&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;W&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Walnut[‘wɔlnət]核桃&lt;/p&gt;
-
-&lt;p&gt;　　Water Caltrop[‘kæltrəp]菱角&lt;/p&gt;
-
-&lt;p&gt;　　Water-chestnut[‘tʃɛsnʌt]马蹄、荸荠&lt;/p&gt;
-
-&lt;p&gt;　　Watermelon[‘wɔtɚmɛlən] 西瓜&lt;/p&gt;
-
-&lt;p&gt;　　Waxberry[‘wæks，bɛri]杨梅&lt;/p&gt;
-
-&lt;p&gt;　　Wax apple莲雾&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Others&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;　　Pulp/flesh 果肉&lt;/p&gt;
-
-&lt;p&gt;　　core核&lt;/p&gt;
-
-&lt;p&gt;　　Apple core 苹果核&lt;/p&gt;
-
-&lt;p&gt;　　Pit 核&lt;/p&gt;
-
-&lt;p&gt;　　Apricot pit杏仁核&lt;/p&gt;
-
-&lt;p&gt;　　Kernel[‘kɝnl]核&lt;/p&gt;
-
-&lt;p&gt;　　Nucleus [‘nuklɪəs]核仁&lt;/p&gt;
-
-&lt;p&gt;　　Seed 籽&lt;/p&gt;
-
-&lt;p&gt;　　Skin皮&lt;/p&gt;
-
-&lt;p&gt;　　Peel 皮&lt;/p&gt;
-
-&lt;p&gt;　　Tender 嫩的&lt;/p&gt;
-
-&lt;p&gt;　　Bitter苦的&lt;/p&gt;
-
-&lt;p&gt;　　Canned fruit 水果罐头&lt;/p&gt;
-
-&lt;p&gt;　　Crisp 脆的&lt;/p&gt;
-
-&lt;p&gt;　　Rotten [‘rɑtn] 烂的&lt;/p&gt;
-
-&lt;p&gt;　　Ripe [raɪp] 熟的（特指水果）&lt;/p&gt;
-
-&lt;p&gt;　　Unripe 未熟的&lt;/p&gt;
-
-&lt;p&gt;　　Flavor 味道&lt;/p&gt;
-
-&lt;p&gt;　　Fresh 新鲜的&lt;/p&gt;
-
-&lt;p&gt;　　Hard 坚硬的&lt;/p&gt;
-
-&lt;p&gt;　　Juice 果汁&lt;/p&gt;
-
-&lt;p&gt;　　Juicy 多汁的&lt;/p&gt;
-
-&lt;p&gt;　　Succulent 多汁的&lt;/p&gt;
-
-&lt;p&gt;　　Dew 果露&lt;/p&gt;
-
-&lt;p&gt;　　Seasonable 应季的&lt;/p&gt;
-
-&lt;p&gt;　　Greengrocer [‘ɡrinɡrosɚ] 蔬果商&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Actual speaking English - 02</title><link href="http://localhost:4000/english-speaking-2/" rel="alternate" type="text/html" title="Actual speaking English - 02" /><published>2020-02-16T00:00:00-08:00</published><updated>2020-02-16T00:00:00-08:00</updated><id>http://localhost:4000/english-speaking-2</id><content type="html" xml:base="http://localhost:4000/english-speaking-2/">&lt;p&gt;&lt;img src=&quot;https://i.pinimg.com/474x/bb/b5/0f/bbb50fc5dbf12dd27e65750159d7af55.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Hello, everyone. My name is Peter Liptak and I’m looking forward to working with all of you here at EBS. As a new employee, I’m hoping to meet each and every one of you individually and get to know you, as well as get your feedback on what we could do to improve things here.&lt;/p&gt;
-
-&lt;p&gt;As to (for) my background, I have a lot of experience in education and writing. I’ve worked in education for about twenty years: been a professor, a private instructor, and also, even a pre-school teacher, so I’m fairly well-rounded in that experience. As a professional writer, I’ve been working for many years with large conglomerates and some governmental organizations, as well as publishing books. I publish ESL books, children’s books and even books on Korea. Anyway, thank you all and please come and talk to me when you have a chance.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I'm looking forward to + verb / verb-ing
-
-I'm looking forward to showing you my capabilities.
-
-As a new employee, I hope to / I'm hoping to + verb
-
-As a new employee, I hope to be successful in my role.
-
-As for my background, I have experience in + noun / of + verb-ing.
-
-As for my background, I have experience of working abroad.
-
-As for my background, I have work experience in teaching / planning.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><summary type="html"></summary></entry></feed>

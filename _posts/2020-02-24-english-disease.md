@@ -99,13 +99,58 @@ comments: true
 
 15. measles 麻疹
 
-16. heart disease 心胀病
+    a disease, especially of children, that causes a high temperature and small red spots that cover the whole body
+
+    - All our children have had the measles.
+
+16. heart disease 心脏病
 
 17. diabetes 糖尿病
 
+    a medical condition in which the body cannot produce enough insulin to control the amount of sugar in the blood
+
 18. cancer 癌症
 
+    a serious disease in which growths of cells, also called cancers, form in the body and kill normal body cells. The disease often causes death.
+
 19. fungus 脚气
+
+    an organism (= a living thing) that is similar to a plant without leaves, flowers or green colouring, and that usually grows on plants or on decaying matter. mushrooms and mildew are both fungi.
+
+20. pneumonia 肺炎 bronchia 支气管
+
+    a serious illness affecting one or both lungs that makes breathing difficult
+
+    - She died from bronchial pneumonia.
+
+21. inflammation 炎症
+
+    ​a condition in which a part of the body becomes red, painful and swollen (= larger than normal) because of infection or injury
+
+    - The doctor's notes recorded inflammation of the ear.
+
+    - I used a cream to reduce the inflammation.
+
+22. insomnia 失眠
+
+    the condition of being unable to sleep
+
+    - to suffer from insomnia
+
+23. nausea 恶心
+
+    the feeling that you have when you want to vomit, for example because you are sick or are shocked or frightened by something
+
+    - A wave of nausea swept over her.
+
+    - Nausea and vomiting are common symptoms.
+
+24. leukemia 白血病
+
+    a serious disease in which too many white blood cells are produced, causing weakness and sometimes death
+
+    - The newspapers are full of stories of leukaemia clusters near nuclear establishments.
+
 
 ---
 

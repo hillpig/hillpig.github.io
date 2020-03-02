@@ -3,7 +3,7 @@ layout: post
 title: Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping
 date: 2020-02-05
 Author: 山猪
-tags: [Java, Spring boot]
+tags: [Java, Spring Boot]
 comments: true
 ---
 ![img](https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&ssl=1)

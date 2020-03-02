@@ -3,7 +3,7 @@ layout: post
 title: Spring boot 事务特性　@Transactional
 date: 2020-02-10
 Author: 山猪
-tags: [Java, Spring boot]
+tags: [Java, Spring Boot]
 comments: true
 ---
 ![img](https://www.javainuse.com/boot-66-18.JPG)
