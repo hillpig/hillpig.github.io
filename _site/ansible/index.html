@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Ansible 学习 1 – 山猪 – 方寸之间 点滴墨彩</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
+    
+    <meta name="author" content="山猪" />
+
+    
+    <meta property="og:title" content="Ansible 学习 1" />
+    <meta property="twitter:title" content="Ansible 学习 1" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="山猪 - 方寸之间 点滴墨彩" href="/feed.xml" />
+  <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/renaldo/128/pig-512.png">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://kit.fontawesome.com/56f7faf3f4.js"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/" class="site-avatar"><img src="https://github.com/hillpig/hillpig.github.io/blob/master/images/IMG_3789.jpg?raw=true" /></a>
+       
+      <h1 class="site-name"><a href="/">山猪</a></h1>
+      <p class="site-description">方寸之间 点滴墨彩</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/">首页</a>
+      
+      
+      
+      <a href="/about">关于</a>
+      
+      
+      
+      <a href="/archive">归档</a>
+      
+      
+      
+      <a href="/tags">标签</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  <li><a href="https://www.weibo.com/https://www.weibo.com/p/1005051403127811/home?from=page_100505&mod=TAB#place" class="icon-1 weibo" title="Weibo"><svg viewBox="0 0 512 512"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></svg></a></li>
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hillpig@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.facebook.com/hillpigcn" class="icon-10 facebook" title="Facebook"><svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg><!--[if lt IE 9]><em>Facebook</em><![endif]--></a></li>
+  
+
+  
+
+  
+  <li><a href="https://github.com/hillpig/hillpig.github.io" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://instagram.com/hillpigcn" class="icon-15 instagram" title="Instagram"><svg viewBox="0 0 512 512"><g><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/><circle cx="351.5" cy="160.5" r="21.5"/></g></svg><!--[if lt IE 9]><em>Instagram</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/samuel-chiang-0b42782a" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="http://stackoverflow.com/users/8577353/samuel-jiang" class="icon-23 stackoverflow" title="StackOverflow"><svg viewBox="0 0 512 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg><!--[if lt IE 9]><em>StackOverflow</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019 山猪</p>
+
+    </footer>
+  </div>
+</div>
+
+    
+
+    <div id="main" role="main" class="wrapper-content">
+      <div class="container">
+        <article class="posts">
+  <h1>Ansible 学习 1</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-03-04
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Ansible">
+          Ansible
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://shadow-soft.com/wp-content/uploads/2018/10/ansible-glue-tools.png" alt="img" /></p>
+
+<!-- more -->
+
+<h1 id="ansible快速入门">Ansible快速入门</h1>
+
+<h2 id="介绍">介绍</h2>
+
+<h3 id="ansible是一款简单的运维自动化工具只需要使用ssh协议连接就可以来进行系统管理自动化执行命令部署等任务">Ansible是一款简单的运维自动化工具，只需要使用ssh协议连接就可以来进行系统管理，自动化执行命令，部署等任务。</h3>
+
+<p><strong>Ansible的特点</strong></p>
+
+<ol>
+  <li>ansible不需要单独安装客户端，也不需要启动任何服务</li>
+  <li>ansible是Python中的一套完整的自动化执行任务模块</li>
+  <li>ansible playbook 采用yaml配置，对于自动化任务执行过一目了然</li>
+</ol>
+
+<p><strong>Ansible组成结构</strong></p>
+
+<ul>
+  <li>
+    <p>Ansible</p>
+
+    <p>是Ansible的命令工具，核心执行工具；一次性或临时执行的操作都是通过该命令执行。</p>
+  </li>
+  <li>
+    <p>Ansible Playbook</p>
+
+    <p>任务剧本（又称任务集），编排定义Ansible任务集的配置文件，由Ansible顺序依次执行，yaml格式。</p>
+  </li>
+  <li>
+    <p>Inventory</p>
+
+    <p>Ansible管理主机的清单，默认是/etc/ansible/hosts文件。</p>
+  </li>
+  <li>
+    <p>Modules</p>
+
+    <p>Ansible执行命令的功能模块，Ansible2.3版本为止，共有1039个模块。还可以自定义模块。</p>
+  </li>
+  <li>
+    <p>Plugins</p>
+
+    <p>插件，模块功能的补充，常有连接类型插件，循环插件，变量插件，过滤插件，插件功能用的较少。</p>
+  </li>
+  <li>
+    <p>API</p>
+
+    <p>提供给第三方程序调用的应用程序编程接口。</p>
+  </li>
+</ul>
+
+<h1 id="-a">-A</h1>
+<hr />
+
+<p><strong>-A</strong>参数指定客户端的用户代理标头，即<strong>User-Agent</strong>。curl 的默认用户代理字符串是<strong>curl/[version]</strong>。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-A</span> <span class="s1">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'</span> https://google.com
+</code></pre></div></div>
+
+<p>上面命令将<strong>User-Agent</strong>改成 Chrome 浏览器。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-A</span> <span class="s1">''</span> https://google.com
+</code></pre></div></div>
+
+<p>上面命令会移除<strong>User-Agent</strong>标头。</p>
+
+<p>也可以通过 <strong>-H</strong> 参数直接指定标头，更改<strong>User-Agent</strong>。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-H</span> <span class="s1">'User-Agent: php/1.0'</span> https://google.com
+</code></pre></div></div>
+
+<h1 id="-b">-b</h1>
+<hr />
+
+<p><strong>-b</strong>参数用来向服务器发送 Cookie。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-b</span> <span class="s1">'foo=bar'</span> https://google.com
+</code></pre></div></div>
+
+<p>上面命令会生成一个标头<strong>Cookie: foo=bar</strong>，向服务器发送一个名为<strong>foo</strong>、值为<strong>bar</strong>的 Cookie。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-b</span> <span class="s1">'foo1=bar;foo2=bar2'</span> https://google.com
+</code></pre></div></div>
+
+<p>上面命令发送两个 Cookie。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-b</span> cookies.txt https://www.google.com
+</code></pre></div></div>
+
+<p>上面命令读取本地文件<strong>cookies.txt</strong>，里面是服务器设置的 Cookie（参见 <strong>-c</strong> 参数），将其发送到服务器。</p>
+
+<h1 id="-c">-c</h1>
+<hr />
+
+<p><strong>-c</strong>参数将服务器设置的 Cookie 写入一个文件。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-c</span> cookies.txt https://www.google.com
+</code></pre></div></div>
+
+<p>上面命令将服务器的 HTTP 回应所设置 Cookie 写入文本文件<strong>cookies.txt</strong>。</p>
+
+<h1 id="-d">-d</h1>
+<hr />
+
+<p><strong>-d</strong>参数用于发送 POST 请求的数据体。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-d</span><span class="s1">'login=emma＆password=123'</span><span class="nt">-X</span> POST https://google.com/login
+</code></pre></div></div>
+
+<p>或者</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-d</span> <span class="s1">'login=emma'</span> <span class="nt">-d</span> <span class="s1">'password=123'</span> <span class="nt">-X</span> POST  https://google.com/login
+</code></pre></div></div>
+
+<p>使用 <strong>-d</strong> 参数以后，HTTP 请求会自动加上标头<strong>Content-Type : application/x-www-form-urlencoded</strong>。并且会自动将请求转为 POST 方法，因此可以省略 <strong>-X POST</strong> 。</p>
+
+<p><strong>-d</strong>参数可以读取本地文本文件的数据，向服务器发送。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-d</span> <span class="s1">'@data.txt'</span> https://google.com/login
+</code></pre></div></div>
+
+<p>上面命令读取<strong>data.txt</strong>文件的内容，作为数据体向服务器发送。</p>
+
+<h1 id="data-urlencode">–data-urlencode</h1>
+<hr />
+
+<p><strong>–data-urlencode</strong>参数等同于 <strong>-d</strong>，发送 POST 请求的数据体，区别在于会自动将发送的数据进行 URL 编码。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">--data-urlencode</span> <span class="s1">'comment=hello world'</span> https://google.com/login
+</code></pre></div></div>
+
+<p>上面代码中，发送的数据<strong>hello world</strong>之间有一个空格，需要进行 URL 编码。</p>
+
+<h1 id="-e">-e</h1>
+<hr />
+
+<p><strong>-e</strong>参数用来设置 HTTP 的标头<strong>Referer</strong>，表示请求的来源。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">curl -e 'https://google.com?q=example' https://www.example.com
+</span></code></pre></div></div>
+
+<p>上面命令将<strong>Referer</strong>标头设为<strong>https://google.com?q=example</strong>。</p>
+
+<p><strong>-H</strong>参数可以通过直接添加标头<strong>Referer</strong>，达到同样效果。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">curl -H 'Referer: https://google.com?q=example' https://www.example.com
+</span></code></pre></div></div>
+
+<h1 id="-f">-F</h1>
+<hr />
+
+<p><strong>-F</strong>参数用来向服务器上传二进制文件。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-F</span> <span class="s1">'file=@photo.png'</span> https://google.com/profile
+</code></pre></div></div>
+
+<p>上面命令会给 HTTP 请求加上标头<strong>Content-Type: multipart/form-data</strong>，然后将文件<strong>photo.png</strong>作为<strong>file</strong>字段上传。</p>
+
+<p><strong>-F</strong>参数可以指定 MIME 类型。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-F</span> <span class="s1">'file=@photo.png;type=image/png'</span> https://google.com/profile
+</code></pre></div></div>
+
+<p>上面命令指定 MIME 类型为<strong>image/png</strong>，否则 curl 会把 MIME 类型设为<strong>application/octet-stream</strong>。</p>
+
+<p><strong>-F</strong>参数也可以指定文件名。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-F</span> <span class="s1">'file=@photo.png;filename=me.png'</span> https://google.com/profile
+</code></pre></div></div>
+
+<p>上面命令中，原始文件名为<strong>photo.png</strong>，但是服务器接收到的文件名为<strong>me.png</strong>。</p>
+
+<h1 id="-g">-G</h1>
+<hr />
+
+<p><strong>-G</strong>参数用来构造 URL 的查询字符串。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-G</span> <span class="nt">-d</span> <span class="s1">'q=kitties'</span> <span class="nt">-d</span> <span class="s1">'count=20'</span> https://google.com/search
+</code></pre></div></div>
+
+<p>上面命令会发出一个 GET 请求，实际请求的 URL 为<strong>https://google.com/search?q=kitties&amp;count=20</strong>。如果省略 <strong>–G</strong>，会发出一个 POST 请求。</p>
+
+<p>如果数据需要 URL 编码，可以结合 <strong>–data–urlencode</strong>参数。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-G</span> <span class="nt">--data-urlencode</span> <span class="s1">'comment=hello world'</span> https://www.example.com
+</code></pre></div></div>
+
+<h1 id="-h">-H</h1>
+<hr />
+
+<p><strong>-H</strong>参数添加 HTTP 请求的标头。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-H</span> <span class="s1">'Accept-Language: en-US'</span> https://google.com
+</code></pre></div></div>
+
+<p>上面命令添加 HTTP 标头<strong>Accept-Language: en-US</strong>。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-H</span> <span class="s1">'Accept-Language: en-US'</span> <span class="nt">-H</span> <span class="s1">'Secret-Message: xyzzy'</span> https://google.com
+</code></pre></div></div>
+
+<p>上面命令添加两个 HTTP 标头。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-d</span> <span class="s1">'{"login": "emma", "pass": "123"}'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> https://google.com/login
+</code></pre></div></div>
+
+<p>上面命令添加 HTTP 请求的标头是<strong>Content-Type: application/json</strong>，然后用 <strong>-d</strong>参数发送 JSON 数据。</p>
+
+<h1 id="-i">-i</h1>
+<hr />
+
+<p><strong>-i</strong>参数打印出服务器回应的 HTTP 标头。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-i</span> https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令收到服务器回应后，先输出服务器回应的标头，然后空一行，再输出网页的源码。</p>
+
+<h1 id="-i-1">-I</h1>
+<hr />
+
+<p><strong>-I</strong>参数向服务器发出 HEAD 请求，然会将服务器返回的 HTTP 标头打印出来。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-I</span> https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令输出服务器对 HEAD 请求的回应。</p>
+
+<p><strong>–head</strong>参数等同于 <strong>-I</strong>。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">--head</span> https://www.example.com
+</code></pre></div></div>
+
+<h1 id="-k">-k</h1>
+<hr />
+
+<p><strong>-k</strong>参数指定跳过 SSL 检测。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-k</span> https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令不会检查服务器的 SSL 证书是否正确。</p>
+
+<h1 id="-l">-L</h1>
+<hr />
+
+<p><strong>-L</strong>参数会让 HTTP 请求跟随服务器的重定向。curl 默认不跟随重定向。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-L</span> <span class="nt">-d</span> <span class="s1">'tweet=hi'</span> https://api.twitter.com/tweet
+</code></pre></div></div>
+
+<h1 id="limit-rate">–limit-rate</h1>
+<hr />
+
+<p><strong>–limit-rate</strong>用来限制 HTTP 请求和回应的带宽，模拟慢网速的环境。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">--limit-rate</span> 200k https://google.com
+</code></pre></div></div>
+
+<p>上面命令将带宽限制在每秒 200K 字节。</p>
+
+<h1 id="-o">-o</h1>
+<hr />
+
+<p><strong>-o</strong>参数将服务器的回应保存成文件，等同于wget命令。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-o</span> example.html https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令将<strong>www.example.com</strong>保存成<strong>example.html</strong>。</p>
+
+<h1 id="-o-1">-O</h1>
+<hr />
+
+<p><strong>-O</strong>参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-O</span> https://www.example.com/foo/bar.html
+</code></pre></div></div>
+
+<p>上面命令将服务器回应保存成文件，文件名为<strong>bar.html</strong>。</p>
+
+<h1 id="-s">-s</h1>
+<hr />
+
+<p><strong>-s</strong>参数将不输出错误和进度信息。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-s</span> https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令一旦发生错误，不会显示错误信息。不发生错误的话，会正常显示运行结果。</p>
+
+<p>如果想让 curl 不产生任何输出，可以使用下面的命令。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-s</span> <span class="nt">-o</span> /dev/null https://google.com
+</code></pre></div></div>
+
+<h1 id="-s-1">-S</h1>
+<hr />
+
+<p><strong>-S</strong>参数指定只输出错误信息，通常与 <strong>-s</strong>一起使用。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-s</span> <span class="nt">-o</span> /dev/null https://google.com
+</code></pre></div></div>
+
+<p>上面命令没有任何输出，除非发生错误。</p>
+
+<h1 id="-u">-u</h1>
+<hr />
+
+<p><strong>-u</strong>参数用来设置服务器认证的用户名和密码。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-u</span> <span class="s1">'bob:12345'</span> https://google.com/login
+</code></pre></div></div>
+
+<p>上面命令设置用户名为<strong>bob</strong>，密码为<strong>12345</strong>，然后将其转为 HTTP 标头<strong>Authorization: Basic Ym9iOjEyMzQ1</strong>。</p>
+
+<p>curl 能够识别 URL 里面的用户名和密码。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl https://bob:12345@google.com/login
+</code></pre></div></div>
+
+<p>上面命令能够识别 URL 里面的用户名和密码，将其转为上个例子里面的 HTTP 标头。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-u</span> <span class="s1">'bob'</span> https://google.com/login
+</code></pre></div></div>
+
+<p>上面命令只设置了用户名，执行后，curl 会提示用户输入密码。</p>
+
+<h1 id="-v">-v</h1>
+<hr />
+
+<p><strong>-v</strong>参数输出通信的整个过程，用于调试。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-v</span> https://www.example.com
+</code></pre></div></div>
+
+<p><strong>–trace</strong>参数也可以用于调试，还会输出原始的二进制数据。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">--trace</span> - https://www.example.com
+</code></pre></div></div>
+
+<h1 id="-x">-x</h1>
+<hr />
+
+<p><strong>-x</strong>参数指定 HTTP 请求的代理。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-x</span> socks5://james:cats@myproxy.com:8080 https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令指定 HTTP 请求通过<strong>myproxy.com:8080</strong>的 socks5 代理发出。</p>
+
+<p>如果没有指定代理协议，默认为 HTTP。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-x</span> james:cats@myproxy.com:8080 https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令中，请求的代理使用 HTTP 协议。</p>
+
+<h1 id="-x-1">-X</h1>
+<hr />
+
+<p><strong>-X</strong>参数指定 HTTP 请求的方法。</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-X</span> POST https://www.example.com
+</code></pre></div></div>
+
+<p>上面命令对<strong>https://www.example.com</strong>发出 POST 请求。</p>
+
+<h1 id="参考文献">参考文献</h1>
+<hr />
+
+<ul>
+  <li>
+    <p><a href="https://catonmat.net/cookbooks/curl" title="curl cookbook">curl cookbook</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.ruanyifeng.com/blog/2011/09/curl.html" title="curl 初学者教程">curl 初学者教程</a></p>
+  </li>
+</ul>
+
+
+  </div>
+
+  
+  
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Ansible 学习 1",
+          language: "zh-CN",
+
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/english-body/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+</div>
+      </div>
+    </div>
+
+    
+
+  </body>
+
+  
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  <li><a href="https://www.weibo.com/https://www.weibo.com/p/1005051403127811/home?from=page_100505&mod=TAB#place" class="icon-1 weibo" title="Weibo"><svg viewBox="0 0 512 512"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></svg></a></li>
+  
+  
+  
+
+  
+
+  
+  <li><a href="mailto:hillpig@gmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.facebook.com/hillpigcn" class="icon-10 facebook" title="Facebook"><svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg><!--[if lt IE 9]><em>Facebook</em><![endif]--></a></li>
+  
+
+  
+
+  
+  <li><a href="https://github.com/hillpig/hillpig.github.io" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://instagram.com/hillpigcn" class="icon-15 instagram" title="Instagram"><svg viewBox="0 0 512 512"><g><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/><circle cx="351.5" cy="160.5" r="21.5"/></g></svg><!--[if lt IE 9]><em>Instagram</em><![endif]--></a></li>
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/samuel-chiang-0b42782a" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="http://stackoverflow.com/users/8577353/samuel-jiang" class="icon-23 stackoverflow" title="StackOverflow"><svg viewBox="0 0 512 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg><!--[if lt IE 9]><em>StackOverflow</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2019 山猪</p>
+
+    </footer>
+
+
+</html>
