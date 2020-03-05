@@ -1,4 +1,383 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T00:12:53-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">English Vocabulary - Body</title><link href="http://localhost:4000/english-body/" rel="alternate" type="text/html" title="English Vocabulary - Body" /><published>2020-03-01T00:00:00-08:00</published><updated>2020-03-01T00:00:00-08:00</updated><id>http://localhost:4000/english-body</id><content type="html" xml:base="http://localhost:4000/english-body/">&lt;p&gt;&lt;img src=&quot;https://cdn.britannica.com/07/192107-050-CE043374/anatomy-charts-human-body-muscle-systems-skeletal.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-04T23:06:20-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Ansible 学习 1</title><link href="http://localhost:4000/ansible/" rel="alternate" type="text/html" title="Ansible 学习 1" /><published>2020-03-04T00:00:00-08:00</published><updated>2020-03-04T00:00:00-08:00</updated><id>http://localhost:4000/ansible</id><content type="html" xml:base="http://localhost:4000/ansible/">&lt;p&gt;&lt;img src=&quot;https://shadow-soft.com/wp-content/uploads/2018/10/ansible-glue-tools.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;ansible快速入门&quot;&gt;Ansible快速入门&lt;/h1&gt;
+
+&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
+
+&lt;h3 id=&quot;ansible是一款简单的运维自动化工具只需要使用ssh协议连接就可以来进行系统管理自动化执行命令部署等任务&quot;&gt;Ansible是一款简单的运维自动化工具，只需要使用ssh协议连接就可以来进行系统管理，自动化执行命令，部署等任务。&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Ansible的特点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ansible不需要单独安装客户端，也不需要启动任何服务&lt;/li&gt;
+  &lt;li&gt;ansible是Python中的一套完整的自动化执行任务模块&lt;/li&gt;
+  &lt;li&gt;ansible playbook 采用yaml配置，对于自动化任务执行过一目了然&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Ansible组成结构&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ansible&lt;/p&gt;
+
+    &lt;p&gt;是Ansible的命令工具，核心执行工具；一次性或临时执行的操作都是通过该命令执行。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ansible Playbook&lt;/p&gt;
+
+    &lt;p&gt;任务剧本（又称任务集），编排定义Ansible任务集的配置文件，由Ansible顺序依次执行，yaml格式。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inventory&lt;/p&gt;
+
+    &lt;p&gt;Ansible管理主机的清单，默认是/etc/ansible/hosts文件。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modules&lt;/p&gt;
+
+    &lt;p&gt;Ansible执行命令的功能模块，Ansible2.3版本为止，共有1039个模块。还可以自定义模块。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Plugins&lt;/p&gt;
+
+    &lt;p&gt;插件，模块功能的补充，常有连接类型插件，循环插件，变量插件，过滤插件，插件功能用的较少。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;API&lt;/p&gt;
+
+    &lt;p&gt;提供给第三方程序调用的应用程序编程接口。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;-a&quot;&gt;-A&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-A&lt;/strong&gt;参数指定客户端的用户代理标头，即&lt;strong&gt;User-Agent&lt;/strong&gt;。curl 的默认用户代理字符串是&lt;strong&gt;curl/[version]&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将&lt;strong&gt;User-Agent&lt;/strong&gt;改成 Chrome 浏览器。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会移除&lt;strong&gt;User-Agent&lt;/strong&gt;标头。&lt;/p&gt;
+
+&lt;p&gt;也可以通过 &lt;strong&gt;-H&lt;/strong&gt; 参数直接指定标头，更改&lt;strong&gt;User-Agent&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'User-Agent: php/1.0'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-b&quot;&gt;-b&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-b&lt;/strong&gt;参数用来向服务器发送 Cookie。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo=bar'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会生成一个标头&lt;strong&gt;Cookie: foo=bar&lt;/strong&gt;，向服务器发送一个名为&lt;strong&gt;foo&lt;/strong&gt;、值为&lt;strong&gt;bar&lt;/strong&gt;的 Cookie。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo1=bar;foo2=bar2'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令发送两个 Cookie。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; cookies.txt https://www.google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令读取本地文件&lt;strong&gt;cookies.txt&lt;/strong&gt;，里面是服务器设置的 Cookie（参见 &lt;strong&gt;-c&lt;/strong&gt; 参数），将其发送到服务器。&lt;/p&gt;
+
+&lt;h1 id=&quot;-c&quot;&gt;-c&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-c&lt;/strong&gt;参数将服务器设置的 Cookie 写入一个文件。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; cookies.txt https://www.google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将服务器的 HTTP 回应所设置 Cookie 写入文本文件&lt;strong&gt;cookies.txt&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-d&quot;&gt;-d&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt;参数用于发送 POST 请求的数据体。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'login=emma＆password=123'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;或者&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'login=emma'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'password=123'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST  https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用 &lt;strong&gt;-d&lt;/strong&gt; 参数以后，HTTP 请求会自动加上标头&lt;strong&gt;Content-Type : application/x-www-form-urlencoded&lt;/strong&gt;。并且会自动将请求转为 POST 方法，因此可以省略 &lt;strong&gt;-X POST&lt;/strong&gt; 。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt;参数可以读取本地文本文件的数据，向服务器发送。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'@data.txt'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令读取&lt;strong&gt;data.txt&lt;/strong&gt;文件的内容，作为数据体向服务器发送。&lt;/p&gt;
+
+&lt;h1 id=&quot;data-urlencode&quot;&gt;–data-urlencode&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;–data-urlencode&lt;/strong&gt;参数等同于 &lt;strong&gt;-d&lt;/strong&gt;，发送 POST 请求的数据体，区别在于会自动将发送的数据进行 URL 编码。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--data-urlencode&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'comment=hello world'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码中，发送的数据&lt;strong&gt;hello world&lt;/strong&gt;之间有一个空格，需要进行 URL 编码。&lt;/p&gt;
+
+&lt;h1 id=&quot;-e&quot;&gt;-e&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;参数用来设置 HTTP 的标头&lt;strong&gt;Referer&lt;/strong&gt;，表示请求的来源。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;curl -e 'https://google.com?q=example' https://www.example.com
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将&lt;strong&gt;Referer&lt;/strong&gt;标头设为&lt;strong&gt;https://google.com?q=example&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-H&lt;/strong&gt;参数可以通过直接添加标头&lt;strong&gt;Referer&lt;/strong&gt;，达到同样效果。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;curl -H 'Referer: https://google.com?q=example' https://www.example.com
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-f&quot;&gt;-F&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数用来向服务器上传二进制文件。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png'&lt;/span&gt; https://google.com/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会给 HTTP 请求加上标头&lt;strong&gt;Content-Type: multipart/form-data&lt;/strong&gt;，然后将文件&lt;strong&gt;photo.png&lt;/strong&gt;作为&lt;strong&gt;file&lt;/strong&gt;字段上传。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数可以指定 MIME 类型。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png;type=image/png'&lt;/span&gt; https://google.com/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令指定 MIME 类型为&lt;strong&gt;image/png&lt;/strong&gt;，否则 curl 会把 MIME 类型设为&lt;strong&gt;application/octet-stream&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数也可以指定文件名。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png;filename=me.png'&lt;/span&gt; https://google.com/profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令中，原始文件名为&lt;strong&gt;photo.png&lt;/strong&gt;，但是服务器接收到的文件名为&lt;strong&gt;me.png&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-g&quot;&gt;-G&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-G&lt;/strong&gt;参数用来构造 URL 的查询字符串。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'q=kitties'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'count=20'&lt;/span&gt; https://google.com/search
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令会发出一个 GET 请求，实际请求的 URL 为&lt;strong&gt;https://google.com/search?q=kitties&amp;amp;count=20&lt;/strong&gt;。如果省略 &lt;strong&gt;–G&lt;/strong&gt;，会发出一个 POST 请求。&lt;/p&gt;
+
+&lt;p&gt;如果数据需要 URL 编码，可以结合 &lt;strong&gt;–data–urlencode&lt;/strong&gt;参数。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--data-urlencode&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'comment=hello world'&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-h&quot;&gt;-H&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-H&lt;/strong&gt;参数添加 HTTP 请求的标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Accept-Language: en-US'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令添加 HTTP 标头&lt;strong&gt;Accept-Language: en-US&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Accept-Language: en-US'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Secret-Message: xyzzy'&lt;/span&gt; https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令添加两个 HTTP 标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;login&quot;: &quot;emma&quot;, &quot;pass&quot;: &quot;123&quot;}'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令添加 HTTP 请求的标头是&lt;strong&gt;Content-Type: application/json&lt;/strong&gt;，然后用 &lt;strong&gt;-d&lt;/strong&gt;参数发送 JSON 数据。&lt;/p&gt;
+
+&lt;h1 id=&quot;-i&quot;&gt;-i&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-i&lt;/strong&gt;参数打印出服务器回应的 HTTP 标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令收到服务器回应后，先输出服务器回应的标头，然后空一行，再输出网页的源码。&lt;/p&gt;
+
+&lt;h1 id=&quot;-i-1&quot;&gt;-I&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-I&lt;/strong&gt;参数向服务器发出 HEAD 请求，然会将服务器返回的 HTTP 标头打印出来。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-I&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令输出服务器对 HEAD 请求的回应。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–head&lt;/strong&gt;参数等同于 &lt;strong&gt;-I&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--head&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-k&quot;&gt;-k&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-k&lt;/strong&gt;参数指定跳过 SSL 检测。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-k&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令不会检查服务器的 SSL 证书是否正确。&lt;/p&gt;
+
+&lt;h1 id=&quot;-l&quot;&gt;-L&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-L&lt;/strong&gt;参数会让 HTTP 请求跟随服务器的重定向。curl 默认不跟随重定向。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tweet=hi'&lt;/span&gt; https://api.twitter.com/tweet
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;limit-rate&quot;&gt;–limit-rate&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;–limit-rate&lt;/strong&gt;用来限制 HTTP 请求和回应的带宽，模拟慢网速的环境。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--limit-rate&lt;/span&gt; 200k https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将带宽限制在每秒 200K 字节。&lt;/p&gt;
+
+&lt;h1 id=&quot;-o&quot;&gt;-o&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;参数将服务器的回应保存成文件，等同于wget命令。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; example.html https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将&lt;strong&gt;www.example.com&lt;/strong&gt;保存成&lt;strong&gt;example.html&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-o-1&quot;&gt;-O&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-O&lt;/strong&gt;参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://www.example.com/foo/bar.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令将服务器回应保存成文件，文件名为&lt;strong&gt;bar.html&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h1 id=&quot;-s&quot;&gt;-s&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-s&lt;/strong&gt;参数将不输出错误和进度信息。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令一旦发生错误，不会显示错误信息。不发生错误的话，会正常显示运行结果。&lt;/p&gt;
+
+&lt;p&gt;如果想让 curl 不产生任何输出，可以使用下面的命令。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /dev/null https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-s-1&quot;&gt;-S&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-S&lt;/strong&gt;参数指定只输出错误信息，通常与 &lt;strong&gt;-s&lt;/strong&gt;一起使用。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /dev/null https://google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令没有任何输出，除非发生错误。&lt;/p&gt;
+
+&lt;h1 id=&quot;-u&quot;&gt;-u&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-u&lt;/strong&gt;参数用来设置服务器认证的用户名和密码。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bob:12345'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令设置用户名为&lt;strong&gt;bob&lt;/strong&gt;，密码为&lt;strong&gt;12345&lt;/strong&gt;，然后将其转为 HTTP 标头&lt;strong&gt;Authorization: Basic Ym9iOjEyMzQ1&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;curl 能够识别 URL 里面的用户名和密码。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl https://bob:12345@google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令能够识别 URL 里面的用户名和密码，将其转为上个例子里面的 HTTP 标头。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bob'&lt;/span&gt; https://google.com/login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令只设置了用户名，执行后，curl 会提示用户输入密码。&lt;/p&gt;
+
+&lt;h1 id=&quot;-v&quot;&gt;-v&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-v&lt;/strong&gt;参数输出通信的整个过程，用于调试。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;–trace&lt;/strong&gt;参数也可以用于调试，还会输出原始的二进制数据。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--trace&lt;/span&gt; - https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-x&quot;&gt;-x&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-x&lt;/strong&gt;参数指定 HTTP 请求的代理。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; socks5://james:cats@myproxy.com:8080 https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令指定 HTTP 请求通过&lt;strong&gt;myproxy.com:8080&lt;/strong&gt;的 socks5 代理发出。&lt;/p&gt;
+
+&lt;p&gt;如果没有指定代理协议，默认为 HTTP。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; james:cats@myproxy.com:8080 https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令中，请求的代理使用 HTTP 协议。&lt;/p&gt;
+
+&lt;h1 id=&quot;-x-1&quot;&gt;-X&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;-X&lt;/strong&gt;参数指定 HTTP 请求的方法。&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST https://www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面命令对&lt;strong&gt;https://www.example.com&lt;/strong&gt;发出 POST 请求。&lt;/p&gt;
+
+&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://catonmat.net/cookbooks/curl&quot; title=&quot;curl cookbook&quot;&gt;curl cookbook&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/09/curl.html&quot; title=&quot;curl 初学者教程&quot;&gt;curl 初学者教程&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Ansible" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Body</title><link href="http://localhost:4000/english-body/" rel="alternate" type="text/html" title="English Vocabulary - Body" /><published>2020-03-01T00:00:00-08:00</published><updated>2020-03-01T00:00:00-08:00</updated><id>http://localhost:4000/english-body</id><content type="html" xml:base="http://localhost:4000/english-body/">&lt;p&gt;&lt;img src=&quot;https://cdn.britannica.com/07/192107-050-CE043374/anatomy-charts-human-body-muscle-systems-skeletal.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -282,7 +661,123 @@ to yawn	打哈欠&lt;/p&gt;</content><author><name></name></author><category ter
 
 &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/42348457&quot; title=&quot;参考文章 1&quot;&gt;参考文章 1 《Java开发中用到的，lombok是什么？》&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">安装配置 Intellij Idea</title><link href="http://localhost:4000/intellij/" rel="alternate" type="text/html" title="安装配置 Intellij Idea" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/intellij</id><content type="html" xml:base="http://localhost:4000/intellij/">&lt;p&gt;&lt;img src=&quot;https://d3nmt5vlzunoa1.cloudfront.net/idea/files/2019/11/blog@2x-3.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">Java - lombok</title><link href="http://localhost:4000/java-lombok/" rel="alternate" type="text/html" title="Java - lombok" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/java-lombok</id><content type="html" xml:base="http://localhost:4000/java-lombok/">&lt;p&gt;&lt;img src=&quot;https://huongdanjava.com/wp-content/uploads/2017/08/lombok.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;什么是javabean&quot;&gt;什么是JavaBean&lt;/h1&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;lombok既是一个IDE插件,也是一个项目要依赖的jar包.lombok是依赖jar包的原因是因为编译时要用它的注解.是插件的原因是他要在编译器编译时通过操作AST(抽象语法树)改变字节码生成.也就是说他可以改变java语法. 他不像spring的依赖注入或者hibernate的orm一样是运行时的特性,而是编译时的特性.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean作用&quot;&gt;JavaBean作用&lt;/h1&gt;
+
+    &lt;p&gt;JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;javabean的属性&quot;&gt;JavaBean的属性&lt;/h1&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;JavaBean的属性可以是任意类型，并且一个JavaBean可以有多个属性。每个属性通常都需要具有相应的setter、 getter方法，setter方法称为属性修改器，getter方法称为属性访问器。&lt;/li&gt;
+      &lt;li&gt;属性修改器必须以小写的set前缀开始，后跟属性名，且属性名的第一个字母要改为大写，例如，name属性的修改器名称为setName，password属性的修改器名称为setPassword。&lt;/li&gt;
+      &lt;li&gt;属性访问器通常以小写的get前缀开始，后跟属性名，且属性名的第一个字母也要改为大写，例如，name属性的访问器名称为getName，password属性的访问器名称为getPassword。&lt;/li&gt;
+      &lt;li&gt;一个JavaBean的某个属性也可以只有set方法或get方法，这样的属性通常也称之为只写、只读属性。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;java-bean类实现serializable接口的原因&quot;&gt;Java Bean类实现Serializable接口的原因&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Serializable接口能帮我们做些什么？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如上所述，读写对象会有什么问题呢？比如：我要将对象写入一个磁盘文件而后再将其读出来会有什么问题吗？别急，其中一个最大的问题就是对象引用！举个例子来说：假如我有两个类，分别是A和B，B类中含有一个指向A类对象的引用，现在我们对两个类进行实例化{ A a = new A(); B b = new B(); }，这时在内存中实际上分配了两个空间，一个存储对象a，一个存储对象b，接下来我们想将它们写入到磁盘的一个文件中去，就在写入文件时出现了问题！因为对象b包含对对象a的引用，所以系统会自动的将a的数据复制一份到b中，这样的话当我们从文件中恢复对象时(也就是重新加载到内存中)时，内存分配了三个空间，而对象a同时在内存中存在两份，想一想后果吧，如果我想修改对象a的数据的话，那不是还要搜索它的每一份拷贝来达到对象数据的一致性，这不是我们所希望的！&lt;/p&gt;
+
+&lt;p&gt;以下序列化机制的解决方案：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 保存到磁盘的所有对象都获得一个序列号(1, 2, 3等等)
+2. 当要保存一个对象时，先检查该对象是否被保存了
+3. 如果以前保存过，只需写入&quot;与已经保存的具有序列号x的对象相同&quot;的标记，否则，保存该对象通过以上的步骤序列化机制解决了对象引用的问题！
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在对对象进行实例化的过程中相关注意事项&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 读取对象的顺序必须与写入的顺序相同
+2. 如果有不能被序列化的对象，执行期间就会抛出NotSerializableException异常
+3. 序列化时，只对对象的状态进行保存，而不管对象的方法
+2. 当一个父类实现序列化，子类自动实现序列化，不需要显式实现Serializable接口
+4. 当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化，而且会是递归的方式。 （序列化程序会将对象版图上的所有东西储存下来，这样才能让该对象恢复到原来的状态）
+5. 如果子类实现Serializable接口而父类未实现时，父类不会被序列化，但此时父类必须有个无参构造方法，否则会抛InvalidClassException异常，因为反序列化时会恢复原有子对象的状态，而父类的成员变量也是原有子对象的一部分。由于父类没有实现序列化接口，即使没有显示调用，也会默认执行父类的无参构造函数使变量初始化
+6. 并非所有的对象都可以序列化
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;至于为什么不可以，有很多原因了，比如：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 安全方面的原因，比如一个对象拥有private，public等field，对于一个要传输的对象，比如写到文件，或者进行RMI传输  等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的。
+2. 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;深入理解&quot;&gt;深入理解&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 序列化算法透析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。&lt;/p&gt;
+
+&lt;p&gt;序列化算法一般会按步骤做如下事情：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将对象实例相关类的描述。&lt;/li&gt;
+  &lt;li&gt;递归地输出类的超类描述直到不再有超类。&lt;/li&gt;
+  &lt;li&gt;从最顶层的超类开始输出对象实例的实际数据值。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 序列化ID的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;serialVersionUID适用于JAVA的序列化机制。简单来说，Java的序列化机制是通过判断类的serialVersionUID来验证版本一致性的。
+在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常，即是InvalidCastException。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 序列化存储规则&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
+序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. 多次序列化的问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StreamCorruptedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;code:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AC&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6145ed810100z143.html&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. 影响序列化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;transient关键字&lt;/li&gt;
+  &lt;li&gt;writeObject()方法与readObject()方法&lt;/li&gt;
+  &lt;li&gt;Externalizable接口&lt;/li&gt;
+  &lt;li&gt;readResolve()方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://projectlombok.org/&quot; title=&quot;lombok的官方地址&quot;&gt;lombok的官方地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rzwitserloot/lombok&quot; title=&quot;lombok的Github地址&quot;&gt;lombok的Github地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/42348457&quot; title=&quot;参考文章 1&quot;&gt;参考文章 1 《Java开发中用到的，lombok是什么？》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">安装配置 Intellij Idea</title><link href="http://localhost:4000/intellij/" rel="alternate" type="text/html" title="安装配置 Intellij Idea" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/intellij</id><content type="html" xml:base="http://localhost:4000/intellij/">&lt;p&gt;&lt;img src=&quot;https://d3nmt5vlzunoa1.cloudfront.net/idea/files/2019/11/blog@2x-3.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -400,123 +895,7 @@ to yawn	打哈欠&lt;/p&gt;</content><author><name></name></author><category ter
 
 &lt;p&gt;&lt;a href=&quot;http://developer.51cto.com/art/201202/317181.htm&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/javabean-class-java/&quot; title=&quot;geeks&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="IDE" /><summary type="html"></summary></entry><entry><title type="html">Java - lombok</title><link href="http://localhost:4000/java-lombok/" rel="alternate" type="text/html" title="Java - lombok" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/java-lombok</id><content type="html" xml:base="http://localhost:4000/java-lombok/">&lt;p&gt;&lt;img src=&quot;https://huongdanjava.com/wp-content/uploads/2017/08/lombok.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;h1 id=&quot;什么是javabean&quot;&gt;什么是JavaBean&lt;/h1&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;lombok既是一个IDE插件,也是一个项目要依赖的jar包.lombok是依赖jar包的原因是因为编译时要用它的注解.是插件的原因是他要在编译器编译时通过操作AST(抽象语法树)改变字节码生成.也就是说他可以改变java语法. 他不像spring的依赖注入或者hibernate的orm一样是运行时的特性,而是编译时的特性.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;h1 id=&quot;javabean作用&quot;&gt;JavaBean作用&lt;/h1&gt;
-
-    &lt;p&gt;JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h1 id=&quot;javabean的属性&quot;&gt;JavaBean的属性&lt;/h1&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;JavaBean的属性可以是任意类型，并且一个JavaBean可以有多个属性。每个属性通常都需要具有相应的setter、 getter方法，setter方法称为属性修改器，getter方法称为属性访问器。&lt;/li&gt;
-      &lt;li&gt;属性修改器必须以小写的set前缀开始，后跟属性名，且属性名的第一个字母要改为大写，例如，name属性的修改器名称为setName，password属性的修改器名称为setPassword。&lt;/li&gt;
-      &lt;li&gt;属性访问器通常以小写的get前缀开始，后跟属性名，且属性名的第一个字母也要改为大写，例如，name属性的访问器名称为getName，password属性的访问器名称为getPassword。&lt;/li&gt;
-      &lt;li&gt;一个JavaBean的某个属性也可以只有set方法或get方法，这样的属性通常也称之为只写、只读属性。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;java-bean类实现serializable接口的原因&quot;&gt;Java Bean类实现Serializable接口的原因&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Serializable接口能帮我们做些什么？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如上所述，读写对象会有什么问题呢？比如：我要将对象写入一个磁盘文件而后再将其读出来会有什么问题吗？别急，其中一个最大的问题就是对象引用！举个例子来说：假如我有两个类，分别是A和B，B类中含有一个指向A类对象的引用，现在我们对两个类进行实例化{ A a = new A(); B b = new B(); }，这时在内存中实际上分配了两个空间，一个存储对象a，一个存储对象b，接下来我们想将它们写入到磁盘的一个文件中去，就在写入文件时出现了问题！因为对象b包含对对象a的引用，所以系统会自动的将a的数据复制一份到b中，这样的话当我们从文件中恢复对象时(也就是重新加载到内存中)时，内存分配了三个空间，而对象a同时在内存中存在两份，想一想后果吧，如果我想修改对象a的数据的话，那不是还要搜索它的每一份拷贝来达到对象数据的一致性，这不是我们所希望的！&lt;/p&gt;
-
-&lt;p&gt;以下序列化机制的解决方案：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 保存到磁盘的所有对象都获得一个序列号(1, 2, 3等等)
-2. 当要保存一个对象时，先检查该对象是否被保存了
-3. 如果以前保存过，只需写入&quot;与已经保存的具有序列号x的对象相同&quot;的标记，否则，保存该对象通过以上的步骤序列化机制解决了对象引用的问题！
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在对对象进行实例化的过程中相关注意事项&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 读取对象的顺序必须与写入的顺序相同
-2. 如果有不能被序列化的对象，执行期间就会抛出NotSerializableException异常
-3. 序列化时，只对对象的状态进行保存，而不管对象的方法
-2. 当一个父类实现序列化，子类自动实现序列化，不需要显式实现Serializable接口
-4. 当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化，而且会是递归的方式。 （序列化程序会将对象版图上的所有东西储存下来，这样才能让该对象恢复到原来的状态）
-5. 如果子类实现Serializable接口而父类未实现时，父类不会被序列化，但此时父类必须有个无参构造方法，否则会抛InvalidClassException异常，因为反序列化时会恢复原有子对象的状态，而父类的成员变量也是原有子对象的一部分。由于父类没有实现序列化接口，即使没有显示调用，也会默认执行父类的无参构造函数使变量初始化
-6. 并非所有的对象都可以序列化
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;至于为什么不可以，有很多原因了，比如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 安全方面的原因，比如一个对象拥有private，public等field，对于一个要传输的对象，比如写到文件，或者进行RMI传输  等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的。
-2. 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;深入理解&quot;&gt;深入理解&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;1. 序列化算法透析&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。&lt;/p&gt;
-
-&lt;p&gt;序列化算法一般会按步骤做如下事情：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;将对象实例相关类的描述。&lt;/li&gt;
-  &lt;li&gt;递归地输出类的超类描述直到不再有超类。&lt;/li&gt;
-  &lt;li&gt;从最顶层的超类开始输出对象实例的实际数据值。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;2. 序列化ID的问题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;serialVersionUID适用于JAVA的序列化机制。简单来说，Java的序列化机制是通过判断类的serialVersionUID来验证版本一致性的。
-在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常，即是InvalidCastException。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. 序列化存储规则&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
-序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-serial/&quot;&gt;详细介绍&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. 多次序列化的问题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StreamCorruptedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;code:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AC&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6145ed810100z143.html&quot;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5. 影响序列化&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;transient关键字&lt;/li&gt;
-  &lt;li&gt;writeObject()方法与readObject()方法&lt;/li&gt;
-  &lt;li&gt;Externalizable接口&lt;/li&gt;
-  &lt;li&gt;readResolve()方法&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://projectlombok.org/&quot; title=&quot;lombok的官方地址&quot;&gt;lombok的官方地址&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/rzwitserloot/lombok&quot; title=&quot;lombok的Github地址&quot;&gt;lombok的Github地址&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/42348457&quot; title=&quot;参考文章 1&quot;&gt;参考文章 1 《Java开发中用到的，lombok是什么？》&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">Programming - Idempotent</title><link href="http://localhost:4000/idempotent/" rel="alternate" type="text/html" title="Programming - Idempotent" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/idempotent</id><content type="html" xml:base="http://localhost:4000/idempotent/">&lt;p&gt;&lt;img src=&quot;https://image.slidesharecdn.com/cloudstock-2010-12-building-a-great-api-101212184238-phpapp01/95/building-a-great-api-evan-cooke-cloudstock-december-2010-21-728.jpg?cb=1292199082&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/javabean-class-java/&quot; title=&quot;geeks&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="IDE" /><summary type="html"></summary></entry><entry><title type="html">Programming - Idempotent</title><link href="http://localhost:4000/idempotent/" rel="alternate" type="text/html" title="Programming - Idempotent" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/idempotent</id><content type="html" xml:base="http://localhost:4000/idempotent/">&lt;p&gt;&lt;img src=&quot;https://image.slidesharecdn.com/cloudstock-2010-12-building-a-great-api-101212184238-phpapp01/95/building-a-great-api-evan-cooke-cloudstock-december-2010-21-728.jpg?cb=1292199082&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1607,345 +1986,4 @@ root     17475  0.0  0.0  61180   832 pts/0    S+   16:27   0:00 egrep (cron|sys
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/peida/archive/2012/12/19/2824418.html&quot; title=&quot;每天一个linux命令（41）：ps命令&quot;&gt;原文&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="Mac" /><summary type="html"></summary></entry><entry><title type="html">curl 的用法指南</title><link href="http://localhost:4000/linux-curl/" rel="alternate" type="text/html" title="curl 的用法指南" /><published>2020-02-20T00:00:00-08:00</published><updated>2020-02-20T00:00:00-08:00</updated><id>http://localhost:4000/linux-curl</id><content type="html" xml:base="http://localhost:4000/linux-curl/">&lt;p&gt;&lt;img src=&quot;https://www.maketecheasier.com/assets/uploads/2019/03/how-to-use-curl-commands-featured-800x400.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;curl 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端（client）的 URL 工具的意思。&lt;/p&gt;
-
-&lt;p&gt;它的功能非常强大，命令行参数多达几十种。如果熟练的话，完全可以取代 Postman 这一类的图形界面工具。&lt;/p&gt;
-
-&lt;p&gt;不带有任何参数时，curl 就是发出 GET 请求。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令向&lt;strong&gt;www.example.com&lt;/strong&gt;发出 GET 请求，服务器返回的内容会在命令行输出。&lt;/p&gt;
-
-&lt;h1 id=&quot;-a&quot;&gt;-A&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-A&lt;/strong&gt;参数指定客户端的用户代理标头，即&lt;strong&gt;User-Agent&lt;/strong&gt;。curl 的默认用户代理字符串是&lt;strong&gt;curl/[version]&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'&lt;/span&gt; https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令将&lt;strong&gt;User-Agent&lt;/strong&gt;改成 Chrome 浏览器。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt; https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令会移除&lt;strong&gt;User-Agent&lt;/strong&gt;标头。&lt;/p&gt;
-
-&lt;p&gt;也可以通过 &lt;strong&gt;-H&lt;/strong&gt; 参数直接指定标头，更改&lt;strong&gt;User-Agent&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'User-Agent: php/1.0'&lt;/span&gt; https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;-b&quot;&gt;-b&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-b&lt;/strong&gt;参数用来向服务器发送 Cookie。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo=bar'&lt;/span&gt; https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令会生成一个标头&lt;strong&gt;Cookie: foo=bar&lt;/strong&gt;，向服务器发送一个名为&lt;strong&gt;foo&lt;/strong&gt;、值为&lt;strong&gt;bar&lt;/strong&gt;的 Cookie。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo1=bar;foo2=bar2'&lt;/span&gt; https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令发送两个 Cookie。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; cookies.txt https://www.google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令读取本地文件&lt;strong&gt;cookies.txt&lt;/strong&gt;，里面是服务器设置的 Cookie（参见 &lt;strong&gt;-c&lt;/strong&gt; 参数），将其发送到服务器。&lt;/p&gt;
-
-&lt;h1 id=&quot;-c&quot;&gt;-c&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-c&lt;/strong&gt;参数将服务器设置的 Cookie 写入一个文件。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; cookies.txt https://www.google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令将服务器的 HTTP 回应所设置 Cookie 写入文本文件&lt;strong&gt;cookies.txt&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;h1 id=&quot;-d&quot;&gt;-d&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt;参数用于发送 POST 请求的数据体。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'login=emma＆password=123'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST https://google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;或者&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'login=emma'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'password=123'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST  https://google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;使用 &lt;strong&gt;-d&lt;/strong&gt; 参数以后，HTTP 请求会自动加上标头&lt;strong&gt;Content-Type : application/x-www-form-urlencoded&lt;/strong&gt;。并且会自动将请求转为 POST 方法，因此可以省略 &lt;strong&gt;-X POST&lt;/strong&gt; 。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt;参数可以读取本地文本文件的数据，向服务器发送。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'@data.txt'&lt;/span&gt; https://google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令读取&lt;strong&gt;data.txt&lt;/strong&gt;文件的内容，作为数据体向服务器发送。&lt;/p&gt;
-
-&lt;h1 id=&quot;data-urlencode&quot;&gt;–data-urlencode&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;–data-urlencode&lt;/strong&gt;参数等同于 &lt;strong&gt;-d&lt;/strong&gt;，发送 POST 请求的数据体，区别在于会自动将发送的数据进行 URL 编码。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--data-urlencode&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'comment=hello world'&lt;/span&gt; https://google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面代码中，发送的数据&lt;strong&gt;hello world&lt;/strong&gt;之间有一个空格，需要进行 URL 编码。&lt;/p&gt;
-
-&lt;h1 id=&quot;-e&quot;&gt;-e&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-e&lt;/strong&gt;参数用来设置 HTTP 的标头&lt;strong&gt;Referer&lt;/strong&gt;，表示请求的来源。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;curl -e 'https://google.com?q=example' https://www.example.com
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令将&lt;strong&gt;Referer&lt;/strong&gt;标头设为&lt;strong&gt;https://google.com?q=example&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-H&lt;/strong&gt;参数可以通过直接添加标头&lt;strong&gt;Referer&lt;/strong&gt;，达到同样效果。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;curl -H 'Referer: https://google.com?q=example' https://www.example.com
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;-f&quot;&gt;-F&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数用来向服务器上传二进制文件。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png'&lt;/span&gt; https://google.com/profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令会给 HTTP 请求加上标头&lt;strong&gt;Content-Type: multipart/form-data&lt;/strong&gt;，然后将文件&lt;strong&gt;photo.png&lt;/strong&gt;作为&lt;strong&gt;file&lt;/strong&gt;字段上传。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数可以指定 MIME 类型。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png;type=image/png'&lt;/span&gt; https://google.com/profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令指定 MIME 类型为&lt;strong&gt;image/png&lt;/strong&gt;，否则 curl 会把 MIME 类型设为&lt;strong&gt;application/octet-stream&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-F&lt;/strong&gt;参数也可以指定文件名。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'file=@photo.png;filename=me.png'&lt;/span&gt; https://google.com/profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令中，原始文件名为&lt;strong&gt;photo.png&lt;/strong&gt;，但是服务器接收到的文件名为&lt;strong&gt;me.png&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;h1 id=&quot;-g&quot;&gt;-G&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-G&lt;/strong&gt;参数用来构造 URL 的查询字符串。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'q=kitties'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'count=20'&lt;/span&gt; https://google.com/search
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令会发出一个 GET 请求，实际请求的 URL 为&lt;strong&gt;https://google.com/search?q=kitties&amp;amp;count=20&lt;/strong&gt;。如果省略 &lt;strong&gt;–G&lt;/strong&gt;，会发出一个 POST 请求。&lt;/p&gt;
-
-&lt;p&gt;如果数据需要 URL 编码，可以结合 &lt;strong&gt;–data–urlencode&lt;/strong&gt;参数。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--data-urlencode&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'comment=hello world'&lt;/span&gt; https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;-h&quot;&gt;-H&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-H&lt;/strong&gt;参数添加 HTTP 请求的标头。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Accept-Language: en-US'&lt;/span&gt; https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令添加 HTTP 标头&lt;strong&gt;Accept-Language: en-US&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Accept-Language: en-US'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Secret-Message: xyzzy'&lt;/span&gt; https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令添加两个 HTTP 标头。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;login&quot;: &quot;emma&quot;, &quot;pass&quot;: &quot;123&quot;}'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; https://google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令添加 HTTP 请求的标头是&lt;strong&gt;Content-Type: application/json&lt;/strong&gt;，然后用 &lt;strong&gt;-d&lt;/strong&gt;参数发送 JSON 数据。&lt;/p&gt;
-
-&lt;h1 id=&quot;-i&quot;&gt;-i&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-i&lt;/strong&gt;参数打印出服务器回应的 HTTP 标头。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令收到服务器回应后，先输出服务器回应的标头，然后空一行，再输出网页的源码。&lt;/p&gt;
-
-&lt;h1 id=&quot;-i-1&quot;&gt;-I&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-I&lt;/strong&gt;参数向服务器发出 HEAD 请求，然会将服务器返回的 HTTP 标头打印出来。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-I&lt;/span&gt; https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令输出服务器对 HEAD 请求的回应。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;–head&lt;/strong&gt;参数等同于 &lt;strong&gt;-I&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--head&lt;/span&gt; https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;-k&quot;&gt;-k&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-k&lt;/strong&gt;参数指定跳过 SSL 检测。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-k&lt;/span&gt; https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令不会检查服务器的 SSL 证书是否正确。&lt;/p&gt;
-
-&lt;h1 id=&quot;-l&quot;&gt;-L&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-L&lt;/strong&gt;参数会让 HTTP 请求跟随服务器的重定向。curl 默认不跟随重定向。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tweet=hi'&lt;/span&gt; https://api.twitter.com/tweet
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;limit-rate&quot;&gt;–limit-rate&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;–limit-rate&lt;/strong&gt;用来限制 HTTP 请求和回应的带宽，模拟慢网速的环境。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--limit-rate&lt;/span&gt; 200k https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令将带宽限制在每秒 200K 字节。&lt;/p&gt;
-
-&lt;h1 id=&quot;-o&quot;&gt;-o&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt;参数将服务器的回应保存成文件，等同于wget命令。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; example.html https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令将&lt;strong&gt;www.example.com&lt;/strong&gt;保存成&lt;strong&gt;example.html&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;h1 id=&quot;-o-1&quot;&gt;-O&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-O&lt;/strong&gt;参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://www.example.com/foo/bar.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令将服务器回应保存成文件，文件名为&lt;strong&gt;bar.html&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;h1 id=&quot;-s&quot;&gt;-s&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-s&lt;/strong&gt;参数将不输出错误和进度信息。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令一旦发生错误，不会显示错误信息。不发生错误的话，会正常显示运行结果。&lt;/p&gt;
-
-&lt;p&gt;如果想让 curl 不产生任何输出，可以使用下面的命令。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /dev/null https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;-s-1&quot;&gt;-S&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-S&lt;/strong&gt;参数指定只输出错误信息，通常与 &lt;strong&gt;-s&lt;/strong&gt;一起使用。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /dev/null https://google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令没有任何输出，除非发生错误。&lt;/p&gt;
-
-&lt;h1 id=&quot;-u&quot;&gt;-u&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-u&lt;/strong&gt;参数用来设置服务器认证的用户名和密码。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bob:12345'&lt;/span&gt; https://google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令设置用户名为&lt;strong&gt;bob&lt;/strong&gt;，密码为&lt;strong&gt;12345&lt;/strong&gt;，然后将其转为 HTTP 标头&lt;strong&gt;Authorization: Basic Ym9iOjEyMzQ1&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;curl 能够识别 URL 里面的用户名和密码。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl https://bob:12345@google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令能够识别 URL 里面的用户名和密码，将其转为上个例子里面的 HTTP 标头。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bob'&lt;/span&gt; https://google.com/login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令只设置了用户名，执行后，curl 会提示用户输入密码。&lt;/p&gt;
-
-&lt;h1 id=&quot;-v&quot;&gt;-v&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-v&lt;/strong&gt;参数输出通信的整个过程，用于调试。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;–trace&lt;/strong&gt;参数也可以用于调试，还会输出原始的二进制数据。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;--trace&lt;/span&gt; - https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;-x&quot;&gt;-x&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-x&lt;/strong&gt;参数指定 HTTP 请求的代理。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; socks5://james:cats@myproxy.com:8080 https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令指定 HTTP 请求通过&lt;strong&gt;myproxy.com:8080&lt;/strong&gt;的 socks5 代理发出。&lt;/p&gt;
-
-&lt;p&gt;如果没有指定代理协议，默认为 HTTP。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; james:cats@myproxy.com:8080 https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令中，请求的代理使用 HTTP 协议。&lt;/p&gt;
-
-&lt;h1 id=&quot;-x-1&quot;&gt;-X&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;-X&lt;/strong&gt;参数指定 HTTP 请求的方法。&lt;/p&gt;
-
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST https://www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面命令对&lt;strong&gt;https://www.example.com&lt;/strong&gt;发出 POST 请求。&lt;/p&gt;
-
-&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://catonmat.net/cookbooks/curl&quot; title=&quot;curl cookbook&quot;&gt;curl cookbook&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/09/curl.html&quot; title=&quot;curl 初学者教程&quot;&gt;curl 初学者教程&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="Mac" /><summary type="html"></summary></entry></feed>
