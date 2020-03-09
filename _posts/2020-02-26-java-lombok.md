@@ -10,104 +10,105 @@ comments: true
 
 <!-- more -->
 
-1. # 什么是JavaBean
+## 安装
 
-lombok既是一个IDE插件,也是一个项目要依赖的jar包.lombok是依赖jar包的原因是因为编译时要用它的注解.是插件的原因是他要在编译器编译时通过操作AST(抽象语法树)改变字节码生成.也就是说他可以改变java语法. 他不像spring的依赖注入或者hibernate的orm一样是运行时的特性,而是编译时的特性.
+    IDEA => Settings => Plugins => Browse repositories => lombok ，点击安装，安装提示重启 IDEA，安装成功。
 
+## 引入依赖
 
-2. # JavaBean作用
+    在自己的项目里添加 lombok 的编译支持，在 pom 文件里面添加 dependency
 
-    JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。
+    ```java
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
+        </dependency>
+    ```
 
-3. # JavaBean的属性
+## 注释
 
-    * JavaBean的属性可以是任意类型，并且一个JavaBean可以有多个属性。每个属性通常都需要具有相应的setter、 getter方法，setter方法称为属性修改器，getter方法称为属性访问器。
-    * 属性修改器必须以小写的set前缀开始，后跟属性名，且属性名的第一个字母要改为大写，例如，name属性的修改器名称为setName，password属性的修改器名称为setPassword。
-    * 属性访问器通常以小写的get前缀开始，后跟属性名，且属性名的第一个字母也要改为大写，例如，name属性的访问器名称为getName，password属性的访问器名称为getPassword。
-    * 一个JavaBean的某个属性也可以只有set方法或get方法，这样的属性通常也称之为只写、只读属性。
+1. @Data
 
----
+    - 注解在 类 上
+    - 提供类所有属性的 get 和 set 方法
+    - 此外还提供了equals、canEqual、hashCode、toString 方法
 
-## Java Bean类实现Serializable接口的原因
+2. @Setter
 
-* Serializable接口能帮我们做些什么？
+    - 注解在 属性 上
+    - 为单个属性提供 set 方法
+    - 注解在 类 上，为该类所有的属性提供 set 方法， 都提供默认构造方法。
 
-如上所述，读写对象会有什么问题呢？比如：我要将对象写入一个磁盘文件而后再将其读出来会有什么问题吗？别急，其中一个最大的问题就是对象引用！举个例子来说：假如我有两个类，分别是A和B，B类中含有一个指向A类对象的引用，现在我们对两个类进行实例化{ A a = new A(); B b = new B(); }，这时在内存中实际上分配了两个空间，一个存储对象a，一个存储对象b，接下来我们想将它们写入到磁盘的一个文件中去，就在写入文件时出现了问题！因为对象b包含对对象a的引用，所以系统会自动的将a的数据复制一份到b中，这样的话当我们从文件中恢复对象时(也就是重新加载到内存中)时，内存分配了三个空间，而对象a同时在内存中存在两份，想一想后果吧，如果我想修改对象a的数据的话，那不是还要搜索它的每一份拷贝来达到对象数据的一致性，这不是我们所希望的！
+3. @Getter
 
+    - 注解在 属性 上
+    - 为单个属性提供 get 方法
+    - 注解在 类 上，为该类所有的属性提供 get 方法，都提供默认构造方法。
 
-以下序列化机制的解决方案：
+4. @Log4j
 
-    1. 保存到磁盘的所有对象都获得一个序列号(1, 2, 3等等)
-    2. 当要保存一个对象时，先检查该对象是否被保存了
-    3. 如果以前保存过，只需写入"与已经保存的具有序列号x的对象相同"的标记，否则，保存该对象通过以上的步骤序列化机制解决了对象引用的问题！
+    - 注解在 类 上
+    - 为类提供一个 属性名为 log 的 log4j 日志对象，提供默认构造方法
 
+5. @AllArgsConstructor
 
-在对对象进行实例化的过程中相关注意事项
+    - 注解在 类 上
+    - 为类提供一个全参的构造方法，加了这个注解后，类中不提供默认构造方法了。
 
-    1. 读取对象的顺序必须与写入的顺序相同
-    2. 如果有不能被序列化的对象，执行期间就会抛出NotSerializableException异常
-    3. 序列化时，只对对象的状态进行保存，而不管对象的方法
-    2. 当一个父类实现序列化，子类自动实现序列化，不需要显式实现Serializable接口
-    4. 当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化，而且会是递归的方式。 （序列化程序会将对象版图上的所有东西储存下来，这样才能让该对象恢复到原来的状态）
-    5. 如果子类实现Serializable接口而父类未实现时，父类不会被序列化，但此时父类必须有个无参构造方法，否则会抛InvalidClassException异常，因为反序列化时会恢复原有子对象的状态，而父类的成员变量也是原有子对象的一部分。由于父类没有实现序列化接口，即使没有显示调用，也会默认执行父类的无参构造函数使变量初始化
-    6. 并非所有的对象都可以序列化
+6. @NoArgsConstructor
 
-至于为什么不可以，有很多原因了，比如：
+    - 注解在 类 上
+    - 为类提供一个无参的构造方法。
 
-    1. 安全方面的原因，比如一个对象拥有private，public等field，对于一个要传输的对象，比如写到文件，或者进行RMI传输  等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的。
-    2. 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
+7. @EqualsAndHashCode
 
----
+    - 注解在 类 上,
+    - 可以生成 equals、canEqual、hashCode 方法。
 
-## 深入理解
+8. @NonNull
 
-**1. 序列化算法透析**
+    - 注解在 属性 上
+    - 自动产生一个关于此参数的非空检查，如果参数为空，则抛出一个空指针异常，也会有一个默认的无参构造方法。
 
-Serialization（序列化）是一种将对象以一连串的字节描述的过程；反序列化deserialization是一种将这些字节重建成一个对象的过程。
+9. @Cleanup
 
-序列化算法一般会按步骤做如下事情：
+    - 注解用在 变量 上
+    - 可以保证此变量代表的资源会被自动关闭，默认是调用资源的 close() 方法，如果该资源有其它关闭方法，可使用 @Cleanup(“methodName”) 来指定要调用的方法，- 也会生成默认的构造方法
 
-- 将对象实例相关类的描述。
-- 递归地输出类的超类描述直到不再有超类。
-- 从最顶层的超类开始输出对象实例的实际数据值。
+10. @ToString
 
+    - 注解在 类 上
+    - 可以生成所有参数的 toString 方法，还会生成默认的构造方法。
 
-**2. 序列化ID的问题**
+11. @RequiredArgsConstructor
 
-serialVersionUID适用于JAVA的序列化机制。简单来说，Java的序列化机制是通过判断类的serialVersionUID来验证版本一致性的。
-在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常，即是InvalidCastException。
+    - 注解用在 类 上，
+    - 使用类中所有带有 @NonNull 注解的或者带有 final 修饰的成员变量生成对应的构造方法。
 
-**3. 序列化存储规则**
+12. @Value
 
-Java 序列化机制为了节省磁盘空间，具有特定的存储规则，当写入文件的为同一对象时，并不会再将对象的内容进行存储，而只是再次存储一份引用；
-序列化到同一个文件时，如第二次修改了相同对象属性值再次保存时候，虚拟机根据引用关系知道已经有一个相同对象已经写入文件，因此只保存第二次写的引用，所以读取时，都是第一次保存的对象。
+    - 注解用在 类 上
+    - 会生成含所有参数的构造方法，get 方法
+    - 此外还提供了equals、hashCode、toString 方法。
 
-[详细介绍](https://www.ibm.com/developerworks/cn/java/j-lo-serial/)
+13. @SneakyThrows
 
-**4. 多次序列化的问题**
+    - 注解在 方法 上
+    - 可以将方法中的代码用 try-catch 语句包裹起来，捕获异常并在 catch 中用 Lombok.sneakyThrow(e) 把异常抛出
+    - 可以使用 @SneakyThrows(Exception.class) 的形式指定抛出哪种异常
+    - 会生成默认的构造方法。
 
-在一次的序列化的过程中，ObjectOutputStream 会在文件开始的地方写入一个 Header 的信息到文件中。于是在多次序列化的过程中就会继续在文件末尾（本次序列化的开头）写入 Header 的信息，这时如果进行反序列化的对象的时候会报错：
+14. @Synchronized
 
-```java
-java.io.StreamCorruptedException: invalid type code: AC
-```
+    - 注解在 类方法 或者 实例方法 上
+    - 效果和 synchronized 关键字相同，区别在于锁对象不同，对于类方法和实例方法，synchronized 关键字的锁对象分别是类的 class 对象和 this 对象，而 @Synchronized 的锁对象分别是 私有静态 final 对象 lock 和 私有 final 对象 lock，当然，也可以自己指定锁对象
+    - 此外也提供默认的构造方法
 
-[解决方法](http://blog.sina.com.cn/s/blog_6145ed810100z143.html)
+[参考链接](https://juejin.im/post/5dde71ddf265da06051d00ab "掘金")
 
-**5. 影响序列化**
-
-- transient关键字
-- writeObject()方法与readObject()方法
-- Externalizable接口
-- readResolve()方法
-
-[lombok的官方地址](https://projectlombok.org/ "lombok的官方地址")
-
-[lombok的Github地址](https://github.com/rzwitserloot/lombok "lombok的Github地址")
-
-[参考文章 1 《Java开发中用到的，lombok是什么？》](https://www.zhihu.com/question/42348457 "参考文章 1")
-
-[参考文章 2 《十分钟搞懂Lombok使用与原理》](https://juejin.im/post/5a6eceb8f265da3e467555fe "参考文章 1")
+[参考链接](https://zhuanlan.zhihu.com/p/32779910 "知乎")
 
 
 
