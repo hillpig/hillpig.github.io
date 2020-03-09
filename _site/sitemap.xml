@@ -225,6 +225,10 @@
 <lastmod>2020-03-04T00:00:00-08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/java-spring-jackson/</loc>
+<lastmod>2020-03-05T00:00:00-08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/404/</loc>
 </url>
 <url>
@@ -256,5 +260,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page7/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page8/</loc>
 </url>
 </urlset>

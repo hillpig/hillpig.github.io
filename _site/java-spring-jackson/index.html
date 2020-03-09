@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Spring boot - jackson 处理 JSON – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Spring boot - jackson 处理 JSON" />
+    <meta property="twitter:title" content="Spring boot - jackson 处理 JSON" />
     
   <!-- Async font loading -->
 <script>
@@ -151,312 +158,224 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Spring boot - jackson 处理 JSON</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-03-05
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/tags#Spring Boot">
+          Spring Boot
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://i2.wp.com/www.thecuriousdev.org/wp-content/uploads/2018/12/lombok-builder-jackson.jpg?w=800&amp;ssl=1" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="spring默认使用的是jackson处理json的序列化和反序列化">spring默认使用的是jackson处理json的序列化和反序列化</h2>
+
+<ol>
+  <li>
+    <p>@JsonIgnore</p>
+
+    <ul>
+      <li>@JsonIgnore是jackson的注解，通常当做标志注解(没有要赋值的属性)，常用于属性上。</li>
+      <li>JSON序列化反序列化都会忽略该属性。</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">user</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="nd">@JsonIgnore</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@JsonIgnoreProperties</p>
+
+    <ul>
+      <li>@JsonIgnoreProperties是Jackson的注解，jackson1版本和2版本有区别，1版本只能放在类上，2版本类、方法、属性都可以，为了保持习惯，一般还是都放在model 类的类名上</li>
+      <li>ignoreUnknown属性，默认为false，此时反序列化json字符串时，有bean中没有的字段，就会抛出异常</li>
+      <li>value属性，默认为空，可以放入要忽略的字段，作用和@JsonIgnore一样，可以统一管理忽略字段</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//生成json时将name和age属性过滤</span>
+ <span class="nd">@JsonIgnoreProperties</span><span class="o">({</span><span class="s">"name"</span><span class="o">},{</span><span class="s">"age"</span><span class="o">})</span>
+ <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">user</span> <span class="o">{</span>
+     <span class="kd">private</span>  <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@JsonIgnoreType</p>
+
+    <ul>
+      <li>修饰类，忽略指定的类型的字段</li>
+    </ul>
+  </li>
+  <li>
+    <p>@JsonProperty</p>
+
+    <ul>
+      <li>@JsonProperty是Jackson的注解，jackson1版本和2版本区别很大，用于属性上、set/get方法上，该属性序列化后可重命名。</li>
+      <li>value属性，1、2版本一样，默认为”“，代表该属性序列化和反序列化时的key值</li>
+      <li>required属性，2.0版本新增属性，默认false，2.6版本之后只能用于@JsonCreator中。例子中required=true，当反序列化时，json串中没有x或y，就会报错。不实用，一般不用该属性</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@JsonProperty</span><span class="o">(</span><span class="s">"nameJY"</span><span class="o">)</span>
+ <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>  <span class="c1">// name值为 “暮色”</span>
+</code></pre></div>    </div>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@JsonProperty</span><span class="o">(</span><span class="s">"userIdStr"</span><span class="o">)</span>
+ <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getUserIdStr</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">getUserId</span><span class="o">());</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@JsonFormat</p>
+
+    <ul>
+      <li>此注解用于属性或者方法上（最好是属性上），可以方便的把Date类型直接转化为我们想要的模式，比如@JsonFormat(pattern = “yyyy-MM-dd HH-mm-ss”)</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cm">/**
+  * 格式化日期属性
+  */</span>
+ <span class="nd">@JsonFormat</span><span class="o">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">"yyyy-MM-dd"</span><span class="o">)</span>
+ <span class="kd">private</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@JsonUnwrapped</p>
+
+    <ul>
+      <li>指定某个字段(类型是POJO)序列化成扁平化，而不是嵌套对象，在反序列化时再包装成对象</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyValue</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="nd">@JsonUnwrapped</span><span class="o">(</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">"pre_"</span><span class="o">,</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s">"_suf"</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="nc">MyValue</span> <span class="n">myValue</span><span class="o">;</span>
+     <span class="kd">public</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+     <span class="kd">public</span> <span class="nc">Date</span> <span class="n">date</span><span class="o">;</span>
+ <span class="o">}</span>
+
+ <span class="c1">//{"name":"杨正","pre_name_suf":null,"pre_age_suf":0,"pre_date_suf":null,"age":24,"date":"2017-12-09"}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@JsonView</p>
+
+    <ul>
+      <li>可以定义视图</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+     <span class="nd">@JsonView</span><span class="o">({</span><span class="nc">UserWithoutPassword</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="n">username</span><span class="o">;</span>
+     <span class="nd">@JsonView</span><span class="o">({</span><span class="nc">UserWithPassword</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="n">password</span><span class="o">;</span>
+     <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserWithPassword</span> <span class="kd">extends</span> <span class="nc">UserWithoutPassword</span> <span class="o">{</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserWithoutPassword</span> <span class="o">{</span>
+     <span class="o">}</span>
+     <span class="nd">@Override</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="s">"User{"</span> <span class="o">+</span>
+                 <span class="s">"username='"</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="sc">'\''</span> <span class="o">+</span>
+                 <span class="s">", password='"</span> <span class="o">+</span> <span class="n">password</span> <span class="o">+</span> <span class="sc">'\''</span> <span class="o">+</span>
+                 <span class="sc">'}'</span><span class="o">;</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">JsonViewTest</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+         <span class="nc">ObjectMapper</span> <span class="n">objectMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectMapper</span><span class="o">();</span>
+         <span class="nc">String</span> <span class="n">json</span> <span class="o">=</span> <span class="s">"{\"username\":\"dubby.cn\",\"password\":\"123456\"}"</span><span class="o">;</span>
+         <span class="c1">//反序列化，使用视图</span>
+         <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">objectMapper</span><span class="o">.</span><span class="na">readerWithView</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">UserWithoutPassword</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">forType</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">readValue</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+         <span class="n">user</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="s">"xxxx"</span><span class="o">;</span>
+         <span class="c1">//序列化，使用视图</span>
+         <span class="nc">String</span> <span class="n">result1</span> <span class="o">=</span> <span class="n">objectMapper</span><span class="o">.</span><span class="na">writerWithView</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">UserWithoutPassword</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result1</span><span class="o">);</span>
+         <span class="nc">String</span> <span class="n">result2</span> <span class="o">=</span> <span class="n">objectMapper</span><span class="o">.</span><span class="na">writerWithView</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">UserWithPassword</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result2</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@JsonSerialize</p>
+
+    <ul>
+      <li>此注解用于属性或者getter方法上，用于在序列化时嵌入我们自定义的代码，比如序列化一个double时在其后面限制两位小数点。</li>
+    </ul>
+  </li>
+  <li>
+    <p>@JsonDeserialize</p>
+
+    <ul>
+      <li>此注解用于属性或者setter方法上，用于在反序列化时可以嵌入我们自定义的代码，类似于上面的@JsonSerialize</li>
+    </ul>
+  </li>
+</ol>
 
 
+  </div>
 
-<div class="posts">
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-laugh-smile-siggle-grin-beam-sneer/">laugh, smile, siggle, grin, beam, sneer 区别</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Spring boot - jackson 处理 JSON",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-01-22
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.beautiful-women-pedia.com/images/woman-smiling-text-photo.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-laugh-smile-siggle-grin-beam-sneer/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/android-apk/">Android 友盟多渠道打包</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-22
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Android">
-              Android
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.ritavpn.com/blog/wp-content/uploads/2019/12/Best-APK-Download-Sites-for-2020.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/android-apk/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-choose-select-pick-elect-opt-prefer/">Choose, select, pick, elect, prefer, opt 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-21
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://jacobspradlin.files.wordpress.com/2013/08/choosetech.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-choose-select-pick-elect-opt-prefer/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/">apparatus, instrument, device, equipment, tool, implement, installation, appliance, facilities 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://cookmankitchenequipments.files.wordpress.com/2015/09/commercial-kitchen-equipment-supplies-l-40da9a0c49163d9c.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/linux-ubuntu-log/">ubuntu下查看log</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Linux">
-              Linux
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#ubuntu">
-              ubuntu
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.howtogeek.com/wp-content/uploads/2012/07/ximage8.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.qSWlkYkoXy.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/linux-ubuntu-log/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-success-succeed-successful-successor/">success, succeed, successful, successor 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://gearingforsuccess.ca/wp-content/uploads/2018/09/success-800x449.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-success-succeed-successful-successor/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-relative/">亲属相关的英文</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://search3.openobjects.com/mediamanager/redcar/fsd/images/relative_experience_graphic_1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-relative/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-progress-process-proceed-procedure/">Progress, Process, Proceed, Procedure区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://dotcom.nlcdn.com/wp-content/uploads/2017/08/BuildSalesProcess_Featured-1140x768@2x-80-min.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-progress-process-proceed-procedure/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page5/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/ansible/">
+        ← 上一篇
       </a>
     </span>
   
-  
-    <span class="next">
-      <a href="/page7/" class="next">
-        下一页 →
-      </a>
-    </span>
   
 </div>
-
       </div>
     </div>
 
