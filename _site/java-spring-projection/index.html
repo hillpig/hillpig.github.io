@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Spring boot - @Projection – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Spring boot - @Projection" />
+    <meta property="twitter:title" content="Spring boot - @Projection" />
     
   <!-- Async font loading -->
 <script>
@@ -151,156 +158,93 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Spring boot - @Projection</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-03-10
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/tags#Spring Boot">
+          Spring Boot
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://javadeveloperzone.com/wp-content/uploads/2018/09/Spring-JPA-Projection-example-1024x488.jpg" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="spring默认使用的是jackson处理json的序列化和反序列化">spring默认使用的是jackson处理json的序列化和反序列化</h2>
+
+<ol>
+  <li>
+    <p>@JsonIgnore</p>
+
+    <ul>
+      <li>@JsonIgnore是jackson的注解，通常当做标志注解(没有要赋值的属性)，常用于属性上。</li>
+      <li>JSON序列化反序列化都会忽略该属性。</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">user</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="nd">@JsonIgnore</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
 
 
+  </div>
 
-<div class="posts">
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/math-test/">LaTex渲染的说明和测试</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Spring boot - @Projection",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2019-07-24
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#document">
-              document
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>LaTeX渲染已经在全站头部文件引入，可以直接使用，公式块上下使用<code class="highlighter-rouge">$$</code>标明，内联公式则用<code class="highlighter-rouge">$</code>.</p>
-
-<p>最好不要让公式出现在文章摘要里。</p>
-
-<p>Jekyll的默认文章摘要是第一段，但是我在使用中发现它选取摘要不是很稳...
-      </div>
-
-      <a href="/math-test/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/document/">LOFFER文档</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2019-06-02
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#document">
-              document
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。</p>
-
-<p>这是一个可以通过Fork直接发布在GitHub的Jekyll博客，你不需要编写代码或使用命令行即可获得一个部署在GitHub的博客。</p>
-
-<h2 id="更新内容">更新内容</h2>
-
-<h3 id="2019-07-25-v040">2019-07-25 V0.4...
-      </div>
-
-      <a href="/document/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/chinese-markdown-cheatsheet/">Markdown语法简介</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2013-07-16
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#markdown">
-              markdown
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>Markdown让文本编辑更加灵活，效果更加丰富。</p>
-
-<p>本中文版Markdown语法简介来自博客 <a href="https://blog.shengbin.me/posts/markdown-syntax">https://blog.shengbin.me/posts/markdown-syntax</a></p>
-
-<p>Markdown语法的完整介绍在这里：<a h...
-      </div>
-
-      <a href="/chinese-markdown-cheatsheet/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page7/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/apache-tomcat-nginx/">
+        ← 上一篇
       </a>
     </span>
   
   
 </div>
-
       </div>
     </div>
 

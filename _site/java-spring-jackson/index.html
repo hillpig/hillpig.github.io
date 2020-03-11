@@ -215,8 +215,16 @@
       <li>value属性，默认为空，可以放入要忽略的字段，作用和@JsonIgnore一样，可以统一管理忽略字段</li>
     </ul>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//生成json时将name和age属性过滤</span>
- <span class="nd">@JsonIgnoreProperties</span><span class="o">({</span><span class="s">"name"</span><span class="o">},{</span><span class="s">"age"</span><span class="o">})</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// 生成json时将name和age属性过滤</span>
+ <span class="nd">@JsonIgnoreProperties</span><span class="o">(</span><span class="n">value</span><span class="o">={</span><span class="s">"name"</span><span class="o">,</span><span class="s">"age"</span><span class="o">})</span>
+ <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">user</span> <span class="o">{</span>
+     <span class="kd">private</span>  <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+ <span class="o">}</span>
+
+ <span class="c1">// deserialization的时候会忽略除 name 和 age 之外的 条目</span>
+ <span class="nd">@JsonIgnoreProperties</span><span class="o">(</span><span class="n">ignoreUnknown</span><span class="o">=</span><span class="kc">true</span><span class="o">)</span>
  <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">user</span> <span class="o">{</span>
      <span class="kd">private</span>  <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
      <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
@@ -227,7 +235,8 @@
     <p>@JsonIgnoreType</p>
 
     <ul>
-      <li>修饰类，忽略指定的类型的字段</li>
+      <li>修饰类</li>
+      <li>忽略指定的类型的字段</li>
     </ul>
   </li>
   <li>
@@ -246,6 +255,27 @@
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@JsonProperty</span><span class="o">(</span><span class="s">"userIdStr"</span><span class="o">)</span>
  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getUserIdStr</span><span class="o">()</span> <span class="o">{</span>
      <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">getUserId</span><span class="o">());</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cm">/**
+ * Note that as of 2.6, this property is only used for Creator
+ * Properties, to ensure existence of property value in JSON:
+ * for other properties (ones injected using a setter or mutable
+ * field), no validation is performed. Support for those cases
+ * may be added in future.
+ * State of this property is exposed via introspection, and its
+ * value is typically used by Schema generators, such as one for
+ * JSON Schema.
+ */</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">Integer</span> <span class="n">x</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Integer</span> <span class="n">y</span><span class="o">;</span>
+     <span class="nd">@JsonCreator</span>
+     <span class="kd">public</span> <span class="nf">MyClass</span><span class="o">(</span><span class="nd">@JsonProperty</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"x"</span><span class="o">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> <span class="nc">Integer</span> <span class="n">x</span><span class="o">,</span> <span class="nd">@JsonProperty</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"value_y"</span><span class="o">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> <span class="nc">Integer</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">;</span>
+     <span class="o">}</span>
  <span class="o">}</span>
 </code></pre></div>    </div>
   </li>
@@ -270,15 +300,58 @@
       <li>指定某个字段(类型是POJO)序列化成扁平化，而不是嵌套对象，在反序列化时再包装成对象</li>
     </ul>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyValue</span> <span class="o">{</span>
-     <span class="kd">public</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
-     <span class="nd">@JsonUnwrapped</span><span class="o">(</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">"pre_"</span><span class="o">,</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s">"_suf"</span><span class="o">)</span>
-     <span class="kd">public</span> <span class="nc">MyValue</span> <span class="n">myValue</span><span class="o">;</span>
-     <span class="kd">public</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
-     <span class="kd">public</span> <span class="nc">Date</span> <span class="n">date</span><span class="o">;</span>
- <span class="o">}</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleMain</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+     <span class="nc">Department</span> <span class="n">dept</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Department</span><span class="o">();</span>
+     <span class="n">dept</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"Admin"</span><span class="o">);</span>
+     <span class="n">dept</span><span class="o">.</span><span class="na">setLocation</span><span class="o">(</span><span class="s">"NY"</span><span class="o">);</span>
+     <span class="nc">Employee</span> <span class="n">employee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">();</span>
+     <span class="n">employee</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"Amy"</span><span class="o">);</span>
+     <span class="n">employee</span><span class="o">.</span><span class="na">setDept</span><span class="o">(</span><span class="n">dept</span><span class="o">);</span>
 
- <span class="c1">//{"name":"杨正","pre_name_suf":null,"pre_age_suf":0,"pre_date_suf":null,"age":24,"date":"2017-12-09"}</span>
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"-- before serialization --"</span><span class="o">);</span>
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"-- after serialization --"</span><span class="o">);</span>
+     <span class="nc">ObjectMapper</span> <span class="n">om</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectMapper</span><span class="o">();</span>
+     <span class="nc">String</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="n">om</span><span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">jsonString</span><span class="o">);</span>
+
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"-- after deserialization --"</span><span class="o">);</span>
+     <span class="nc">Employee</span> <span class="n">employee2</span> <span class="o">=</span> <span class="n">om</span><span class="o">.</span><span class="na">readValue</span><span class="o">(</span><span class="n">jsonString</span><span class="o">,</span> <span class="nc">Employee</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">employee2</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>输出</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">--</span> <span class="n">before</span> <span class="n">serialization</span> <span class="o">--</span>
+ <span class="nc">Employee</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="nc">Amy</span><span class="err">'</span><span class="o">,</span> <span class="n">dept</span><span class="o">=</span><span class="nc">Department</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="nc">Admin</span><span class="err">'</span><span class="o">,</span> <span class="n">location</span><span class="o">=</span><span class="err">'</span><span class="no">NY</span><span class="err">'</span><span class="o">}}</span>
+ <span class="o">--</span> <span class="n">after</span> <span class="n">serialization</span> <span class="o">--</span>
+ <span class="o">{</span><span class="s">"name"</span><span class="o">:</span><span class="s">"Amy"</span><span class="o">,</span><span class="s">"dept-name"</span><span class="o">:</span><span class="s">"Admin"</span><span class="o">,</span><span class="s">"dept-location"</span><span class="o">:</span><span class="s">"NY"</span><span class="o">}</span>
+ <span class="o">--</span> <span class="n">after</span> <span class="n">deserialization</span> <span class="o">--</span>
+ <span class="nc">Employee</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="nc">Amy</span><span class="err">'</span><span class="o">,</span> <span class="n">dept</span><span class="o">=</span><span class="nc">Department</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="nc">Admin</span><span class="err">'</span><span class="o">,</span> <span class="n">location</span><span class="o">=</span><span class="err">'</span><span class="no">NY</span><span class="err">'</span><span class="o">}}</span>
+</code></pre></div>    </div>
+
+    <p><strong>如果没有prefix / suffix</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="nd">@JsonUnwrapped</span>
+     <span class="kd">private</span> <span class="nc">Department</span> <span class="n">dept</span><span class="o">;</span>
+     <span class="o">.............</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>输出</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">--</span> <span class="n">before</span> <span class="n">serialization</span> <span class="o">--</span>
+ <span class="nc">Employee</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="nc">Amy</span><span class="err">'</span><span class="o">,</span> <span class="n">dept</span><span class="o">=</span><span class="nc">Department</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="nc">Admin</span><span class="err">'</span><span class="o">,</span> <span class="n">location</span><span class="o">=</span><span class="err">'</span><span class="no">NY</span><span class="err">'</span><span class="o">}}</span>
+ <span class="o">--</span> <span class="n">after</span> <span class="n">serialization</span> <span class="o">--</span>
+ <span class="o">{</span><span class="s">"name"</span><span class="o">:</span><span class="s">"Amy"</span><span class="o">,</span><span class="s">"name"</span><span class="o">:</span><span class="s">"Admin"</span><span class="o">,</span><span class="s">"location"</span><span class="o">:</span><span class="s">"NY"</span><span class="o">}</span>
+ <span class="o">--</span> <span class="n">after</span> <span class="n">deserialization</span> <span class="o">--</span>
+ <span class="nc">Employee</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="nc">Admin</span><span class="err">'</span><span class="o">,</span> <span class="n">dept</span><span class="o">=</span><span class="nc">Department</span><span class="o">{</span><span class="n">name</span><span class="o">=</span><span class="err">'</span><span class="kc">null</span><span class="err">'</span><span class="o">,</span> <span class="n">location</span><span class="o">=</span><span class="err">'</span><span class="no">NY</span><span class="err">'</span><span class="o">}}</span>
 </code></pre></div>    </div>
   </li>
   <li>
@@ -288,57 +361,174 @@
       <li>可以定义视图</li>
     </ul>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
-     <span class="nd">@JsonView</span><span class="o">({</span><span class="nc">UserWithoutPassword</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
-     <span class="kd">public</span> <span class="nc">String</span> <span class="n">username</span><span class="o">;</span>
-     <span class="nd">@JsonView</span><span class="o">({</span><span class="nc">UserWithPassword</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
-     <span class="kd">public</span> <span class="nc">String</span> <span class="n">password</span><span class="o">;</span>
-     <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserWithPassword</span> <span class="kd">extends</span> <span class="nc">UserWithoutPassword</span> <span class="o">{</span>
-     <span class="o">}</span>
-     <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserWithoutPassword</span> <span class="o">{</span>
-     <span class="o">}</span>
-     <span class="nd">@Override</span>
-     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
-         <span class="k">return</span> <span class="s">"User{"</span> <span class="o">+</span>
-                 <span class="s">"username='"</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="sc">'\''</span> <span class="o">+</span>
-                 <span class="s">", password='"</span> <span class="o">+</span> <span class="n">password</span> <span class="o">+</span> <span class="sc">'\''</span> <span class="o">+</span>
-                 <span class="sc">'}'</span><span class="o">;</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Views</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Public</span> <span class="o">{</span>
      <span class="o">}</span>
  <span class="o">}</span>
 
- <span class="kd">public</span> <span class="kd">class</span> <span class="nc">JsonViewTest</span> <span class="o">{</span>
-     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
-         <span class="nc">ObjectMapper</span> <span class="n">objectMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectMapper</span><span class="o">();</span>
-         <span class="nc">String</span> <span class="n">json</span> <span class="o">=</span> <span class="s">"{\"username\":\"dubby.cn\",\"password\":\"123456\"}"</span><span class="o">;</span>
-         <span class="c1">//反序列化，使用视图</span>
-         <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">objectMapper</span><span class="o">.</span><span class="na">readerWithView</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">UserWithoutPassword</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">forType</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">readValue</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
-         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
-         <span class="n">user</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="s">"xxxx"</span><span class="o">;</span>
-         <span class="c1">//序列化，使用视图</span>
-         <span class="nc">String</span> <span class="n">result1</span> <span class="o">=</span> <span class="n">objectMapper</span><span class="o">.</span><span class="na">writerWithView</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">UserWithoutPassword</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
-         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result1</span><span class="o">);</span>
-         <span class="nc">String</span> <span class="n">result2</span> <span class="o">=</span> <span class="n">objectMapper</span><span class="o">.</span><span class="na">writerWithView</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">UserWithPassword</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
-         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result2</span><span class="o">);</span>
-     <span class="o">}</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+ 
+     <span class="nd">@JsonView</span><span class="o">(</span><span class="nc">Views</span><span class="o">.</span><span class="na">Public</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+ <span class="o">}</span>
+
+ <span class="nd">@Test</span>
+ <span class="kd">public</span> <span class="kt">void</span> <span class="nf">whenUseJsonViewToSerialize_thenCorrect</span><span class="o">()</span> 
+   <span class="kd">throws</span> <span class="nc">JsonProcessingException</span> <span class="o">{</span>
+    
+     <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">User</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"John"</span><span class="o">);</span>
+    
+     <span class="nc">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectMapper</span><span class="o">();</span>
+     <span class="n">mapper</span><span class="o">.</span><span class="na">disable</span><span class="o">(</span><span class="nc">MapperFeature</span><span class="o">.</span><span class="na">DEFAULT_VIEW_INCLUSION</span><span class="o">);</span>
+    
+     <span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">mapper</span>
+         <span class="o">.</span><span class="na">writerWithView</span><span class="o">(</span><span class="nc">Views</span><span class="o">.</span><span class="na">Public</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+    
+     <span class="n">assertThat</span><span class="o">(</span><span class="n">result</span><span class="o">,</span> <span class="n">containsString</span><span class="o">(</span><span class="s">"John"</span><span class="o">));</span>
+     <span class="n">assertThat</span><span class="o">(</span><span class="n">result</span><span class="o">,</span> <span class="n">not</span><span class="o">(</span><span class="n">containsString</span><span class="o">(</span><span class="s">"1"</span><span class="o">)));</span>
  <span class="o">}</span>
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>@JsonSerialize</p>
+    <p>@JsonSerialize 和 @JsonDeserialize</p>
 
     <ul>
-      <li>此注解用于属性或者getter方法上，用于在序列化时嵌入我们自定义的代码，比如序列化一个double时在其后面限制两位小数点。</li>
+      <li>@JsonSerialize用于属性或者getter方法上，用于在序列化时嵌入我们自定义的代码，比如序列化一个double时在其后面限制两位小数点。</li>
+      <li>@JsonDeserialize用于属性或者setter方法上，用于在反序列化时可以嵌入我们自定义的代码，类似于上面的@JsonSerialize</li>
     </ul>
-  </li>
-  <li>
-    <p>@JsonDeserialize</p>
 
-    <ul>
-      <li>此注解用于属性或者setter方法上，用于在反序列化时可以嵌入我们自定义的代码，类似于上面的@JsonSerialize</li>
-    </ul>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomDoubleSerialize</span> <span class="kd">extends</span> <span class="nc">JsonSerializer</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;</span> <span class="o">{</span>  
+    
+     <span class="kd">private</span> <span class="nc">DecimalFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DecimalFormat</span><span class="o">(</span><span class="s">"##.00"</span><span class="o">);</span>  
+    
+     <span class="nd">@Override</span>  
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">serialize</span><span class="o">(</span><span class="nc">Double</span> <span class="n">value</span><span class="o">,</span> <span class="nc">JsonGenerator</span> <span class="n">jgen</span><span class="o">,</span>  
+             <span class="nc">SerializerProvider</span> <span class="n">provider</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">,</span>  
+             <span class="nc">JsonProcessingException</span> <span class="o">{</span>  
+    
+         <span class="n">jgen</span><span class="o">.</span><span class="na">writeString</span><span class="o">(</span><span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">value</span><span class="o">));</span>  
+     <span class="o">}</span>  
+ <span class="o">}</span>  
+</code></pre></div>    </div>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomDateDeserialize</span> <span class="kd">extends</span> <span class="nc">JsonDeserializer</span><span class="o">&lt;</span><span class="nc">Date</span><span class="o">&gt;</span> <span class="o">{</span>  
+  
+     <span class="kd">private</span> <span class="nc">SimpleDateFormat</span> <span class="n">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd"</span><span class="o">);</span>  
+    
+     <span class="nd">@Override</span>  
+     <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">deserialize</span><span class="o">(</span><span class="nc">JsonParser</span> <span class="n">jp</span><span class="o">,</span> <span class="nc">DeserializationContext</span> <span class="n">ctxt</span><span class="o">)</span>  
+             <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">,</span> <span class="nc">JsonProcessingException</span> <span class="o">{</span>  
+    
+         <span class="nc">Date</span> <span class="n">date</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>  
+         <span class="k">try</span> <span class="o">{</span>  
+             <span class="n">date</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">jp</span><span class="o">.</span><span class="na">getText</span><span class="o">());</span>  
+         <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ParseException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>  
+             <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>  
+         <span class="o">}</span>  
+         <span class="k">return</span> <span class="n">date</span><span class="o">;</span>  
+     <span class="o">}</span>  
+ <span class="o">}</span> 
+</code></pre></div>    </div>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//表示序列化时忽略的属性  </span>
+ <span class="nd">@JsonIgnoreProperties</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"word"</span> <span class="o">})</span>  
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>  
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>  
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>  
+     <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">sex</span><span class="o">;</span>  
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">;</span>  
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">word</span><span class="o">;</span>  
+     <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span>  
+        
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>  
+         <span class="k">return</span> <span class="n">name</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>  
+         <span class="k">return</span> <span class="n">age</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isSex</span><span class="o">()</span> <span class="o">{</span>  
+         <span class="k">return</span> <span class="n">sex</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSex</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">sex</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">sex</span> <span class="o">=</span> <span class="n">sex</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">getBirthday</span><span class="o">()</span> <span class="o">{</span>  
+         <span class="k">return</span> <span class="n">birthday</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="c1">// 反序列化一个固定格式的Date  </span>
+     <span class="nd">@JsonDeserialize</span><span class="o">(</span><span class="n">using</span> <span class="o">=</span> <span class="nc">CustomDateDeserialize</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>  
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBirthday</span><span class="o">(</span><span class="nc">Date</span> <span class="n">birthday</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getWord</span><span class="o">()</span> <span class="o">{</span>  
+         <span class="k">return</span> <span class="n">word</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWord</span><span class="o">(</span><span class="nc">String</span> <span class="n">word</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">word</span> <span class="o">=</span> <span class="n">word</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="c1">// 序列化指定格式的double格式  </span>
+     <span class="nd">@JsonSerialize</span><span class="o">(</span><span class="n">using</span> <span class="o">=</span> <span class="nc">CustomDoubleSerialize</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>  
+     <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span>  
+         <span class="k">return</span> <span class="n">salary</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSalary</span><span class="o">(</span><span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="nf">Person</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="nf">Person</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">sex</span><span class="o">,</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">,</span>  
+             <span class="nc">String</span> <span class="n">word</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>  
+         <span class="kd">super</span><span class="o">();</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">sex</span> <span class="o">=</span> <span class="n">sex</span><span class="o">;</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="o">;</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">word</span> <span class="o">=</span> <span class="n">word</span><span class="o">;</span>  
+         <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>  
+     <span class="o">}</span>  
+        
+     <span class="kd">public</span> <span class="nf">Person</span><span class="o">()</span> <span class="o">{</span>  
+     <span class="o">}</span>  
+        
+     <span class="nd">@Override</span>  
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>  
+         <span class="k">return</span> <span class="s">"Person [name="</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", age="</span> <span class="o">+</span> <span class="n">age</span> <span class="o">+</span> <span class="s">", sex="</span> <span class="o">+</span> <span class="n">sex</span>  
+                 <span class="o">+</span> <span class="s">", birthday="</span> <span class="o">+</span> <span class="n">birthday</span> <span class="o">+</span> <span class="s">", word="</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s">", salary="</span>  
+                 <span class="o">+</span> <span class="n">salary</span> <span class="o">+</span> <span class="s">"]"</span><span class="o">;</span>  
+     <span class="o">}</span>
+ <span class="o">}</span>  
+</code></pre></div>    </div>
   </li>
 </ol>
 
+<p><a href="https://www.concretepage.com/jackson-api/jackson-jsonignore-jsonignoreproperties-and-jsonignoretype#allowGetters">参考链接</a></p>
+
+<p><a href="https://www.baeldung.com/jackson-json-view-annotation">参考链接</a></p>
+
+<p><a href="https://www.jianshu.com/p/668aa8bda86f">参考链接</a></p>
 
   </div>
 
@@ -374,6 +564,12 @@
       </a>
     </span>
   
+  
+    <span class="next" >
+      <a href="http://localhost:4000/apache-tomcat-nginx/">
+        下一篇 →
+      </a>
+    </span>
   
 </div>
       </div>

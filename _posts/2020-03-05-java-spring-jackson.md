@@ -32,8 +32,16 @@ comments: true
 
 
     ```java
-    //生成json时将name和age属性过滤
-    @JsonIgnoreProperties({"name"},{"age"})
+    // 生成json时将name和age属性过滤
+    @JsonIgnoreProperties(value={"name","age"})
+    public class  user {
+        private  String name;
+        private int age;
+        private String address;
+    }
+
+    // deserialization的时候会忽略除 name 和 age 之外的 条目
+    @JsonIgnoreProperties(ignoreUnknown=true)
     public class  user {
         private  String name;
         private int age;
@@ -41,7 +49,8 @@ comments: true
     ```
 3. @JsonIgnoreType
 
-    - 修饰类，忽略指定的类型的字段
+    - 修饰类
+    - 忽略指定的类型的字段
 
 4. @JsonProperty
 
@@ -58,6 +67,28 @@ comments: true
     @JsonProperty("userIdStr")
     public String getUserIdStr() {
         return String.valueOf(getUserId());
+    }
+    ```
+
+    ```java
+    /**
+    * Note that as of 2.6, this property is only used for Creator
+    * Properties, to ensure existence of property value in JSON:
+    * for other properties (ones injected using a setter or mutable
+    * field), no validation is performed. Support for those cases
+    * may be added in future.
+    * State of this property is exposed via introspection, and its
+    * value is typically used by Schema generators, such as one for
+    * JSON Schema.
+    */
+    public class MyClass {
+        private Integer x;
+        private Integer y;
+        @JsonCreator
+        public MyClass(@JsonProperty(value = "x", required = true) Integer x, @JsonProperty(value = "value_y", required = true) Integer y) {
+            this.x = x;
+            this.y = y;
+        }
     }
     ```
 
@@ -78,15 +109,61 @@ comments: true
     - 指定某个字段(类型是POJO)序列化成扁平化，而不是嵌套对象，在反序列化时再包装成对象
 
     ```java
-    public class MyValue {
-        public String name;
-        @JsonUnwrapped(prefix = "pre_", suffix = "_suf")
-        public MyValue myValue;
-        public int age;
-        public Date date;
-    }
+    public class ExampleMain {
+        public static void main(String[] args) throws IOException {
+        Department dept = new Department();
+        dept.setName("Admin");
+        dept.setLocation("NY");
+        Employee employee = new Employee();
+        employee.setName("Amy");
+        employee.setDept(dept);
 
-    //{"name":"杨正","pre_name_suf":null,"pre_age_suf":0,"pre_date_suf":null,"age":24,"date":"2017-12-09"}
+        System.out.println("-- before serialization --");
+        System.out.println(employee);
+
+        System.out.println("-- after serialization --");
+        ObjectMapper om = new ObjectMapper();
+        String jsonString = om.writeValueAsString(employee);
+        System.out.println(jsonString);
+
+        System.out.println("-- after deserialization --");
+        Employee employee2 = om.readValue(jsonString, Employee.class);
+        System.out.println(employee2);
+        }
+    }
+    ```
+
+    **输出**
+
+    ```java
+    -- before serialization --
+    Employee{name='Amy', dept=Department{name='Admin', location='NY'}}
+    -- after serialization --
+    {"name":"Amy","dept-name":"Admin","dept-location":"NY"}
+    -- after deserialization --
+    Employee{name='Amy', dept=Department{name='Admin', location='NY'}}
+    ```
+
+    **如果没有prefix / suffix**
+
+    ```java
+    public class Employee {
+        private String name;
+        @JsonUnwrapped
+        private Department dept;
+        .............
+    }
+    ```
+
+    **输出**
+
+    ```java
+    -- before serialization --
+    Employee{name='Amy', dept=Department{name='Admin', location='NY'}}
+    -- after serialization --
+    {"name":"Amy","name":"Admin","location":"NY"}
+    -- after deserialization --
+    Employee{name='Admin', dept=Department{name='null', location='NY'}}
     ```
 
 7. @JsonView
@@ -94,46 +171,169 @@ comments: true
     - 可以定义视图
 
     ```java
-    class User {
-        @JsonView({UserWithoutPassword.class})
-        public String username;
-        @JsonView({UserWithPassword.class})
-        public String password;
-        public interface UserWithPassword extends UserWithoutPassword {
-        }
-        public interface UserWithoutPassword {
-        }
-        @Override
-        public String toString() {
-            return "User{" +
-                    "username='" + username + '\'' +
-                    ", password='" + password + '\'' +
-                    '}';
+    public class Views {
+        public static class Public {
         }
     }
 
-    public class JsonViewTest {
-        public static void main(String[] args) throws IOException {
-            ObjectMapper objectMapper = new ObjectMapper();
-            String json = "{\"username\":\"dubby.cn\",\"password\":\"123456\"}";
-            //反序列化，使用视图
-            User user = objectMapper.readerWithView(User.UserWithoutPassword.class).forType(User.class).readValue(json);
-            System.out.println(user);
-            user.password = "xxxx";
-            //序列化，使用视图
-            String result1 = objectMapper.writerWithView(User.UserWithoutPassword.class).writeValueAsString(user);
-            System.out.println(result1);
-            String result2 = objectMapper.writerWithView(User.UserWithPassword.class).writeValueAsString(user);
-            System.out.println(result2);
-        }
+    public class User {
+        public int id;
+ 
+        @JsonView(Views.Public.class)
+        public String name;
+    }
+
+    @Test
+    public void whenUseJsonViewToSerialize_thenCorrect() 
+      throws JsonProcessingException {
+    
+        User user = new User(1, "John");
+    
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.disable(MapperFeature.DEFAULT_VIEW_INCLUSION);
+    
+        String result = mapper
+            .writerWithView(Views.Public.class)
+            .writeValueAsString(user);
+    
+        assertThat(result, containsString("John"));
+        assertThat(result, not(containsString("1")));
     }
     ```
 
-8. @JsonSerialize
+8. @JsonSerialize 和 @JsonDeserialize
 
-    - 此注解用于属性或者getter方法上，用于在序列化时嵌入我们自定义的代码，比如序列化一个double时在其后面限制两位小数点。
+    - @JsonSerialize用于属性或者getter方法上，用于在序列化时嵌入我们自定义的代码，比如序列化一个double时在其后面限制两位小数点。
+    - @JsonDeserialize用于属性或者setter方法上，用于在反序列化时可以嵌入我们自定义的代码，类似于上面的@JsonSerialize
 
-9. @JsonDeserialize
+    ```java
+    public class CustomDoubleSerialize extends JsonSerializer<Double> {  
+    
+        private DecimalFormat df = new DecimalFormat("##.00");  
+    
+        @Override  
+        public void serialize(Double value, JsonGenerator jgen,  
+                SerializerProvider provider) throws IOException,  
+                JsonProcessingException {  
+    
+            jgen.writeString(df.format(value));  
+        }  
+    }  
+    ```
 
-    - 此注解用于属性或者setter方法上，用于在反序列化时可以嵌入我们自定义的代码，类似于上面的@JsonSerialize
+    ```java
+    public class CustomDateDeserialize extends JsonDeserializer<Date> {  
+  
+        private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");  
+    
+        @Override  
+        public Date deserialize(JsonParser jp, DeserializationContext ctxt)  
+                throws IOException, JsonProcessingException {  
+    
+            Date date = null;  
+            try {  
+                date = sdf.parse(jp.getText());  
+            } catch (ParseException e) {  
+                e.printStackTrace();  
+            }  
+            return date;  
+        }  
+    } 
+    ```
 
+    ```java
+    //表示序列化时忽略的属性  
+    @JsonIgnoreProperties(value = { "word" })  
+    public class Person {  
+        private String name;  
+        private int age;  
+        private boolean sex;  
+        private Date birthday;  
+        private String word;  
+        private double salary;  
+        
+        public String getName() {  
+            return name;  
+        }  
+        
+        public void setName(String name) {  
+            this.name = name;  
+        }  
+        
+        public int getAge() {  
+            return age;  
+        }  
+        
+        public void setAge(int age) {  
+            this.age = age;  
+        }  
+        
+        public boolean isSex() {  
+            return sex;  
+        }  
+        
+        public void setSex(boolean sex) {  
+            this.sex = sex;  
+        }  
+        
+        public Date getBirthday() {  
+            return birthday;  
+        }  
+        
+        // 反序列化一个固定格式的Date  
+        @JsonDeserialize(using = CustomDateDeserialize.class)  
+        public void setBirthday(Date birthday) {  
+            this.birthday = birthday;  
+        }  
+        
+        public String getWord() {  
+            return word;  
+        }  
+        
+        public void setWord(String word) {  
+            this.word = word;  
+        }  
+        
+        // 序列化指定格式的double格式  
+        @JsonSerialize(using = CustomDoubleSerialize.class)  
+        public double getSalary() {  
+            return salary;  
+        }  
+        
+        public void setSalary(double salary) {  
+            this.salary = salary;  
+        }  
+        
+        public Person(String name, int age) {  
+            this.name = name;  
+            this.age = age;  
+        }  
+        
+        public Person(String name, int age, boolean sex, Date birthday,  
+                String word, double salary) {  
+            super();  
+            this.name = name;  
+            this.age = age;  
+            this.sex = sex;  
+            this.birthday = birthday;  
+            this.word = word;  
+            this.salary = salary;  
+        }  
+        
+        public Person() {  
+        }  
+        
+        @Override  
+        public String toString() {  
+            return "Person [name=" + name + ", age=" + age + ", sex=" + sex  
+                    + ", birthday=" + birthday + ", word=" + word + ", salary="  
+                    + salary + "]";  
+        }
+    }  
+    ```
+
+[参考链接](https://www.concretepage.com/jackson-api/jackson-jsonignore-jsonignoreproperties-and-jsonignoretype#allowGetters)
+
+[参考链接](https://www.baeldung.com/jackson-json-view-annotation)
+
+[参考链接](https://www.jianshu.com/p/668aa8bda86f)

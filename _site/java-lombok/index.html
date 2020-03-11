@@ -182,23 +182,24 @@
 
 <!-- more -->
 
+<h2 id="lombok是什么">Lombok是什么?</h2>
+
+<p>Lombok是一个通过注解以达到减少代码的Java库,如通过注解的方式减少get,set方法,构造方法等。</p>
+
 <h2 id="安装">安装</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IDEA =&gt; Settings =&gt; Plugins =&gt; Browse repositories =&gt; lombok ，点击安装，安装提示重启 IDEA，安装成功。
-</code></pre></div></div>
+<p>IDEA =&gt; Settings =&gt; Plugins =&gt; Browse repositories =&gt; lombok ，点击安装，安装提示重启 IDEA，安装成功。</p>
 
 <h2 id="引入依赖">引入依赖</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在自己的项目里添加 lombok 的编译支持，在 pom 文件里面添加 dependency
+<p>在自己的项目里添加 lombok 的编译支持，在 pom 文件里面添加 dependency</p>
 
-```java
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-        &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-        &lt;version&gt;1.16.18&lt;/version&gt;
-        &lt;scope&gt;provided&lt;/scope&gt;
-    &lt;/dependency&gt;
-```
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="o">.</span><span class="na">projectlombok</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">lombok</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.16</span><span class="o">.</span><span class="mi">18</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="n">provided</span><span class="o">&lt;/</span><span class="n">scope</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
 <h2 id="注释">注释</h2>
@@ -212,6 +213,50 @@
       <li>提供类所有属性的 get 和 set 方法</li>
       <li>此外还提供了equals、canEqual、hashCode、toString 方法</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Java</span>
+ <span class="nd">@Data</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">brithday</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Class</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Message</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getAddress</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">address</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">getBirthday</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">birthday</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAddress</span><span class="o">(</span><span class="nc">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">address</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBirthday</span><span class="o">(</span><span class="nc">Date</span> <span class="n">birthday</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{...}</span>
+
+     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">canEqual</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">other</span> <span class="k">instanceof</span> <span class="nc">Message</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="o">()</span> <span class="o">{...}</span>
+
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="s">"Message(name="</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">", address="</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getAddress</span><span class="o">()</span> <span class="o">+</span> <span class="s">", birthday="</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getBirthday</span><span class="o">()</span> <span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@Setter</p>
@@ -221,6 +266,67 @@
       <li>为单个属性提供 set 方法</li>
       <li>注解在 类 上，为该类所有的属性提供 set 方法， 都提供默认构造方法。</li>
     </ul>
+
+    <p><strong>注释在class上</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Java</span>
+ <span class="nd">@Setter</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">brithday</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Class</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Message</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAddress</span><span class="o">(</span><span class="nc">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">address</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBirthday</span><span class="o">(</span><span class="nc">Date</span> <span class="n">birthday</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="o">;}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>注释在variable上</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Java</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+
+     <span class="nd">@Setter</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">brithday</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Class</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Message</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@Getter</p>
@@ -230,6 +336,67 @@
       <li>为单个属性提供 get 方法</li>
       <li>注解在 类 上，为该类所有的属性提供 get 方法，都提供默认构造方法。</li>
     </ul>
+
+    <p><strong>注释在class上</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Java</span>
+ <span class="nd">@Getter</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">brithday</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Class</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Message</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getAddress</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">address</span><span class="o">;}</span>
+
+     <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">getBirthday</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">birthday</span><span class="o">;}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>注释在variable上</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Java</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+
+     <span class="nd">@Getter</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">brithday</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Class</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Date</span> <span class="n">birthday</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Message</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+
+     <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">getBirthday</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">birthday</span><span class="o">;}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@Log4j</p>
@@ -238,6 +405,26 @@
       <li>注解在 类 上</li>
       <li>为类提供一个 属性名为 log 的 log4j 日志对象，提供默认构造方法</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Java</span>
+ <span class="nd">@Slf4j</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">StudentTest</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Here is some INFO"</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Class</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">StudentTest</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Logger</span> <span class="n">log</span> <span class="o">=</span> <span class="nc">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">StudentTest</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Here is some INFO"</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@AllArgsConstructor</p>
@@ -246,6 +433,29 @@
       <li>注解在 类 上</li>
       <li>为类提供一个全参的构造方法，加了这个注解后，类中不提供默认构造方法了。</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@AllArgsConstructor</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Long</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Long</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Student</span><span class="o">(</span><span class="kt">long</span> <span class="n">id</span><span class="o">,</span> <span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">className</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">className</span> <span class="o">=</span> <span class="n">className</span><span class="o">;</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@NoArgsConstructor</p>
@@ -254,6 +464,68 @@
       <li>注解在 类 上</li>
       <li>为类提供一个无参的构造方法。</li>
     </ul>
+
+    <p><strong>例 1</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@NoArgsConstructor</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Long</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Long</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Student</span><span class="o">()</span> <span class="o">{</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>例 2</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@NoArgsConstructor</span><span class="o">(</span><span class="n">staticName</span> <span class="o">=</span> <span class="s">"init"</span><span class="o">)</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Long</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Long</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span> <span class="o">=</span> <span class="s">" "</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Student</span> <span class="nf">init</span><span class="o">(){</span>
+         <span class="k">return</span> <span class="k">new</span> <span class="nf">Student</span><span class="o">();</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>调用：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">StudentTest</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+     <span class="c1">//    Student student = new Student();//编译时报错</span>
+         <span class="nc">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="nc">Student</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+         <span class="n">student</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"hresh"</span><span class="o">);</span>
+         <span class="n">student</span><span class="o">.</span><span class="na">setClassName</span><span class="o">(</span><span class="s">"Lv5"</span><span class="o">);</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">student</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@EqualsAndHashCode</p>
@@ -262,6 +534,52 @@
       <li>注解在 类 上,</li>
       <li>可以生成 equals、canEqual、hashCode 方法。</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//父类</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">sex</span><span class="o">;</span>
+
+     <span class="kd">public</span> <span class="nf">Person</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">sex</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">sex</span> <span class="o">=</span> <span class="n">sex</span><span class="o">;</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+
+ <span class="c1">// 子类</span>
+ <span class="nd">@EqualsAndHashCode</span><span class="o">(</span><span class="n">exclude</span> <span class="o">=</span> <span class="o">{</span><span class="s">"className"</span><span class="o">},</span><span class="n">callSuper</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="nc">Person</span><span class="o">{</span>
+    
+     <span class="nd">@Getter</span>
+     <span class="nd">@Setter</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+
+     <span class="nd">@Getter</span>
+     <span class="nd">@Setter</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span><span class="o">;</span>
+    
+     <span class="kd">public</span> <span class="nf">Student</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">sex</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">,</span> <span class="nc">String</span> <span class="n">className</span><span class="o">)</span><span class="err"> </span><span class="o">{</span>
+         <span class="kd">super</span><span class="o">(</span><span class="n">name</span><span class="o">,</span><span class="n">sex</span><span class="o">);</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">className</span> <span class="o">=</span> <span class="n">className</span><span class="o">;</span>
+     <span class="o">}</span>
+
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>调用：</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">Student</span> <span class="n">s1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">(</span><span class="s">"hresh"</span><span class="o">,</span><span class="s">"man"</span><span class="o">,</span><span class="mi">22</span><span class="o">,</span><span class="s">"Lv3"</span><span class="o">);</span>
+ <span class="nc">Student</span> <span class="n">s2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">(</span><span class="s">"hresh"</span><span class="o">,</span><span class="s">"woman"</span><span class="o">,</span><span class="mi">22</span><span class="o">,</span><span class="s">"Lv5"</span><span class="o">);</span>
+ <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s2</span><span class="o">));</span><span class="c1">//true</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>解析：</strong></p>
+
+    <p>子类实现@EqualsAndHashCode(callSuper = false) ，不调用父类的属性，那么子类属性里面的相同的话，那 hashcode 的值就相同，再加上排除对 className 属性的比对，所以代码里面的2个对象的 equals 方法的返回值是 true 。</p>
   </li>
   <li>
     <p>@NonNull</p>
@@ -270,22 +588,111 @@
       <li>注解在 属性 上</li>
       <li>自动产生一个关于此参数的非空检查，如果参数为空，则抛出一个空指针异常，也会有一个默认的无参构造方法。</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+
+     <span class="nd">@Setter</span>
+     <span class="nd">@Getter</span>
+     <span class="nd">@NonNull</span>
+     <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">member</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@NonNull</span>
+ <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">members</span><span class="o">;</span>
+    
+ <span class="kd">public</span> <span class="nf">Family</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">members</span><span class="o">)</span> <span class="o">{</span>
+     <span class="k">if</span> <span class="o">(</span><span class="n">members</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">NullPointerException</span><span class="o">(</span><span class="s">"members"</span><span class="o">);</span>
+     <span class="k">this</span><span class="o">.</span><span class="na">members</span> <span class="o">=</span> <span class="n">members</span><span class="o">;</span>
+ <span class="o">}</span>
+    
+ <span class="nd">@NonNull</span>
+ <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="nf">getMembers</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="n">members</span><span class="o">;</span>
+ <span class="o">}</span>
+    
+ <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setMembers</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">members</span><span class="o">)</span> <span class="o">{</span>
+     <span class="k">if</span> <span class="o">(</span><span class="n">members</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">NullPointerException</span><span class="o">(</span><span class="s">"members"</span><span class="o">);</span>
+     <span class="k">this</span><span class="o">.</span><span class="na">members</span> <span class="o">=</span> <span class="n">members</span><span class="o">;</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@Cleanup</p>
 
     <ul>
       <li>注解用在 变量 上</li>
-      <li>可以保证此变量代表的资源会被自动关闭，默认是调用资源的 close() 方法，如果该资源有其它关闭方法，可使用 @Cleanup(“methodName”) 来指定要调用的方法，- 也会生成默认的构造方法</li>
+      <li>可以保证此变量代表的资源会被自动关闭，默认是调用资源的 close() 方法，如果该资源有其它关闭方法，可使用 @Cleanup(“methodName”) 来指定要调用的方法，</li>
+      <li>也会生成默认的构造方法</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCleanUp</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">try</span> <span class="o">{</span>
+         <span class="nd">@Cleanup</span>
+         <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ByteArrayOutputStream</span><span class="o">();</span>
+         <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="k">new</span> <span class="kt">byte</span><span class="o">[]</span> <span class="o">{</span><span class="sc">'Y'</span><span class="o">,</span><span class="sc">'e'</span><span class="o">,</span><span class="sc">'s'</span><span class="o">});</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCleanUp</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">try</span> <span class="o">{</span>
+         <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ByteArrayOutputStream</span><span class="o">();</span>
+         <span class="k">try</span> <span class="o">{</span>
+             <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="k">new</span> <span class="kt">byte</span><span class="o">[]{</span><span class="sc">'Y'</span><span class="o">,</span> <span class="sc">'e'</span><span class="o">,</span> <span class="sc">'s'</span><span class="o">});</span>
+             <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+         <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+             <span class="n">baos</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+         <span class="o">}</span>
+     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@ToString</p>
 
     <ul>
       <li>注解在 类 上</li>
-      <li>可以生成所有参数的 toString 方法，还会生成默认的构造方法。</li>
+      <li>可以生成所有参数的 toString 方法</li>
+      <li>还会生成默认的构造方法</li>
     </ul>
+
+    <p><em>callSuper</em> 是否输出父类的toString方法,默认为false
+<em>includeFieldNames</em> 是否包含字段名称,默认为true
+<em>exclude</em> 排除生成tostring的字段</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@ToString</span><span class="o">(</span><span class="n">callSuper</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span><span class="n">exclude</span> <span class="o">={</span><span class="s">"name"</span><span class="o">})</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Person</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">"Person{name="</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">", address="</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">+</span> <span class="s">"}"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@RequiredArgsConstructor</p>
@@ -294,15 +701,89 @@
       <li>注解用在 类 上，</li>
       <li>使用类中所有带有 @NonNull 注解的或者带有 final 修饰的成员变量生成对应的构造方法。</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@RequiredArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+    <span class="nd">@NonNull</span>
+    <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span><span class="o">;</span>
+    <span class="nd">@NonNull</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+    <span class="nd">@NonNull</span>
+    <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span><span class="o">;</span>
+    <span class="nd">@NonNull</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">className</span><span class="o">;</span>
+
+    <span class="nd">@ConstructorProperties</span><span class="o">({</span><span class="s">"id"</span><span class="o">,</span><span class="s">"name"</span><span class="o">})</span>
+    <span class="kd">public</span> <span class="nf">Student</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="kt">long</span> <span class="n">id</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">NullPointerException</span><span class="o">(</span><span class="s">"id"</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">if</span> <span class="k">else</span> <span class="o">(</span><span class="n">name</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">NullPointerException</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@Value</p>
 
     <ul>
       <li>注解用在 类 上</li>
-      <li>会生成含所有参数的构造方法，get 方法</li>
+      <li>会生成含所有参数的构造方法，get 方法，没有 set 方法</li>
       <li>此外还提供了equals、hashCode、toString 方法。</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Value</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Value</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+
+    <span class="nd">@ConstructorProperties</span><span class="o">({</span><span class="s">"name"</span><span class="o">,</span><span class="s">"age"</span><span class="o">})</span>
+    <span class="kd">public</span> <span class="nf">Student</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">age</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 省略 equals、 hashcode、 toString 方法</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>调用：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">(</span><span class="s">"hresh"</span><span class="o">,</span><span class="mi">22</span><span class="o">);</span><span class="c1">//没有set方法</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">student</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">student</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@SneakyThrows</p>
@@ -313,6 +794,32 @@
       <li>可以使用 @SneakyThrows(Exception.class) 的形式指定抛出哪种异常</li>
       <li>会生成默认的构造方法。</li>
     </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+
+    <span class="nd">@SneakyThrows</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+        <span class="nc">InputStream</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="nf">Test</span><span class="o">(){</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="k">new</span> <span class="nf">FileInputStream</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">var2</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="n">var2</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>@Synchronized</p>
@@ -322,12 +829,159 @@
       <li>效果和 synchronized 关键字相同，区别在于锁对象不同，对于类方法和实例方法，synchronized 关键字的锁对象分别是类的 class 对象和 this 对象，而 @Synchronized 的锁对象分别是 私有静态 final 对象 lock 和 私有 final 对象 lock，当然，也可以自己指定锁对象</li>
       <li>此外也提供默认的构造方法</li>
     </ul>
+
+    <p><strong>例子 1</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Object</span> <span class="n">readLock</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">();</span>
+
+    <span class="nd">@Synchronized</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"hello"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Synchronized</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">answer</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">518</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Synchronized</span><span class="o">(</span><span class="s">"readLock"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"foo"</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Object</span> <span class="n">$LOCK</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Object</span> <span class="n">$lock</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Object</span> <span class="n">readLock</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">();</span>
+
+    <span class="kd">public</span> <span class="nf">Test</span><span class="o">()</span> <span class="o">{}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">Object</span> <span class="n">var0</span> <span class="o">=</span> <span class="n">$LOCK</span><span class="o">;</span>
+        <span class="kd">synchronized</span><span class="o">(</span><span class="n">$LOCK</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"hello"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">answer</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">Object</span> <span class="n">var1</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="n">$lOCK</span><span class="o">;</span>
+        <span class="kd">synchronized</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="n">$lOCK</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="mi">518</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">Object</span> <span class="n">var2</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">readLock</span><span class="o">;</span>
+        <span class="kd">synchronized</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">readLock</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"foo"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>例子 2</strong></p>
+
+    <hr />
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="nc">DateFormat</span> <span class="n">format</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"MM-dd-YYYY"</span><span class="o">);</span>
+    
+<span class="nd">@Synchronized</span>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">synchronizedFormat</span><span class="o">(</span><span class="nc">Date</span> <span class="n">date</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">format</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">date</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">final</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Object</span> <span class="n">$lock</span> <span class="o">=</span> <span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Object</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+<span class="kd">private</span> <span class="nc">DateFormat</span> <span class="n">format</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"MM-dd-YYYY"</span><span class="o">);</span>
+    
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">synchronizedFormat</span><span class="o">(</span><span class="nc">Date</span> <span class="n">date</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">synchronized</span> <span class="o">(</span><span class="n">$lock</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">format</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">date</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@Builder</p>
+
+    <ul>
+      <li>用在类、构造器、方法上</li>
+      <li>提供复杂的 builder APIs</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Builder</span>
+<span class="nd">@Data</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>等价：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Builder</span> <span class="nf">builder</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">Builder</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span><span class="o">{</span>
+        <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">name</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">){</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+            <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">age</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">){</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+            <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="kd">public</span> <span class="nc">Student</span> <span class="nf">build</span><span class="o">(){</span>
+            <span class="nc">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+            <span class="n">student</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="n">age</span><span class="o">);</span>
+            <span class="n">student</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+            <span class="k">return</span> <span class="n">student</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>调用：</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StudentTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="nc">Student</span><span class="o">.</span><span class="na">builder</span><span class="o">().</span><span class="na">name</span><span class="o">(</span><span class="s">"hresh"</span><span class="o">).</span><span class="na">age</span><span class="o">(</span><span class="mi">22</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
   </li>
 </ol>
 
 <p><a href="https://juejin.im/post/5dde71ddf265da06051d00ab" title="掘金">参考链接</a></p>
 
-<p><a href="https://zhuanlan.zhihu.com/p/32779910" title="知乎">参考链接</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/32779910" title="Lombok 看这篇就够了">参考链接</a></p>
 
 
   </div>

@@ -40,6 +40,8 @@ comments: true
         ear wax 耳屎
 
         sleep / dry stuff / dry crap / crusty stuff 眼屎
+
+        saliva / drool / water 口水
     '''
 
 5. floss one's teeth / pick one's teeth 剔牙
