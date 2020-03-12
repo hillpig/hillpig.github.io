@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Spring boot - @transient – 山猪 – 方寸之间 点滴墨彩</title>
+  <title>transient 的作用 – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,8 +19,8 @@
     <meta name="author" content="山猪" />
 
     
-    <meta property="og:title" content="Spring boot - @transient" />
-    <meta property="twitter:title" content="Spring boot - @transient" />
+    <meta property="og:title" content="transient 的作用" />
+    <meta property="twitter:title" content="transient 的作用" />
     
   <!-- Async font loading -->
 <script>
@@ -159,7 +159,7 @@
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
         <article class="posts">
-  <h1>Spring boot - @transient</h1>
+  <h1>transient 的作用</h1>
 
   <div clsss="meta">
     <span class="date">
@@ -171,12 +171,6 @@
       <li>
         <a href="http://localhost:4000/tags#Java">
           Java
-        </a>
-      </li>
-      
-      <li>
-        <a href="http://localhost:4000/tags#Spring Boot">
-          Spring Boot
         </a>
       </li>
       
@@ -274,6 +268,19 @@
 
  <span class="o">}</span>
 </code></pre></div>    </div>
+
+    <p><em>Output</em></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">read</span> <span class="n">before</span> <span class="nl">Serializable:</span> 
+ <span class="nl">username:</span> <span class="nc">Alexia</span>
+ <span class="nl">password:</span> <span class="mi">123456</span>
+
+ <span class="n">read</span> <span class="n">after</span> <span class="nl">Serializable:</span> 
+ <span class="nl">username:</span> <span class="nc">Alexia</span>
+ <span class="nl">password:</span> <span class="kc">null</span>
+</code></pre></div>    </div>
+
+    <p><strong>密码字段为null，说明反序列化时根本没有从文件中获取到信息</strong></p>
   </li>
   <li>
     <p>transient关键字只能修饰变量，而不能修饰方法和类。注意，本地变量是不能被transient关键字修饰的。变量如果是用户自定义类变量，则该类需要实现Serializable接口。</p>
@@ -345,7 +352,7 @@
  <span class="kd">class</span> <span class="nc">User</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
      <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">8294180014912103005L</span><span class="o">;</span>  
         
-     <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="n">username</span><span class="o">;</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="n">username</span><span class="o">;</span> <span class="c1">//username 为静态变量</span>
      <span class="kd">private</span> <span class="kd">transient</span> <span class="nc">String</span> <span class="n">passwd</span><span class="o">;</span>
         
      <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getUsername</span><span class="o">()</span> <span class="o">{</span>
@@ -366,6 +373,19 @@
 
  <span class="o">}</span>
 </code></pre></div>    </div>
+
+    <p><em>Output</em></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">read</span> <span class="n">before</span> <span class="nl">Serializable:</span> 
+ <span class="nl">username:</span> <span class="nc">Alexia</span>
+ <span class="nl">password:</span> <span class="mi">123456</span>
+
+ <span class="n">read</span> <span class="n">after</span> <span class="nl">Serializable:</span> 
+ <span class="nl">username:</span> <span class="n">jmwang</span>
+ <span class="nl">password:</span> <span class="kc">null</span>
+</code></pre></div>    </div>
+
+    <p><strong>这说明反序列化后类中static型变量username的值为当前JVM中对应static变量的值，为修改后jmwang，而不是序列化时的值Alexia。</strong></p>
   </li>
   <li>
     <p>Java中，对象的序列化可以通过实现两种接口来实现，若实现的是Serializable接口，则所有的序列化将会自动进行，若实现的是Externalizable接口，则没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。</p>
@@ -419,8 +439,27 @@
      <span class="o">}</span>
  <span class="o">}</span>
 </code></pre></div>    </div>
+
+    <p><em>Output</em></p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> 是的，我将会被序列化，不管我是否被transient关键字修饰
+</span></code></pre></div>    </div>
   </li>
 </ol>
+
+<h2 id="补充">补充：</h2>
+
+<p>Java序列化提供两种方式。</p>
+
+<p>一种是实现Serializable接口
+使用该方式非常简单，通过重写该接口预置的4个方法，可以达到对序列化的控制。不重写这些方法，也可以自动序列化，非常方便。</p>
+
+<p>另一种是实现Exteranlizable接口。
+不像Serializable接口只是一个标记接口，里面的接口方法都是可选的（可实现可不实现，如果不实现则启用其自动序列化功能），而Externalizable接口不是一个标记接口，它强制你自己动手实现串行化和反串行化方法。它的效率比Serializable高一些，并且可以决定哪些属性需要序列化（即使是transient修饰的），但是要求必须重写两个方法。Externalizable对小数目对象有效的多。但是对大量对象，或者重复对象，则效率低。</p>
+
+<p><a href="https://www.cnblogs.com/lanxuezaipiao/p/3369962.html">Java transient关键字使用小记</a></p>
+
+<p><a href="https://blog.nowcoder.net/n/fc6b0e88670340a1ac0d4ddcc79a5d68">Java——transient关键字及Java对象序列化</a></p>
 
   </div>
 
@@ -437,7 +476,7 @@
           admin: ["hillpig"],
           id: window.location.pathname,      // Ensure uniqueness and length less than 50
           distractionFreeMode: false,  // Facebook-like distraction free mode
-          title: "Spring boot - @transient",
+          title: "transient 的作用",
           language: "zh-CN",
 
         })
@@ -451,14 +490,14 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/english-speaking-1/">
+      <a href="http://localhost:4000/java-spring-postmapping-getmapping-putmapping-deletemapping/">
         ← 上一篇
       </a>
     </span>
   
   
     <span class="next" >
-      <a href="http://localhost:4000/java-spring-dto-dao/">
+      <a href="http://localhost:4000/http-get-post-delete/">
         下一篇 →
       </a>
     </span>

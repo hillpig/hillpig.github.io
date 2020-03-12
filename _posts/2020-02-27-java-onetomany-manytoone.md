@@ -10,14 +10,22 @@ comments: true
 
 <!-- more -->
 
-1. # 什么是JavaBean
+1. # 什么是Hibernate
 
-lombok既是一个IDE插件,也是一个项目要依赖的jar包.lombok是依赖jar包的原因是因为编译时要用它的注解.是插件的原因是他要在编译器编译时通过操作AST(抽象语法树)改变字节码生成.也就是说他可以改变java语法. 他不像spring的依赖注入或者hibernate的orm一样是运行时的特性,而是编译时的特性.
+    Hibernate是一种ORM框架，全称为 Object_Relative DateBase-Mapping，在Java对象与关系数据库之间建立某种映射，以实现直接存取Java对象
 
 
-2. # JavaBean作用
+2. # 什么是ORM
 
-    JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。
+    ORM是一种思想
+
+    - O代表的是Objcet
+    - R代表的是Relative
+    - M代表的是Mapping
+
+    ORM->对象关系映射....ORM关注是对象与数据库中的列的关系
+
+    ![ORM](https://i.loli.net/2020/03/12/hirTEWDJ3Ybopn6.png)
 
 3. # JavaBean的属性
 
@@ -105,7 +113,7 @@ java.io.StreamCorruptedException: invalid type code: AC
 
 [lombok的Github地址](https://github.com/rzwitserloot/lombok "lombok的Github地址")
 
-[参考文章 1 《Java开发中用到的，lombok是什么？》](https://www.zhihu.com/question/42348457 "参考文章 1")
+[参考文章 1 《Hibernate入门这一篇就够了》](https://segmentfault.com/a/1190000013568216 "参考文章 1")
 
 [参考文章 2 《十分钟搞懂Lombok使用与原理》](https://juejin.im/post/5a6eceb8f265da3e467555fe "参考文章 1")
 

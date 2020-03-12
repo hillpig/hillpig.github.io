@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Spring boot - @transient
+title: transient 的作用
 date: 2020-02-05
 Author: 山猪
-tags: [Java, Spring Boot]
+tags: [Java]
 comments: true
 ---
 ![img](https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG)
@@ -96,6 +96,20 @@ comments: true
     }
     ```
 
+    *Output*
+
+    ```java
+    read before Serializable: 
+    username: Alexia
+    password: 123456
+
+    read after Serializable: 
+    username: Alexia
+    password: null
+    ```
+
+    **密码字段为null，说明反序列化时根本没有从文件中获取到信息**
+
 2. transient关键字只能修饰变量，而不能修饰方法和类。注意，本地变量是不能被transient关键字修饰的。变量如果是用户自定义类变量，则该类需要实现Serializable接口。
 
 3. 被transient关键字修饰的变量不再能被序列化，一个静态变量不管是否被transient修饰，均不能被序列化。
@@ -165,7 +179,7 @@ comments: true
     class User implements Serializable {
         private static final long serialVersionUID = 8294180014912103005L;  
         
-        public static String username;
+        public static String username; //username 为静态变量
         private transient String passwd;
         
         public String getUsername() {
@@ -186,6 +200,21 @@ comments: true
 
     }
     ```
+
+    *Output*
+
+    ```java
+    read before Serializable: 
+    username: Alexia
+    password: 123456
+
+    read after Serializable: 
+    username: jmwang
+    password: null
+    ```
+
+    **这说明反序列化后类中static型变量username的值为当前JVM中对应static变量的值，为修改后jmwang，而不是序列化时的值Alexia。**
+
 4. Java中，对象的序列化可以通过实现两种接口来实现，若实现的是Serializable接口，则所有的序列化将会自动进行，若实现的是Externalizable接口，则没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。
 
     ```java
@@ -238,3 +267,23 @@ comments: true
         }
     }
     ```
+
+    *Output*
+
+    ```console
+    是的，我将会被序列化，不管我是否被transient关键字修饰
+    ```
+
+## 补充：
+
+Java序列化提供两种方式。
+
+一种是实现Serializable接口
+使用该方式非常简单，通过重写该接口预置的4个方法，可以达到对序列化的控制。不重写这些方法，也可以自动序列化，非常方便。
+
+另一种是实现Exteranlizable接口。
+不像Serializable接口只是一个标记接口，里面的接口方法都是可选的（可实现可不实现，如果不实现则启用其自动序列化功能），而Externalizable接口不是一个标记接口，它强制你自己动手实现串行化和反串行化方法。它的效率比Serializable高一些，并且可以决定哪些属性需要序列化（即使是transient修饰的），但是要求必须重写两个方法。Externalizable对小数目对象有效的多。但是对大量对象，或者重复对象，则效率低。
+
+[Java transient关键字使用小记](https://www.cnblogs.com/lanxuezaipiao/p/3369962.html)
+
+[Java——transient关键字及Java对象序列化](https://blog.nowcoder.net/n/fc6b0e88670340a1ac0d4ddcc79a5d68)

@@ -188,152 +188,112 @@
 
 <!-- more -->
 
-<h2 id="安装">安装</h2>
+<hr />
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IDEA =&gt; Settings =&gt; Plugins =&gt; Browse repositories =&gt; lombok ，点击安装，安装提示重启 IDEA，安装成功。
-</code></pre></div></div>
+<h2 id="配置-terminal">配置 Terminal</h2>
 
-<h2 id="引入依赖">引入依赖</h2>
+<p>配置shell path与系统一致</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在自己的项目里添加 lombok 的编译支持，在 pom 文件里面添加 dependency
+<p>Preferences =&gt; Tools =&gt; Terminal</p>
 
-```java
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-        &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-        &lt;version&gt;1.16.18&lt;/version&gt;
-        &lt;scope&gt;provided&lt;/scope&gt;
-    &lt;/dependency&gt;
-```
-</code></pre></div></div>
+<hr />
 
-<h2 id="注释">注释</h2>
+<h2 id="安装配置-theme">安装配置 theme</h2>
 
-<ol>
+<ul>
   <li>
-    <p>@Data</p>
-
-    <ul>
-      <li>注解在 类 上</li>
-      <li>提供类所有属性的 get 和 set 方法</li>
-      <li>此外还提供了equals、canEqual、hashCode、toString 方法</li>
-    </ul>
+    <p><a href="https://plugins.jetbrains.com/search?headline=164-theme&amp;tags=Theme" title="官方市场">官方市场</a></p>
   </li>
   <li>
-    <p>@Setter</p>
-
-    <ul>
-      <li>注解在 属性 上</li>
-      <li>为单个属性提供 set 方法</li>
-      <li>注解在 类 上，为该类所有的属性提供 set 方法， 都提供默认构造方法。</li>
-    </ul>
+    <p><a href="https://plugins.jetbrains.com/contest/intellij-themes/2019" title="社区活动">社区活动</a></p>
   </li>
   <li>
-    <p>@Getter</p>
+    <p><a href="http://www.riaway.com/index.php" title="中文渠道">中文渠道</a></p>
+  </li>
+</ul>
 
-    <ul>
-      <li>注解在 属性 上</li>
-      <li>为单个属性提供 get 方法</li>
-      <li>注解在 类 上，为该类所有的属性提供 get 方法，都提供默认构造方法。</li>
-    </ul>
+<p>It’s a plug-in theme, it needs to be installed per <a href="https://www.jetbrains.com/help/idea/installing-updating-and-uninstalling-repository-plugins.html" title="plugins installation guide">plugins installation guide</a> .</p>
+
+<p>Intellji 的 theme 是以插件的形式安装的，安装后：</p>
+
+<p>Preferences =&gt; Appearance &amp; Behavior =&gt; Appearance =&gt; Theme</p>
+
+<p>选择安装后的theme</p>
+
+<hr />
+
+<h2 id="安装配置-gerrit-code-review">安装配置 Gerrit Code Review</h2>
+
+<ul>
+  <li><a href="https://gerrit-review.googlesource.com/Documentation/dev-intellij.html#_code_style" title="下载链接">下载链接</a></li>
+</ul>
+
+<h2 id="设置copyright">设置Copyright</h2>
+
+<ul>
+  <li>同上链接</li>
+</ul>
+
+<h2 id="安装配置-presentation-assistant">安装配置 Presentation Assistant</h2>
+
+<ul>
+  <li>增加 shortcut 提示</li>
+</ul>
+
+<h2 id="安装配置-acejump">安装配置 AceJump</h2>
+
+<ul>
+  <li>快速跳转</li>
+</ul>
+
+<h2 id="配置-code-style">配置 Code Style</h2>
+
+<p>Preferences =&gt; Editor =&gt; Code Style =&gt; Java =&gt; Scheme =&gt; GoogleStyle</p>
+
+<h2 id="其他常用-plugin">其他常用 Plugin</h2>
+
+<ul>
+  <li>
+    <p>Save Actions</p>
   </li>
   <li>
-    <p>@Log4j</p>
-
-    <ul>
-      <li>注解在 类 上</li>
-      <li>为类提供一个 属性名为 log 的 log4j 日志对象，提供默认构造方法</li>
-    </ul>
+    <p>Cucumber for Java</p>
   </li>
   <li>
-    <p>@AllArgsConstructor</p>
+    <p>lombok</p>
+  </li>
+</ul>
 
-    <ul>
-      <li>注解在 类 上</li>
-      <li>为类提供一个全参的构造方法，加了这个注解后，类中不提供默认构造方法了。</li>
-    </ul>
+<h2 id="快捷键">快捷键</h2>
+
+<p>Preferences =&gt; KeyMap =&gt; macOS =&gt; Editor Actions</p>
+
+<ul>
+  <li>
+    <p>⌘O 查找类文件</p>
   </li>
   <li>
-    <p>@NoArgsConstructor</p>
-
-    <ul>
-      <li>注解在 类 上</li>
-      <li>为类提供一个无参的构造方法。</li>
-    </ul>
+    <p>⌘⌥← / ⌘⌥→ 退回 / 前进到上一个操作的地方</p>
   </li>
   <li>
-    <p>@EqualsAndHashCode</p>
-
-    <ul>
-      <li>注解在 类 上,</li>
-      <li>可以生成 equals、canEqual、hashCode 方法。</li>
-    </ul>
+    <p>⌘/ 注释/取消注释与行注释</p>
   </li>
   <li>
-    <p>@NonNull</p>
-
-    <ul>
-      <li>注解在 属性 上</li>
-      <li>自动产生一个关于此参数的非空检查，如果参数为空，则抛出一个空指针异常，也会有一个默认的无参构造方法。</li>
-    </ul>
+    <p>⌘⌥/ 注释/取消注释与块注释</p>
   </li>
-  <li>
-    <p>@Cleanup</p>
+</ul>
 
-    <ul>
-      <li>注解用在 变量 上</li>
-      <li>可以保证此变量代表的资源会被自动关闭，默认是调用资源的 close() 方法，如果该资源有其它关闭方法，可使用 @Cleanup(“methodName”) 来指定要调用的方法，- 也会生成默认的构造方法</li>
-    </ul>
-  </li>
-  <li>
-    <p>@ToString</p>
+<h2 id="参考">参考</h2>
 
-    <ul>
-      <li>注解在 类 上</li>
-      <li>可以生成所有参数的 toString 方法，还会生成默认的构造方法。</li>
-    </ul>
-  </li>
-  <li>
-    <p>@RequiredArgsConstructor</p>
+<p><a href="https://www.youtube.com/watch?v=S_GLO5la_nI" title="YouTube"><img src="http://img.youtube.com/vi/S_GLO5la_nI/0.jpg" alt="YouTube" /></a></p>
 
-    <ul>
-      <li>注解用在 类 上，</li>
-      <li>使用类中所有带有 @NonNull 注解的或者带有 final 修饰的成员变量生成对应的构造方法。</li>
-    </ul>
-  </li>
-  <li>
-    <p>@Value</p>
+<p><a href="https://zhuanlan.zhihu.com/p/73715639" title="IntelliJ IDEA 快捷键大全（Mac版）">《IntelliJ IDEA 快捷键大全（Mac版）》</a></p>
 
-    <ul>
-      <li>注解用在 类 上</li>
-      <li>会生成含所有参数的构造方法，get 方法</li>
-      <li>此外还提供了equals、hashCode、toString 方法。</li>
-    </ul>
-  </li>
-  <li>
-    <p>@SneakyThrows</p>
+<p><a href="https://blog.csdn.net/robertohuang/article/details/75042116#commentBox" title="IntelliJ IDEA详细配置和使用教程(适用于Java开发人员)">《IntelliJ IDEA详细配置和使用教程(适用于Java开发人员)》</a></p>
 
-    <ul>
-      <li>注解在 方法 上</li>
-      <li>可以将方法中的代码用 try-catch 语句包裹起来，捕获异常并在 catch 中用 Lombok.sneakyThrow(e) 把异常抛出</li>
-      <li>可以使用 @SneakyThrows(Exception.class) 的形式指定抛出哪种异常</li>
-      <li>会生成默认的构造方法。</li>
-    </ul>
-  </li>
-  <li>
-    <p>@Synchronized</p>
+<p><a href="http://justcode.ikeepstudying.com/2019/04/intellij-idea-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B2019%E5%9B%BE%E6%96%87%E7%89%88-%E8%AE%A9%E4%BD%A0%E7%88%B1%E4%B8%8D%E9%87%8A%E6%89%8B/" title="IntelliJ IDEA 使用教程(2019图文版) -让你爱不释手">《IntelliJ IDEA 使用教程(2019图文版) -让你爱不释手》</a></p>
 
-    <ul>
-      <li>注解在 类方法 或者 实例方法 上</li>
-      <li>效果和 synchronized 关键字相同，区别在于锁对象不同，对于类方法和实例方法，synchronized 关键字的锁对象分别是类的 class 对象和 this 对象，而 @Synchronized 的锁对象分别是 私有静态 final 对象 lock 和 私有 final 对象 lock，当然，也可以自己指定锁对象</li>
-      <li>此外也提供默认的构造方法</li>
-    </ul>
-  </li>
-</ol>
-
-<p><a href="https://juejin.im/post/5dde71ddf265da06051d00ab" title="掘金">参考链接</a></p>
-
-<p><a href="https://zhuanlan.zhihu.com/p/32779910" title="知乎">参考链接</a></p>
+<p><a href="https://segmentfault.com/a/1190000016649744" title="Mac 神兵利器（三） 使用Intellij IDEA打造全栈IDE">《Mac 神兵利器（三） 使用Intellij IDEA打造全栈IDE》</a></p>
 
 
   </div>
