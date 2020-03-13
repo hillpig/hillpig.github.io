@@ -209,6 +209,49 @@ comments: true
  
     利用ORM工具自动生成的表除了User和Book表外,还自动生成了一个User_Book表,用于实现多对多关联
 
+15. @MappedSuperclass
+
+    *可以将超类的JPA注解传递给子类,使子类能够继承超类的JPA注解*
+ 
+    *示例:*
+
+    ```java
+    @MappedSuperclass
+    public class Employee() {
+       ....
+    }
+
+    @Entity
+    public class Engineer extends Employee {
+       .....
+    }
+
+    @Entity
+    public class Manager extends Employee{
+       .....
+    }
+    ```
+
+16. @Embedded
+
+    *将几个字段组合成一个类,并作为整个Entity的一个属性.*
+ 
+    例如User包括id,name,city,street,zip属性. 我们希望city,street,zip属性映射为Address对象.这样,User对象将具有id,name和address这三个属性. Address对象必须定义为@Embededable.
+ 
+    *示例:*
+
+    ```java
+    @Embeddable
+    public class Address{city,street,zip}
+
+    @Entity
+    public class User {
+
+       @Embedded
+       private Address address;
+    }
+    ```
+
 ## 例子 1：
 
 ```sql
@@ -372,3 +415,5 @@ public class Vmtracka implements Serializable{
 [Hibernate注解之基本注解的注解使用](https://zhuanlan.zhihu.com/p/35907884)
 
 [Hibernate注解](https://www.yiibai.com/hibernate/hibernate_annotations.html)
+
+[参考](https://www.cnblogs.com/javaxiaoxin/p/8279641.html)

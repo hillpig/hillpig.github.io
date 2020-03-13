@@ -1,4 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-11T18:01:09-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Spring boot - Hibernate 中的注释</title><link href="http://localhost:4000/java-spring-hibernate-annotation/" rel="alternate" type="text/html" title="Spring boot - Hibernate 中的注释" /><published>2020-03-11T00:00:00-07:00</published><updated>2020-03-11T00:00:00-07:00</updated><id>http://localhost:4000/java-spring-hibernate-annotation</id><content type="html" xml:base="http://localhost:4000/java-spring-hibernate-annotation/">&lt;p&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-sZpG0bMK5xQ/W_qZl9AuksI/AAAAAAAAE9U/2aimw3DF5pUZzeAOmN7xiLc59GTqRaNIQCEwYBhgL/s1600/spring-hibernate.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-12T12:31:05-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Technical Terms</title><link href="http://localhost:4000/technical-terms/" rel="alternate" type="text/html" title="Technical Terms" /><published>2020-03-12T00:00:00-07:00</published><updated>2020-03-12T00:00:00-07:00</updated><id>http://localhost:4000/technical-terms</id><content type="html" xml:base="http://localhost:4000/technical-terms/">&lt;p&gt;&lt;img src=&quot;https://javadeveloperzone.com/wp-content/uploads/2018/09/Spring-JPA-Projection-example-1024x488.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;spring默认使用的是jackson处理json的序列化和反序列化&quot;&gt;spring默认使用的是jackson处理json的序列化和反序列化&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;SQL 语句主要可以划分为以下 3 个类别。&lt;/p&gt;
+
+    &lt;p&gt;DDL（Data Definition Languages）语句：数据定义语言，这些语句定义了不同的数据段、数据库、表、列、索引等数据库对象的定义。常用的语句关键字主要包括 create、drop、alter等。&lt;/p&gt;
+
+    &lt;p&gt;DML（Data Manipulation Language）语句：数据操纵语句，用于添加、删除、更新和查询数据库记录，并检查数据完整性，常用的语句关键字主要包括 insert、delete、udpate 和select 等。(增添改查）&lt;/p&gt;
+
+    &lt;p&gt;DCL（Data Control Language）语句：数据控制语句，用于控制不同数据段直接的许可和访问级别的语句。这些语句定义了数据库、表、字段、用户的访问权限和安全级别。主要的语句关键字包括 grant、revoke 等。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;什么是POJO、PO、DTO、VO、BO?&lt;/p&gt;
+
+    &lt;p&gt;POJO（Plain Old Java Object）这种叫法是Martin Fowler、Rebecca Parsons和Josh MacKenzie在2000年的一次演讲的时候提出来的。&lt;/p&gt;
+
+    &lt;p&gt;按照Martin Fowler的解释是“Plain Old Java Object”，从字面上翻译为“纯洁老式的Java对象”，但大家都使用“简单java对象”来称呼它。POJO的内在含义是指：那些没有继承任何类、也没有实现任何接口，更没有被其它框架侵入的java对象。&lt;/p&gt;
+
+    &lt;p&gt;先给一个定义吧:&lt;/p&gt;
+
+    &lt;p&gt;POJO是一个简单的、普通Java对象，它包含业务逻辑处理或持久化逻辑等，但不是JavaBean、EntityBean等，不具有任何特殊角色，不继承或不实现任何其它Java框架的类或接口。 可以包含类似与JavaBean属性和对属性访问的setter和getter方法的。&lt;/p&gt;
+
+    &lt;p&gt;POJO(Plain Old Java Object)这个名字用来强调它是一个普通java对象，而不是一个特殊的对象。&lt;/p&gt;
+
+    &lt;p&gt;2005年11月时，“POJO”主要用来指代那些没用遵从特定的Java对象模型，约定或框架如EJB的Java对象。&lt;/p&gt;
+
+    &lt;p&gt;理想地讲，一个POJO是一个不受任何限制的Java对象（除了Java语言规范）。例如一个POJO不应该是&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;扩展预定的类，如       public class Foo extends javax.servlet.http.HttpServlet { …&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;实现预定的接口，如   public class Bar implements javax.ejb.EntityBean { …&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;包含预定的标注，如   @javax.ejb.Entity public class Baz{ …&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;然后，因为技术上的困难及其他原因，许多兼容POJO风格的软件产品或框架事实上仍然要求使用预定的标注，譬如用于更方便的持久化。&lt;/p&gt;
+
+    &lt;p&gt;一般在web应用程序中建立一个数据库的映射对象时，我们只能称它为POJO。&lt;/p&gt;
+
+    &lt;p&gt;正确官方理解思路：&lt;/p&gt;
+
+    &lt;p&gt;我在做Java EE培训中，发现我的很多学生问我什么是POJO，后来我在写书的时候发现POJO这个概念无法回避。现在网上对于POJO的解释很多，但是很多都是有错误的或者不够准确。&lt;/p&gt;
+
+    &lt;p&gt;对此我一开始也是存在误区的，我原来是这样理解的： POJO是这样的一种“纯粹的”JavaBean，在它里面除了JavaBean规范的方法和属性没有别的东西，即private属性以及对这个属性方法的public的get和set方法。我们会发现这样的JavaBean很“单纯”，它只能装载数据，作为数据存储的载体，而不具有业务逻辑处理的能力。所以下面的代码被认为是POJO了。&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    
+ &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DbHello&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//实现了接口，就不能称之为POJO，这已经不是简单的Java类了&lt;/span&gt;
+
+     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DictionaryDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;DictionaryDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;其实，这样的认为是错误的，仔细阅读了&lt;a href=&quot;http://martinfowler.com/bliki/POJO.html&quot;&gt;《POJOs in Action》&lt;/a&gt;这本书的有关部分和POJO的最原始的出处，&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;The term was coined while Rebecca Parsons, Josh MacKenzie and I were preparing for a talk at a conference in September 2000.&lt;/p&gt;
+
+      &lt;p&gt;In the talk we were pointing out the many benefits of encoding business logic into regular java objects rather than using Entity Beans.We wondered why people were so against using regular objects in their systems and concluded that it was because simple objects lacked a fancy name. So we gave them one, and it’’s caught on very nicely.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;基本的意思是，将业务逻辑写进规则的Java对象（regular java objects）中，比使用Entity Beans更有好处。另外，我们要给具有业务逻辑处理的规则的Java对象（regular java objects）起了一个名字——POJO，这些Java对象不是EntityBeans（EJB规范中专门用于封装数据库访问的一种组件，以面向对象的方式进行数据库的访问）。&lt;/p&gt;
+
+    &lt;p&gt;在&lt;a href=&quot;http://www.webopedia.com/TERM/P/POJO.htm&quot;&gt;POJO&lt;/a&gt;查到解释如下：&lt;/p&gt;
+
+    &lt;p&gt;POJO, or Plain Old Java Object, is a normal Java object class (that is, not a JavaBean, EntityBean etc.)  and does not serve any other special role nor does it implement any special interfaces of any of the Java frameworks. This term was coined by Martin Fowler, Rebbecca Parsons and Josh MacKenzie who believed that by creating the acronym POJO, such objects would have a “fancy name”, thereby convincing people that they were worthy of use.&lt;/p&gt;
+
+    &lt;p&gt;基本意思是说POJO一个普通的Java对象（不是JavaBean，EntityBean等），也不担当任何的特殊的角色，也不实现任何Java框架指定的接口。&lt;/p&gt;
+
+    &lt;p&gt;我觉得上面的解释很准确，POJO应该不是我们开始认为的JavaBean，当然更不是EJB，它不应该依赖于框架（即继承或实现某些框架类或接口）。总之，POJO就是一个很简单的Java类，没那么多复杂的东西。例如：Struts1中的Action和ActionForm当然不属于POJO了，而在Struts2中的Action由于可以不继承任何的接口，所以在这种情况下Action是POJO，但是Struts2中的Action也可以继承ActionSupport类就不再属于POJO了。POJO里面是可以包含业务逻辑处理和持久化逻辑，也可以包含类似与JavaBean属性和对属性访问的set和get方法的。&lt;/p&gt;
+
+    &lt;p&gt;最后，我们总结一下给一个定义把，POJO是一个简单的、普通Java对象，它包含业务逻辑处理或持久化逻辑等，但不是JavaBean、EntityBean等，不具有任何特殊角色，不继承或不实现任何其它Java框架的类或接口。&lt;/p&gt;
+
+    &lt;p&gt;POJO例子：&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DbHello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//简单的Java类，称之为POJO，不继承，不实现接口&lt;/span&gt;
+
+     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DictionaryDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;DictionaryDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;辅助理解：POJO可以认为是一个中间对象：&lt;/p&gt;
+
+    &lt;p&gt;一个中间对象，可以转化为PO、DTO、VO。&lt;/p&gt;
+
+    &lt;p&gt;1 ．POJO持久化之后==〉PO（在运行期，由Hibernate中的cglib动态把POJO转换为PO，PO相对于POJO会增加一些用来管理数据库entity状态的属性和方法。PO对于programmer来说完全透明，由于是运行期生成PO，所以可以支持增量编译，增量调试。）&lt;/p&gt;
+
+    &lt;p&gt;2 ．POJO传输过程中==〉DTO&lt;/p&gt;
+
+    &lt;p&gt;3 ．POJO用作表示层==〉VO&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;什么是JavaBean？&lt;/p&gt;
+
+    &lt;p&gt;JavaBean实际上是指一种特殊的Java类，它通常用来实现一些比较常用的简单功能，并可以很容易的被重用或者是插入其他应用程序中去。所有遵循“一定编程原则”的Java类都可以被称作JavaBean。&lt;/p&gt;
+
+    &lt;p&gt;JavaBean是一个遵循特定写法的Java类，是一种Java语言编写的可重用组件，它的方法命名，构造及行为必须符合特定的约定：&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;这个类必须具有一个公共的(public)无参构造函数；&lt;/li&gt;
+      &lt;li&gt;所有属性私有化（private）；&lt;/li&gt;
+      &lt;li&gt;私有化的属性必须通过public类型的方法（getter和setter）暴露给其他程序，并且方法的命名也必须遵循一定的命名规范。&lt;/li&gt;
+      &lt;li&gt;这个类应是可序列化的。（比如可以实现Serializable 接口，用于实现bean的持久性）&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;JavaBean在Java EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象（内省机制），并且通过反射那些遵循命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。&lt;/p&gt;
+
+    &lt;p&gt;因为这些要求主要是靠约定而不是靠实现接口，所以许多开发者把JavaBean看作遵从特定命名约定的POJO。（可以这么理解，POJO按JavaBean的规则来，就可以变成JavaBean）。&lt;/p&gt;
+
+    &lt;p&gt;简而言之，当一个POJO可序列化，有一个无参的构造函数，使用getter和setter方法来访问属性时，他就是一个JavaBean。（没毛病！）&lt;/p&gt;
+
+    &lt;hr /&gt;
+
+    &lt;p&gt;JavaBean是一种组件技术，就好像你做了一个扳手，而这个扳手会在很多地方被拿去用，这个扳子也提供多种功能(你可以拿这个扳手扳、锤、撬等等)，而这个扳手就是一个组件。&lt;/p&gt;
+
+    &lt;p&gt;◇对于JavaBean，就是一个Java模型组件，他为使用Java类提供了一种标准的格式，在用户程序和可视化管理工具中可以自动获得这种具有标准格式的类的信息，并能够创建和管理这些类。 
+ ◇JavaBean可以使应用程序更加面向对象，可以把数据封装起来，把应用的业务逻辑和显示逻辑分离开，降低了开发的复杂程度和维护成本！
+ ◇JavaBean 是一种JAVA语言写成的可重用组件。为写成JavaBean，类必须是具体的和公共的，并且具有无参数的构造器。JavaBeans 通过提供符合一致性设计模式的公共方法将内部域暴露称为属性。众所周知，属性名称符合这种模式，其他Java 类可以通过内省机制发现和操作这些JavaBean 属性。
+ ◇通常情况下，由于 Java Bean 是被容器所创建（如 Tomcat) 的，所以 Java Bean 应具有一个无参的构造器，另外，通常 Java Bean 还要实现 Serializable 接口用于实现 Bean 的持久性。 Java Bean 是不能被跨进程访问的。
+ ◇JavaBean 是使用 java.beans 包开发的，它是 Java 2 标准版的一部分。JavaBean 是一台机器上同一个地址空间中运行的组件。JavaBean 是进程内组件。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;什么是Bean？&lt;/p&gt;
+
+    &lt;p&gt;Bean的中文含义是“豆子”，Bean的含义是可重复使用的Java组件。所谓组件就是一个由可以自行进行内部管理的一个或几个类所组成、外界不了解其内部信息和运行方式的群体。使用它的对象只能通过接口来操作。&lt;/p&gt;
+
+    &lt;p&gt;Bean并不需要继承特别的基类(BaseClass)或实现特定的接口(Interface)。Bean的编写规范使Bean的容器(Container)能够分析一个Java类文件，并将其方法(Methods)翻译成属性(Properties)，即把Java类作为一个Bean类使用。Bean的编写规范包括Bean类的构造方法、定义属性和访问方法编写规则。&lt;/p&gt;
+
+    &lt;p&gt;Java Bean是基于Java的组件模型，由属性、方法和事件3部分组成。在该模型中，JavaBean可以被修改或与其他组件结合以生成新组件或完整的程序。它是一种Java类，通过封装成为具有某种功能或者处理某个业务的对象。因此，也可以通过嵌在JSP页面内的Java代码访问Bean及其属性。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;什么是EJB、EntityBean？&lt;/p&gt;
+
+    &lt;p&gt;什么是EJB 、Entity Bean？
+ Enterprise Bean，也就是Enterprise JavaBean（EJB），是J2EE的一部分，定义了一个用于开发基于组件的企业多重应用程序的标准。其特点包括网络服务支持和核心开发工具(SDK)。&lt;/p&gt;
+
+    &lt;p&gt;在 J2EE里，Enterprise Java Beans(EJB)称为Java 企业Bean，是Java的核心代码，分别是会话 Bean（Session Bean），实体Bean（Entity Bean）和消息驱动Bean（MessageDriven Bean）。&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Session Bean用于实现业务逻辑，它可以是有状态的，也可以是无状态的。每当客户端请求时，容器就会选择一个Session Bean来为客户端服务。Session Bean可以直接访问数据库，但更多时候，它会通过Entity Bean实现数据访问。 这个类一般用单例模式来实现，因为每次连接都需要用到它。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Entity Bean是域模型对象，用于实现O/R映射，负责将数据库中的表记录映射为内存中的Entity对象，事实上，创建一个Entity Bean对象相当于新建一条记录，删除一个 Entity Bean会同时从数据库中删除对应记录，修改一个Entity Bean时，容器会自动将Entity Bean的状态和数据库同步。&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;Enterprise Bean 是使用 javax.ejb 包开发的，它是标准 JDK 的扩展，是 Java 2 Enterprise Edition 的一部分。Enterprise Bean 是在多台机器上跨几个地址空间运行的组件。因此 Enterprise Bean 是进程间组件。&lt;/p&gt;
+
+    &lt;p&gt;我们一般所熟悉的tomcat仅仅只实现了j2ee的一小部分规范，它只是一个serlvet的容器（Web）容器，它不能跑J2EE的程序，EJB说到底也是种规范，它是j2EE下面的一个子分类（核心类），所以j2ee包含EJB，同时我们都可以说JBOSS，Weblogic，WebSphere是J2EE容器，也可以叫EJB容器。因为它们能跑EJB组件。那么什么是EJB组件呢？其实就是java写出来的一段程序被打包成EAR包，这个EAR包放在某个EJB的容器的特定目录下启动就可以跑了。类似于互联网公司经常使用的WAR包（部署在tomcat上）。&lt;/p&gt;
+
+    &lt;p&gt;然后要说的是EJB是一种是很老、很繁琐的技术标准（规范）了，现如今基本已经被淘汰了。因为EJB的繁琐、难用，spring的出现彻底革了EJB的命，不然怎么说是Java的春天（spring）来了呢。&lt;/p&gt;
+
+    &lt;p&gt;EJB实现原理： 就是把原来放到客户端实现的代码放到服务器端，并依靠RMI进行通信。&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/jojo52013145/article/details/5783677&quot;&gt;EJB的原理和实质&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/panchanggui/p/11610998.html&quot;&gt;原文&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - Hibernate 中的注释</title><link href="http://localhost:4000/java-spring-hibernate-annotation/" rel="alternate" type="text/html" title="Spring boot - Hibernate 中的注释" /><published>2020-03-11T00:00:00-07:00</published><updated>2020-03-11T00:00:00-07:00</updated><id>http://localhost:4000/java-spring-hibernate-annotation</id><content type="html" xml:base="http://localhost:4000/java-spring-hibernate-annotation/">&lt;p&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-sZpG0bMK5xQ/W_qZl9AuksI/AAAAAAAAE9U/2aimw3DF5pUZzeAOmN7xiLc59GTqRaNIQCEwYBhgL/s1600/spring-hibernate.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -246,6 +426,49 @@ private List users; }
 
     &lt;p&gt;利用ORM工具自动生成的表除了User和Book表外,还自动生成了一个User_Book表,用于实现多对多关联&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;@MappedSuperclass&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;可以将超类的JPA注解传递给子类,使子类能够继承超类的JPA注解&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;示例:&lt;/em&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@MappedSuperclass&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;....&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Entity&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Engineer&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;.....&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Entity&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Manager&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;.....&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;@Embedded&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;将几个字段组合成一个类,并作为整个Entity的一个属性.&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;例如User包括id,name,city,street,zip属性. 我们希望city,street,zip属性映射为Address对象.这样,User对象将具有id,name和address这三个属性. Address对象必须定义为@Embededable.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;示例:&lt;/em&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Embeddable&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;city&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;street&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Entity&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+   &lt;span class=&quot;nd&quot;&gt;@Embedded&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;例子-1&quot;&gt;例子 1：&lt;/h2&gt;
@@ -406,7 +629,31 @@ private List users; }
 
 &lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/35907884&quot;&gt;Hibernate注解之基本注解的注解使用&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.yiibai.com/hibernate/hibernate_annotations.html&quot;&gt;Hibernate注解&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">Apache, Tomcat, Nginx 应用场景和对比</title><link href="http://localhost:4000/apache-tomcat-nginx/" rel="alternate" type="text/html" title="Apache, Tomcat, Nginx 应用场景和对比" /><published>2020-03-10T00:00:00-07:00</published><updated>2020-03-10T00:00:00-07:00</updated><id>http://localhost:4000/apache-tomcat-nginx</id><content type="html" xml:base="http://localhost:4000/apache-tomcat-nginx/">&lt;p&gt;&lt;img src=&quot;https://www.nginx.com/wp-content/uploads/2016/02/apache-tomcat-logo.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.yiibai.com/hibernate/hibernate_annotations.html&quot;&gt;Hibernate注解&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/javaxiaoxin/p/8279641.html&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - @Projection</title><link href="http://localhost:4000/java-spring-projection/" rel="alternate" type="text/html" title="Spring boot - @Projection" /><published>2020-03-10T00:00:00-07:00</published><updated>2020-03-10T00:00:00-07:00</updated><id>http://localhost:4000/java-spring-projection</id><content type="html" xml:base="http://localhost:4000/java-spring-projection/">&lt;p&gt;&lt;img src=&quot;https://javadeveloperzone.com/wp-content/uploads/2018/09/Spring-JPA-Projection-example-1024x488.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;spring默认使用的是jackson处理json的序列化和反序列化&quot;&gt;spring默认使用的是jackson处理json的序列化和反序列化&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;@JsonIgnore&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;@JsonIgnore是jackson的注解，通常当做标志注解(没有要赋值的属性)，常用于属性上。&lt;/li&gt;
+      &lt;li&gt;JSON序列化反序列化都会忽略该属性。&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;nd&quot;&gt;@JsonIgnore&lt;/span&gt;
+     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">Apache, Tomcat, Nginx 应用场景和对比</title><link href="http://localhost:4000/apache-tomcat-nginx/" rel="alternate" type="text/html" title="Apache, Tomcat, Nginx 应用场景和对比" /><published>2020-03-10T00:00:00-07:00</published><updated>2020-03-10T00:00:00-07:00</updated><id>http://localhost:4000/apache-tomcat-nginx</id><content type="html" xml:base="http://localhost:4000/apache-tomcat-nginx/">&lt;p&gt;&lt;img src=&quot;https://www.nginx.com/wp-content/uploads/2016/02/apache-tomcat-logo.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -451,29 +698,7 @@ private List users; }
 
 &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/32212996/answer/87524617&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/MPFLY/article/details/76578006&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="DevOp" /><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - @Projection</title><link href="http://localhost:4000/java-spring-projection/" rel="alternate" type="text/html" title="Spring boot - @Projection" /><published>2020-03-10T00:00:00-07:00</published><updated>2020-03-10T00:00:00-07:00</updated><id>http://localhost:4000/java-spring-projection</id><content type="html" xml:base="http://localhost:4000/java-spring-projection/">&lt;p&gt;&lt;img src=&quot;https://javadeveloperzone.com/wp-content/uploads/2018/09/Spring-JPA-Projection-example-1024x488.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;spring默认使用的是jackson处理json的序列化和反序列化&quot;&gt;spring默认使用的是jackson处理json的序列化和反序列化&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;@JsonIgnore&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;@JsonIgnore是jackson的注解，通常当做标志注解(没有要赋值的属性)，常用于属性上。&lt;/li&gt;
-      &lt;li&gt;JSON序列化反序列化都会忽略该属性。&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;nd&quot;&gt;@JsonIgnore&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - jackson 处理 JSON</title><link href="http://localhost:4000/java-spring-jackson/" rel="alternate" type="text/html" title="Spring boot - jackson 处理 JSON" /><published>2020-03-05T00:00:00-08:00</published><updated>2020-03-05T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-jackson</id><content type="html" xml:base="http://localhost:4000/java-spring-jackson/">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/www.thecuriousdev.org/wp-content/uploads/2018/12/lombok-builder-jackson.jpg?w=800&amp;amp;ssl=1&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/MPFLY/article/details/76578006&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="DevOp" /><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">Spring boot - jackson 处理 JSON</title><link href="http://localhost:4000/java-spring-jackson/" rel="alternate" type="text/html" title="Spring boot - jackson 处理 JSON" /><published>2020-03-05T00:00:00-08:00</published><updated>2020-03-05T00:00:00-08:00</updated><id>http://localhost:4000/java-spring-jackson</id><content type="html" xml:base="http://localhost:4000/java-spring-jackson/">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/www.thecuriousdev.org/wp-content/uploads/2018/12/lombok-builder-jackson.jpg?w=800&amp;amp;ssl=1&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -1487,116 +1712,7 @@ to yawn	打哈欠&lt;/p&gt;</content><author><name></name></author><category ter
 
 &lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000013568216&quot; title=&quot;参考文章 1&quot;&gt;参考文章 1 《Hibernate入门这一篇就够了》&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">安装配置 Intellij Idea</title><link href="http://localhost:4000/intellij/" rel="alternate" type="text/html" title="安装配置 Intellij Idea" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/intellij</id><content type="html" xml:base="http://localhost:4000/intellij/">&lt;p&gt;&lt;img src=&quot;https://d3nmt5vlzunoa1.cloudfront.net/idea/files/2019/11/blog@2x-3.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;配置-terminal&quot;&gt;配置 Terminal&lt;/h2&gt;
-
-&lt;p&gt;配置shell path与系统一致&lt;/p&gt;
-
-&lt;p&gt;Preferences =&amp;gt; Tools =&amp;gt; Terminal&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;安装配置-theme&quot;&gt;安装配置 theme&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://plugins.jetbrains.com/search?headline=164-theme&amp;amp;tags=Theme&quot; title=&quot;官方市场&quot;&gt;官方市场&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://plugins.jetbrains.com/contest/intellij-themes/2019&quot; title=&quot;社区活动&quot;&gt;社区活动&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.riaway.com/index.php&quot; title=&quot;中文渠道&quot;&gt;中文渠道&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It’s a plug-in theme, it needs to be installed per &lt;a href=&quot;https://www.jetbrains.com/help/idea/installing-updating-and-uninstalling-repository-plugins.html&quot; title=&quot;plugins installation guide&quot;&gt;plugins installation guide&lt;/a&gt; .&lt;/p&gt;
-
-&lt;p&gt;Intellji 的 theme 是以插件的形式安装的，安装后：&lt;/p&gt;
-
-&lt;p&gt;Preferences =&amp;gt; Appearance &amp;amp; Behavior =&amp;gt; Appearance =&amp;gt; Theme&lt;/p&gt;
-
-&lt;p&gt;选择安装后的theme&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;安装配置-gerrit-code-review&quot;&gt;安装配置 Gerrit Code Review&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gerrit-review.googlesource.com/Documentation/dev-intellij.html#_code_style&quot; title=&quot;下载链接&quot;&gt;下载链接&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;设置copyright&quot;&gt;设置Copyright&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;同上链接&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;安装配置-presentation-assistant&quot;&gt;安装配置 Presentation Assistant&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;增加 shortcut 提示&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;安装配置-acejump&quot;&gt;安装配置 AceJump&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;快速跳转&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;配置-code-style&quot;&gt;配置 Code Style&lt;/h2&gt;
-
-&lt;p&gt;Preferences =&amp;gt; Editor =&amp;gt; Code Style =&amp;gt; Java =&amp;gt; Scheme =&amp;gt; GoogleStyle&lt;/p&gt;
-
-&lt;h2 id=&quot;其他常用-plugin&quot;&gt;其他常用 Plugin&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Save Actions&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Cucumber for Java&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;lombok&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;快捷键&quot;&gt;快捷键&lt;/h2&gt;
-
-&lt;p&gt;Preferences =&amp;gt; KeyMap =&amp;gt; macOS =&amp;gt; Editor Actions&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;⌘O 查找类文件&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;⌘⌥← / ⌘⌥→ 退回 / 前进到上一个操作的地方&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;⌘/ 注释/取消注释与行注释&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;⌘⌥/ 注释/取消注释与块注释&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;参考&quot;&gt;参考&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=S_GLO5la_nI&quot; title=&quot;YouTube&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/S_GLO5la_nI/0.jpg&quot; alt=&quot;YouTube&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/73715639&quot; title=&quot;IntelliJ IDEA 快捷键大全（Mac版）&quot;&gt;《IntelliJ IDEA 快捷键大全（Mac版）》&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/robertohuang/article/details/75042116#commentBox&quot; title=&quot;IntelliJ IDEA详细配置和使用教程(适用于Java开发人员)&quot;&gt;《IntelliJ IDEA详细配置和使用教程(适用于Java开发人员)》&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://justcode.ikeepstudying.com/2019/04/intellij-idea-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B2019%E5%9B%BE%E6%96%87%E7%89%88-%E8%AE%A9%E4%BD%A0%E7%88%B1%E4%B8%8D%E9%87%8A%E6%89%8B/&quot; title=&quot;IntelliJ IDEA 使用教程(2019图文版) -让你爱不释手&quot;&gt;《IntelliJ IDEA 使用教程(2019图文版) -让你爱不释手》&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000016649744&quot; title=&quot;Mac 神兵利器（三） 使用Intellij IDEA打造全栈IDE&quot;&gt;《Mac 神兵利器（三） 使用Intellij IDEA打造全栈IDE》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="IDE" /><summary type="html"></summary></entry><entry><title type="html">Java - lombok</title><link href="http://localhost:4000/java-lombok/" rel="alternate" type="text/html" title="Java - lombok" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/java-lombok</id><content type="html" xml:base="http://localhost:4000/java-lombok/">&lt;p&gt;&lt;img src=&quot;https://huongdanjava.com/wp-content/uploads/2017/08/lombok.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a6eceb8f265da3e467555fe&quot; title=&quot;参考文章 1&quot;&gt;参考文章 2 《十分钟搞懂Lombok使用与原理》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Spring Boot" /><summary type="html"></summary></entry><entry><title type="html">Java - lombok</title><link href="http://localhost:4000/java-lombok/" rel="alternate" type="text/html" title="Java - lombok" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/java-lombok</id><content type="html" xml:base="http://localhost:4000/java-lombok/">&lt;p&gt;&lt;img src=&quot;https://huongdanjava.com/wp-content/uploads/2017/08/lombok.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -2399,332 +2515,116 @@ to yawn	打哈欠&lt;/p&gt;</content><author><name></name></author><category ter
 
 &lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5dde71ddf265da06051d00ab&quot; title=&quot;掘金&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/32779910&quot; title=&quot;Lombok 看这篇就够了&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Disease</title><link href="http://localhost:4000/english-disease/" rel="alternate" type="text/html" title="English Vocabulary - Disease" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>http://localhost:4000/english-disease</id><content type="html" xml:base="http://localhost:4000/english-disease/">&lt;p&gt;&lt;img src=&quot;https://www.spondylitis.ca/wp-content/uploads/2020/02/600x400_heart_illustration_xray-1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/32779910&quot; title=&quot;Lombok 看这篇就够了&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><summary type="html"></summary></entry><entry><title type="html">安装配置 Intellij Idea</title><link href="http://localhost:4000/intellij/" rel="alternate" type="text/html" title="安装配置 Intellij Idea" /><published>2020-02-26T00:00:00-08:00</published><updated>2020-02-26T00:00:00-08:00</updated><id>http://localhost:4000/intellij</id><content type="html" xml:base="http://localhost:4000/intellij/">&lt;p&gt;&lt;img src=&quot;https://d3nmt5vlzunoa1.cloudfront.net/idea/files/2019/11/blog@2x-3.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;cold 感冒&lt;/p&gt;
+&lt;hr /&gt;
 
-    &lt;p&gt;a common infection, especially in the nose and throat, that often causes a cough, a slight fever, and sometimes some pain in the muscles:&lt;/p&gt;
+&lt;h2 id=&quot;配置-terminal&quot;&gt;配置 Terminal&lt;/h2&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;I’ve got a cold.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;She caught a cold at school.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;（UK informal）&lt;/em&gt; Don’t come near me - I’ve got a stinking/streaming cold (= extremely bad cold).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;fever 发烧&lt;/p&gt;
+&lt;p&gt;配置shell path与系统一致&lt;/p&gt;
 
-    &lt;p&gt;a medical condition in which the body temperature is higher than usual and the heart beats very fast:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;He’s got a headache and a slight fever.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;flu 流感&lt;/p&gt;
-
-    &lt;p&gt;Pan seared scallons 香煎扇贝&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;headache 头痛&lt;/p&gt;
-
-    &lt;p&gt;Brown all sides of the steak&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;stomachache 胃痛、肚子痛&lt;/p&gt;
-
-    &lt;p&gt;With braises, where you’re adding the least amount of liquid required to cook the meat or vegetables, stews require full submersion, and usually call for the meat or vegetables to be cut into unifiorm pieces for even cooking.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;red braised pork belly 红烧肉&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Bring the water to a boil, turn down to medium low heat, and let it simmer for 40 minutes.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;Because it preserves all the nutrients in your food.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Toothache 牙痛&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Blanch the vegetables before stir frying. It&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;indigestion 消化不良&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Do you suffer from indigestion after you have eaten?&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;You’ll give yourself indigestion if you swallow your dinner so quickly.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;anaemia 贫血&lt;/p&gt;
-
-    &lt;p&gt;a medical condition in which there are not enough red blood cells in the blood:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;The main symptoms of anaemia are tiredness and pallor.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;stroke 中风&lt;/p&gt;
-
-    &lt;p&gt;a sudden change in the blood supply to a part of the brain, sometimes causing a loss of the ability to move particular parts of the body:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;She suffered/had a stroke that left her unable to speak.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;He’s been fairly poorly since having a stroke in January.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;He suffered a stroke in 1988 that left him unable to speak, but his mental capacity wasn’t affected.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;appendicitis 阑尾炎&lt;/p&gt;
-
-    &lt;p&gt;an illness in which the appendix is infected and painful and usually needs to be removed in an operation：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;She had her appendix out (= medically removed) last summer.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;arthritis 关节炎&lt;/p&gt;
-
-    &lt;p&gt;a serious condition in which a person’s joints (= the places where two bones are connected) become painful, swollen, and stiff:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;In later life she was crippled with arthritis.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;enteritis / gastroenteritis 肠炎&lt;/p&gt;
-
-    &lt;p&gt;an illness that causes the stomach and bowels to become swollen and painful&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;fracture / break 骨折&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;She fractured her skull in the accident.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Two of her ribs fractured when she was thrown from her horse.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Your arm’s got a fracture.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Old bones break easily.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;chicken pox 水痘&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;measles 麻疹&lt;/p&gt;
-
-    &lt;p&gt;a disease, especially of children, that causes a high temperature and small red spots that cover the whole body&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;All our children have had the measles.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;heart disease 心脏病&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;diabetes 糖尿病&lt;/p&gt;
-
-    &lt;p&gt;a medical condition in which the body cannot produce enough insulin to control the amount of sugar in the blood&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;cancer 癌症&lt;/p&gt;
-
-    &lt;p&gt;a serious disease in which growths of cells, also called cancers, form in the body and kill normal body cells. The disease often causes death.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;fungus 脚气&lt;/p&gt;
-
-    &lt;p&gt;an organism (= a living thing) that is similar to a plant without leaves, flowers or green colouring, and that usually grows on plants or on decaying matter. mushrooms and mildew are both fungi.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;pneumonia 肺炎 bronchia 支气管&lt;/p&gt;
-
-    &lt;p&gt;a serious illness affecting one or both lungs that makes breathing difficult&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;She died from bronchial pneumonia.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;inflammation 炎症&lt;/p&gt;
-
-    &lt;p&gt;​a condition in which a part of the body becomes red, painful and swollen (= larger than normal) because of infection or injury&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;The doctor’s notes recorded inflammation of the ear.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;I used a cream to reduce the inflammation.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;insomnia 失眠&lt;/p&gt;
-
-    &lt;p&gt;the condition of being unable to sleep&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;to suffer from insomnia&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;nausea 恶心&lt;/p&gt;
-
-    &lt;p&gt;the feeling that you have when you want to vomit, for example because you are sick or are shocked or frightened by something&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;A wave of nausea swept over her.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Nausea and vomiting are common symptoms.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;leukemia 白血病&lt;/p&gt;
-
-    &lt;p&gt;a serious disease in which too many white blood cells are produced, causing weakness and sometimes death&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;The newspapers are full of stories of leukaemia clusters near nuclear establishments.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Preferences =&amp;gt; Tools =&amp;gt; Terminal&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h1 id=&quot;more-examples&quot;&gt;More Examples:&lt;/h1&gt;
+&lt;h2 id=&quot;安装配置-theme&quot;&gt;安装配置 theme&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;He is under the weather. 他生病了。&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://plugins.jetbrains.com/search?headline=164-theme&amp;amp;tags=Theme&quot; title=&quot;官方市场&quot;&gt;官方市场&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;He has been shut-in for a few days. 他生病在家几天了。&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://plugins.jetbrains.com/contest/intellij-themes/2019&quot; title=&quot;社区活动&quot;&gt;社区活动&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;He feels exhausted most of the time. 他经常觉得非常疲惫。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;His head is pounding. 他头痛。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;He feels light-headed. 他觉得头晕。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;He feels as though everything around him is spinning. 他感到天旋地转。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;He has been lacking in energy for some time. 他感觉虚弱有一段时间了。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;He has bouts of uncontrollable coughing. 他无法控制的一阵阵咳嗽。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;He has bouts of abdominal pain. 他一阵阵的肚子痛。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;He has a soure throat and a stuffy nose. 他嗓子痛，而且鼻子不通气，。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It is usually hard for him to fall asleep when he goes to bed at night.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;He has a feeling of tightness in the chest. 他觉得胸部闷闷的。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The tooth hurts when he bites down on it. 他咬东西时，牙齿就痛。&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.riaway.com/index.php&quot; title=&quot;中文渠道&quot;&gt;中文渠道&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;It’s a plug-in theme, it needs to be installed per &lt;a href=&quot;https://www.jetbrains.com/help/idea/installing-updating-and-uninstalling-repository-plugins.html&quot; title=&quot;plugins installation guide&quot;&gt;plugins installation guide&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;Intellji 的 theme 是以插件的形式安装的，安装后：&lt;/p&gt;
+
+&lt;p&gt;Preferences =&amp;gt; Appearance &amp;amp; Behavior =&amp;gt; Appearance =&amp;gt; Theme&lt;/p&gt;
+
+&lt;p&gt;选择安装后的theme&lt;/p&gt;
+
 &lt;hr /&gt;
 
-&lt;h1 id=&quot;read-more&quot;&gt;Read More:&lt;/h1&gt;
+&lt;h2 id=&quot;安装配置-gerrit-code-review&quot;&gt;安装配置 Gerrit Code Review&lt;/h2&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gerrit-review.googlesource.com/Documentation/dev-intellij.html#_code_style&quot; title=&quot;下载链接&quot;&gt;下载链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;设置copyright&quot;&gt;设置Copyright&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;同上链接&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;安装配置-presentation-assistant&quot;&gt;安装配置 Presentation Assistant&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;增加 shortcut 提示&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;安装配置-acejump&quot;&gt;安装配置 AceJump&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;快速跳转&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;配置-code-style&quot;&gt;配置 Code Style&lt;/h2&gt;
+
+&lt;p&gt;Preferences =&amp;gt; Editor =&amp;gt; Code Style =&amp;gt; Java =&amp;gt; Scheme =&amp;gt; GoogleStyle&lt;/p&gt;
+
+&lt;h2 id=&quot;其他常用-plugin&quot;&gt;其他常用 Plugin&lt;/h2&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;disease 表示“疾病”，通常指具体的“疾病”(可数)。如：&lt;/p&gt;
-
-    &lt;p&gt;Most diseases could be wiped out. 多数疾病是可以消灭的。&lt;/p&gt;
-
-    &lt;p&gt;I caught the disease from you. 这病我是从你那传染来的。&lt;/p&gt;
-
-    &lt;p&gt;注：有时指疾病的总称(不可数)，即通称的“疾病”。如：&lt;/p&gt;
-
-    &lt;p&gt;Rats spread disease. 老鼠传染疾病。&lt;/p&gt;
-
-    &lt;p&gt;Cleanliness helps prevent disease. 清洁有助于预防疾病。&lt;/p&gt;
+    &lt;p&gt;Save Actions&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;illness 和 sickness 常可通用，它们主要用于表示生病的时间或因病(disease)导致的不健康状态等。如：&lt;/p&gt;
-
-    &lt;p&gt;He can’t come because of illness. 他因病不能来。&lt;/p&gt;
-
-    &lt;p&gt;He died after a long illness. 他死之前病了很久。&lt;/p&gt;
-
-    &lt;p&gt;She is cheerful in spite of her illness. 她尽管有病，但还是快乐。&lt;/p&gt;
+    &lt;p&gt;Cucumber for Java&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;用于医学上表示各种病称时，通常用 disease。如：&lt;/p&gt;
-
-    &lt;p&gt;contagious diseases 传染病&lt;/p&gt;
-
-    &lt;p&gt;English disease 气管炎&lt;/p&gt;
-
-    &lt;p&gt;heart disease 心脏病&lt;/p&gt;
-
-    &lt;p&gt;lung disease 肺病&lt;/p&gt;
-
-    &lt;p&gt;a nervous disease 神经病&lt;/p&gt;
-
-    &lt;p&gt;a sex disease 性病&lt;/p&gt;
-
-    &lt;p&gt;skin disease 皮肤病     等等&lt;/p&gt;
-
-    &lt;p&gt;注：有个别搭配也用 illness。如：&lt;/p&gt;
-
-    &lt;p&gt;mental illness / sickness 精神病&lt;/p&gt;
+    &lt;p&gt;lombok&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;胃不调 upset stomach&lt;/p&gt;
+&lt;h2 id=&quot;快捷键&quot;&gt;快捷键&lt;/h2&gt;
 
-&lt;p&gt;觉食物积滞胃中 feel heavy on the stomach&lt;/p&gt;
+&lt;p&gt;Preferences =&amp;gt; KeyMap =&amp;gt; macOS =&amp;gt; Editor Actions&lt;/p&gt;
 
-&lt;p&gt;有点恶心 have （experience） some nausea&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;⌘O 查找类文件&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;⌘⌥← / ⌘⌥→ 退回 / 前进到上一个操作的地方&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;⌘/ 注释/取消注释与行注释&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;⌘⌥/ 注释/取消注释与块注释&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;⌃; 激活acejump&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;偶而恶心和呕吐 develop occasional nausea and vomiting&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
+&lt;h2 id=&quot;参考&quot;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=S_GLO5la_nI&quot; title=&quot;YouTube&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/S_GLO5la_nI/0.jpg&quot; alt=&quot;YouTube&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/73715639&quot; title=&quot;IntelliJ IDEA 快捷键大全（Mac版）&quot;&gt;《IntelliJ IDEA 快捷键大全（Mac版）》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/robertohuang/article/details/75042116#commentBox&quot; title=&quot;IntelliJ IDEA详细配置和使用教程(适用于Java开发人员)&quot;&gt;《IntelliJ IDEA详细配置和使用教程(适用于Java开发人员)》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://justcode.ikeepstudying.com/2019/04/intellij-idea-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B2019%E5%9B%BE%E6%96%87%E7%89%88-%E8%AE%A9%E4%BD%A0%E7%88%B1%E4%B8%8D%E9%87%8A%E6%89%8B/&quot; title=&quot;IntelliJ IDEA 使用教程(2019图文版) -让你爱不释手&quot;&gt;《IntelliJ IDEA 使用教程(2019图文版) -让你爱不释手》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000016649744&quot; title=&quot;Mac 神兵利器（三） 使用Intellij IDEA打造全栈IDE&quot;&gt;《Mac 神兵利器（三） 使用Intellij IDEA打造全栈IDE》&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="IDE" /><summary type="html"></summary></entry></feed>

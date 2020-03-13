@@ -432,6 +432,49 @@ private List users; }
 
     <p>利用ORM工具自动生成的表除了User和Book表外,还自动生成了一个User_Book表,用于实现多对多关联</p>
   </li>
+  <li>
+    <p>@MappedSuperclass</p>
+
+    <p><em>可以将超类的JPA注解传递给子类,使子类能够继承超类的JPA注解</em></p>
+
+    <p><em>示例:</em></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@MappedSuperclass</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nf">Employee</span><span class="o">()</span> <span class="o">{</span>
+   <span class="o">....</span>
+<span class="o">}</span>
+
+<span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Engineer</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{</span>
+   <span class="o">.....</span>
+<span class="o">}</span>
+
+<span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="nc">Employee</span><span class="o">{</span>
+   <span class="o">.....</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>@Embedded</p>
+
+    <p><em>将几个字段组合成一个类,并作为整个Entity的一个属性.</em></p>
+
+    <p>例如User包括id,name,city,street,zip属性. 我们希望city,street,zip属性映射为Address对象.这样,User对象将具有id,name和address这三个属性. Address对象必须定义为@Embededable.</p>
+
+    <p><em>示例:</em></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Embeddable</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Address</span><span class="o">{</span><span class="n">city</span><span class="o">,</span><span class="n">street</span><span class="o">,</span><span class="n">zip</span><span class="o">}</span>
+
+<span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+
+   <span class="nd">@Embedded</span>
+   <span class="kd">private</span> <span class="nc">Address</span> <span class="n">address</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <h2 id="例子-1">例子 1：</h2>
@@ -594,6 +637,8 @@ private List users; }
 
 <p><a href="https://www.yiibai.com/hibernate/hibernate_annotations.html">Hibernate注解</a></p>
 
+<p><a href="https://www.cnblogs.com/javaxiaoxin/p/8279641.html">参考</a></p>
+
   </div>
 
   
@@ -628,6 +673,12 @@ private List users; }
       </a>
     </span>
   
+  
+    <span class="next" >
+      <a href="http://localhost:4000/technical-terms/">
+        下一篇 →
+      </a>
+    </span>
   
 </div>
       </div>
