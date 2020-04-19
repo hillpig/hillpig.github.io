@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Triple Dot in Java – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Triple Dot in Java" />
+    <meta property="twitter:title" content="Triple Dot in Java" />
     
   <!-- Async font loading -->
 <script>
@@ -151,306 +158,141 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Triple Dot in Java</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-03-15
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Java">
+          Java
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/09/FIGS/arg02.gif" alt="img" /></p>
+
+<!-- more -->
+
+<h1 id="英文">英文</h1>
+
+<p>The “Three Dots” in java is called the Variable Arguments or varargs. It allows the method to accept zero or multiple arguments. Varargs are very helpful if you don’t know how many arguments you will have to pass in the method.</p>
+
+<p>For Example:</p>
+
+<blockquote>
+  <p>abc(); // Likely useless, but possible</p>
+</blockquote>
+
+<blockquote>
+  <p>abc(“x”, “y”, “z”);</p>
+</blockquote>
+
+<blockquote>
+  <p>abc(“xyz”);</p>
+</blockquote>
+
+<blockquote>
+  <p>abc(new String[]{“x”, “y”, “z”});</p>
+</blockquote>
+
+<p>But one thing you must not is, the argument that gets the … must be the last in the method signature. In simpler terms,</p>
+
+<p>abc (int i, String… strings) is correct, whereas:</p>
+
+<p>abc(String… strings, int i) is wrong.</p>
+
+<p><a href="https://www.edureka.co/community/31144/3-dot-in-parameter-in-java">原文</a></p>
+
+<h1 id="中文">中文</h1>
+
+<p>类型后面三个点(String…)，是从Java 5开始，Java语言对方法参数支持一种新写法，叫可变长度参数列表，其语法就是类型后跟…，表示此处接受的参数为0到多个Object类型的对象，或者是一个Object[]。 例如我们有一个方法叫做test(String…strings)，那么你还可以写方法test()，但你不能写test(String[] strings)，这样会出编译错误，系统提示出现重复的方法。</p>
+
+<p>在使用的时候，对于test(String…strings)，你可以直接用test()去调用，标示没有参数，也可以用去test(“aaa”)，也可以用test(new String[]{“aaa”,”bbb”})。</p>
+
+<p>另外如果既有test(String…strings)函数，又有test()函数，我们在调用test()时，会优先使用test()函数。只有当没有test()函数式，我们调用test()，程序才会走test(String…strings)。
+例一：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ttest</span> <span class="o">{</span>
+    <span class="c1">//private static int a;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="kt">int</span><span class="o">...</span> <span class="n">a</span><span class="o">){</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Ttest</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>例二:
+String… excludeProperty表示不定参数，也就是调用这个方法的时候这里可以传入多个String对象。</p>
+
+<p>```java
+public static void main(String[] args) {
+    //测试，传入多个参数
+    test(“hello”, “world”, “13sd”, “china”, “cum”, “ict”);
+}</p>
+
+<p>public static void test(String… arguments) {
+    for (int i = 0; i &lt; arguments.length; i++) {
+        System.out.println(arguments[i]);
+    }
+}</p>
+
+<p><a href="https://blog.csdn.net/guoquanyou/article/details/8571156">原文</a></p>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/linux-ssh/">SSH原理与运用</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Triple Dot in Java",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-02-19
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Linux">
-              Linux
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.howtogeek.com/wp-content/uploads/2019/07/ximg_5d28e05a4901f.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.IPkGuFKMja.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/linux-ssh/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-vocabulary-vegetable/">English Vocabulary - Vegetable</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-19
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-vocabulary-vegetable/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-cook/">English Vocabulary - Cook</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-19
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://gourmandelle.com/wp-content/uploads/2013/03/Cooking-Methods-from-a-Yin-Yang-Perspective-Gourmandelle.com_.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-cook/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-vocabulary-fruit/">English Vocabulary - Fruit</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-17
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.snopes.com/tachyon/2018/04/fruits_feature.jpg?resize=865,452&amp;quality=65" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-vocabulary-fruit/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-speaking-2/">Actual speaking English - 02</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-16
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i.pinimg.com/474x/bb/b5/0f/bbb50fc5dbf12dd27e65750159d7af55.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-speaking-2/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/mac-iterm2/">Mac OS X - iterm2 安装 美化</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-15
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Mac">
-              Mac
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://iterm2.com/img/logo2x.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/mac-iterm2/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-serializable/">Serialization and Deserialization in Java</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-14
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/media/index/serialization-process.gif" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-serializable/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-persistence-serialization/">persistence and serialization in Java</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-14
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://koenig-media.raywenderlich.com/uploads/2017/08/UnitySaveLoad-feature.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-persistence-serialization/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page3/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/technical-terms/">
+        ← 上一篇
       </a>
     </span>
   
   
-    <span class="next">
-      <a href="/page5/" class="next">
-        下一页 →
+    <span class="next" >
+      <a href="http://localhost:4000/python/">
+        下一篇 →
       </a>
     </span>
   
 </div>
-
       </div>
     </div>
 
