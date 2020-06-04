@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>AWS - Solutions Architect Associate – 山猪 – 方寸之间 点滴墨彩</title>
+  <title>AWS - Solutions Architect Professional – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,8 +19,8 @@
     <meta name="author" content="山猪" />
 
     
-    <meta property="og:title" content="AWS - Solutions Architect Associate" />
-    <meta property="twitter:title" content="AWS - Solutions Architect Associate" />
+    <meta property="og:title" content="AWS - Solutions Architect Professional" />
+    <meta property="twitter:title" content="AWS - Solutions Architect Professional" />
     
   <!-- Async font loading -->
 <script>
@@ -159,11 +159,11 @@
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
         <article class="posts">
-  <h1>AWS - Solutions Architect Associate</h1>
+  <h1>AWS - Solutions Architect Professional</h1>
 
   <div clsss="meta">
     <span class="date">
-      2020-05-16
+      2020-06-03
     </span>
 
     <ul class="tag">
@@ -184,27 +184,32 @@
 
 <h1 id="knowledge-points">Knowledge Points</h1>
 
-<h2 id="aws---dynamic-autoscaling-policy">AWS - Dynamic Autoscaling policy</h2>
+<h2 id="amazon-ebs-encryption">Amazon EBS encryption</h2>
 
-<ol>
+<p>The following types of data are encrypted:</p>
+
+<ul>
   <li>
-    <p>target tracking scaling policies</p>
+    <p>Data at rest inside the volume</p>
   </li>
   <li>
-    <p>Step Scaling Policies</p>
+    <p>All data moving between the volume and the instance</p>
   </li>
   <li>
-    <p>Simple Scaling Policies</p>
+    <p>All snapshots created from the volume</p>
   </li>
-</ol>
+  <li>
+    <p>All volumes created from those snapshots</p>
+  </li>
+</ul>
 
-<p><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html">参考原文1</a></p>
+<p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">参考 1</a></p>
 
-<p><a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html">参考原文2</a></p>
+<p><a href="https://aws.amazon.com/cn/blogs/security/how-to-protect-data-at-rest-with-amazon-ec2-instance-store-encryption/">参考 2</a></p>
 
-<h2 id="what-is-vpc-peering">What is VPC peering?</h2>
+<h2 id="aws-x509-client-certificates">AWS X.509 client certificates</h2>
 
-<p><a href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">参考</a></p>
+<p><a href="https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html">参考</a></p>
 
 <h2 id="uploading-objects-using-presigned-urls">Uploading objects using presigned URLs</h2>
 
@@ -436,15 +441,13 @@ In either mode, you can take point-in-time snapshots of your volumes, which are 
 
 <h1 id="online-exam-library">Online Exam Library</h1>
 
-<p><a href="https://www.examtopics.com/exams/amazon/aws-certified-solutions-architect-associate/view/">www.examtopics.com</a></p>
+<p><a href="https://www.examtopics.com/exams/amazon/aws-certified-solutions-architect-professional/view/">www.examtopics.com</a></p>
 
-<p><a href="https://chercher.tech/aws-certification/aws-solutions-architect-associate-2019-with-practice-test-set-1">chercher.tech</a></p>
+<p><a href="https://chercher.tech/aws-certification/aws-sap-c00-certified-solution-architect-professional-exam-set-1">chercher.tech</a></p>
 
-<p><a href="https://free-braindumps.com/amazon/free-saa-c02-braindumps.html">free-braindumps.com</a></p>
+<p><a href="https://free-braindumps.com/amazon/free-sap-c01-braindumps.html">free-braindumps.com</a></p>
 
-<p><a href="https://www.lleicloud.com/index.php/category/saa/">www.lleicloud.com</a></p>
-
-<p><a href="http://sunqi.me/2019/12/31/AWS-Certified-Solutions-Architect-Associate-Exam/">sunqi.me</a></p>
+<p><a href="https://www.lleicloud.com/index.php/%e7%bb%83%e4%b9%a0%e9%a2%981-aws-certified-solutions-architect-professiona/">www.lleicloud.com</a></p>
 
 <hr />
 
@@ -1351,7 +1354,7 @@ In either mode, you can take point-in-time snapshots of your volumes, which are 
           admin: ["hillpig"],
           id: window.location.pathname,      // Ensure uniqueness and length less than 50
           distractionFreeMode: false,  // Facebook-like distraction free mode
-          title: "AWS - Solutions Architect Associate",
+          title: "AWS - Solutions Architect Professional",
           language: "zh-CN",
 
         })
@@ -1365,17 +1368,11 @@ In either mode, you can take point-in-time snapshots of your volumes, which are 
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/lucene/">
+      <a href="http://localhost:4000/aws-saa/">
         ← 上一篇
       </a>
     </span>
   
-  
-    <span class="next" >
-      <a href="http://localhost:4000/aws-sap/">
-        下一篇 →
-      </a>
-    </span>
   
 </div>
       </div>
