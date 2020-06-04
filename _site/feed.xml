@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-04T00:02:08-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">AWS - Solutions Architect Professional</title><link href="http://localhost:4000/aws-sap/" rel="alternate" type="text/html" title="AWS - Solutions Architect Professional" /><published>2020-06-03T00:00:00-07:00</published><updated>2020-06-03T00:00:00-07:00</updated><id>http://localhost:4000/aws-sap</id><content type="html" xml:base="http://localhost:4000/aws-sap/">&lt;p&gt;&lt;img src=&quot;https://github.com/hillpig/hillpig.github.io/blob/master/images/AWS-SAA.jpg?raw=true&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-04T00:35:38-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">AWS - Solutions Architect Professional</title><link href="http://localhost:4000/aws-sap/" rel="alternate" type="text/html" title="AWS - Solutions Architect Professional" /><published>2020-06-03T00:00:00-07:00</published><updated>2020-06-03T00:00:00-07:00</updated><id>http://localhost:4000/aws-sap</id><content type="html" xml:base="http://localhost:4000/aws-sap/">&lt;p&gt;&lt;img src=&quot;https://blog.shikisoft.com/assets/images/post_imgs/aws-all-5-certifications.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -31,9 +31,9 @@
 
 &lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;uploading-objects-using-presigned-urls&quot;&gt;Uploading objects using presigned URLs&lt;/h2&gt;
+&lt;h2 id=&quot;aws-certificate-manager&quot;&gt;AWS Certificate Manager&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/cn/certificate-manager/&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;aws-nat-gateway-vs-nat-instance&quot;&gt;AWS NAT gateway VS. NAT instance&lt;/h2&gt;
 
