@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Java - Apache - Lucene – 山猪 – 方寸之间 点滴墨彩</title>
+  <title>Java - Lucene – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -19,8 +19,8 @@
     <meta name="author" content="山猪" />
 
     
-    <meta property="og:title" content="Java - Apache - Lucene" />
-    <meta property="twitter:title" content="Java - Apache - Lucene" />
+    <meta property="og:title" content="Java - Lucene" />
+    <meta property="twitter:title" content="Java - Lucene" />
     
   <!-- Async font loading -->
 <script>
@@ -159,7 +159,7 @@
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
         <article class="posts">
-  <h1>Java - Apache - Lucene</h1>
+  <h1>Java - Lucene</h1>
 
   <div clsss="meta">
     <span class="date">
@@ -174,6 +174,12 @@
         </a>
       </li>
       
+      <li>
+        <a href="http://localhost:4000/tags#Database">
+          Database
+        </a>
+      </li>
+      
     </ul>
   </div>
 
@@ -182,21 +188,472 @@
 
 <!-- more -->
 
-<h2 id="encode--decode-逻辑">Encode &amp; Decode 逻辑</h2>
+<h1 id="lucene">Lucene</h1>
 
 <p>Lucene是apache下的一个开源的全文检索引擎工具包。它为软件开发人员提供一个简单易用的工具包（类库），以方便的在目标系统中实现全文检索的功能。</p>
 
 <p>Lucene和搜索引擎是不同的，Lucene是一套用java或其它语言写的全文检索的工具包。它为应用程序提供了很多个api接口去调用，可以简单理解为是一套实现全文检索的类库。搜索引擎是一个全文检索系统，它是一个单独运行的软件系统。</p>
 
-<h3 id="textplain">text/plain</h3>
+<h2 id="实现全文检索">实现全文检索</h2>
 
-<p>数据以纯文本形式进行编码，其中不含任何控件或格式字符</p>
+<h3 id="a-索引流程">A. 索引流程</h3>
 
-<p><a href="https://www.jianshu.com/p/4b1a88d1c1d0">参考原文1</a></p>
+<p>对文档索引的过程，就是将用户要搜索的文档内容进行索引，然后把索引存储在索引库（index）中。</p>
 
-<p><a href="https://towardsdatascience.com/a-guide-to-unicode-utf-8-and-strings-in-python-757a232db95c">参考原文2</a></p>
+<ol>
+  <li>
+    <p>为什么要采集数据</p>
 
-<p><a href="https://www.iteye.com/blog/mikzhang-1101705">参考原文3</a></p>
+    <p>全文检索搜索的内容的格式是多种多样的，比如：视频、mp3、图片、文档等等。对于这种格式不同的数据，需要先将他们采集到本地，然后统一封装到lucene的文档对象中，也就是说需要将存储的内容进行统一才能对它进行查询。</p>
+  </li>
+  <li>
+    <p>采集数据的方式</p>
+
+    <ul>
+      <li>对于互联网中的数据，使用爬虫工具（http工具）将网页爬取到本地</li>
+      <li>对于数据库中的数据，使用jdbc程序进行数据采集</li>
+      <li>对于文件系统的数据，使用io流采集</li>
+    </ul>
+  </li>
+  <li>
+    <p>索引文件的逻辑结构</p>
+
+    <p><img src="https://i.loli.net/2020/06/30/vWdO2UfymNoiS75.png" alt="4807654-9b844464ca0a98ac.png" /></p>
+
+    <p>文档域：</p>
+
+    <ul>
+      <li>
+        <p>文档域存储的信息就是采集到的信息，通过Document对象来存储，具体说是通过Document对象中field域来存储数据。</p>
+
+        <p>比如：数据库中一条记录会存储一个一个Document对象，数据库中一列会存储成Document中一个field域。</p>
+      </li>
+      <li>
+        <p>文档域中，Document对象之间是没有关系的。而且每个Document中的field域也不一定一样。</p>
+      </li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center">Field</th>
+          <th style="text-align: center">Data Type</th>
+          <th style="text-align: center">Analyzed</th>
+          <th style="text-align: center">Indexed</th>
+          <th style="text-align: center">Stored</th>
+          <th style="text-align: center">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">StringField (FieldName, FieldValue, Store.YES)</td>
+          <td style="text-align: center">String</td>
+          <td style="text-align: center">N</td>
+          <td style="text-align: center">Y</td>
+          <td style="text-align: center">Y / N</td>
+          <td style="text-align: center">构建字符串Field，但是不会进行分词，将整个串储存在索引中。是否储存在文档中由Store.YES(NO)决定。</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">LongField (FieldName, FieldValue, Store.YES)</td>
+          <td style="text-align: center">Long</td>
+          <td style="text-align: center">Y</td>
+          <td style="text-align: center">Y</td>
+          <td style="text-align: center">Y / N</td>
+          <td style="text-align: center">构建Long数字型Field，进行分词和索引。 是否储存在文档中由Store.YES(NO)决定。</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">StoredField (FieldName, FieldValue)</td>
+          <td style="text-align: center">Multiple Types</td>
+          <td style="text-align: center">N</td>
+          <td style="text-align: center">N</td>
+          <td style="text-align: center">Y</td>
+          <td style="text-align: center">构建不同类型Field，不分析、不索引，储存在文档中。</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">TextField (FieldName, FieldValue, Store.NO) / TextField (FieldName, reader)</td>
+          <td style="text-align: center">String / Steam</td>
+          <td style="text-align: center">Y</td>
+          <td style="text-align: center">Y</td>
+          <td style="text-align: center">Y / N</td>
+          <td style="text-align: center">如果是Reader，lucene预判内容比较多，会采用Unstored的策略。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>索引域:</p>
+
+    <ul>
+      <li>索引域主要是为了搜索使用的。索引域内容是经过lucene分词之后存储的。</li>
+    </ul>
+
+    <p>倒排索引表：</p>
+
+    <ul>
+      <li>传统方法是先找到文件，如何在文件中找内容，在文件内容中匹配搜索关键字，这种方法是顺序扫描方法，数据量大就搜索慢。</li>
+      <li>倒排索引结构是根据内容（词语）找文档，倒排索引结构也叫反向索引结构，包括索引和文档两部分，索引即词汇表，它是在索引中匹配搜索关键字，由于索引内容量有限并且采用固定优化算法搜索速度很快，找到了索引中的词汇，词汇与文档关联，从而最终找到了文档。</li>
+    </ul>
+
+    <p><img src="https://i.loli.net/2020/06/30/zExCXFYZysDvnLM.png" alt="4807654-f079439f152d8f42.png" /></p>
+  </li>
+  <li>
+    <p>索引</p>
+
+    <p>4.1 采集数据</p>
+
+    <p>Book:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+    
+     <span class="kd">private</span> <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">Float</span> <span class="n">price</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">pic</span><span class="o">;</span>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">description</span><span class="o">;</span>
+     <span class="kd">public</span> <span class="nc">Integer</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="nc">Integer</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="nc">Float</span> <span class="nf">getPrice</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="n">price</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPrice</span><span class="o">(</span><span class="nc">Float</span> <span class="n">price</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">price</span> <span class="o">=</span> <span class="n">price</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getPic</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="n">pic</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPic</span><span class="o">(</span><span class="nc">String</span> <span class="n">pic</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">pic</span> <span class="o">=</span> <span class="n">pic</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getDescription</span><span class="o">()</span> <span class="o">{</span>
+         <span class="k">return</span> <span class="n">description</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDescription</span><span class="o">(</span><span class="nc">String</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">description</span> <span class="o">=</span> <span class="n">description</span><span class="o">;</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>BookDao:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">BookDao</span> <span class="o">{</span>
+    
+     <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="nf">queryBooks</span><span class="o">();</span>
+
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>BookDaoImpl:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">BookDaoImpl</span> <span class="kd">implements</span> <span class="nc">BookDao</span> <span class="o">{</span>
+
+     <span class="nd">@Override</span>
+     <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="nf">queryBooks</span><span class="o">()</span> <span class="o">{</span>
+         <span class="c1">// 数据库链接</span>
+         <span class="nc">Connection</span> <span class="n">connection</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+         <span class="c1">// 预编译statement</span>
+         <span class="nc">PreparedStatement</span> <span class="n">preparedStatement</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+         <span class="c1">// 结果集</span>
+         <span class="nc">ResultSet</span> <span class="n">resultSet</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+         <span class="c1">// 图书列表</span>
+         <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;();</span>
+
+         <span class="k">try</span> <span class="o">{</span>
+             <span class="c1">// 加载数据库驱动</span>
+             <span class="nc">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"com.mysql.jdbc.Driver"</span><span class="o">);</span>
+             <span class="c1">// 连接数据库</span>
+             <span class="n">connection</span> <span class="o">=</span> <span class="nc">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span>
+                     <span class="s">"jdbc:mysql://localhost:3306/solr"</span><span class="o">,</span> <span class="s">"root"</span><span class="o">,</span> <span class="s">"root"</span><span class="o">);</span>
+
+             <span class="c1">// SQL语句</span>
+             <span class="nc">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT * FROM book"</span><span class="o">;</span>
+             <span class="c1">// 创建preparedStatement</span>
+             <span class="n">preparedStatement</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+
+             <span class="c1">// 获取结果集</span>
+             <span class="n">resultSet</span> <span class="o">=</span> <span class="n">preparedStatement</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">();</span>
+
+             <span class="c1">// 结果集解析</span>
+             <span class="k">while</span> <span class="o">(</span><span class="n">resultSet</span><span class="o">.</span><span class="na">next</span><span class="o">())</span> <span class="o">{</span>
+                 <span class="nc">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Book</span><span class="o">();</span>
+                 <span class="n">book</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">resultSet</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="s">"id"</span><span class="o">));</span>
+                 <span class="n">book</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">resultSet</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span>
+                 <span class="n">book</span><span class="o">.</span><span class="na">setPrice</span><span class="o">(</span><span class="n">resultSet</span><span class="o">.</span><span class="na">getFloat</span><span class="o">(</span><span class="s">"price"</span><span class="o">));</span>
+                 <span class="n">book</span><span class="o">.</span><span class="na">setPic</span><span class="o">(</span><span class="n">resultSet</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"pic"</span><span class="o">));</span>
+                 <span class="n">book</span><span class="o">.</span><span class="na">setDescription</span><span class="o">(</span><span class="n">resultSet</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"description"</span><span class="o">));</span>
+                 <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
+             <span class="o">}</span>
+         <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+             <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+         <span class="o">}</span>
+         <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>4.2 创建索引</p>
+
+    <p>创建索引流程：</p>
+
+    <p><img src="https://i.loli.net/2020/06/30/OhWusqU3pRMBJ5S.png" alt="4807654-eb03a78cabbf89cf.png" /></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> IndexWriter是索引过程的核心组件，通过IndexWriter可以创建新索引、更新索引、删除索引操作。IndexWriter需要通过Directory对索引进行存储操作。
+</code></pre></div>    </div>
+
+    <p>Directory描述了索引的存储位置，底层封装了I/O操作，负责对索引进行存储。它是一个抽象类，它的子类常用的包括FSDirectory（在文件系统存储索引）、RAMDirectory（在内存存储索引）。</p>
+
+    <p>代码：</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Test</span>
+ <span class="kd">public</span> <span class="kt">void</span> <span class="nf">createIndex</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+     <span class="c1">// 采集数据</span>
+     <span class="nc">BookDao</span> <span class="n">dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BookDaoImpl</span><span class="o">();</span>
+     <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">dao</span><span class="o">.</span><span class="na">queryBooks</span><span class="o">();</span>
+
+     <span class="c1">// 将采集到的数据封装到Document对象中</span>
+     <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Document</span><span class="o">&gt;</span> <span class="n">docList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+     <span class="nc">Document</span> <span class="n">document</span><span class="o">;</span>
+     <span class="k">for</span> <span class="o">(</span><span class="nc">Book</span> <span class="n">book</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">document</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">();</span>
+         <span class="c1">// store:如果是yes，则说明存储到文档域中</span>
+         <span class="c1">// 图书ID</span>
+         <span class="c1">// 不分词、索引、存储 StringField</span>
+         <span class="nc">Field</span> <span class="n">id</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringField</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="n">book</span><span class="o">.</span><span class="na">getId</span><span class="o">().</span><span class="na">toString</span><span class="o">(),</span> <span class="nc">Store</span><span class="o">.</span><span class="na">YES</span><span class="o">);</span>
+         <span class="c1">// 图书名称</span>
+         <span class="c1">// 分词、索引、存储 TextField</span>
+         <span class="nc">Field</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TextField</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="n">book</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span> <span class="nc">Store</span><span class="o">.</span><span class="na">YES</span><span class="o">);</span>
+         <span class="c1">// 图书价格</span>
+         <span class="c1">// 分词、索引、存储 但是是数字类型，所以使用FloatField</span>
+         <span class="nc">Field</span> <span class="n">price</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FloatField</span><span class="o">(</span><span class="s">"price"</span><span class="o">,</span> <span class="n">book</span><span class="o">.</span><span class="na">getPrice</span><span class="o">(),</span> <span class="nc">Store</span><span class="o">.</span><span class="na">YES</span><span class="o">);</span>
+         <span class="c1">// 图书图片地址</span>
+         <span class="c1">// 不分词、不索引、存储 StoredField</span>
+         <span class="nc">Field</span> <span class="n">pic</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StoredField</span><span class="o">(</span><span class="s">"pic"</span><span class="o">,</span> <span class="n">book</span><span class="o">.</span><span class="na">getPic</span><span class="o">());</span>
+         <span class="c1">// 图书描述</span>
+         <span class="c1">// 分词、索引、不存储 TextField</span>
+         <span class="nc">Field</span> <span class="n">description</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TextField</span><span class="o">(</span><span class="s">"description"</span><span class="o">,</span>
+                 <span class="n">book</span><span class="o">.</span><span class="na">getDescription</span><span class="o">(),</span> <span class="nc">Store</span><span class="o">.</span><span class="na">NO</span><span class="o">);</span>
+
+         <span class="c1">// 设置boost值</span>
+         <span class="k">if</span> <span class="o">(</span><span class="n">book</span><span class="o">.</span><span class="na">getId</span><span class="o">()</span> <span class="o">==</span> <span class="mi">4</span><span class="o">)</span>
+             <span class="n">description</span><span class="o">.</span><span class="na">setBoost</span><span class="o">(</span><span class="mi">100</span><span class="n">f</span><span class="o">);</span>
+
+         <span class="c1">// 将field域设置到Document对象中</span>
+         <span class="n">document</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+         <span class="n">document</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+         <span class="n">document</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">price</span><span class="o">);</span>
+         <span class="n">document</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">pic</span><span class="o">);</span>
+         <span class="n">document</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">description</span><span class="o">);</span>
+
+         <span class="n">docList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
+     <span class="o">}</span>
+
+     <span class="c1">// 创建分词器，标准分词器</span>
+     <span class="c1">// Analyzer analyzer = new StandardAnalyzer();</span>
+     <span class="c1">// 使用ikanalyzer</span>
+     <span class="nc">Analyzer</span> <span class="n">analyzer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IKAnalyzer</span><span class="o">();</span>
+
+     <span class="c1">// 创建IndexWriter</span>
+     <span class="nc">IndexWriterConfig</span> <span class="n">cfg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IndexWriterConfig</span><span class="o">(</span><span class="nc">Version</span><span class="o">.</span><span class="na">LUCENE_4_10_3</span><span class="o">,</span>
+             <span class="n">analyzer</span><span class="o">);</span>
+     <span class="c1">// 指定索引库的地址</span>
+     <span class="nc">File</span> <span class="n">indexFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"E:\\11-index\\hcx\\"</span><span class="o">);</span>
+     <span class="nc">Directory</span> <span class="n">directory</span> <span class="o">=</span> <span class="nc">FSDirectory</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">indexFile</span><span class="o">);</span>
+     <span class="nc">IndexWriter</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IndexWriter</span><span class="o">(</span><span class="n">directory</span><span class="o">,</span> <span class="n">cfg</span><span class="o">);</span>
+
+     <span class="c1">// 通过IndexWriter对象将Document写入到索引库中</span>
+     <span class="k">for</span> <span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span> <span class="o">:</span> <span class="n">docList</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">writer</span><span class="o">.</span><span class="na">addDocument</span><span class="o">(</span><span class="n">doc</span><span class="o">);</span>
+     <span class="o">}</span>
+
+     <span class="c1">// 关闭writer</span>
+     <span class="n">writer</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>4.3 分词</p>
+
+    <p>在对Docuemnt中的内容索引之前需要使用分词器进行分词 ，主要过程就是分词、过虑两步。</p>
+
+    <ul>
+      <li>分词：将采集到的文档内容切分成一个一个的词，具体应该说是将Document中Field的value值切分成一个一个的词。</li>
+      <li>过滤：将分好的词进行过滤，包括去除标点符号、去除停用词（的、是、a、an、the等）、大写转小写、词的形还原（复数形式转成单数形参、过去式转成现在式。。。）等。</li>
+    </ul>
+
+    <p>什么是停用词？</p>
+
+    <ul>
+      <li>停用词是为节省存储空间和提高搜索效率，搜索引擎在索引页面或处理搜索请求时会自动忽略某些字或词，这些字或词即被称为Stop Words(停用词)。比如语气助词、副词、介词、连接词等，通常自身并无明确的意义，只有将其放入一个完整的句子中才有一定作用，如常见的“的”、“在”、“是”、“啊”等。</li>
+    </ul>
+
+    <p>Lucene作为了一个工具包提供不同国家的分词器，如下图：</p>
+
+    <p><img src="https://i.loli.net/2020/06/30/TvQfhlBFJd6USER.png" alt="4807654-e9bb1fafe52177ac.png" /></p>
+
+    <p>注意由于语言不同分析器的切分规则也不同，本例子使用StandardAnalyzer，它可以对用英文进行分词。</p>
+
+    <p>如下是org.apache.lucene.analysis.standard.standardAnalyzer的部分源码：</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@Override</span>
+ <span class="kd">protected</span> <span class="nc">TokenStreamComponents</span> <span class="nf">createComponents</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">fieldName</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">Reader</span> <span class="n">reader</span><span class="o">)</span> <span class="o">{</span>
+     <span class="kd">final</span> <span class="nc">StandardTokenizer</span> <span class="n">src</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StandardTokenizer</span><span class="o">(</span><span class="n">getVersion</span><span class="o">(),</span> <span class="n">reader</span><span class="o">);</span>
+     <span class="n">src</span><span class="o">.</span><span class="na">setMaxTokenLength</span><span class="o">(</span><span class="n">maxTokenLength</span><span class="o">);</span>
+     <span class="nc">TokenStream</span> <span class="n">tok</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StandardFilter</span><span class="o">(</span><span class="n">getVersion</span><span class="o">(),</span> <span class="n">src</span><span class="o">);</span>
+     <span class="n">tok</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LowerCaseFilter</span><span class="o">(</span><span class="n">getVersion</span><span class="o">(),</span> <span class="n">tok</span><span class="o">);</span>
+     <span class="n">tok</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StopFilter</span><span class="o">(</span><span class="n">getVersion</span><span class="o">(),</span> <span class="n">tok</span><span class="o">,</span> <span class="n">stopwords</span><span class="o">);</span>
+     <span class="k">return</span> <span class="k">new</span> <span class="nf">TokenStreamComponents</span><span class="o">(</span><span class="n">src</span><span class="o">,</span> <span class="n">tok</span><span class="o">)</span> <span class="o">{</span>
+     <span class="nd">@Override</span>
+     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">setReader</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Reader</span> <span class="n">reader</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+         <span class="n">src</span><span class="o">.</span><span class="na">setMaxTokenLength</span><span class="o">(</span><span class="nc">StandardAnalyzer</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">maxTokenLength</span><span class="o">);</span>
+         <span class="kd">super</span><span class="o">.</span><span class="na">setReader</span><span class="o">(</span><span class="n">reader</span><span class="o">);</span>
+     <span class="o">}</span>
+     <span class="o">};</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Tokenizer是分词器，负责将reader转换为语汇单元即进行分词，Lucene提供了很多的分词器，也可以使用第三方的分词，比如IKAnalyzer一个中文分词器。</li>
+      <li>TokenFilter是分词过滤器，负责对语汇单元进行过滤，tokenFilter可以是一个过滤器链儿，Lucene提供了很多的分词器过滤器，比如大小写转换、去除停用词等。</li>
+    </ul>
+
+    <p>如下图是语汇单元的生成过程：</p>
+
+    <p><img src="https://i.loli.net/2020/06/30/6yEHqa9jZdCGAfz.png" alt="4807654-3d029e09c55d2b9f.png" /></p>
+
+    <p>从一个Reader字符流开始，创建一个基于Reader的Tokenizer分词器，经过三个TokenFilter生成语汇单元Token。</p>
+
+    <p>比如下边的文档经过分析器分析如下：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 原文档内容：
+ Lucene is a Java full-text search engine.  
+
+ 分析后得到的语汇单元：
+ lucene、java、full、text、search、engine
+</code></pre></div>    </div>
+
+    <p>同一个域中相同的语汇单元（Token）对应同一个Term（词），它记录了语汇单元的内容及所在域的域名等，还包括该token出现的频率及位置。</p>
+
+    <ul>
+      <li>不同的域中拆分出来的相同的单词对应不同的term。</li>
+      <li>相同的域中拆分出来的相同的单词对应相同的term。</li>
+    </ul>
+
+    <p>例如：图书信息里面，图书名称中的java和图书描述中的java对应不同的term</p>
+
+    <p>4.4 使用luke工具查看索引</p>
+
+    <p><img src="https://i.loli.net/2020/06/30/iVJtN4b7YkHB1IS.png" alt="4807654-4e351bb735673e1d.png" /></p>
+
+    <p>Luke作为Lucene工具包中的一个工具（http://www.getopt.org/luke/），可以通过界面来进行索引文件的查询、修改。</p>
+
+    <p>打开Luke方法：</p>
+
+    <ul>
+      <li>命令运行：cmd运行：java -jar lukeall-4.10.3.jar</li>
+      <li>手动执行：双击lukeall-4.10.3.jar</li>
+    </ul>
+
+    <p><img src="https://i.loli.net/2020/06/30/P1X3lnaGhLVMfSm.png" alt="4807654-e08b3f36792c2708.png" /></p>
+
+    <p><img src="https://i.loli.net/2020/06/30/8wYrnR3MsaE5Oou.png" alt="4807654-541f7a53eecd7519.png" /></p>
+  </li>
+</ol>
+
+<h3 id="b-搜索流程">B. 搜索流程</h3>
+
+<p>搜索过程：</p>
+
+<p><img src="https://i.loli.net/2020/06/30/kyCsuanLJdGcphR.png" alt="4807654-e1e14761c391dbfa.png" /></p>
+
+<ol>
+  <li>用户定义查询语句，用户确定查询什么内容（输入什么关键字）指定查询语法，相当于sql语句。</li>
+  <li>IndexSearcher索引搜索对象，定义了很多搜索方法，程序员调用此方法搜索。</li>
+  <li>IndexReader索引读取对象，它对应的索引维护对象IndexWriter，IndexSearcher通过IndexReader读取索引目录中的索引文件</li>
+  <li>Directory索引流对象，IndexReader需要Directory读取索引库，使用FSDirectory文件系统流对象</li>
+  <li>IndexSearcher搜索完成，返回一个TopDocs（匹配度高的前边的一些记录）</li>
+</ol>
+
+<p>1.输入查询语句：</p>
+
+<p>同数据库的sql一样，lucene全文检索也有固定的语法：
+最基本的有比如：AND, OR, NOT 等</p>
+
+<p>举个例子，用户想找一个description中包括java关键字和lucene关键字的文档。
+它对应的查询语句：description:java AND lucene
+如下是使用luke搜索的例子：</p>
+
+<p><img src="https://i.loli.net/2020/06/30/G7NvZIzW6oFsgp3.png" alt="4807654-7f18ce85b69bf65b.png" /></p>
+
+<p>2.搜索分词</p>
+
+<p>和索引过程的分词一样，这里要对用户输入的关键字进行分词，一般情况索引和搜索使用的分词器一致。</p>
+
+<p>比如：输入搜索关键字“java学习”，分词后为java和学习两个词，与java和学习有关的内容都搜索出来了</p>
+
+<p>代码：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">indexSearch</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="c1">// 创建query对象</span>
+    <span class="c1">// 使用QueryParser搜索时，需要指定分词器，搜索时的分词器要和索引时的分词器一致</span>
+    <span class="c1">// 第一个参数：默认搜索的域的名称</span>
+    <span class="nc">QueryParser</span> <span class="n">parser</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">QueryParser</span><span class="o">(</span><span class="s">"description"</span><span class="o">,</span>
+            <span class="k">new</span> <span class="nf">StandardAnalyzer</span><span class="o">());</span>
+
+    <span class="c1">// 通过queryparser来创建query对象</span>
+    <span class="c1">// 参数：输入的lucene的查询语句(关键字一定要大写)</span>
+    <span class="nc">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"description:java AND lucene"</span><span class="o">);</span>
+
+    <span class="c1">// 创建IndexSearcher</span>
+    <span class="c1">// 指定索引库的地址</span>
+    <span class="nc">File</span> <span class="n">indexFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"E:\\11-index\\hcx\\"</span><span class="o">);</span>
+    <span class="nc">Directory</span> <span class="n">directory</span> <span class="o">=</span> <span class="nc">FSDirectory</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">indexFile</span><span class="o">);</span>
+    <span class="nc">IndexReader</span> <span class="n">reader</span> <span class="o">=</span> <span class="nc">DirectoryReader</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">directory</span><span class="o">);</span>
+    <span class="nc">IndexSearcher</span> <span class="n">searcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IndexSearcher</span><span class="o">(</span><span class="n">reader</span><span class="o">);</span>
+
+    <span class="c1">// 通过searcher来搜索索引库</span>
+    <span class="c1">// 第二个参数：指定需要显示的顶部记录的N条</span>
+    <span class="nc">TopDocs</span> <span class="n">topDocs</span> <span class="o">=</span> <span class="n">searcher</span><span class="o">.</span><span class="na">search</span><span class="o">(</span><span class="n">query</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+
+    <span class="c1">// 根据查询条件匹配出的记录总数</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">topDocs</span><span class="o">.</span><span class="na">totalHits</span><span class="o">;</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"匹配出的记录总数:"</span> <span class="o">+</span> <span class="n">count</span><span class="o">);</span>
+    <span class="c1">// 根据查询条件匹配出的记录</span>
+    <span class="nc">ScoreDoc</span><span class="o">[]</span> <span class="n">scoreDocs</span> <span class="o">=</span> <span class="n">topDocs</span><span class="o">.</span><span class="na">scoreDocs</span><span class="o">;</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="nc">ScoreDoc</span> <span class="n">scoreDoc</span> <span class="o">:</span> <span class="n">scoreDocs</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// 获取文档的ID</span>
+        <span class="kt">int</span> <span class="n">docId</span> <span class="o">=</span> <span class="n">scoreDoc</span><span class="o">.</span><span class="na">doc</span><span class="o">;</span>
+
+        <span class="c1">// 通过ID获取文档</span>
+        <span class="nc">Document</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">searcher</span><span class="o">.</span><span class="na">doc</span><span class="o">(</span><span class="n">docId</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"商品ID："</span> <span class="o">+</span> <span class="n">doc</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"id"</span><span class="o">));</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"商品名称："</span> <span class="o">+</span> <span class="n">doc</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"商品价格："</span> <span class="o">+</span> <span class="n">doc</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"price"</span><span class="o">));</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"商品图片地址："</span> <span class="o">+</span> <span class="n">doc</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"pic"</span><span class="o">));</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"=========================="</span><span class="o">);</span>
+        <span class="c1">// System.out.println("商品描述：" + doc.get("description"));</span>
+    <span class="o">}</span>
+    <span class="c1">// 关闭资源</span>
+    <span class="n">reader</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><a href="https://www.jianshu.com/p/4b1a88d1c1d0">参考原文 1</a></p>
+
+<p><a href="https://www.chedong.com/tech/lucene.html">参考原文 2</a></p>
+
+<p><a href="https://www.jianshu.com/p/4b1a88d1c1d0">参考原文 3</a></p>
 
 
   </div>
@@ -214,7 +671,7 @@
           admin: ["hillpig"],
           id: window.location.pathname,      // Ensure uniqueness and length less than 50
           distractionFreeMode: false,  // Facebook-like distraction free mode
-          title: "Java - Apache - Lucene",
+          title: "Java - Lucene",
           language: "zh-CN",
 
         })

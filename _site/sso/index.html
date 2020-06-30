@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>SSO – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="SSO" />
+    <meta property="twitter:title" content="SSO" />
     
   <!-- Async font loading -->
 <script>
@@ -151,312 +158,126 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>SSO</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2020-06-20
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#IT">
+          IT
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://miro.medium.com/max/1400/0*rf6Z7l0CXPB4eQeq.jpg" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="sso">SSO</h2>
+
+<p>SSO 是英文 Single Sign On 的缩写，翻译过来就是单点登录。顾名思义，它把两个及以上个产品中的用户登录逻辑抽离出来，达到只输入一次用户名密码，就能同时登录多个产品的效果。</p>
+
+<p>打个比方，SSO 和我们去迪士尼玩时购买的通票很像。</p>
+
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/6/722924230df383cce6c9ec3ab8b1be48?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="图片名" /></p>
+
+<p>我们只要买一次通票，就可以玩所有游乐场内的设施，而不需要在过山车或者摩天轮那里重新买一次票。在这里，买票就相当于登录认证，游乐场就相当于使用一套 SSO 的公司，各种游乐设施就相当于公司的各个产品。</p>
+
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/6/4a6f420786946c6054c9cdde40004acd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="图片名" /></p>
+
+<p>使用 SSO 的优点很明显：</p>
+
+<ul>
+  <li>提升用户体验。
+就以我厂为例。我厂有两个产品，丁香人才网和丁香园论坛，假如你是我厂用户，肯定无法忍受登录丁香园论坛的时候输入一次用户名密码，登录人才网又要输入一次用户名密码吧？</li>
+  <li>避免重复开发
+假如你是我厂后端，每天任务都饱和的不行，肯定无法忍受到人才网开发一套登录逻辑，到论坛又开发一套登录逻辑吧？</li>
+  <li>提升安全系数
+假如你是我厂运维，发现了一个安全隐患需要紧急修复。你肯定无法忍受给茫茫多的产品后端都发一封邮件，责令修复吧？万一漏了一个呢？</li>
+</ul>
+
+<p>综合看来，SSO 不仅是有用的，而且是必要的。</p>
+
+<h2 id="cas">CAS</h2>
+<p>SSO 仅仅是一种架构，一种设计，而 CAS 则是实现 SSO 的一种手段。两者是抽象与具体的关系。当然，除了 CAS 之外，实现 SSO 还有其他手段，比如简单的 cookie。CAS （Central Authentication Service）中心授权服务，本身是一个开源协议，分为 1.0 版本和 2.0 版本。1.0 称为基础模式，2.0称为代理模式，适用于存在非 Web 应用之间的单点登录。本文只涉及 CAS 1.0，下文中将详细介绍。</p>
+
+<h2 id="sso-的演进与分类">SSO 的演进与分类</h2>
+
+<p>下面详述一下各种场景下的 SSO，它们之间是逐步升级，逐步复杂化的关系。</p>
+
+<ol>
+  <li>
+    <p>同域 SSO如图，同域 SSO 是最简单的一种情况。此时，两个产品都是在一个域名下，单点登录是很自然的选择。我们来捋一捋步骤，搞清楚这里的步骤是理解后文的基础，千万不要跳过。</p>
+
+    <ol>
+      <li>用户访问产品 a，向 后台服务器发送登录请求。</li>
+      <li>登录认证成功，服务器把用户的登录信息写入 session。</li>
+      <li>服务器为该用户生成一个 cookie，并加入到 response header 中，随着请求返回而写入浏览器。该 cookie 的域设定为 dxy.cn。</li>
+      <li>下一次，当用户访问同域名的产品 b 时，由于 a 和 b 在同一域名下，也是 dxy.cn，浏览器会自动带上之前的 cookie。此时后台服务器就可以通过该 cookie 来验证登录状态了。</li>
+    </ol>
+  </li>
+</ol>
+
+<p>实际上，这种场景就是最简单最传统的登录操作。虽然我们把产品 a 和 b 人为分开了，但由于它们在同域上，就算看成是同一产品的不同类目也未尝不可。我们没有设置独立的 SSO 服务器，因为业务后台服务器本身就足以承担 SSO 的职能。</p>
+
+<p><a href="https://www.jianshu.com/p/4b1a88d1c1d0">参考原文1</a></p>
+
+<p><a href="https://towardsdatascience.com/a-guide-to-unicode-utf-8-and-strings-in-python-757a232db95c">参考原文2</a></p>
+
+<p><a href="https://www.iteye.com/blog/mikzhang-1101705">参考原文3</a></p>
 
 
+  </div>
 
-<div class="posts">
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/">apparatus, instrument, device, equipment, tool, implement, installation, appliance, facilities 区别</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "SSO",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-01-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://cookmankitchenequipments.files.wordpress.com/2015/09/commercial-kitchen-equipment-supplies-l-40da9a0c49163d9c.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-apparatus-instrument-device-equipment-tool-implement-installation-appliance-facilities/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/linux-ubuntu-log/">ubuntu下查看log</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Linux">
-              Linux
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#ubuntu">
-              ubuntu
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.howtogeek.com/wp-content/uploads/2012/07/ximage8.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.qSWlkYkoXy.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/linux-ubuntu-log/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-success-succeed-successful-successor/">success, succeed, successful, successor 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://gearingforsuccess.ca/wp-content/uploads/2018/09/success-800x449.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-success-succeed-successful-successor/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-relative/">亲属相关的英文</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://search3.openobjects.com/mediamanager/redcar/fsd/images/relative_experience_graphic_1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-relative/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-progress-process-proceed-procedure/">Progress, Process, Proceed, Procedure区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://dotcom.nlcdn.com/wp-content/uploads/2017/08/BuildSalesProcess_Featured-1140x768@2x-80-min.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-progress-process-proceed-procedure/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-outer-space/">Words about outer space</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1134635135%2F960x0.jpg%3Ffit%3Dscale" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-outer-space/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-mood-emotion-temper-feeling/">Mood, Emotion, Temper, Feeling 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://svgsilh.com/svg/1337383.svg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-mood-emotion-temper-feeling/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-insist-persist/">两种坚持 英文</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.grammar.com/images/2984_insist_vs._persist.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-insist-persist/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page8/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/english-aisle-passage-corridor-hallway-porch/">
+        ← 上一篇
       </a>
     </span>
   
   
-    <span class="next">
-      <a href="/page10/" class="next">
-        下一页 →
+    <span class="next" >
+      <a href="http://localhost:4000/sql-fulltext-retrieval/">
+        下一篇 →
       </a>
     </span>
   
 </div>
-
       </div>
     </div>
 
