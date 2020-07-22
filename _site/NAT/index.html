@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>NAT – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="NAT" />
+    <meta property="twitter:title" content="NAT" />
     
   <!-- Async font loading -->
 <script>
@@ -151,324 +158,114 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>NAT</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-07-22
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#IT">
+          IT
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/tags#Network">
+          Network
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/image-36.png" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="听ccie大神说">听CCIE大神说</h2>
+
+<p>面试问了一个NAT的问题，有点懵，和PAT有点混淆，PAT是一个静态映射表，那么NAT是什么？</p>
+
+<p>咨询了朋友，一个CCIE大神，获得信息如下：</p>
+
+<ul>
+  <li>在Cisco的技术栈中，没有直接的PAT的概念，只有以下三种</li>
+</ul>
+
+<ol>
+  <li>Static NAT</li>
+  <li>Dynamic NAT</li>
+  <li>Overloading</li>
+</ol>
+
+<p>其中Overloading 等同于PAT</p>
+
+<ul>
+  <li>
+    <p>NAT可以是IP 映射IP 也可以是 IP + port 映射 IP + port</p>
+  </li>
+  <li>
+    <p>如果是IP 映射IP 就有 public IP pool的概念</p>
+  </li>
+  <li>
+    <p>静态NAT 是人工设定的</p>
+  </li>
+  <li>
+    <p>动态NAT 是系统自动分配的，此时映射关系会有一个生命周期的概念，比如我们一般会设置500秒,或者120秒, 这段时间如果没有session保持，那么映射关系就会被清除。此时再有response 从公网发过来，就会被丢弃。一般来说这个时间周期内都没有返回的包, 那也不是什么正常的通讯。</p>
+  </li>
+  <li>
+    <p>NAT不管哪一种,  核心都是会使用translation table, 动态和静态的区别就是静态NAT在你配置完命令后这个表格里就有内容了</p>
+  </li>
+  <li>
+    <p>大家会说NAT 某种程度上也起到一定的安全作用, 就是有里面向外的访问, 才可以让外面向内传输,  否则,外面不能直接凭空向内访问</p>
+  </li>
+</ul>
+
+<h2 id="自言自语">自言自语</h2>
+<p>网关是如何处理外网对内网的应答呢？response 回到了网关，这时候根据包头中destination的ip + port信息，对照动态映射表，网关就可以判断是内网里哪个ip + port，把包中的destination 这段替换掉，重新打包封装发给内网，就回到了原来的主机了</p>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-transaction/">Spring boot 事务特性　@Transactional</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "NAT",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-02-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring Boot">
-              Spring Boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.javainuse.com/boot-66-18.JPG" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-transaction/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-pascalcase-camelcase/">Pascal Case & Camel Case</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.bkacontent.com/wp-content/uploads/2015/10/AP-Title-Case-Splash.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-pascalcase-camelcase/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/http-get-post-delete/">HTTP - Get, Post, Put, Delete</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-08
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#http">
-              http
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://s3-us-west-2.amazonaws.com/assertible/blog/swagger-petstore-store-endpoints.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/http-get-post-delete/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-transient/">transient 的作用</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://4.bp.blogspot.com/-uLmc1hOq1fE/WP-acf2E4rI/AAAAAAAAoM8/UJvPps1Vx84kMWoCl4POGFovxJ6cx-oVQCLcB/s400/transient.JPG" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-transient/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/">Spring boot - @PostMapping @GetMapping @PutMapping @DeleteMapping</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring Boot">
-              Spring Boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i2.wp.com/springframework.guru/wp-content/uploads/2017/09/mvc.png?w=800&amp;ssl=1" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-postmapping-getmapping-putmapping-deletemapping/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-dto-dao/">Spring boot - DTO vs DAO</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-05
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring Boot">
-              Spring Boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://i.stack.imgur.com/3XnBN.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-dto-dao/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-speaking-1/">Actual speaking English - 01</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://img.arirang.com/A_UpFile/Template/TP190328175316_A1.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-speaking-1/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-auto-parts/">Auto Parts</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-02-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://n6s6b6w9.stackpathcdn.com/client/w_719,q_lossy,ret_wait/https://appgrooves.com/cdn/mc/AUTO_AND_VEHICLES/1_w1200.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-auto-parts/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page6/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/sql-fuzzy-search/">
+        ← 上一篇
       </a>
     </span>
   
-  
-    <span class="next">
-      <a href="/page8/" class="next">
-        下一页 →
-      </a>
-    </span>
   
 </div>
-
       </div>
     </div>
 
