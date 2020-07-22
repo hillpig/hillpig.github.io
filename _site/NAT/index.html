@@ -184,34 +184,36 @@
   </div>
 
   <div class="entry">
-    <p><img src="https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/image-36.png" alt="img" /></p>
+    <p><img src="https://doc.bce.baidu.com/bce-documentation/VPC/VPC_bestpractise01.png" alt="img" /></p>
 
 <!-- more -->
 
 <h2 id="听ccie大神说">听CCIE大神说</h2>
 
-<p>面试问了一个NAT的问题，有点懵，和PAT有点混淆，PAT是一个静态映射表，那么NAT是什么？</p>
+<p>面试被问了一个NAT的问题，有点懵，和PAT的概念有点混淆，PAT是一个静态映射表，那么NAT是什么？</p>
 
 <p>咨询了朋友，一个CCIE大神，获得信息如下：</p>
 
 <ul>
-  <li>在Cisco的技术栈中，没有直接的PAT的概念，只有以下三种</li>
-</ul>
+  <li>
+    <p>在Cisco的技术栈中，没有直接的PAT的概念，只有以下三种</p>
 
-<ol>
-  <li>Static NAT</li>
-  <li>Dynamic NAT</li>
-  <li>Overloading</li>
-</ol>
+    <ol>
+      <li>Static NAT</li>
+      <li>Dynamic NAT</li>
+      <li>Overloading</li>
+    </ol>
+  </li>
+</ul>
 
 <p>其中Overloading 等同于PAT</p>
 
 <ul>
   <li>
-    <p>NAT可以是IP 映射IP 也可以是 IP + port 映射 IP + port</p>
+    <p>NAT可以是IP 映射IP 也可以是 IP+Port 映射 IP+Port</p>
   </li>
   <li>
-    <p>如果是IP 映射IP 就有 public IP pool的概念</p>
+    <p>如果是IP 映射IP 就有 Public IP Pool的概念</p>
   </li>
   <li>
     <p>静态NAT 是人工设定的</p>
@@ -227,8 +229,8 @@
   </li>
 </ul>
 
-<h2 id="自言自语">自言自语</h2>
-<p>网关是如何处理外网对内网的应答呢？response 回到了网关，这时候根据包头中destination的ip + port信息，对照动态映射表，网关就可以判断是内网里哪个ip + port，把包中的destination 这段替换掉，重新打包封装发给内网，就回到了原来的主机了</p>
+<h2 id="自说自话">自说自话</h2>
+<p>网关是如何处理外网对内网的应答呢？response 回到了网关，这时候根据包头中 destination 的 IP+Port 信息，对照映射表，网关就可以判断是内网里哪个 IP+Port ，把包中的 destination 这段替换掉，重新打包封装发给内网，就回到了原来的主机。</p>
 
   </div>
 
@@ -259,7 +261,7 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/sql-fuzzy-search/">
+      <a href="http://localhost:4000/Charles/">
         ← 上一篇
       </a>
     </span>
