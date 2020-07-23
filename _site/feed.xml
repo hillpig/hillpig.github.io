@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-22T12:46:35-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">NAT</title><link href="http://localhost:4000/NAT/" rel="alternate" type="text/html" title="NAT" /><published>2020-07-22T00:00:00-07:00</published><updated>2020-07-22T00:00:00-07:00</updated><id>http://localhost:4000/NAT</id><content type="html" xml:base="http://localhost:4000/NAT/">&lt;p&gt;&lt;img src=&quot;https://doc.bce.baidu.com/bce-documentation/VPC/VPC_bestpractise01.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-23T15:45:28-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">NAT</title><link href="http://localhost:4000/NAT/" rel="alternate" type="text/html" title="NAT" /><published>2020-07-22T00:00:00-07:00</published><updated>2020-07-22T00:00:00-07:00</updated><id>http://localhost:4000/NAT</id><content type="html" xml:base="http://localhost:4000/NAT/">&lt;p&gt;&lt;img src=&quot;https://doc.bce.baidu.com/bce-documentation/VPC/VPC_bestpractise01.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -108,58 +108,86 @@
 
 &lt;!-- more --&gt;
 
-&lt;h2 id=&quot;sso&quot;&gt;SSO&lt;/h2&gt;
+&lt;h1 id=&quot;mysql模糊搜索&quot;&gt;MySQL模糊搜索&lt;/h1&gt;
 
-&lt;p&gt;SSO 是英文 Single Sign On 的缩写，翻译过来就是单点登录。顾名思义，它把两个及以上个产品中的用户登录逻辑抽离出来，达到只输入一次用户名密码，就能同时登录多个产品的效果。&lt;/p&gt;
-
-&lt;p&gt;打个比方，SSO 和我们去迪士尼玩时购买的通票很像。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2017/11/6/722924230df383cce6c9ec3ab8b1be48?imageView2/0/w/1280/h/960/format/webp/ignore-error/1&quot; alt=&quot;图片名&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我们只要买一次通票，就可以玩所有游乐场内的设施，而不需要在过山车或者摩天轮那里重新买一次票。在这里，买票就相当于登录认证，游乐场就相当于使用一套 SSO 的公司，各种游乐设施就相当于公司的各个产品。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2017/11/6/4a6f420786946c6054c9cdde40004acd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1&quot; alt=&quot;图片名&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用 SSO 的优点很明显：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;提升用户体验。
-就以我厂为例。我厂有两个产品，丁香人才网和丁香园论坛，假如你是我厂用户，肯定无法忍受登录丁香园论坛的时候输入一次用户名密码，登录人才网又要输入一次用户名密码吧？&lt;/li&gt;
-  &lt;li&gt;避免重复开发
-假如你是我厂后端，每天任务都饱和的不行，肯定无法忍受到人才网开发一套登录逻辑，到论坛又开发一套登录逻辑吧？&lt;/li&gt;
-  &lt;li&gt;提升安全系数
-假如你是我厂运维，发现了一个安全隐患需要紧急修复。你肯定无法忍受给茫茫多的产品后端都发一封邮件，责令修复吧？万一漏了一个呢？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;综合看来，SSO 不仅是有用的，而且是必要的。&lt;/p&gt;
-
-&lt;h2 id=&quot;cas&quot;&gt;CAS&lt;/h2&gt;
-&lt;p&gt;SSO 仅仅是一种架构，一种设计，而 CAS 则是实现 SSO 的一种手段。两者是抽象与具体的关系。当然，除了 CAS 之外，实现 SSO 还有其他手段，比如简单的 cookie。CAS （Central Authentication Service）中心授权服务，本身是一个开源协议，分为 1.0 版本和 2.0 版本。1.0 称为基础模式，2.0称为代理模式，适用于存在非 Web 应用之间的单点登录。本文只涉及 CAS 1.0，下文中将详细介绍。&lt;/p&gt;
-
-&lt;h2 id=&quot;sso-的演进与分类&quot;&gt;SSO 的演进与分类&lt;/h2&gt;
-
-&lt;p&gt;下面详述一下各种场景下的 SSO，它们之间是逐步升级，逐步复杂化的关系。&lt;/p&gt;
+&lt;h2 id=&quot;四种模糊搜索&quot;&gt;四种模糊搜索&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;同域 SSO如图，同域 SSO 是最简单的一种情况。此时，两个产品都是在一个域名下，单点登录是很自然的选择。我们来捋一捋步骤，搞清楚这里的步骤是理解后文的基础，千万不要跳过。&lt;/p&gt;
+    &lt;p&gt;LIKE&lt;/p&gt;
 
-    &lt;ol&gt;
-      &lt;li&gt;用户访问产品 a，向 后台服务器发送登录请求。&lt;/li&gt;
-      &lt;li&gt;登录认证成功，服务器把用户的登录信息写入 session。&lt;/li&gt;
-      &lt;li&gt;服务器为该用户生成一个 cookie，并加入到 response header 中，随着请求返回而写入浏览器。该 cookie 的域设定为 dxy.cn。&lt;/li&gt;
-      &lt;li&gt;下一次，当用户访问同域名的产品 b 时，由于 a 和 b 在同一域名下，也是 dxy.cn，浏览器会自动带上之前的 cookie。此时后台服务器就可以通过该 cookie 来验证登录状态了。&lt;/li&gt;
-    &lt;/ol&gt;
+    &lt;p&gt;Like主要支持两种通配符，分别是”_“和”%”，其中前者代表匹配1个任意字符，常用于充当占位符；而后者代表匹配0个或多个任意字符。从某种意义上讲，Like可看作是一个精简的正则表达式功能。&lt;/p&gt;
+
+    &lt;p&gt;例如，在如上表中查找所有以”hello”开头的记录，则其SQL语句为：&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;LIKE&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello%'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;如果想查找所有以”hello”开头且至少含有6个字符的记录，则可简单修改SQL语句如下：&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;LIKE&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello_%'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;另外：当在Like模式字段中，若不包含任何”_“和”%”通配符，则等价于”=”，表示精确匹配，例如查询语句……Like “hello”，则仅返回hello一条记录；还可在Like前加限定词Not，表示结果取反。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;RegExp&lt;/p&gt;
+
+    &lt;p&gt;正则表达式，更加强大，MySQL语法支持绝大多数正则表达式功能。为了限定正则表达式以某个模式串开头或者结尾，可以通过添加”^”和”$”标识符来限定，例如仍然搜索以”hello”开头的目标字段，则其SQL语句为：&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;REGEXP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;内置函数&lt;/p&gt;
+
+    &lt;p&gt;LOCATE(substr,str)  //返回substr在str中第一次出现的位置，LOCATE()只要找到返回的结果都大于0(即使是查询的内容就是最开始部分)，没有查找到才返回0
+ LOCATE(substr,str,pos)  //同上，但是多了一个位置参数，返回sunstr在str中pos位置后第一次出现的位置
+ INSTR(string ,substring)    //返回substring首次在string中出现的位置，据说是LOCATE()方法的别名函数，功能一样
+ POSITION(substr IN str)  //同上，据说也是LOCATE()方法的别名函数，功能一样，不过它不再是通过返回值来判断，而是使用关键字IN
+ FIND_IN_SET(str,strlist)    //strlist必须要是以逗号分隔的字符串，如果字符串str在strlist组成的N子串的字符串列表中存在，返回值的范围为1到N&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INSTR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+ &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOCATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+ &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;注意：以上函数都不能使用索引&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;全文索引&lt;/p&gt;
+
+    &lt;p&gt;全文索引是MySQL中索引的一种，曾经仅在引擎为MyISAM的表中支持，从5.6版本开始在InnoDB中也开始支持全文索引，支持的字段格式包括CHAR、VARCHAR和TEXT。在如上已经添加了全文索引的tests表中，仍然查询包含”hello”的记录，应用全文索引查询的SQL语句为：&lt;/p&gt;
+
+    &lt;p&gt;index 是前提条件，否则会报错： &lt;em&gt;SQL Error [1191] [HY000]: Can’t find FULLTEXT index matching the column list&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;创建表，并建立索引&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;EXISTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;TEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FULLTEXT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;或者对已存在的表，创建相应的索引&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FULLTEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;之后可以进行搜索&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MATCH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;against&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;实际上，MATCH(words) against(‘hello’)返回的是字段words对目标字符”hello”的匹配程度：当不存在任何匹配结果时，返回0；否则，根据匹配次数的多少和位置先后返回一个匹配度。例如，如下SQL语句返回表中每条记录对目标字段”hello”的匹配度&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MATCH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;against&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;实际上，这种场景就是最简单最传统的登录操作。虽然我们把产品 a 和 b 人为分开了，但由于它们在同域上，就算看成是同一产品的不同类目也未尝不可。我们没有设置独立的 SSO 服务器，因为业务后台服务器本身就足以承担 SSO 的职能。&lt;/p&gt;
+&lt;h2 id=&quot;查询性能&quot;&gt;查询性能&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/4b1a88d1c1d0&quot;&gt;参考原文1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;基于索引的搜索一定是最快的，LIKE通配符次之但是和其他的方式差别不大。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/a-guide-to-unicode-utf-8-and-strings-in-python-757a232db95c&quot;&gt;参考原文2&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.iteye.com/blog/mikzhang-1101705&quot;&gt;参考原文3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"></summary></entry><entry><title type="html">SQL - Full Text Retrieval</title><link href="http://localhost:4000/sql-fulltext-retrieval/" rel="alternate" type="text/html" title="SQL - Full Text Retrieval" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fulltext-retrieval</id><content type="html" xml:base="http://localhost:4000/sql-fulltext-retrieval/">&lt;p&gt;&lt;img src=&quot;https://intellipaat.com/mediaFiles/2015/11/SQL-e1559106221282.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://database.51cto.com/art/202004/614332.htm&quot;&gt;参考原文1&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"></summary></entry><entry><title type="html">SQL - Full Text Retrieval</title><link href="http://localhost:4000/sql-fulltext-retrieval/" rel="alternate" type="text/html" title="SQL - Full Text Retrieval" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fulltext-retrieval</id><content type="html" xml:base="http://localhost:4000/sql-fulltext-retrieval/">&lt;p&gt;&lt;img src=&quot;https://intellipaat.com/mediaFiles/2015/11/SQL-e1559106221282.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
