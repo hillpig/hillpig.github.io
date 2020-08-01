@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>Git Log – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="Git Log" />
+    <meta property="twitter:title" content="Git Log" />
     
   <!-- Async font loading -->
 <script>
@@ -151,324 +158,72 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>Git Log</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-07-31
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#Git">
+          Git
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="https://i.loli.net/2020/08/01/OqY9KTlo7izgFaf.jpg" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="最近申请-bc的-sred-过程中需要统计工作量用到了git-log的一些高级功能">最近申请 BC的 SR&amp;ED 过程中，需要统计工作量，用到了git log的一些高级功能</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--after</span><span class="o">=</span><span class="s2">"2018-10-1"</span> <span class="nt">--before</span><span class="o">=</span><span class="s2">"2019-9-30"</span>  <span class="nt">--pretty</span><span class="o">=</span>format:<span class="s2">"%h;</span><span class="si">$(</span><span class="nb">basename</span> <span class="sb">`</span>git rev-parse <span class="nt">--show-toplevel</span><span class="sb">`</span><span class="si">)</span><span class="s2">;%an;%ad;%s"</span> <span class="nt">--author</span><span class="o">=</span><span class="s1">'Samuel'</span> <span class="o">&gt;</span> ~/log2.csv
+</code></pre></div></div>
+<p>效果如cover image</p>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-outer-space/">Words about outer space</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "Git Log",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1134635135%2F960x0.jpg%3Ffit%3Dscale" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-outer-space/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-mood-emotion-temper-feeling/">Mood, Emotion, Temper, Feeling 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://svgsilh.com/svg/1337383.svg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-mood-emotion-temper-feeling/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-insist-persist/">两种坚持 英文</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://www.grammar.com/images/2984_insist_vs._persist.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-insist-persist/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-guideline-guidance/">guideline, guidance 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://images.yourstory.com/production/document_image/mystoryimage/lfvlkbu2-imgdirections.jpg?fm=png&amp;auto=format" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-guideline-guidance/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-eg-ie/">e.g. or i.e.</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://7esl.com/wp-content/uploads/2019/07/I.e.-vs-E.g.-1-1200x628.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-eg-ie/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/english-activity-motion-motive-motivation-motivate/">Activity, Motion, Motive, Motivation, Motivate 区别</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-01-03
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#English">
-              English
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rw0115yea-07-1545343575.jpg?crop=1.00xw:0.676xh;0,0.199xh&amp;resize=2048:*" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/english-activity-motion-motive-motivation-motivate/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/math-test/">LaTex渲染的说明和测试</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2019-07-24
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#document">
-              document
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>LaTeX渲染已经在全站头部文件引入，可以直接使用，公式块上下使用<code class="highlighter-rouge">$$</code>标明，内联公式则用<code class="highlighter-rouge">$</code>.</p>
-
-<p>最好不要让公式出现在文章摘要里。</p>
-
-<p>Jekyll的默认文章摘要是第一段，但是我在使用中发现它选取摘要不是很稳...
-      </div>
-
-      <a href="/math-test/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/document/">LOFFER文档</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2019-06-02
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#sample">
-              sample
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#document">
-              document
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。</p>
-
-<p>这是一个可以通过Fork直接发布在GitHub的Jekyll博客，你不需要编写代码或使用命令行即可获得一个部署在GitHub的博客。</p>
-
-<h2 id="更新内容">更新内容</h2>
-
-<h3 id="2019-07-25-v040">2019-07-25 V0.4...
-      </div>
-
-      <a href="/document/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page9/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/NAT/">
+        ← 上一篇
       </a>
     </span>
   
-  
-    <span class="next">
-      <a href="/page11/" class="next">
-        下一页 →
-      </a>
-    </span>
   
 </div>
-
       </div>
     </div>
 
