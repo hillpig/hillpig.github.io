@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>山猪 – 方寸之间 点滴墨彩</title>
+  <title>ZigBee, WIFI, BLE(Bluetooth Low Energy) – 山猪 – 方寸之间 点滴墨彩</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,11 +9,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="方寸之间 点滴墨彩">
-    <meta property="og:description" content="方寸之间 点滴墨彩" />
+    <meta name="description" content="
+
+" />
+    <meta property="og:description" content="
+
+" />
     
     <meta name="author" content="山猪" />
 
+    
+    <meta property="og:title" content="ZigBee, WIFI, BLE(Bluetooth Low Energy)" />
+    <meta property="twitter:title" content="ZigBee, WIFI, BLE(Bluetooth Low Energy)" />
     
   <!-- Async font loading -->
 <script>
@@ -151,324 +158,117 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <script src="https://unpkg.com/feather-icons"></script>
+        <article class="posts">
+  <h1>ZigBee, WIFI, BLE(Bluetooth Low Energy)</h1>
 
+  <div clsss="meta">
+    <span class="date">
+      2020-08-04
+    </span>
 
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/tags#IT">
+          IT
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-<div class="posts">
+  <div class="entry">
+    <p><img src="https://mlijwtixss3a.i.optimole.com/H_dfGNQ-VpcXFvq9/w:640/h:388/q:auto/https://www.neothingsiot.com/wp-content/uploads/2014/11/ZigBee.png" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="目前智能家居物联网中最流行的三种通信协议zigbeewifi以及ble">目前智能家居物联网中最流行的三种通信协议，Zigbee、WiFi以及BLE</h2>
+
+<h3 id="zigbee">ZigBee</h3>
+
+<p>ZigBee基于IEEE802.15.4协议，是一种近距离、低复杂度、低功耗、低数据速率、低成本的双向无线通信技术，主要适合于自动控制和远程控制领域，可以嵌入各种设备中，同时支持地理定位功能。由于蜜蜂(bee)是靠飞翔和“嗡嗡”(zig)地抖动翅膀的“舞蹈”来与同伴传递花粉所在方位和远近信息的，也就是所蜜蜂依靠着这样的方式构成了群体中的通信“网络”，因此ZigBee的发明者们形象地利用蜜蜂的这种行为来形象地描述这种无线信息传输技术。</p>
+
+<ol>
+  <li>低功耗 5mA</li>
+  <li>低成本 父节点32KB代码，子节点4KB代码，协议免费</li>
+  <li>低速率 250kbps</li>
+  <li>近距离 10～100m，增加发射功率后，1～3km</li>
+  <li>低延时 从休眠转入工作状态15ms</li>
+  <li>高容量 父节点可连接管理254个子节点，最大组成65000节点的扩展网络</li>
+  <li>安全性 AES128 对称密码</li>
+  <li>免费频段 主要使用2.4GHz频段，还有900MHz。</li>
+</ol>
+
+<p>Note： 需要网关设备，既父节点统一管理设备。</p>
+
+<h3 id="wifi">WIFI</h3>
+
+<p>我们所说的WIFI是一个协议栈，IEEE 802.11x。2.4GHz频段支持IEEE 802.11b/g/n/ax，而5GHz频段则支持 IEEE 802.11a/n/ac/ax，大部分智能家居设备都使用了2.4G这个频段，并支持IEEE 802.11b/g/n 协议。一般来说因为带宽的需求没有很高，所以不支持 IEEE 802.11ac/ax，也就是我们常说的WIFI 5 / WIFI 6。</p>
+
+<p>同样使用2.4GHz频段，WI-FI和ZigBee之间确实存在干扰问题，但是</p>
+
+<ol>
+  <li>ZigBee的发射功率很小，数据传输量也很小。</li>
+  <li>如果终端设备支持自动调频，ZigBee则可以使用25、26信道，此时于WIFI 2.4GHz不重叠。</li>
+</ol>
+
+<p>WIFI连接智能设备存在两个问题：</p>
+
+<ol>
+  <li>功耗大，1w左右，供电一般需要用线缆外接。</li>
+  <li>设备接入数量受限于路由器，家用路由器数十个设备连接后就会出现断开连接的问题。</li>
+</ol>
+
+<h3 id="bluetoothbluetooth-low-energy">Bluetooth(Bluetooth Low Energy)</h3>
+
+<p>Bluetooth 蓝牙也是工作在2.4GHz频段的协议，公开频段，无需申请许可证。</p>
+
+<p>Pro：传输数据能力比ZigBee强，无需网关。</p>
+
+<p>Con：穿墙能力差。</p>
+
+<p>一般用于手机连接其他设备。</p>
+
+<h3 id="补充">补充</h3>
+
+<h3 id="usb30-又名-usb31-gen1或者-usb32-gen1x1-工作在25ghz频段下理论传输速率5gbs但是使用了差分信号技术工作时会对24ghz频段无线信号造成干扰目前只能依靠屏蔽包裹来处理但是裸露的接头部分较难处理">USB3.0 (又名 USB3.1 Gen1或者 USB3.2 Gen1x1) 工作在2.5GHz频段下(理论传输速率5Gb/s，但是使用了差分信号技术)，工作时会对2.4GHz频段无线信号造成干扰，目前只能依靠屏蔽包裹来处理，但是裸露的接头部分较难处理。</h3>
+
+  </div>
+
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/python-recursion/">Python - Recursion</a>
-      </h1>
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "74ca3b7eb8473997f178",
+          clientSecret: "9e51a9ad6faad0e1c09e83fb474746ec40ef8af5",
+          repo: "hillpig.github.io",
+          owner: "hillpig",
+          admin: ["hillpig"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "ZigBee, WIFI, BLE(Bluetooth Low Energy)",
+          language: "zh-CN",
 
-      <div clsss="meta">
-        <span class="date">
-          2020-03-30
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Python">
-              Python
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://files.realpython.com/media/python-recursion-title.1beb2deff72a.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/python-recursion/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/python-parameter/">Python 学习 - 默认参数 和 可变参数 关键字参数</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-03-30
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Python">
-              Python
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://foofish.net/images/function_default_args2.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/python-parameter/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-field/">Spring boot - @field</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-03-25
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring Boot">
-              Spring Boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://vladmihalcea.com/wp-content/uploads/2018/10/PublisherYearAndMonth.png" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-field/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/python/">Python 学习 1</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-03-15
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Python">
-              Python
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://miro.medium.com/max/12032/0*fUJ-vxQtDB0ssLX7" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/python/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-triple-dot/">Triple Dot in Java</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-03-15
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/09/FIGS/arg02.gif" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-triple-dot/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/technical-terms/">Technical Terms</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-03-12
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#IT">
-              IT
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://javadeveloperzone.com/wp-content/uploads/2018/09/Spring-JPA-Projection-example-1024x488.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/technical-terms/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-hibernate-annotation/">Spring boot - Hibernate 中的注释</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-03-11
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring Boot">
-              Spring Boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://3.bp.blogspot.com/-sZpG0bMK5xQ/W_qZl9AuksI/AAAAAAAAE9U/2aimw3DF5pUZzeAOmN7xiLc59GTqRaNIQCEwYBhgL/s1600/spring-hibernate.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-hibernate-annotation/" class="read-more">Read More</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/java-spring-projection/">Spring boot - @Projection</a>
-      </h1>
-
-      <div clsss="meta">
-        <span class="date">
-          2020-03-10
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/tags#Java">
-              Java
-            </a>
-          </li>
-          
-          <li>
-            <a href="http://localhost:4000/tags#Spring Boot">
-              Spring Boot
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p><img src="https://javadeveloperzone.com/wp-content/uploads/2018/09/Spring-JPA-Projection-example-1024x488.jpg" alt="img" /></p>
-
-
-      </div>
-
-      <a href="/java-spring-projection/" class="read-more">Read More</a>
-    </article>
-    
-  
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+
+</article>
 
 <div class="pagination">
   
-    <span class="prev">
-      <a href="/page2/" class="prev">
-        ← 上一页
+    <span class="prev" >
+      <a href="http://localhost:4000/git-log/">
+        ← 上一篇
       </a>
     </span>
   
-  
-    <span class="next">
-      <a href="/page4/" class="next">
-        下一页 →
-      </a>
-    </span>
   
 </div>
-
       </div>
     </div>
 

@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-31T17:28:36-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Git Log</title><link href="http://localhost:4000/git-log/" rel="alternate" type="text/html" title="Git Log" /><published>2020-07-31T00:00:00-07:00</published><updated>2020-07-31T00:00:00-07:00</updated><id>http://localhost:4000/git-log</id><content type="html" xml:base="http://localhost:4000/git-log/">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/01/OqY9KTlo7izgFaf.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-10T16:53:23-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">ZigBee, WIFI, BLE(Bluetooth Low Energy)</title><link href="http://localhost:4000/zigbee/" rel="alternate" type="text/html" title="ZigBee, WIFI, BLE(Bluetooth Low Energy)" /><published>2020-08-04T00:00:00-07:00</published><updated>2020-08-04T00:00:00-07:00</updated><id>http://localhost:4000/zigbee</id><content type="html" xml:base="http://localhost:4000/zigbee/">&lt;p&gt;&lt;img src=&quot;https://mlijwtixss3a.i.optimole.com/H_dfGNQ-VpcXFvq9/w:640/h:388/q:auto/https://www.neothingsiot.com/wp-content/uploads/2014/11/ZigBee.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;目前智能家居物联网中最流行的三种通信协议zigbeewifi以及ble&quot;&gt;目前智能家居物联网中最流行的三种通信协议，Zigbee、WiFi以及BLE&lt;/h2&gt;
+
+&lt;h3 id=&quot;zigbee&quot;&gt;ZigBee&lt;/h3&gt;
+
+&lt;p&gt;ZigBee基于IEEE802.15.4协议，是一种近距离、低复杂度、低功耗、低数据速率、低成本的双向无线通信技术，主要适合于自动控制和远程控制领域，可以嵌入各种设备中，同时支持地理定位功能。由于蜜蜂(bee)是靠飞翔和“嗡嗡”(zig)地抖动翅膀的“舞蹈”来与同伴传递花粉所在方位和远近信息的，也就是所蜜蜂依靠着这样的方式构成了群体中的通信“网络”，因此ZigBee的发明者们形象地利用蜜蜂的这种行为来形象地描述这种无线信息传输技术。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;低功耗 5mA&lt;/li&gt;
+  &lt;li&gt;低成本 父节点32KB代码，子节点4KB代码，协议免费&lt;/li&gt;
+  &lt;li&gt;低速率 250kbps&lt;/li&gt;
+  &lt;li&gt;近距离 10～100m，增加发射功率后，1～3km&lt;/li&gt;
+  &lt;li&gt;低延时 从休眠转入工作状态15ms&lt;/li&gt;
+  &lt;li&gt;高容量 父节点可连接管理254个子节点，最大组成65000节点的扩展网络&lt;/li&gt;
+  &lt;li&gt;安全性 AES128 对称密码&lt;/li&gt;
+  &lt;li&gt;免费频段 主要使用2.4GHz频段，还有900MHz。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note： 需要网关设备，既父节点统一管理设备。&lt;/p&gt;
+
+&lt;h3 id=&quot;wifi&quot;&gt;WIFI&lt;/h3&gt;
+
+&lt;p&gt;我们所说的WIFI是一个协议栈，IEEE 802.11x。2.4GHz频段支持IEEE 802.11b/g/n/ax，而5GHz频段则支持 IEEE 802.11a/n/ac/ax，大部分智能家居设备都使用了2.4G这个频段，并支持IEEE 802.11b/g/n 协议。一般来说因为带宽的需求没有很高，所以不支持 IEEE 802.11ac/ax，也就是我们常说的WIFI 5 / WIFI 6。&lt;/p&gt;
+
+&lt;p&gt;同样使用2.4GHz频段，WI-FI和ZigBee之间确实存在干扰问题，但是&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ZigBee的发射功率很小，数据传输量也很小。&lt;/li&gt;
+  &lt;li&gt;如果终端设备支持自动调频，ZigBee则可以使用25、26信道，此时于WIFI 2.4GHz不重叠。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;WIFI连接智能设备存在两个问题：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;功耗大，1w左右，供电一般需要用线缆外接。&lt;/li&gt;
+  &lt;li&gt;设备接入数量受限于路由器，家用路由器数十个设备连接后就会出现断开连接的问题。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;bluetoothbluetooth-low-energy&quot;&gt;Bluetooth(Bluetooth Low Energy)&lt;/h3&gt;
+
+&lt;p&gt;Bluetooth 蓝牙也是工作在2.4GHz频段的协议，公开频段，无需申请许可证。&lt;/p&gt;
+
+&lt;p&gt;Pro：传输数据能力比ZigBee强，无需网关。&lt;/p&gt;
+
+&lt;p&gt;Con：穿墙能力差。&lt;/p&gt;
+
+&lt;p&gt;一般用于手机连接其他设备。&lt;/p&gt;
+
+&lt;h3 id=&quot;补充&quot;&gt;补充&lt;/h3&gt;
+
+&lt;h3 id=&quot;usb30-又名-usb31-gen1或者-usb32-gen1x1-工作在25ghz频段下理论传输速率5gbs但是使用了差分信号技术工作时会对24ghz频段无线信号造成干扰目前只能依靠屏蔽包裹来处理但是裸露的接头部分较难处理&quot;&gt;USB3.0 (又名 USB3.1 Gen1或者 USB3.2 Gen1x1) 工作在2.5GHz频段下(理论传输速率5Gb/s，但是使用了差分信号技术)，工作时会对2.4GHz频段无线信号造成干扰，目前只能依靠屏蔽包裹来处理，但是裸露的接头部分较难处理。&lt;/h3&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">Git Log</title><link href="http://localhost:4000/git-log/" rel="alternate" type="text/html" title="Git Log" /><published>2020-07-31T00:00:00-07:00</published><updated>2020-07-31T00:00:00-07:00</updated><id>http://localhost:4000/git-log</id><content type="html" xml:base="http://localhost:4000/git-log/">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/01/OqY9KTlo7izgFaf.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -6,7 +59,53 @@
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log &lt;span class=&quot;nt&quot;&gt;--after&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2018-10-1&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2019-9-30&quot;&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&quot;%h;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;basename&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-parse &lt;span class=&quot;nt&quot;&gt;--show-toplevel&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;;%an;%ad;%s&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Samuel'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ~/log2.csv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;效果如cover image&lt;/p&gt;</content><author><name></name></author><category term="Git" /><summary type="html"></summary></entry><entry><title type="html">Charles Proxy</title><link href="http://localhost:4000/Charles/" rel="alternate" type="text/html" title="Charles Proxy" /><published>2020-07-22T00:00:00-07:00</published><updated>2020-07-22T00:00:00-07:00</updated><id>http://localhost:4000/Charles</id><content type="html" xml:base="http://localhost:4000/Charles/">&lt;p&gt;&lt;img src=&quot;https://rileymacdonald.ca/wp-content/uploads/2013/12/charles.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;效果如cover image&lt;/p&gt;</content><author><name></name></author><category term="Git" /><summary type="html"></summary></entry><entry><title type="html">NAT</title><link href="http://localhost:4000/NAT/" rel="alternate" type="text/html" title="NAT" /><published>2020-07-22T00:00:00-07:00</published><updated>2020-07-22T00:00:00-07:00</updated><id>http://localhost:4000/NAT</id><content type="html" xml:base="http://localhost:4000/NAT/">&lt;p&gt;&lt;img src=&quot;https://doc.bce.baidu.com/bce-documentation/VPC/VPC_bestpractise01.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;听ccie大神说&quot;&gt;听CCIE大神说&lt;/h2&gt;
+
+&lt;p&gt;面试被问了一个NAT的问题，有点懵，和PAT的概念有点混淆，PAT是一个静态映射表，那么NAT是什么？&lt;/p&gt;
+
+&lt;p&gt;咨询了朋友，一个CCIE大神，获得信息如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;在Cisco的技术栈中，没有直接的PAT的概念，只有以下三种&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Static NAT&lt;/li&gt;
+      &lt;li&gt;Dynamic NAT&lt;/li&gt;
+      &lt;li&gt;Overloading&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;其中Overloading 等同于PAT&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;NAT可以是IP 映射IP 也可以是 IP+Port 映射 IP+Port&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果是IP 映射IP 就有 Public IP Pool的概念&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;静态NAT 是人工设定的&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;动态NAT 是系统自动分配的，此时映射关系会有一个生命周期的概念，比如我们一般会设置500秒,或者120秒, 这段时间如果没有session保持，那么映射关系就会被清除。此时再有response 从公网发过来，就会被丢弃。一般来说这个时间周期内都没有返回的包, 那也不是什么正常的通讯。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;NAT不管哪一种,  核心都是会使用translation table, 动态和静态的区别就是静态NAT在你配置完命令后这个表格里就有内容了&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;大家会说NAT 某种程度上也起到一定的安全作用, 就是有里面向外的访问, 才可以让外面向内传输,  否则,外面不能直接凭空向内访问&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;自说自话&quot;&gt;自说自话&lt;/h2&gt;
+&lt;p&gt;网关是如何处理外网对内网的应答呢？response 回到了网关，这时候根据包头中 destination 的 IP+Port 信息，对照映射表，网关就可以判断是内网里哪个 IP+Port ，把包中的 destination 这段替换掉，重新打包封装发给内网，就回到了原来的主机。&lt;/p&gt;</content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"></summary></entry><entry><title type="html">Charles Proxy</title><link href="http://localhost:4000/Charles/" rel="alternate" type="text/html" title="Charles Proxy" /><published>2020-07-22T00:00:00-07:00</published><updated>2020-07-22T00:00:00-07:00</updated><id>http://localhost:4000/Charles</id><content type="html" xml:base="http://localhost:4000/Charles/">&lt;p&gt;&lt;img src=&quot;https://rileymacdonald.ca/wp-content/uploads/2013/12/charles.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -66,53 +165,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/392362115090&quot;&gt;参考原文2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://iacn.me/2018/03/14/network-security-configuration-newer-than-android-n/&quot;&gt;参考原文3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"></summary></entry><entry><title type="html">NAT</title><link href="http://localhost:4000/NAT/" rel="alternate" type="text/html" title="NAT" /><published>2020-07-22T00:00:00-07:00</published><updated>2020-07-22T00:00:00-07:00</updated><id>http://localhost:4000/NAT</id><content type="html" xml:base="http://localhost:4000/NAT/">&lt;p&gt;&lt;img src=&quot;https://doc.bce.baidu.com/bce-documentation/VPC/VPC_bestpractise01.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;听ccie大神说&quot;&gt;听CCIE大神说&lt;/h2&gt;
-
-&lt;p&gt;面试被问了一个NAT的问题，有点懵，和PAT的概念有点混淆，PAT是一个静态映射表，那么NAT是什么？&lt;/p&gt;
-
-&lt;p&gt;咨询了朋友，一个CCIE大神，获得信息如下：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;在Cisco的技术栈中，没有直接的PAT的概念，只有以下三种&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Static NAT&lt;/li&gt;
-      &lt;li&gt;Dynamic NAT&lt;/li&gt;
-      &lt;li&gt;Overloading&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;其中Overloading 等同于PAT&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;NAT可以是IP 映射IP 也可以是 IP+Port 映射 IP+Port&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果是IP 映射IP 就有 Public IP Pool的概念&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;静态NAT 是人工设定的&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;动态NAT 是系统自动分配的，此时映射关系会有一个生命周期的概念，比如我们一般会设置500秒,或者120秒, 这段时间如果没有session保持，那么映射关系就会被清除。此时再有response 从公网发过来，就会被丢弃。一般来说这个时间周期内都没有返回的包, 那也不是什么正常的通讯。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;NAT不管哪一种,  核心都是会使用translation table, 动态和静态的区别就是静态NAT在你配置完命令后这个表格里就有内容了&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;大家会说NAT 某种程度上也起到一定的安全作用, 就是有里面向外的访问, 才可以让外面向内传输,  否则,外面不能直接凭空向内访问&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;自说自话&quot;&gt;自说自话&lt;/h2&gt;
-&lt;p&gt;网关是如何处理外网对内网的应答呢？response 回到了网关，这时候根据包头中 destination 的 IP+Port 信息，对照映射表，网关就可以判断是内网里哪个 IP+Port ，把包中的 destination 这段替换掉，重新打包封装发给内网，就回到了原来的主机。&lt;/p&gt;</content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"></summary></entry><entry><title type="html">SQL - Fuzzy Search</title><link href="http://localhost:4000/sql-fuzzy-search/" rel="alternate" type="text/html" title="SQL - Fuzzy Search" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fuzzy-search</id><content type="html" xml:base="http://localhost:4000/sql-fuzzy-search/">&lt;p&gt;&lt;img src=&quot;https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/image-36.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://iacn.me/2018/03/14/network-security-configuration-newer-than-android-n/&quot;&gt;参考原文3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"></summary></entry><entry><title type="html">SQL - Fuzzy Search</title><link href="http://localhost:4000/sql-fuzzy-search/" rel="alternate" type="text/html" title="SQL - Fuzzy Search" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fuzzy-search</id><content type="html" xml:base="http://localhost:4000/sql-fuzzy-search/">&lt;p&gt;&lt;img src=&quot;https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/image-36.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -526,61 +579,4 @@ ft_min_word_len = 1
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://blog.jostle.me/blog/collaboration-vs-cooperation&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">Security - Encryption - Signature or Key</title><link href="http://localhost:4000/security-encryption/" rel="alternate" type="text/html" title="Security - Encryption - Signature or Key" /><published>2020-06-10T00:00:00-07:00</published><updated>2020-06-10T00:00:00-07:00</updated><id>http://localhost:4000/security-encryption</id><content type="html" xml:base="http://localhost:4000/security-encryption/">&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Illustration_of_digital_signature.svg/1024px-Illustration_of_digital_signature.svg.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;A对信息签名的作用是确认这个信息是A发出的，不是别人发出的；&lt;/li&gt;
-  &lt;li&gt;加密是对内容进行机密性保护，主要是保证信息内容不会被其他人获取，只有B可以获取。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;也就是保证整个过程的端到端的唯一确定性，这个信息是A发出的（不是别人），且是发给B的，只有B才被获得具体内容（别人就算截获信息也不能获得具体内容）。这只是大概说了作用，具体说来，涉及到密钥相关的东西。密钥有公钥和私钥之分。那么这里一共有两组四个密钥：A的公钥（PUB_A），A的私钥（PRI_A）；B的公钥（PUB_B），B的私钥（PRI_B）。公钥一般用来加密，私钥用来签名。通常公钥是公开出去的，但是私钥只能自己私密持有。公钥和私钥唯一对应，用某个公钥签名过得内容只能用对应的私钥才能解签验证；同样用某个私钥加密的内容只能用对应的公钥才能解密。&lt;/p&gt;
-
-&lt;p&gt;这时A向B发送信息的整个签名和加密的过程如下：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;A先用自己的私钥（PRI_A）对信息（一般是信息的摘要）进行签名。&lt;/li&gt;
-  &lt;li&gt;A接着使用B的公钥（PUB_B）对信息内容和签名信息进行加密。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;这样当B接收到A的信息后，获取信息内容的步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;用自己的私钥（PRI_B）解密A用B的公钥（PUB_B）加密的内容；&lt;/li&gt;
-  &lt;li&gt;得到解密后的明文后用A的公钥（PUB_A）解签A用A自己的私钥（PRI_A）的签名。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;从而整个过程就保证了开始说的端到端的唯一确认。A的签名只有A的公钥才能解签，这样B就能确认这个信息是A发来的；A的加密只有B的私钥才能解密，这样A就能确认这份信息只能被B读取。&lt;/p&gt;
-
-&lt;p&gt;签名密钥和加密密钥
-由于公钥所具有的两种不同用途,在实际应用中,需要分别配置用于数字签名/验证的
-密钥对和用于数据加密/解密的密钥对,这里分别称为签名密钥对和加密密钥对｡这两对密
-钥由于用途不同,因此,对于密钥的管理也就有着不同的要求｡&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;签名密钥对的管理
-签名密钥对由签名私钥和验证公钥组成｡
-签名私钥是发送方身份的证明,具有日常生活中公章､私章的效力｡为保证其惟一性,
-签名私钥绝对不能够做备份和存档,丢失后只需重新生成新的密钥对｡验证公钥需要存档,
-用于验证旧的数字签名｡
-用做数字签名的这一对密钥一般可以有较长的生命期｡&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;加密密钥对的管理
-加密密钥对由加密公钥和解密私钥组成｡
-为防止密钥丢失时数据无法恢复,解密私钥应该进行备份,同时还可能需要进行存档,
-以便能在任何时候解密历史密文数据｡加密公钥则无需备份和存档,加密公钥丢失时,只需
-重新生成密钥对即可｡
-这种密钥应该频繁更换,故加密密钥对的生命周期较短｡&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;不难看出,这两对密钥的密钥管理要求存在互相冲突的地方,因此,必须针对不同的用
-途使用不同的密钥对｡尽管有的公钥体制算法如RSA,既可以用于加密,又可以用于签名,
-但由于这两对密钥在管理上截然不同的要求,在使用中仍然必须为用户配置两对密钥:其一
-用于数字签名,另一用于加密｡而采用一对密钥,既用于加密,又用于签名,这种做法是不安
-全的｡&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/27669212&quot;&gt;参考 1&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/gotohbu/java/article/details/4328066&quot;&gt;参考 2&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://blog.jostle.me/blog/collaboration-vs-cooperation&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
