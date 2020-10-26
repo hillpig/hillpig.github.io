@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-10T16:53:23-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">ZigBee, WIFI, BLE(Bluetooth Low Energy)</title><link href="http://localhost:4000/zigbee/" rel="alternate" type="text/html" title="ZigBee, WIFI, BLE(Bluetooth Low Energy)" /><published>2020-08-04T00:00:00-07:00</published><updated>2020-08-04T00:00:00-07:00</updated><id>http://localhost:4000/zigbee</id><content type="html" xml:base="http://localhost:4000/zigbee/">&lt;p&gt;&lt;img src=&quot;https://mlijwtixss3a.i.optimole.com/H_dfGNQ-VpcXFvq9/w:640/h:388/q:auto/https://www.neothingsiot.com/wp-content/uploads/2014/11/ZigBee.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-26T00:41:42-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Curriculum Vitae VS. Resume</title><link href="http://localhost:4000/english-cv-resume/" rel="alternate" type="text/html" title="Curriculum Vitae VS. Resume" /><published>2020-09-22T00:00:00-07:00</published><updated>2020-09-22T00:00:00-07:00</updated><id>http://localhost:4000/english-cv-resume</id><content type="html" xml:base="http://localhost:4000/english-cv-resume/">&lt;p&gt;&lt;img src=&quot;https://resumegenius.com/wp-content/uploads/2020/06/CV-vs-Resume-Differences.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://resumegenius.com/blog/resume-help/cv-vs-resume&quot;&gt;参考原文1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.monster.ca/career-advice/article/whats-the-difference-between-a-resume-and-a-cv-in-canada&quot;&gt;参考原文2&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">PostgreSQL</title><link href="http://localhost:4000/PostgreSQL/" rel="alternate" type="text/html" title="PostgreSQL" /><published>2020-09-04T00:00:00-07:00</published><updated>2020-09-04T00:00:00-07:00</updated><id>http://localhost:4000/PostgreSQL</id><content type="html" xml:base="http://localhost:4000/PostgreSQL/">&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/700/1*PY24xlr4TpOkXW04HUoqrQ.jpeg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -19,7 +25,7 @@
   &lt;li&gt;免费频段 主要使用2.4GHz频段，还有900MHz。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Note： 需要网关设备，既父节点统一管理设备。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note： 需要网关设备，既父节点统一管理设备。&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;wifi&quot;&gt;WIFI&lt;/h3&gt;
 
@@ -29,6 +35,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;ZigBee的发射功率很小，数据传输量也很小。&lt;/li&gt;
+  &lt;li&gt;ZigBee和CDMA一样，采用直序扩频技术(DSSS)，抗干扰能力极强，同时有很高的保密性和可靠性。&lt;/li&gt;
   &lt;li&gt;如果终端设备支持自动调频，ZigBee则可以使用25、26信道，此时于WIFI 2.4GHz不重叠。&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -51,7 +58,61 @@
 
 &lt;h3 id=&quot;补充&quot;&gt;补充&lt;/h3&gt;
 
-&lt;h3 id=&quot;usb30-又名-usb31-gen1或者-usb32-gen1x1-工作在25ghz频段下理论传输速率5gbs但是使用了差分信号技术工作时会对24ghz频段无线信号造成干扰目前只能依靠屏蔽包裹来处理但是裸露的接头部分较难处理&quot;&gt;USB3.0 (又名 USB3.1 Gen1或者 USB3.2 Gen1x1) 工作在2.5GHz频段下(理论传输速率5Gb/s，但是使用了差分信号技术)，工作时会对2.4GHz频段无线信号造成干扰，目前只能依靠屏蔽包裹来处理，但是裸露的接头部分较难处理。&lt;/h3&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">Git Log</title><link href="http://localhost:4000/git-log/" rel="alternate" type="text/html" title="Git Log" /><published>2020-07-31T00:00:00-07:00</published><updated>2020-07-31T00:00:00-07:00</updated><id>http://localhost:4000/git-log</id><content type="html" xml:base="http://localhost:4000/git-log/">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/01/OqY9KTlo7izgFaf.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;USB3.0 (又名 USB3.1 Gen1或者 USB3.2 Gen1x1) 工作在2.5GHz频段下(理论传输速率5Gb/s，但是使用了差分信号技术)，工作时会对2.4GHz频段无线信号造成干扰，目前只能依靠屏蔽包裹来处理，但是裸露的接头部分较难处理。&lt;/p&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">ZigBee, WIFI, BLE(Bluetooth Low Energy)</title><link href="http://localhost:4000/zigbee/" rel="alternate" type="text/html" title="ZigBee, WIFI, BLE(Bluetooth Low Energy)" /><published>2020-08-04T00:00:00-07:00</published><updated>2020-08-04T00:00:00-07:00</updated><id>http://localhost:4000/zigbee</id><content type="html" xml:base="http://localhost:4000/zigbee/">&lt;p&gt;&lt;img src=&quot;https://mlijwtixss3a.i.optimole.com/H_dfGNQ-VpcXFvq9/w:640/h:388/q:auto/https://www.neothingsiot.com/wp-content/uploads/2014/11/ZigBee.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;目前智能家居物联网中最流行的三种通信协议zigbeewifi以及ble&quot;&gt;目前智能家居物联网中最流行的三种通信协议，Zigbee、WiFi以及BLE&lt;/h2&gt;
+
+&lt;h3 id=&quot;zigbee&quot;&gt;ZigBee&lt;/h3&gt;
+
+&lt;p&gt;ZigBee基于IEEE802.15.4协议，是一种近距离、低复杂度、低功耗、低数据速率、低成本的双向无线通信技术，主要适合于自动控制和远程控制领域，可以嵌入各种设备中，同时支持地理定位功能。由于蜜蜂(bee)是靠飞翔和“嗡嗡”(zig)地抖动翅膀的“舞蹈”来与同伴传递花粉所在方位和远近信息的，也就是所蜜蜂依靠着这样的方式构成了群体中的通信“网络”，因此ZigBee的发明者们形象地利用蜜蜂的这种行为来形象地描述这种无线信息传输技术。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;低功耗 5mA&lt;/li&gt;
+  &lt;li&gt;低成本 父节点32KB代码，子节点4KB代码，协议免费&lt;/li&gt;
+  &lt;li&gt;低速率 250kbps&lt;/li&gt;
+  &lt;li&gt;近距离 10～100m，增加发射功率后，1～3km&lt;/li&gt;
+  &lt;li&gt;低延时 从休眠转入工作状态15ms&lt;/li&gt;
+  &lt;li&gt;高容量 父节点可连接管理254个子节点，最大组成65000节点的扩展网络&lt;/li&gt;
+  &lt;li&gt;安全性 AES128 对称密码&lt;/li&gt;
+  &lt;li&gt;免费频段 主要使用2.4GHz频段，还有900MHz。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Note： 需要网关设备，既父节点统一管理设备。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;wifi&quot;&gt;WIFI&lt;/h3&gt;
+
+&lt;p&gt;我们所说的WIFI是一个协议栈，IEEE 802.11x。2.4GHz频段支持IEEE 802.11b/g/n/ax，而5GHz频段则支持 IEEE 802.11a/n/ac/ax，大部分智能家居设备都使用了2.4G这个频段，并支持IEEE 802.11b/g/n 协议。一般来说因为带宽的需求没有很高，所以不支持 IEEE 802.11ac/ax，也就是我们常说的WIFI 5 / WIFI 6。&lt;/p&gt;
+
+&lt;p&gt;同样使用2.4GHz频段，WI-FI和ZigBee之间确实存在干扰问题，但是&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ZigBee的发射功率很小，数据传输量也很小。&lt;/li&gt;
+  &lt;li&gt;ZigBee和CDMA一样，采用直序扩频技术(DSSS)，抗干扰能力极强，同时有很高的保密性和可靠性。&lt;/li&gt;
+  &lt;li&gt;如果终端设备支持自动调频，ZigBee则可以使用25、26信道，此时于WIFI 2.4GHz不重叠。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;WIFI连接智能设备存在两个问题：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;功耗大，1w左右，供电一般需要用线缆外接。&lt;/li&gt;
+  &lt;li&gt;设备接入数量受限于路由器，家用路由器数十个设备连接后就会出现断开连接的问题。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;bluetoothbluetooth-low-energy&quot;&gt;Bluetooth(Bluetooth Low Energy)&lt;/h3&gt;
+
+&lt;p&gt;Bluetooth 蓝牙也是工作在2.4GHz频段的协议，公开频段，无需申请许可证。&lt;/p&gt;
+
+&lt;p&gt;Pro：传输数据能力比ZigBee强，无需网关。&lt;/p&gt;
+
+&lt;p&gt;Con：穿墙能力差。&lt;/p&gt;
+
+&lt;p&gt;一般用于手机连接其他设备。&lt;/p&gt;
+
+&lt;h3 id=&quot;补充&quot;&gt;补充&lt;/h3&gt;
+
+&lt;p&gt;USB3.0 (又名 USB3.1 Gen1或者 USB3.2 Gen1x1) 工作在2.5GHz频段下(理论传输速率5Gb/s，但是使用了差分信号技术)，工作时会对2.4GHz频段无线信号造成干扰，目前只能依靠屏蔽包裹来处理，但是裸露的接头部分较难处理。&lt;/p&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">Git Log</title><link href="http://localhost:4000/git-log/" rel="alternate" type="text/html" title="Git Log" /><published>2020-07-31T00:00:00-07:00</published><updated>2020-07-31T00:00:00-07:00</updated><id>http://localhost:4000/git-log</id><content type="html" xml:base="http://localhost:4000/git-log/">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/01/OqY9KTlo7izgFaf.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -165,90 +226,11 @@
 
 &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/392362115090&quot;&gt;参考原文2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://iacn.me/2018/03/14/network-security-configuration-newer-than-android-n/&quot;&gt;参考原文3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"></summary></entry><entry><title type="html">SQL - Fuzzy Search</title><link href="http://localhost:4000/sql-fuzzy-search/" rel="alternate" type="text/html" title="SQL - Fuzzy Search" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fuzzy-search</id><content type="html" xml:base="http://localhost:4000/sql-fuzzy-search/">&lt;p&gt;&lt;img src=&quot;https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/image-36.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://iacn.me/2018/03/14/network-security-configuration-newer-than-android-n/&quot;&gt;参考原文3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"></summary></entry><entry><title type="html">SQL - Integrated Functions</title><link href="http://localhost:4000/sql-function/" rel="alternate" type="text/html" title="SQL - Integrated Functions" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-function</id><content type="html" xml:base="http://localhost:4000/sql-function/">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/24/WkDXgGqNzrsaY9M.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
-&lt;h1 id=&quot;mysql模糊搜索&quot;&gt;MySQL模糊搜索&lt;/h1&gt;
-
-&lt;h2 id=&quot;四种模糊搜索&quot;&gt;四种模糊搜索&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;LIKE&lt;/p&gt;
-
-    &lt;p&gt;Like主要支持两种通配符，分别是”_“和”%”，其中前者代表匹配1个任意字符，常用于充当占位符；而后者代表匹配0个或多个任意字符。从某种意义上讲，Like可看作是一个精简的正则表达式功能。&lt;/p&gt;
-
-    &lt;p&gt;例如，在如上表中查找所有以”hello”开头的记录，则其SQL语句为：&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;LIKE&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello%'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;如果想查找所有以”hello”开头且至少含有6个字符的记录，则可简单修改SQL语句如下：&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;LIKE&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello_%'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;另外：当在Like模式字段中，若不包含任何”_“和”%”通配符，则等价于”=”，表示精确匹配，例如查询语句……Like “hello”，则仅返回hello一条记录；还可在Like前加限定词Not，表示结果取反。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;RegExp&lt;/p&gt;
-
-    &lt;p&gt;正则表达式，更加强大，MySQL语法支持绝大多数正则表达式功能。为了限定正则表达式以某个模式串开头或者结尾，可以通过添加”^”和”$”标识符来限定，例如仍然搜索以”hello”开头的目标字段，则其SQL语句为：&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;REGEXP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;内置函数&lt;/p&gt;
-
-    &lt;p&gt;LOCATE(substr,str)  //返回substr在str中第一次出现的位置，LOCATE()只要找到返回的结果都大于0(即使是查询的内容就是最开始部分)，没有查找到才返回0
- LOCATE(substr,str,pos)  //同上，但是多了一个位置参数，返回sunstr在str中pos位置后第一次出现的位置
- INSTR(string ,substring)    //返回substring首次在string中出现的位置，据说是LOCATE()方法的别名函数，功能一样
- POSITION(substr IN str)  //同上，据说也是LOCATE()方法的别名函数，功能一样，不过它不再是通过返回值来判断，而是使用关键字IN
- FIND_IN_SET(str,strlist)    //strlist必须要是以逗号分隔的字符串，如果字符串str在strlist组成的N子串的字符串列表中存在，返回值的范围为1到N&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INSTR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
- &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOCATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
- &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;注意：以上函数都不能使用索引&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;全文索引&lt;/p&gt;
-
-    &lt;p&gt;全文索引是MySQL中索引的一种，曾经仅在引擎为MyISAM的表中支持，从5.6版本开始在InnoDB中也开始支持全文索引，支持的字段格式包括CHAR、VARCHAR和TEXT。在如上已经添加了全文索引的tests表中，仍然查询包含”hello”的记录，应用全文索引查询的SQL语句为：&lt;/p&gt;
-
-    &lt;p&gt;index 是前提条件，否则会报错： &lt;em&gt;SQL Error [1191] [HY000]: Can’t find FULLTEXT index matching the column list&lt;/em&gt;&lt;/p&gt;
-
-    &lt;p&gt;创建表，并建立索引&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;EXISTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;TEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FULLTEXT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;或者对已存在的表，创建相应的索引&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FULLTEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;之后可以进行搜索&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MATCH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;against&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;实际上，MATCH(words) against(‘hello’)返回的是字段words对目标字符”hello”的匹配程度：当不存在任何匹配结果时，返回0；否则，根据匹配次数的多少和位置先后返回一个匹配度。例如，如下SQL语句返回表中每条记录对目标字段”hello”的匹配度&lt;/p&gt;
-
-    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MATCH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;against&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;查询性能&quot;&gt;查询性能&lt;/h2&gt;
-
-&lt;p&gt;基于索引的搜索一定是最快的，LIKE通配符次之但是和其他的方式差别不大。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://database.51cto.com/art/202004/614332.htm&quot;&gt;参考原文1&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"></summary></entry><entry><title type="html">SQL - Full Text Retrieval</title><link href="http://localhost:4000/sql-fulltext-retrieval/" rel="alternate" type="text/html" title="SQL - Full Text Retrieval" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fulltext-retrieval</id><content type="html" xml:base="http://localhost:4000/sql-fulltext-retrieval/">&lt;p&gt;&lt;img src=&quot;https://intellipaat.com/mediaFiles/2015/11/SQL-e1559106221282.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5ea2d833f265da47cc02a6fd&quot;&gt;掘金原文&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"></summary></entry><entry><title type="html">SQL - Full Text Retrieval</title><link href="http://localhost:4000/sql-fulltext-retrieval/" rel="alternate" type="text/html" title="SQL - Full Text Retrieval" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fulltext-retrieval</id><content type="html" xml:base="http://localhost:4000/sql-fulltext-retrieval/">&lt;p&gt;&lt;img src=&quot;https://intellipaat.com/mediaFiles/2015/11/SQL-e1559106221282.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -458,125 +440,87 @@ ft_min_word_len = 1
 
 &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/a-guide-to-unicode-utf-8-and-strings-in-python-757a232db95c&quot;&gt;参考原文2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.iteye.com/blog/mikzhang-1101705&quot;&gt;参考原文3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">SQL - Integrated Functions</title><link href="http://localhost:4000/sql-function/" rel="alternate" type="text/html" title="SQL - Integrated Functions" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-function</id><content type="html" xml:base="http://localhost:4000/sql-function/">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/24/WkDXgGqNzrsaY9M.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.iteye.com/blog/mikzhang-1101705&quot;&gt;参考原文3&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="IT" /><summary type="html"></summary></entry><entry><title type="html">SQL - Fuzzy Search</title><link href="http://localhost:4000/sql-fuzzy-search/" rel="alternate" type="text/html" title="SQL - Fuzzy Search" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>http://localhost:4000/sql-fuzzy-search</id><content type="html" xml:base="http://localhost:4000/sql-fuzzy-search/">&lt;p&gt;&lt;img src=&quot;https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/image-36.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5ea2d833f265da47cc02a6fd&quot;&gt;掘金原文&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - aisle, passage, corridor, hallway, and porch</title><link href="http://localhost:4000/english-aisle-passage-corridor-hallway-porch/" rel="alternate" type="text/html" title="English Vocabulary - aisle, passage, corridor, hallway, and porch" /><published>2020-06-14T00:00:00-07:00</published><updated>2020-06-14T00:00:00-07:00</updated><id>http://localhost:4000/english-aisle-passage-corridor-hallway-porch</id><content type="html" xml:base="http://localhost:4000/english-aisle-passage-corridor-hallway-porch/">&lt;p&gt;&lt;img src=&quot;https://preview.free3d.com/img/2019/03/2206078282665821244/erok78hd-900.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;mysql模糊搜索&quot;&gt;MySQL模糊搜索&lt;/h1&gt;
 
-&lt;!-- more --&gt;
+&lt;h2 id=&quot;四种模糊搜索&quot;&gt;四种模糊搜索&lt;/h2&gt;
 
-&lt;h2 id=&quot;aisle&quot;&gt;aisle&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A passage between rows of seats in a building such as a church or theater, an airplane, or a train.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;passage--passageway&quot;&gt;passage / passageway&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A covered walkway, between rooms or buildings.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hall--hallway&quot;&gt;hall / hallway&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A corridor in a building.&lt;/li&gt;
-  &lt;li&gt;An entrance hall.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;corridor&quot;&gt;corridor&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A narrow hallway, passageway, or gallery, often with rooms or apartments opening onto it.&lt;/li&gt;
-  &lt;li&gt;A tract of land forming a passageway, such as one that allows an inland country access to the sea through another country.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;porch&quot;&gt;porch&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;A covered platform, usually having a separate roof, at an entrance to a building.&lt;/li&gt;
+&lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;An open or enclosed gallery or room attached to the outside of a building; a verandah.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A porch is a wooden structure that forms a covered entrance to a doorway at ground level.  A porch is typically located at the front of the house.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;LIKE&lt;/p&gt;
 
-&lt;h2 id=&quot;lobby&quot;&gt;lobby&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;An entryway or reception area.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;Like主要支持两种通配符，分别是”_“和”%”，其中前者代表匹配1个任意字符，常用于充当占位符；而后者代表匹配0个或多个任意字符。从某种意义上讲，Like可看作是一个精简的正则表达式功能。&lt;/p&gt;
 
-&lt;h1 id=&quot;balcony&quot;&gt;balcony&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;A balcony is a platform that protrudes from the wall of an upper floor of a building and is enclosed by a railing. Balconies are often highly decorative, especially in wealthy or scenic areas. They are not designed as social areas but, rather, add an outdoor ambiance to the indoors.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;例如，在如上表中查找所有以”hello”开头的记录，则其SQL语句为：&lt;/p&gt;
 
-&lt;h1 id=&quot;deck&quot;&gt;deck&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;A deck is a large, raised wooden floor attached to the back of a house and contained by a perimeter railing for safety. Decks are rarely covered, and usually have a rough or informal look that is not integrated with the rest of the house’s design. They are typically intended to be locations for large outdoor social gatherings, such as barbecues and birthday parties. Access to the deck may be from the ground through a stairway, or from the house through a back door.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;LIKE&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello%'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-&lt;h1 id=&quot;patio&quot;&gt;patio&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;A patio is typically a paved, roofless surface adjoining a residence that is generally intended for dining and recreation. These open-air living spaces are at ground level and are usually made from cement, stone, slate, or a combination of these materials.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry><entry><title type="html">English Vocabulary - Collaboration VS. Cooperation / coordination</title><link href="http://localhost:4000/english-collaborate-cooperate/" rel="alternate" type="text/html" title="English Vocabulary - Collaboration VS. Cooperation / coordination" /><published>2020-06-12T00:00:00-07:00</published><updated>2020-06-12T00:00:00-07:00</updated><id>http://localhost:4000/english-collaborate-cooperate</id><content type="html" xml:base="http://localhost:4000/english-collaborate-cooperate/">&lt;p&gt;&lt;img src=&quot;https://convergencelabs.com/assets/images/blog/letter-c.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;如果想查找所有以”hello”开头且至少含有6个字符的记录，则可简单修改SQL语句如下：&lt;/p&gt;
 
-&lt;!-- more --&gt;
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;LIKE&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello_%'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-&lt;p&gt;Collaboration and cooperation are two words which are often used interchangeably, especially in the workplace. Both terms are so overused that their distinct meanings have blended into one. They’ve effectively become buzzwords. But contrary to popular belief, they’re different!&lt;/p&gt;
-
-&lt;p&gt;There’s a small but crucial difference which impacts a number of ways work gets done in organizations, including how people associate their work with the organization’s goals, and how they see their work in relation to their colleague’s.&lt;/p&gt;
-
-&lt;p&gt;So it’s worth investigating the actual definitions of these two words. Let’s get right into it.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-collaboration&quot;&gt;What is collaboration?&lt;/h2&gt;
-&lt;p&gt;First, let’s define collaboration. Collaboration is when a group of people come together and work on a project in support of a shared objective, outcome, or mission. It’s a photographer working with a designer to create a cover image, or the technology department working with the marketing team to improve their customer journey.&lt;/p&gt;
-
-&lt;p&gt;Here’s an example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;You and I work in different departments. You’re the lead developer on the tech team and I’m a senior product designer. We get together to discuss the product we’re working on and decide together that we need to make it more efficient for our users. This is our shared vision for the product. Together we design and implement a major change to the product that accomplishes this. In this respect, we’re co-authors of this particular project. We share credit.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;what-is-cooperation&quot;&gt;What is cooperation?&lt;/h2&gt;
-&lt;p&gt;On the other hand, cooperation is when a group of people work in support of another’s goals. It’s a teammate helping you put together your presentation. Or a developer helping explain how to word the technical details in your monthly product email.&lt;/p&gt;
-
-&lt;p&gt;The key point to note here is that there isn’t really a shared vision. Collaboration implies shared ownership and interest in a specific outcome. If you and I collaborate on a project, we have shared authorship. Cooperation, on the other hand, could just mean that you’ve given me help on something I’m working on and that I’m ultimately responsible for.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-is-this-important&quot;&gt;Why is this important?&lt;/h2&gt;
-&lt;p&gt;The difference between these two terms is important because one term implies ownership by one individual and the other implies co-ownership by two or more individuals—or even by an entire organization. It’s the difference between working on someone else’s project (furthering their goals) and working with someone to achieve a goal which you both share.&lt;/p&gt;
-
-&lt;p&gt;In short, it’s a question of ownership. The way your organization frames ownership of projects and goals, it turns out, has a profound impact on your people’s experience within your organization. Collaboration, more so than cooperation, communicates to your people that their work is meaningful and part of a larger group effort. In this sense, each collaborator turns into an equal stakeholder, and gains a sense that they’re contributing to something larger than themselves.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean that cooperation is worse than collaboration, or that it has to be one way or the other. In fact, people working together, especially in larger organizations, sometimes struggle to find shared visions just by the nature of how teams are structured. Sometimes there just isn’t any identifiable common ground. Similarly, people might cooperate on projects that other people are collaborating on. They offer their services but don’t share the same goal, vision, and co-ownership. Both collaboration and cooperation are necessary modes of effective teamwork.&lt;/p&gt;
-
-&lt;p&gt;Of course there are some major benefits to finding common ground between teams and implementing changes to ensure collaboration not only happens, but makes sense. The first step is to find and communicate a shared sense of purpose between departments.&lt;/p&gt;
-
-&lt;h2 id=&quot;creating-a-shared-sense-of-purpose&quot;&gt;Creating a shared sense of purpose&lt;/h2&gt;
-&lt;p&gt;A shared purpose, above all, is the key driver of collaboration. But communicating that purpose and instilling it in people is a massive challenge in and of itself. Collaboration can’t be enforced; it has to come naturally out of a shared interest in achieving goals. Only then can the collaborative process take hold in an organization.&lt;/p&gt;
-
-&lt;p&gt;A lot of this will depend on your leaders’ ability to break down divisions between departments and align teams around common goals. This can be done in regular All Hands meetings, quarterly get-togethers, and by frequently celebrating collaborative relationships between teams: holding them up as something all employees should aspire to. Leaders should identify shared visions and acknowledge how teams formed working relationships to make those visions a reality.&lt;/p&gt;
-
-&lt;p&gt;But emphasizing a shared sense of purpose isn’t only the work of leaders. It can be done by anyone, either in an official meeting setting or just in casual conversation: “What’s your team working on? Oh, interesting. There’s some overlap with my team. Let’s set up a meeting next week to see how we can achieve that goal together.”&lt;/p&gt;
-
-&lt;h2 id=&quot;collaboration-as-a-process&quot;&gt;Collaboration as a process&lt;/h2&gt;
-&lt;p&gt;When people share the same purpose, collaboration happens almost naturally. It’s actually kind of weird! But effective collaboration does require some organization. And even the most collaborative environment will find room for cooperation too.&lt;/p&gt;
-
-&lt;p&gt;One way to go about making this happen is to sit down with other teams regularly to find intersections where collaborating makes sense. At Jostle, teams are always getting together in conference rooms to give status reports, express pain points, and figure out how we can help each other achieve shared goals. We’ve all made it part of our collaborative process to always be exploring the ways we intersect with other teams. On top of that, sharing information is crucial, for both the process and the articulation of shared purpose.&lt;/p&gt;
-
-&lt;p&gt;Finding complementary skills between teams is one more way to build the connections necessary for collaboration. Focus on people whose combined skills can handle shared projects and start to build relationships from that. Think of this as exploring a potential partnership that bridges the departmental divide (hopefully taking down any silos with it).&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
-&lt;p&gt;Collaboration and cooperation are not at odds with each other. Rather, they’re two ways of making teamwork happen. And although this article focuses more on collaboration, I want to be clear that these two are often occurring in tandem, depending on the stakeholders involved. A collaborative environment is also simultaneously a cooperative environment.&lt;/p&gt;
-
-&lt;h2 id=&quot;coordination&quot;&gt;coordination&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;the organization of the different elements of a complex body or activity so as to enable them to work together effectively.&lt;/p&gt;
+    &lt;p&gt;另外：当在Like模式字段中，若不包含任何”_“和”%”通配符，则等价于”=”，表示精确匹配，例如查询语句……Like “hello”，则仅返回hello一条记录；还可在Like前加限定词Not，表示结果取反。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;the ability to use different parts of the body together smoothly and efficiently.&lt;/p&gt;
+    &lt;p&gt;RegExp&lt;/p&gt;
+
+    &lt;p&gt;正则表达式，更加强大，MySQL语法支持绝大多数正则表达式功能。为了限定正则表达式以某个模式串开头或者结尾，可以通过添加”^”和”$”标识符来限定，例如仍然搜索以”hello”开头的目标字段，则其SQL语句为：&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;REGEXP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;the linking of atoms by coordinate bonds.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;内置函数&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://blog.jostle.me/blog/collaboration-vs-cooperation&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="English" /><summary type="html"></summary></entry></feed>
+    &lt;p&gt;LOCATE(substr,str)  //返回substr在str中第一次出现的位置，LOCATE()只要找到返回的结果都大于0(即使是查询的内容就是最开始部分)，没有查找到才返回0
+ LOCATE(substr,str,pos)  //同上，但是多了一个位置参数，返回sunstr在str中pos位置后第一次出现的位置
+ INSTR(string ,substring)    //返回substring首次在string中出现的位置，据说是LOCATE()方法的别名函数，功能一样
+ POSITION(substr IN str)  //同上，据说也是LOCATE()方法的别名函数，功能一样，不过它不再是通过返回值来判断，而是使用关键字IN
+ FIND_IN_SET(str,strlist)    //strlist必须要是以逗号分隔的字符串，如果字符串str在strlist组成的N子串的字符串列表中存在，返回值的范围为1到N&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INSTR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+ &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOCATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+ &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;注意：以上函数都不能使用索引&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;全文索引&lt;/p&gt;
+
+    &lt;p&gt;全文索引是MySQL中索引的一种，曾经仅在引擎为MyISAM的表中支持，从5.6版本开始在InnoDB中也开始支持全文索引，支持的字段格式包括CHAR、VARCHAR和TEXT。在如上已经添加了全文索引的tests表中，仍然查询包含”hello”的记录，应用全文索引查询的SQL语句为：&lt;/p&gt;
+
+    &lt;p&gt;index 是前提条件，否则会报错： &lt;em&gt;SQL Error [1191] [HY000]: Can’t find FULLTEXT index matching the column list&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;创建表，并建立索引&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;EXISTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;TEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FULLTEXT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;或者对已存在的表，创建相应的索引&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FULLTEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;之后可以进行搜索&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MATCH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;against&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;实际上，MATCH(words) against(‘hello’)返回的是字段words对目标字符”hello”的匹配程度：当不存在任何匹配结果时，返回0；否则，根据匹配次数的多少和位置先后返回一个匹配度。例如，如下SQL语句返回表中每条记录对目标字段”hello”的匹配度&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MATCH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;against&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;查询性能&quot;&gt;查询性能&lt;/h2&gt;
+
+&lt;p&gt;基于索引的搜索一定是最快的，LIKE通配符次之但是和其他的方式差别不大。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://database.51cto.com/art/202004/614332.htm&quot;&gt;参考原文1&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"></summary></entry></feed>

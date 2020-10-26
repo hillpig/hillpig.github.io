@@ -1,12 +1,12 @@
 ---
 layout: post
-title: ZigBee, WIFI, BLE(Bluetooth Low Energy)
-date: 2020-08-04
+title: PostgreSQL
+date: 2020-09-04
 Author: 山猪
 tags: [IT]
 comments: true
 ---
-![img](https://mlijwtixss3a.i.optimole.com/H_dfGNQ-VpcXFvq9/w:640/h:388/q:auto/https://www.neothingsiot.com/wp-content/uploads/2014/11/ZigBee.png)
+![img](https://miro.medium.com/max/700/1*PY24xlr4TpOkXW04HUoqrQ.jpeg)
 
 <!-- more -->
 
