@@ -169,7 +169,7 @@
     <ul class="tag">
       
       <li>
-        <a href="http://localhost:4000/tags#Linux">
+        <a href="/tags#Linux">
           Linux
         </a>
       </li>
@@ -221,7 +221,7 @@
 
     <p>整个过程是这样的：</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 3.1. 远程主机收到用户的登录请求，把自己的公钥发给用户。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 3.1. 远程主机收到用户的登录请求，把自己的公钥发给用户。
 
  3.2. 用户使用这个公钥，将登录密码加密后，发送回来。
 
@@ -326,7 +326,7 @@
 
     <p>这条命令由多个语句组成，依次分解开来看：</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> （1）"$ ssh user@host"，表示登录远程主机；
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> （1）"$ ssh user@host"，表示登录远程主机；
  （2）单引号中的mkdir .ssh &amp;&amp; cat &gt;&gt; .ssh/authorized_keys，表示登录后在远程shell上执行的命令；
  （3）"$ mkdir -p .ssh"的作用是，如果用户主目录中的.ssh目录不存在，就创建一个；
  （4）'cat &gt;&gt; .ssh/authorized_keys' &lt; ~/.ssh/id_rsa.pub的作用是，将本地的公钥文件~/.ssh/id_rsa.pub，重定向追加到远程文件authorized_keys的末尾。
@@ -515,14 +515,14 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/english-vocabulary-vegetable/">
+      <a href="/english-vocabulary-vegetable/">
         ← 上一篇
       </a>
     </span>
   
   
     <span class="next" >
-      <a href="http://localhost:4000/linux-curl/">
+      <a href="/linux-curl/">
         下一篇 →
       </a>
     </span>

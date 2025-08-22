@@ -169,13 +169,13 @@
     <ul class="tag">
       
       <li>
-        <a href="http://localhost:4000/tags#Java">
+        <a href="/tags#Java">
           Java
         </a>
       </li>
       
       <li>
-        <a href="http://localhost:4000/tags#Spring Boot">
+        <a href="/tags#Spring Boot">
           Spring Boot
         </a>
       </li>
@@ -190,12 +190,12 @@
 
 <h1 id="什么是hibernate">什么是Hibernate</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hibernate是一种ORM框架，全称为 Object_Relative DateBase-Mapping，在Java对象与关系数据库之间建立某种映射，以实现直接存取Java对象
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hibernate是一种ORM框架，全称为 Object_Relative DateBase-Mapping，在Java对象与关系数据库之间建立某种映射，以实现直接存取Java对象
 </code></pre></div></div>
 
 <h1 id="什么是orm">什么是ORM</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ORM是一种思想
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ORM是一种思想
 
 - O代表的是Objcet
 - R代表的是Relative
@@ -208,17 +208,17 @@ ORM-&gt;对象关系映射....ORM关注是对象与数据库中的列的关系
 
 <h1 id="什么是hql语言">什么是HQL语言？</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HQL：Hibernate Query Language
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HQL：Hibernate Query Language
 </code></pre></div></div>
 
 <h1 id="hql语言的语法是什么">HQL语言的语法是什么？</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HQL 的语法：就是将原来的 sql 语句中的表与字段名称换成对象与属性的名称就可以了
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HQL 的语法：就是将原来的 sql 语句中的表与字段名称换成对象与属性的名称就可以了
 </code></pre></div></div>
 
 <h1 id="getcurrentsession与opensession的区别">getCurrentSession与openSession的区别</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>getCurrentSession:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>getCurrentSession:
 
 当前session必须要有事务边界，且只能处理唯一的一个事务。当事务提交或者回滚后session自动失效
 
@@ -415,14 +415,14 @@ openSeesion:
 @Entity
 public class User {</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ManyToMany(targetEntity=package.Book.class)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ManyToMany(targetEntity=package.Book.class)
 private List books; }
 </code></pre></div>    </div>
 
     <p>@Entity
 public class Book {</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ManyToMany(targetEntity=package.Users.class,mappedBy="books")
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ManyToMany(targetEntity=package.Users.class,mappedBy="books")
 private List users; }
 </code></pre></div>    </div>
 
@@ -668,14 +668,14 @@ private List users; }
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/java-spring-projection/">
+      <a href="/java-spring-projection/">
         ← 上一篇
       </a>
     </span>
   
   
     <span class="next" >
-      <a href="http://localhost:4000/technical-terms/">
+      <a href="/technical-terms/">
         下一篇 →
       </a>
     </span>

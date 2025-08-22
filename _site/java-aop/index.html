@@ -169,13 +169,13 @@
     <ul class="tag">
       
       <li>
-        <a href="http://localhost:4000/tags#Java">
+        <a href="/tags#Java">
           Java
         </a>
       </li>
       
       <li>
-        <a href="http://localhost:4000/tags#Spring Boot">
+        <a href="/tags#Spring Boot">
           Spring Boot
         </a>
       </li>
@@ -267,7 +267,7 @@
 
 <p>來看一個最簡單的例子，當您需要在執行某些方法時留下日誌訊息，直覺的，您可能會如下撰寫：</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.logging.*</span><span class="o">;</span>
 
@@ -302,7 +302,7 @@
   <li>IHello.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IHello</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
@@ -315,7 +315,7 @@
   <li>HelloSpeaker.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloSpeaker</span> <span class="kd">implements</span> <span class="nc">IHello</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
@@ -330,7 +330,7 @@
   <li>HelloProxy.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.logging.*</span><span class="o">;</span> 
 
@@ -367,7 +367,7 @@
   <li>ProxyDemo.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProxyDemo</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
@@ -395,7 +395,7 @@
   <li>LogHandler.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.logging.*</span><span class="o">;</span> 
 <span class="kn">import</span> <span class="nn">java.lang.reflect.*</span><span class="o">;</span> 
@@ -445,7 +445,7 @@
   <li>IHello.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IHello</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
@@ -458,7 +458,7 @@
   <li>HelloSpeaker.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloSpeaker</span> <span class="kd">implements</span> <span class="nc">IHello</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
@@ -473,7 +473,7 @@
   <li>ProxyDemo.java</li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">onlyfun</span><span class="o">.</span><span class="na">caterpillar</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">onlyfun.caterpillar</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProxyDemo</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
@@ -532,7 +532,7 @@
 
     <p>通知(advice):</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 查电表的工人，在工作前心里明白，或者说必须接到公司老板下达的任务，即包括什么时候去查电表，以及去住户人家怎样查电表。和此相似，通知定义了切面做什么和什么时候去做（确切的说是程序员在通知中定义的）。除了定义切面要完成的工作(what job)，还会定位什么时候(when)去履行这项工作。是在方法调用前，还是调用之后，还是前后都是，还是抛出异常时。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 查电表的工人，在工作前心里明白，或者说必须接到公司老板下达的任务，即包括什么时候去查电表，以及去住户人家怎样查电表。和此相似，通知定义了切面做什么和什么时候去做（确切的说是程序员在通知中定义的）。除了定义切面要完成的工作(what job)，还会定位什么时候(when)去履行这项工作。是在方法调用前，还是调用之后，还是前后都是，还是抛出异常时。
 </code></pre></div>    </div>
 
     <p>切面一共有五种通知</p>
@@ -693,7 +693,7 @@
 
     <p>没有观众的表演家就不能叫表演家，观众对于表演家非常重要，但又不属于表演家，他是一个分离出来的点，因此，我们就能将观众定义成一个切面，好让他能够轻松的观看一个表演家的表演。</p>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">mengxiang</span><span class="o">.</span><span class="na">concert</span><span class="o">;</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="nn">com.mengxiang.concert</span><span class="o">;</span>
 
  <span class="kn">import</span> <span class="nn">org.aspectj.lang.annotation.*</span><span class="o">;</span>
 
@@ -781,7 +781,7 @@
   <li>
     <p>定义目标对象</p>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">service</span><span class="o">;</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="nn">com.bytebeats.spring4.aop.annotation.service</span><span class="o">;</span>
 
  <span class="cm">/**
  * ${DESCRIPTION}
@@ -797,7 +797,7 @@
 
     <p>BankServiceImpl</p>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">service</span><span class="o">;</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="nn">com.bytebeats.spring4.aop.annotation.service</span><span class="o">;</span>
 
  <span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="o">;</span>
 
@@ -824,7 +824,7 @@
   <li>
     <p>定义切面</p>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">;</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="nn">com.bytebeats.spring4.aop.annotation</span><span class="o">;</span>
 
  <span class="kn">import</span> <span class="nn">org.aspectj.lang.JoinPoint</span><span class="o">;</span>
  <span class="kn">import</span> <span class="nn">org.aspectj.lang.ProceedingJoinPoint</span><span class="o">;</span>
@@ -991,7 +991,7 @@
 
     <p>到此，基于注解方式配置AOP已经结束了，接下来可以验证一下。</p>
 
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">bytebeats</span><span class="o">.</span><span class="na">spring4</span><span class="o">.</span><span class="na">aop</span><span class="o">.</span><span class="na">annotation</span><span class="o">;</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">package</span> <span class="nn">com.bytebeats.spring4.aop.annotation</span><span class="o">;</span>
 
  <span class="kn">import</span> <span class="nn">com.bytebeats.spring4.aop.annotation.service.BankService</span><span class="o">;</span>
  <span class="kn">import</span> <span class="nn">com.bytebeats.spring4.aop.xml.service.UserService</span><span class="o">;</span>
@@ -1096,14 +1096,14 @@
 <div class="pagination">
   
     <span class="prev" >
-      <a href="http://localhost:4000/java-spring-transaction/">
+      <a href="/java-spring-transaction/">
         ← 上一篇
       </a>
     </span>
   
   
     <span class="next" >
-      <a href="http://localhost:4000/git-ssh-key/">
+      <a href="/git-ssh-key/">
         下一篇 →
       </a>
     </span>
