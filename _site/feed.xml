@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-04-11T21:27:22-07:00</updated><id>/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">关于Linux的版本</title><link href="/linux-release/" rel="alternate" type="text/html" title="关于Linux的版本" /><published>2023-04-11T00:00:00-07:00</published><updated>2023-04-11T00:00:00-07:00</updated><id>/linux-release</id><content type="html" xml:base="/linux-release/"><![CDATA[<p><img src="https://miro.medium.com/max/1400/0*rf6Z7l0CXPB4eQeq.jpg" alt="img" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-08-22T16:59:30-07:00</updated><id>/feed.xml</id><title type="html">山猪</title><subtitle>方寸之间 点滴墨彩</subtitle><entry><title type="html">Virtualization Vagrant</title><link href="/virtualization-vagrant/" rel="alternate" type="text/html" title="Virtualization Vagrant" /><published>2023-04-17T00:00:00-07:00</published><updated>2023-04-17T00:00:00-07:00</updated><id>/virtualization-vagrant</id><content type="html" xml:base="/virtualization-vagrant/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">snap /dev/loop at 100% utilization – no free space</title><link href="/linux-snap-disk-full/" rel="alternate" type="text/html" title="snap /dev/loop at 100% utilization – no free space" /><published>2023-04-16T00:00:00-07:00</published><updated>2023-04-16T00:00:00-07:00</updated><id>/linux-snap-disk-full</id><content type="html" xml:base="/linux-snap-disk-full/"><![CDATA[<!-- more -->
+
+<p>Having Snap images which consume 100% of their filesystem is perfectly acceptable. In fact, it’s supposed to work that way.</p>
+
+<blockquote>
+  <p>A snap is a squashfs file carrying content and a bit of metadata that tells the system how to manipulate it. - https://docs.snapcraft.io/snaps/metadata</p>
+</blockquote>
+
+<p>Because Snap uses SquashFS, which is a compressed read-only filesystem, the filesystem size is always just large enough to contain it’s contents. In addition, because the filesystem is read-only, there’s no need to allow for any additional storage, as such additional space can never be used anyway.</p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">English Vocabulary - tag and tab</title><link href="/english-tag-tab/" rel="alternate" type="text/html" title="English Vocabulary - tag and tab" /><published>2023-04-16T00:00:00-07:00</published><updated>2023-04-16T00:00:00-07:00</updated><id>/english-tag-tab</id><content type="html" xml:base="/english-tag-tab/"><![CDATA[<p><img src="https://preview.free3d.com/img/2019/03/2206078282665821244/erok78hd-900.jpg" alt="img" /></p>
+
+<!-- more -->
+
+<h2 id="tag">tag</h2>
+
+<ul>
+  <li>
+    <p>A tag is a label that hangs from an article for sale. It has information about the item and/or the price.</p>
+  </li>
+  <li>
+    <p>A tag can also be the label sewn into an article of clothing that includes the marker’s name, size of the clothing and possibly a list of the materials in the clothing(cotton, linen, acrylic, etc)</p>
+  </li>
+  <li>
+    <p>Tag is also a game palyed by chasing someone to try to “tag” them (touch them) and say “you’re it!”</p>
+  </li>
+  <li>
+    <p>Tag football is a game of football played by tagging the person who has the ball rather than tackling them.</p>
+  </li>
+</ul>
+
+<h2 id="tab">tab</h2>
+
+<ul>
+  <li>A tab can be a running account of money owed to a business, like at a bar, or a store. The bartender of clerk might ask the customer: “Are you payingin cash, or shall I puth it your tab?”</li>
+</ul>
+
+<p>When you say, “I’ll pick up the tab,” it means you will pay the bill or check (usually at a cafe, restaurant, bar, etc.)</p>
+
+<ul>
+  <li>
+    <p>A tab can also be the spacing from one column to the next. There is a key on the computer (or typewriter) that moves your typing to the next position set by your tab.</p>
+  </li>
+  <li>
+    <p>A tab can be a small flap, strap, loop, or similar appendage used for pulling, hanging, or decoration. (Can also be called a tag)</p>
+  </li>
+  <li>
+    <p>There is also a soft drink called “TaB”.</p>
+  </li>
+  <li>
+    <p>A tab is a small piece of material that sticks out from something like a notebook to mark and open it to a particular place in the book or to label the top of a file folder.</p>
+  </li>
+</ul>]]></content><author><name></name></author><category term="English" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">关于Linux的版本</title><link href="/linux-release/" rel="alternate" type="text/html" title="关于Linux的版本" /><published>2023-04-11T00:00:00-07:00</published><updated>2023-04-11T00:00:00-07:00</updated><id>/linux-release</id><content type="html" xml:base="/linux-release/"><![CDATA[<p><img src="https://miro.medium.com/max/1400/0*rf6Z7l0CXPB4eQeq.jpg" alt="img" /></p>
 
 <!-- more -->
 
@@ -50,6 +100,68 @@ c - code name</p>
 <p>pro security-status (Ubuntu 22.04 jammy)</p>
 
 <h2 id="what-is-lts">What is LTS?</h2>
+
+<h2 id="how-do-i-know-if-x11-is-enabled-how-do-i-know-if-xorg-is-working">How do I know if X11 is enabled? How do I know if XORG is working?</h2>
+
+<p>If you want to check for errors in X11, launch “xeyes”, and a simple GUI should appear on the screen.</p>
+
+<h2 id="what-is-the-display-environment-variable">What is the $DISPLAY environment variable?</h2>
+
+<p>The magic word in the X window system is DISPLAY. A display consists (simplified) of:</p>
+
+<ul>
+  <li>a keyboard</li>
+  <li>a mouse</li>
+  <li>and a screen</li>
+</ul>
+
+<p>A display is managed by a server program, known as an X server. The server serves displaying capabilities to other programs that connect to it.</p>
+
+<p>The remote server knows where it has to redirect the X network traffic via the definition of the DISPLAY environment variable which generally points to an X Display server located on your local computer.</p>
+
+<p>The value of the display environment variable is:</p>
+
+<blockquote>
+  <p>hostname:D.S</p>
+</blockquote>
+
+<p>where:</p>
+
+<p>hostname is the name of the computer where the X server runs. An omitted hostname means the localhost.</p>
+
+<p><strong>D</strong> is a sequence number (usually 0). It can be varied if there are multiple displays connected to one computer.</p>
+
+<p><strong>S</strong> is the screen number. A display can actually have multiple screens. Usually, there’s only one screen though where 0 is the default.</p>
+
+<p>Example of values</p>
+
+<blockquote>
+  <p>localhost:4
+google.com:0
+:0.0</p>
+</blockquote>
+
+<p><code class="language-plaintext highlighter-rouge">hostname:D.S</code> means screen S on display D of host hostname; the X server for this display is listening at TCP port 6000+D.</p>
+
+<p><code class="language-plaintext highlighter-rouge">host/unix:D.S</code> means screen S on display D of host host; the X server for this display is listening at UNIX domain socket /tmp/.X11-unix/XD (so it’s only reachable from host).</p>
+
+<p><code class="language-plaintext highlighter-rouge">:D.S</code> is equivalent to host/unix:D.S, where host is the local hostname.</p>
+
+<p><strong>:0.0 means that we are talking about the first screen attached to your first display in your local host</strong></p>
+
+<p>Read more <a href="http://support.objectplanet.com/esupport/index.php?_m=knowledgebase&amp;_a=viewarticle&amp;kbarticleid=17">here: support.objectplanet.com</a> and <a href="https://superuser.com/questions/368530/understanding-x-windows-display-environment-variable-when-tunnelling?_gl=1*bxrxcx*_ga*MTgwNzczOTIxMS4xNjgxNzE0Nzg1*_ga_S812YQPLT2*MTY4MTcxNDc4NC4xLjAuMTY4MTcxNDc4Ny4wLjAuMA..">here: superuser.com</a> and <a href="http://docstore.mik.ua/orelly/unix3/upt/ch35_08.htm">here: docstore.mik.ua</a>.</p>
+
+<p>From a X(7) man page:</p>
+
+<blockquote>
+  <p>From the user’s perspective, every X server has a display name of the form:</p>
+
+  <p>hostname:displaynumber.screennumber</p>
+
+  <p>This information is used by the application to determine how it should connect to the server and which screen it should use by default (on displays with multiple monitors):</p>
+
+  <p>hostname The hostname specifies the name of the machine to which the display is physically connected. If the hostname is not given, the most efficient way of communicating to a server on the same machine will be used. displaynumber The phrase “display” is usually used to refer to a collection of monitors that share a common keyboard and pointer (mouse, tablet, etc.). Most workstations tend to only have one keyboard, and therefore, only one display. Larger, multi-user systems, however, frequently have several displays so that more than one person can be doing graphics work at once. To avoid confusion, each display on a machine is assigned a display number (beginning at 0) when the X server for that display is started. The display number must always be given in a display name. screennumber Some displays share a single keyboard and pointer among two or more monitors. Since each monitor has its own set of windows, each screen is assigned a screen number (beginning at 0) when the X server for that display is started. If the screen number is not given, screen 0 will be used.</p>
+</blockquote>
 
 <p>下面详述一下各种场景下的 SSO，它们之间是逐步升级，逐步复杂化的关系。</p>
 
@@ -301,151 +413,4 @@ c - code name</p>
 </ul>
 
 <h2 id="自说自话">自说自话</h2>
-<p>网关是如何处理外网对内网的应答呢？response 回到了网关，这时候根据包头中 destination 的 IP+Port 信息，对照映射表，网关就可以判断是内网里哪个 IP+Port ，把包中的 destination 这段替换掉，重新打包封装发给内网，就回到了原来的主机。</p>]]></content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Charles Proxy</title><link href="/Charles/" rel="alternate" type="text/html" title="Charles Proxy" /><published>2020-07-22T00:00:00-07:00</published><updated>2020-07-22T00:00:00-07:00</updated><id>/Charles</id><content type="html" xml:base="/Charles/"><![CDATA[<p><img src="https://rileymacdonald.ca/wp-content/uploads/2013/12/charles.png" alt="img" /></p>
-
-<!-- more -->
-
-<h2 id="使用charles对移动设备进行https抓包-默认是不可用的">使用Charles对移动设备进行HTTPS抓包 默认是不可用的</h2>
-
-<ol>
-  <li>
-    <p>homepage –&gt; Proxy –&gt; Proxy Settings</p>
-
-    <p>设置proxy接收端口和对外访问需要用到的端口</p>
-  </li>
-  <li>
-    <p>homepage –&gt; Help –&gt; SSL Proxying –&gt; Install Charles Root Certificate on a Mobile Device or Remote Browser</p>
-  </li>
-</ol>
-
-<p>需要安装SSL的certificate</p>
-
-<h2 id="ios-设备适配">IOS 设备适配</h2>
-<p>IOS设备 需要下载Charles的根证书， chls.pro/ssl , 允许下载 –&gt; 安装藐视文件 –&gt; 完全信任</p>
-
-<h2 id="android-设备适配">Android 设备适配</h2>
-<p>Androi7.0之后的版本，增加了证书验证，APP内不再默认信任用户设备的证书。</p>
-
-<ol>
-  <li>
-    <p>在res底下创建一个xml文件夹，然后在内部创建一个名为 “network_security_config.xml”的文件，文件内容如下:</p>
-
-    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;network-security-config&gt;</span>
-     <span class="nt">&lt;base-config</span> <span class="na">cleartextTrafficPermitted=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-         <span class="nt">&lt;trust-anchors&gt;</span>
-             <span class="nt">&lt;certificates</span> <span class="na">src=</span><span class="s">"system"</span> <span class="na">overridePins=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-             <span class="nt">&lt;certificates</span> <span class="na">src=</span><span class="s">"user"</span> <span class="na">overridePins=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-         <span class="nt">&lt;/trust-anchors&gt;</span>
-     <span class="nt">&lt;/base-config&gt;</span>
- <span class="nt">&lt;/network-security-config&gt;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>在AndroidManifest里的<application>标签中，添加代码：</application></p>
-
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="err">android:networkSecurityConfig=</span><span class="s2">"@xml/network_security_config"</span><span class="w">
-</span></code></pre></div>    </div>
-    <p>Note: 这个方法仅供测试使用，会有一些安全隐患，可以参考底部的几个文章改进。</p>
-  </li>
-</ol>
-
-<h2 id="注意事项">注意事项</h2>
-
-<ul>
-  <li>移动设备和proxy host在同一个 WI-FI SSID内</li>
-  <li>proxy可以限制需要访问的域名地址</li>
-  <li>proxy host的防火墙设置需要更改</li>
-</ul>
-
-<p><a href="https://www.cnblogs.com/xiaozi/p/9229615.html">参考原文1</a></p>
-
-<p><a href="https://www.jianshu.com/p/392362115090">参考原文2</a></p>
-
-<p><a href="https://iacn.me/2018/03/14/network-security-configuration-newer-than-android-n/">参考原文3</a></p>]]></content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL - Fuzzy Search</title><link href="/sql-fuzzy-search/" rel="alternate" type="text/html" title="SQL - Fuzzy Search" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>/sql-fuzzy-search</id><content type="html" xml:base="/sql-fuzzy-search/"><![CDATA[<p><img src="https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/image-36.png" alt="img" /></p>
-
-<!-- more -->
-
-<h1 id="mysql模糊搜索">MySQL模糊搜索</h1>
-
-<h2 id="四种模糊搜索">四种模糊搜索</h2>
-
-<ol>
-  <li>
-    <p>LIKE</p>
-
-    <p>Like主要支持两种通配符，分别是”_“和”%”，其中前者代表匹配1个任意字符，常用于充当占位符；而后者代表匹配0个或多个任意字符。从某种意义上讲，Like可看作是一个精简的正则表达式功能。</p>
-
-    <p>例如，在如上表中查找所有以”hello”开头的记录，则其SQL语句为：</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">words</span> <span class="k">FROM</span> <span class="n">tests</span> <span class="k">WHERE</span> <span class="n">words</span> <span class="k">LIKE</span> <span class="s1">'hello%'</span><span class="p">;</span>
-</code></pre></div>    </div>
-
-    <p>如果想查找所有以”hello”开头且至少含有6个字符的记录，则可简单修改SQL语句如下：</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">words</span> <span class="k">FROM</span> <span class="n">tests</span> <span class="k">WHERE</span> <span class="n">words</span> <span class="k">LIKE</span> <span class="s1">'hello_%'</span><span class="p">;</span>
-</code></pre></div>    </div>
-
-    <p>另外：当在Like模式字段中，若不包含任何”_“和”%”通配符，则等价于”=”，表示精确匹配，例如查询语句……Like “hello”，则仅返回hello一条记录；还可在Like前加限定词Not，表示结果取反。</p>
-  </li>
-  <li>
-    <p>RegExp</p>
-
-    <p>正则表达式，更加强大，MySQL语法支持绝大多数正则表达式功能。为了限定正则表达式以某个模式串开头或者结尾，可以通过添加”^”和”$”标识符来限定，例如仍然搜索以”hello”开头的目标字段，则其SQL语句为：</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">words</span> <span class="k">FROM</span> <span class="n">tests</span> <span class="k">WHERE</span> <span class="n">words</span> <span class="n">REGEXP</span> <span class="s1">'hello'</span><span class="p">;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>内置函数</p>
-
-    <p>LOCATE(substr,str)  //返回substr在str中第一次出现的位置，LOCATE()只要找到返回的结果都大于0(即使是查询的内容就是最开始部分)，没有查找到才返回0
- LOCATE(substr,str,pos)  //同上，但是多了一个位置参数，返回sunstr在str中pos位置后第一次出现的位置
- INSTR(string ,substring)    //返回substring首次在string中出现的位置，据说是LOCATE()方法的别名函数，功能一样
- POSITION(substr IN str)  //同上，据说也是LOCATE()方法的别名函数，功能一样，不过它不再是通过返回值来判断，而是使用关键字IN
- FIND_IN_SET(str,strlist)    //strlist必须要是以逗号分隔的字符串，如果字符串str在strlist组成的N子串的字符串列表中存在，返回值的范围为1到N</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">words</span>  <span class="k">FROM</span> <span class="n">tests</span> <span class="k">WHERE</span> <span class="n">INSTR</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s1">'hello'</span><span class="p">);</span>  
- <span class="k">SELECT</span> <span class="n">words</span>  <span class="k">FROM</span> <span class="n">tests</span> <span class="k">WHERE</span> <span class="n">LOCATE</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">,</span> <span class="n">words</span><span class="p">);</span>  
- <span class="k">SELECT</span> <span class="n">words</span>  <span class="k">FROM</span> <span class="n">tests</span> <span class="k">WHERE</span> <span class="k">POSITION</span><span class="p">(</span><span class="s1">'hello'</span> <span class="k">IN</span> <span class="n">words</span><span class="p">);</span> 
-</code></pre></div>    </div>
-
-    <p>注意：以上函数都不能使用索引</p>
-  </li>
-  <li>
-    <p>全文索引</p>
-
-    <p>全文索引是MySQL中索引的一种，曾经仅在引擎为MyISAM的表中支持，从5.6版本开始在InnoDB中也开始支持全文索引，支持的字段格式包括CHAR、VARCHAR和TEXT。在如上已经添加了全文索引的tests表中，仍然查询包含”hello”的记录，应用全文索引查询的SQL语句为：</p>
-
-    <p>index 是前提条件，否则会报错： <em>SQL Error [1191] [HY000]: Can’t find FULLTEXT index matching the column list</em></p>
-
-    <p>创建表，并建立索引</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">tests</span><span class="p">(</span><span class="n">words</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="n">FULLTEXT</span> <span class="p">(</span><span class="n">words</span><span class="p">));</span>
-</code></pre></div>    </div>
-
-    <p>或者对已存在的表，创建相应的索引</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tests</span> <span class="k">ADD</span> <span class="n">FULLTEXT</span><span class="p">(</span><span class="n">words</span><span class="p">);</span>
-</code></pre></div>    </div>
-
-    <p>之后可以进行搜索</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">words</span> <span class="k">FROM</span> <span class="n">tests</span> <span class="k">WHERE</span> <span class="k">MATCH</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="n">against</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
-</code></pre></div>    </div>
-
-    <p>实际上，MATCH(words) against(‘hello’)返回的是字段words对目标字符”hello”的匹配程度：当不存在任何匹配结果时，返回0；否则，根据匹配次数的多少和位置先后返回一个匹配度。例如，如下SQL语句返回表中每条记录对目标字段”hello”的匹配度</p>
-
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="k">MATCH</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="n">against</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">tests</span><span class="p">;</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<h2 id="查询性能">查询性能</h2>
-
-<p>基于索引的搜索一定是最快的，LIKE通配符次之但是和其他的方式差别不大。</p>
-
-<p><a href="https://database.51cto.com/art/202004/614332.htm">参考原文1</a></p>]]></content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL - Integrated Functions</title><link href="/sql-function/" rel="alternate" type="text/html" title="SQL - Integrated Functions" /><published>2020-06-20T00:00:00-07:00</published><updated>2020-06-20T00:00:00-07:00</updated><id>/sql-function</id><content type="html" xml:base="/sql-function/"><![CDATA[<p><img src="https://i.loli.net/2020/07/24/WkDXgGqNzrsaY9M.jpg" alt="img" /></p>
-
-<!-- more -->
-
-<p><a href="https://juejin.im/post/5ea2d833f265da47cc02a6fd">掘金原文</a></p>]]></content><author><name></name></author><category term="Database" /><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>网关是如何处理外网对内网的应答呢？response 回到了网关，这时候根据包头中 destination 的 IP+Port 信息，对照映射表，网关就可以判断是内网里哪个 IP+Port ，把包中的 destination 这段替换掉，重新打包封装发给内网，就回到了原来的主机。</p>]]></content><author><name></name></author><category term="IT" /><category term="Network" /><summary type="html"><![CDATA[]]></summary></entry></feed>

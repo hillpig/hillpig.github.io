@@ -231,6 +231,68 @@ c - code name</p>
 
 <h2 id="what-is-lts">What is LTS?</h2>
 
+<h2 id="how-do-i-know-if-x11-is-enabled-how-do-i-know-if-xorg-is-working">How do I know if X11 is enabled? How do I know if XORG is working?</h2>
+
+<p>If you want to check for errors in X11, launch “xeyes”, and a simple GUI should appear on the screen.</p>
+
+<h2 id="what-is-the-display-environment-variable">What is the $DISPLAY environment variable?</h2>
+
+<p>The magic word in the X window system is DISPLAY. A display consists (simplified) of:</p>
+
+<ul>
+  <li>a keyboard</li>
+  <li>a mouse</li>
+  <li>and a screen</li>
+</ul>
+
+<p>A display is managed by a server program, known as an X server. The server serves displaying capabilities to other programs that connect to it.</p>
+
+<p>The remote server knows where it has to redirect the X network traffic via the definition of the DISPLAY environment variable which generally points to an X Display server located on your local computer.</p>
+
+<p>The value of the display environment variable is:</p>
+
+<blockquote>
+  <p>hostname:D.S</p>
+</blockquote>
+
+<p>where:</p>
+
+<p>hostname is the name of the computer where the X server runs. An omitted hostname means the localhost.</p>
+
+<p><strong>D</strong> is a sequence number (usually 0). It can be varied if there are multiple displays connected to one computer.</p>
+
+<p><strong>S</strong> is the screen number. A display can actually have multiple screens. Usually, there’s only one screen though where 0 is the default.</p>
+
+<p>Example of values</p>
+
+<blockquote>
+  <p>localhost:4
+google.com:0
+:0.0</p>
+</blockquote>
+
+<p><code class="language-plaintext highlighter-rouge">hostname:D.S</code> means screen S on display D of host hostname; the X server for this display is listening at TCP port 6000+D.</p>
+
+<p><code class="language-plaintext highlighter-rouge">host/unix:D.S</code> means screen S on display D of host host; the X server for this display is listening at UNIX domain socket /tmp/.X11-unix/XD (so it’s only reachable from host).</p>
+
+<p><code class="language-plaintext highlighter-rouge">:D.S</code> is equivalent to host/unix:D.S, where host is the local hostname.</p>
+
+<p><strong>:0.0 means that we are talking about the first screen attached to your first display in your local host</strong></p>
+
+<p>Read more <a href="http://support.objectplanet.com/esupport/index.php?_m=knowledgebase&amp;_a=viewarticle&amp;kbarticleid=17">here: support.objectplanet.com</a> and <a href="https://superuser.com/questions/368530/understanding-x-windows-display-environment-variable-when-tunnelling?_gl=1*bxrxcx*_ga*MTgwNzczOTIxMS4xNjgxNzE0Nzg1*_ga_S812YQPLT2*MTY4MTcxNDc4NC4xLjAuMTY4MTcxNDc4Ny4wLjAuMA..">here: superuser.com</a> and <a href="http://docstore.mik.ua/orelly/unix3/upt/ch35_08.htm">here: docstore.mik.ua</a>.</p>
+
+<p>From a X(7) man page:</p>
+
+<blockquote>
+  <p>From the user’s perspective, every X server has a display name of the form:</p>
+
+  <p>hostname:displaynumber.screennumber</p>
+
+  <p>This information is used by the application to determine how it should connect to the server and which screen it should use by default (on displays with multiple monitors):</p>
+
+  <p>hostname The hostname specifies the name of the machine to which the display is physically connected. If the hostname is not given, the most efficient way of communicating to a server on the same machine will be used. displaynumber The phrase “display” is usually used to refer to a collection of monitors that share a common keyboard and pointer (mouse, tablet, etc.). Most workstations tend to only have one keyboard, and therefore, only one display. Larger, multi-user systems, however, frequently have several displays so that more than one person can be doing graphics work at once. To avoid confusion, each display on a machine is assigned a display number (beginning at 0) when the X server for that display is started. The display number must always be given in a display name. screennumber Some displays share a single keyboard and pointer among two or more monitors. Since each monitor has its own set of windows, each screen is assigned a screen number (beginning at 0) when the X server for that display is started. If the screen number is not given, screen 0 will be used.</p>
+</blockquote>
+
 <p>下面详述一下各种场景下的 SSO，它们之间是逐步升级，逐步复杂化的关系。</p>
 
 <ol>
@@ -294,6 +356,12 @@ c - code name</p>
       </a>
     </span>
   
+  
+    <span class="next" >
+      <a href="/english-tag-tab/">
+        下一篇 →
+      </a>
+    </span>
   
 </div>
       </div>

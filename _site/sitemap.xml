@@ -345,6 +345,18 @@
 <lastmod>2023-04-11T00:00:00-07:00</lastmod>
 </url>
 <url>
+<loc>/english-tag-tab/</loc>
+<lastmod>2023-04-16T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>/linux-snap-disk-full/</loc>
+<lastmod>2023-04-16T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>/virtualization-vagrant/</loc>
+<lastmod>2023-04-17T00:00:00-07:00</lastmod>
+</url>
+<url>
 <loc>/404/</loc>
 </url>
 <url>
@@ -388,5 +400,8 @@
 </url>
 <url>
 <loc>/page11/</loc>
+</url>
+<url>
+<loc>/page12/</loc>
 </url>
 </urlset>
